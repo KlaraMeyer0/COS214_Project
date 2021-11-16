@@ -3,9 +3,9 @@
 
 using namespace std;
 
-#include "StarlinkFactory.h"
+#include "SatelliteFactory.h"
 
-class ManagerFactory : public StarlinkFactory {
+class ManagerFactory : public SatelliteFactory {
 private:
     Satellite* spacecraft;
 public:
