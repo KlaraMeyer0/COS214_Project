@@ -6,14 +6,14 @@ using namespace std;
 #include "Engine.h"
 #include "MerlinEngine.h"
 
-class Falcon : public Engine {
+class FalconCore : public Engine {
 private:
-    MerlinEngine** merlins;
+	MerlinEngine** merlins;
 public:
-    Falcon();
-    ~Falcon();
-    void TurnOn();
-    void TurnOff();
+	FalconCore();
+	~FalconCore();
+	void TurnOn();
+	void TurnOff();
 };
 
 #endif

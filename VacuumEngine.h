@@ -7,10 +7,10 @@ using namespace std;
 
 class VacuumEngine : public Engine {
 public:
-    VacuumEngine();
-    ~VacuumEngine();
-    void TurnOn();
-    void TurnOff();
+	VacuumEngine();
+	~VacuumEngine();
+	void TurnOn();
+	void TurnOff();
 };
 
 #endif

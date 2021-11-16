@@ -7,10 +7,10 @@ using namespace std;
 
 class MerlinEngine : public Engine {
 public:
-    MerlinEngine();
-    ~MerlinEngine();
-    void TurnOn();
-    void TurnOff();
+	MerlinEngine();
+	~MerlinEngine();
+	void TurnOn();
+	void TurnOff();
 };
 
 #endif

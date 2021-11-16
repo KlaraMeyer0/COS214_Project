@@ -1,14 +1,12 @@
-#ifndef ENGINE_H
-#define ENGINE_H
+#ifndef STAGEENGINE_H
+#define STAGEENGINE_H
 
 using namespace std;
 
-class Engine {
-private:
-	bool On;
+class StageEngine {
 public:
-	Engine();
-	~Engine();
+	StageEngine();
+	~StageEngine();
 	virtual void TurnOn() = 0;
 	virtual void TurnOff() = 0;
 };
