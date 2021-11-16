@@ -3,9 +3,10 @@
 
 using namespace std;
 
+#include "Engine.h"
 #include "MerlinEngine.h"
 
-class Falcon {
+class Falcon : public Engine {
 private:
     MerlinEngine** merlins;
 public:

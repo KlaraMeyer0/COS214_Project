@@ -3,7 +3,9 @@
 
 using namespace std;
 
-class MerlinEngine {
+#include "Engine.h"
+
+class MerlinEngine : public Engine {
 public:
     MerlinEngine();
     ~MerlinEngine();
