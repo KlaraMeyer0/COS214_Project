@@ -6,6 +6,7 @@ using namespace std;
 #include "Rocketship.h"
 #include "LaunchCareTaker.h"
 #include "TestLaunch.h"
+#include "LaunchFile.h"
 
 class LaunchInterface {
 private:
