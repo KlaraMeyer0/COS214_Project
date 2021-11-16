@@ -3,6 +3,8 @@
 
 using namespace std;
 
+#include "Launch.h"
+
 class TestLaunch {
 public:
 	TestLaunch();

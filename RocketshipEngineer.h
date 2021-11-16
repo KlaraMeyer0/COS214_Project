@@ -3,6 +3,10 @@
 
 using namespace std;
 
+#include "Work.h"
+#include "RocketShipBay.h"
+#include "LaunchCaretaker.h"
+
 class RocketshipEngineer {
 private:
 	RocketShipBay* rb;
@@ -16,6 +20,7 @@ public:
 	bool makeCrewDragon();
 	bool makeStarlink();
 	bool createBackup();
+	bool retrieveBackup();
 	bool startTestLaunch();
 };
 
