@@ -1,2 +1,0 @@
-// hi
-Some test code
