@@ -4,16 +4,18 @@
 using namespace std;
 
 #include "StarlinkSatellite.h"
-#include "SatelitteManager.h"
+#include "SatelliteManager.h"
 #include "Rocketship.h"
 #include "FalconRocket.h"
+#include "SatelliteIterator.h"
+#include <vector>
 
 class StarlinkCollection : public Rocketship {
 private:
     FalconRocket* rocket;
-    StarlinkSatellite* satellites;
+    vector<Satellite*> satellites;
     int numSatellites;
-    SatelitteManager* satelitteCreator;
+    SatelliteManager* satelitteCreator;
     int num_G;
     int num_O;
 public:
