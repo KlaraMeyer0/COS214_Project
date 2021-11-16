@@ -1,5 +1,5 @@
-#ifndef FALCON_H
-#define FALCON_H
+#ifndef FALCONCORE_H
+#define FALCONCORE_H
 
 using namespace std;
 
