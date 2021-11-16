@@ -3,6 +3,8 @@
 
 using namespace std;
 
+#include "CargoFactory.h"
+
 class EquitmentFactory : public CargoFactory {
 public:
 	EquitmentFactory();
