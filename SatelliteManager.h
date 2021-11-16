@@ -4,6 +4,7 @@
 using namespace std;
 
 #include "StarlinkSatellite.h"
+#include "Satellite.h"
 
 class SatelliteManager : public Satellite {
 private:
