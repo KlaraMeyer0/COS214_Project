@@ -3,18 +3,18 @@
 
 using namespace std;
 
-#include "Stage1Engine.h"
-#include "Stage2Engine.h"
+#include "StageEngine.h"
 
 class FalconRocket {
-private:
-	Stage1Engine* stage1;
-	Stage2Engine* stage2;
+protected:
+	StageEngine* stage;
 public:
 	FalconRocket();
 	~FalconRocket();
-	virtual void detach() = 0;
-	virtual void attach() = 0;
+	void detach();
+	void attach(StageEngine*);
+	void turnOn();
+	void turnOff();
 };
 
 #endif

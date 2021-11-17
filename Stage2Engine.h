@@ -4,15 +4,17 @@
 using namespace std;
 
 #include "VacuumEngine.h"
+#include "FalconRocket.h"
+#include "StageEngine.h"
 
-class Stage2Engine {
+class Stage2Engine : public StageEngine {
 private:
 	VacuumEngine* engine;
 public:
 	Stage2Engine();
 	~Stage2Engine();
-	virtual void TurnOn();
-	virtual void TurnOff();
+	void TurnOn(FalconRocket*);
+	void TurnOff(FalconRocket*);
 };
 
 #endif
