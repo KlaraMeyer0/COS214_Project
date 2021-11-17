@@ -9,8 +9,8 @@ class Station {
 private:
     Station* next;
 public:
-	Station();
-	~Station();
+    Station();
+    ~Station();
     void add(Station* stat);
     virtual void receiveCargo(Cargo* c);
     virtual void receiveCommunication(string com);
