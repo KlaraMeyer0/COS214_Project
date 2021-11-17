@@ -11,7 +11,7 @@ using namespace std;
 class LaunchInterface {
 private:
     Rocketship** rocketships;
-	LaunchCareTaker** launchCareTaker;
+	LaunchCaretaker** launchCaretakers;
 public:
 	LaunchInterface();
 	~LaunchInterface();
