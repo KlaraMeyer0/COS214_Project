@@ -9,7 +9,7 @@ class Cargo {
 private:
     string name;
 public:
-	Cargo();
+	Cargo(string);
 	~Cargo();
 };
 

@@ -7,7 +7,7 @@ using namespace std;
 
 class Equitment : public Cargo {
 public:
-	Equitment();
+	Equitment(string);
 	~Equitment();
 };
 

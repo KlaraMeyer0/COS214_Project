@@ -4,6 +4,7 @@
 using namespace std;
 
 #include "Engine.h"
+#include <iostream>
 
 class MerlinEngine : public Engine {
 public:

@@ -3,12 +3,12 @@
 
 using namespace std;
 
+#include "_9Engine.h"
+
 class Falcon9 {
 public:
 	Falcon9();
 	~Falcon9();
-	void attach();
-	void detach();
 };
 
 #endif

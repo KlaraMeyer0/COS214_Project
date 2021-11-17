@@ -3,12 +3,12 @@
 
 using namespace std;
 
+#include "HeavyEngine.h"
+
 class FalconHeavy {
 public:
 	FalconHeavy();
 	~FalconHeavy();
-	void attach();
-	void detach();
 };
 
 #endif
