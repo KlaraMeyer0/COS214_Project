@@ -7,12 +7,12 @@ using namespace std;
 
 class LaunchFile {
 private:
-    State state;
+    Rocketship** rocketships;
 public:
 	LaunchFile();
 	~LaunchFile();
-    State getState();
-    void setState(State);
+    Rocketship** getLaunch();
+    void setLaunch(Rocketship** rocketships);
 };
 
 #endif
