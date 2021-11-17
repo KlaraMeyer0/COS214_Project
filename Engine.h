@@ -4,7 +4,7 @@
 using namespace std;
 
 class Engine {
-private:
+protected:
 	bool On;
 public:
 	Engine();

@@ -5,6 +5,7 @@ using namespace std;
 
 #include "Engine.h"
 #include "MerlinEngine.h"
+#include <iostream>
 
 class FalconCore : public Engine {
 private:

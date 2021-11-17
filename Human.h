@@ -7,7 +7,7 @@ using namespace std;
 
 class Human : public Cargo {
 public:
-	Human();
+	Human(string);
 	~Human();
 };
 

@@ -6,6 +6,7 @@ using namespace std;
 #include "Spacecraft.h"
 
 class CrewDragonSpacecraft : public Spacecraft {
+public:
 	CrewDragonSpacecraft();
 	~CrewDragonSpacecraft();
 };
