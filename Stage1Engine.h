@@ -3,12 +3,15 @@
 
 using namespace std;
 
-class Stage1Engine {
+#include "FalconRocket.h"
+#include "StageEngine.h"
+
+class Stage1Engine : public StageEngine {
 public:
 	Stage1Engine();
 	~Stage1Engine();
-	virtual void TurnOn() = 0;
-	virtual void TurnOff() = 0;
+	virtual void TurnOn(FalconRocket*) = 0;
+	virtual void TurnOff(FalconRocket*) = 0;
 };
 
 #endif

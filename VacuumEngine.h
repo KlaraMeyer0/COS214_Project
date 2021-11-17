@@ -4,6 +4,7 @@
 using namespace std;
 
 #include "Engine.h"
+#include <iostream>
 
 class VacuumEngine : public Engine {
 public:

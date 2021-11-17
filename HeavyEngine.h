@@ -5,15 +5,16 @@ using namespace std;
 
 #include "Stage1Engine.h"
 #include "FalconCore.h"
+#include "FalconRocket.h"
 
-class HeavyEngine {
+class HeavyEngine : public Stage1Engine {
 private:
 	FalconCore** cores;
 public:
 	HeavyEngine();
 	~HeavyEngine();
-	virtual void TurnOn();
-	virtual void TurnOff();
+	virtual void TurnOn(FalconRocket*);
+	virtual void TurnOff(FalconRocket*);
 };
 
 #endif
