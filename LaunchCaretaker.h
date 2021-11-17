@@ -11,6 +11,8 @@ private:
 public:
 	LaunchCaretaker();
 	~LaunchCaretaker();
+	LaunchFile* getFile();
+	void setFile(LaunchFile* file);
 };
 
 #endif
