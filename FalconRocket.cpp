@@ -1,26 +1,33 @@
 #include "FalconRocket.h"
 
-FalconRocket::FalconRocket() {
+FalconRocket::FalconRocket(){
 
 };
 
-FalconRocket::~FalconRocket() {
+FalconRocket::~FalconRocket()
+{
     delete stage;
 };
 
-void detach() {
+void FalconRocket::detach()
+{
     delete stage;
 };
 
-void attach(StageEngine* s) {
+void FalconRocket::attach(StageEngine *s)
+{
     detach();
     stage = s;
 };
 
-void FalconRocket::turnOn() {
-    if (stage != 0) stage->TurnOn(this);
+void FalconRocket::turnOn()
+{
+    if (stage != 0)
+        stage->TurnOn(this);
 };
 
-void FalconRocket::turnOff() {
-    if (stage != 0) stage->TurnOff(this);
+void FalconRocket::turnOff()
+{
+    if (stage != 0)
+        stage->TurnOff(this);
 };
