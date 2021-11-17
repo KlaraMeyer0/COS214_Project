@@ -13,6 +13,7 @@ void detach() {
 };
 
 void attach(StageEngine* s) {
+    detach();
     stage = s;
 };
 

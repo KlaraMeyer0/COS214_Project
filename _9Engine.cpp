@@ -12,6 +12,5 @@ void _9Engine::TurnOn(FalconRocket* r) {
 
 void _9Engine::TurnOff(FalconRocket* r) {
 	core->TurnOff();
-	r->detach();
 	r->attach(new Stage2Engine());
 };
