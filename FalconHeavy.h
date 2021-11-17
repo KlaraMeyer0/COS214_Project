@@ -4,8 +4,9 @@
 using namespace std;
 
 #include "HeavyEngine.h"
+#include "FalconRocket.h"
 
-class FalconHeavy {
+class FalconHeavy : public FalconRocket {
 public:
 	FalconHeavy();
 	~FalconHeavy();
