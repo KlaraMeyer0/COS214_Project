@@ -9,12 +9,11 @@ using namespace std;
 
 class SatelliteManager : public Satellite {
 private:
-    vector<StarlinkSatellite*> list;
+    vector<StarlinkSatellite*>* list;
 public:
 	SatelliteManager();
 	~SatelliteManager();
-    void setStatus();
-    vector<StarlinkSatellite*> getSatellite(int, int);
+    vector<StarlinkSatellite*>* getSatellite(int, int);
 };
 
 #endif
