@@ -1,15 +1,13 @@
 #ifndef ROCKETSHIPENGINEER_H
 #define ROCKETSHIPENGINEER_H
 
-using namespace std;
-
 #include "Work.h"
 #include "RocketShipBay.h"
 #include "LaunchCaretaker.h"
 
 class RocketshipEngineer {
 private:
-	RocketShipBay* rb;
+	RocketshipBay* rb;
 	Work** command;
 	LaunchCaretaker** LaunchCaretakers;
 public:
