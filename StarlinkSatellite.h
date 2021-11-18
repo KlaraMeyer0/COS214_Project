@@ -4,10 +4,11 @@
 using namespace std;
 
 #include "Satellite.h"
+#include "Station.h"
 #include "CommunicationRelay.h"
 #include <string>
 
-class StarlinkSatellite : public Satellite {
+class StarlinkSatellite : public Satellite, public Station {
 private:
     bool status;
     CommunicationRelay* relay;

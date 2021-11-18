@@ -1,8 +1,6 @@
 #ifndef STARLINKBAY_H
 #define STARLINKBAY_H
 
-using namespace std;
-
 #include "RocketshipBay.h"
 
 class StarlinkBay : public RocketshipBay {
@@ -12,7 +10,7 @@ public:
 	void getRocketship();
 	void buildRocket();
 	void buildBody();
-	void buildCargo();
+	void addCargo();
 };
 
 #endif

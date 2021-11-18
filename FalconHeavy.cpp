@@ -1,7 +1,7 @@
 #include "FalconHeavy.h"
 
 FalconHeavy::FalconHeavy() {
-    stage = new FalconHeavy();
+    stage = new HeavyEngine();
 };
 
 FalconHeavy::~FalconHeavy() {};

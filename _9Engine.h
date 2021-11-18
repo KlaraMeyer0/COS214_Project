@@ -4,6 +4,7 @@
 using namespace std;
 
 #include "Stage1Engine.h"
+#include "Stage2Engine.h"
 #include "FalconCore.h"
 #include "FalconRocket.h"
 

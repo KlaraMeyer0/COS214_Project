@@ -4,6 +4,7 @@
 using namespace std;
 
 #include "Stage1Engine.h"
+#include "Stage2Engine.h"
 #include "FalconCore.h"
 #include "FalconRocket.h"
 
@@ -13,8 +14,8 @@ private:
 public:
 	HeavyEngine();
 	~HeavyEngine();
-	virtual void TurnOn(FalconRocket*);
-	virtual void TurnOff(FalconRocket*);
+	void TurnOn(FalconRocket*);
+	void TurnOff(FalconRocket*);
 };
 
 #endif

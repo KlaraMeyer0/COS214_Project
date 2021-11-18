@@ -1,18 +1,21 @@
 #ifndef DRAGONBAY_H
 #define DRAGONBAY_H
 
-using namespace std;
-
 #include "RocketshipBay.h"
+#include "DragonRocketship.h"
+#include "DragonFactory.h"
+#include "CargoFactory.h"
+#include "RocketFactory.h"
 
-class DragonBay : public RocketshipBay {
+class DragonBay : public RocketshipBay
+{
 public:
 	DragonBay();
 	~DragonBay();
-	void getRocketship();
+	DragonRocketship *getRocketship();
 	void buildRocket();
 	void buildBody();
-	void buildCargo();
+	void addCargo();
 };
 
 #endif

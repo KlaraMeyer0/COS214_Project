@@ -11,7 +11,7 @@ private:
 public:
 	CargoFactory();
 	~CargoFactory();
-    virtual Cargo* createRocket() = 0;
+    virtual Cargo* createCargo(string n) = 0;
     Cargo* startFactory();
 };
 
