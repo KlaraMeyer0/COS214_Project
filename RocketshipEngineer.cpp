@@ -3,21 +3,9 @@
 RocketshipEngineer::RocketshipEngineer() {}
 RocketshipEngineer::~RocketshipEngineer() {}
 
-void RocketshipEngineer::construct()
+void RocketshipEngineer::construct(int bay)
 {
-    rb->buildBody();
-    rb->addCargo();
-    rb->buildRocket();
+    rb[bay]->buildBody();
+    rb[bay]->addCargo();
+    rb[bay]->buildRocket();
 }
-
-bool RocketshipEngineer::makeDragon() {}
-
-bool RocketshipEngineer::makeCrewDragon() {}
-
-bool RocketshipEngineer::makeStarlink() {}
-
-bool RocketshipEngineer::createBackup() {}
-
-bool RocketshipEngineer::retrieveBackup() {}
-
-bool RocketshipEngineer::startTestLaunch() {}
