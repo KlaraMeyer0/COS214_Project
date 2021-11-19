@@ -40,7 +40,7 @@ void LaunchInterface::outputDesc(){
     for (int i = 0; i < rocketCount; i++)
         cout<<i<<endl<<launchCaretaker->getDesc(i)<<endl;
 }
-void LaunchInterface::restoreFile(){
+void LaunchInterface::restoreFile(){//needs to be tested!!!
     //check if current setup is backed up
     if (!launchCaretaker->contains(rocketships)) {
         bool flag = false;
