@@ -4,12 +4,14 @@
 using namespace std;
 
 #include "SatelliteFactory.h"
+#include "StarlinkSatellite.h"
 
 class StarlinkFactory : public SatelliteFactory {
 public:
 	StarlinkFactory();
 	~StarlinkFactory();
-    Satellite* createRocket();
+protected:
+    Satellite* createSatellite();
 };
 
 #endif

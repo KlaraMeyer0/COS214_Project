@@ -1,18 +1,16 @@
 #ifndef SATELLITEFACTORY_H
 #define SATELLITEFACTORY_H
 
-using namespace std;
-
 #include "Satellite.h"
 
-class SatelliteFactory {
-private:
-    Satellite* spacecraft;
+class SatelliteFactory
+{
 public:
-	SatelliteFactory();
-	~SatelliteFactory();
-    virtual Satellite* createRocket() = 0;
-    Satellite* startFactory();
+    SatelliteFactory();
+    ~SatelliteFactory();
+    Satellite *startFactory();
+protected:
+    virtual Satellite *createSatellite() = 0;
 };
 
 #endif

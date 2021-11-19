@@ -1,8 +1,6 @@
 #ifndef CARGOFACTORY_H
 #define CARGOFACTORY_H
 
-using namespace std;
-
 #include "Cargo.h"
 
 class CargoFactory
@@ -10,11 +8,9 @@ class CargoFactory
 public:
     CargoFactory();
     ~CargoFactory();
+    Cargo *startFactory(string n);
+protected:
     virtual Cargo *getCargo(string n) = 0;
-    Cargo *startFactory();
-
-private:
-    Cargo *cargo;
 };
 
 #endif

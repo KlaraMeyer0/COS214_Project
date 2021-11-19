@@ -3,7 +3,7 @@
 
 #include "SatelliteManager.h"
 
-SatelliteManager::SatelliteManager() {}
+SatelliteManager::SatelliteManager() {} //if you paramaterise constructor edit ManagerFactory.cpp creation of SatelliteManager
 
 SatelliteManager::~SatelliteManager() {}
 

@@ -9,6 +9,7 @@ class EquipmentFactory : public CargoFactory {
 public:
 	EquipmentFactory();
 	~EquipmentFactory();
+protected:
     Cargo* getCargo(string n);
 };
 

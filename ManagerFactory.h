@@ -1,17 +1,15 @@
 #ifndef MANAGERFACTORY_H
 #define MANAGERFACTORY_H
 
-using namespace std;
-
 #include "SatelliteFactory.h"
+#include "SatelliteManager.h"
 
 class ManagerFactory : public SatelliteFactory {
-private:
-    Satellite* spacecraft;
 public:
 	ManagerFactory();
 	~ManagerFactory();
-    Satellite* createRocket();
+protected:
+    Satellite* createSatellite();
 };
 
 #endif

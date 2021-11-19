@@ -12,6 +12,7 @@ class HumanFactory : public CargoFactory
 public:
 	HumanFactory();
 	~HumanFactory();
+protected:
 	Cargo *getCargo(string n);
 };
 
