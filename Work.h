@@ -2,6 +2,7 @@
 #define WORK_H
 
 using namespace std;
+#include "LaunchInterface.h"
 
 class Work {
 public:

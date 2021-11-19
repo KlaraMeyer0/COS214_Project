@@ -25,16 +25,16 @@ LaunchInterface::~LaunchInterface(){
 void LaunchInterface::TestLaunch(){
 
 }
-void LaunchInterface::addRocketship(Rocketship* r){
+void LaunchInterface::addRocketship(Rocketship* r){//add rocket to current array
     rocketCount++;
     Rocketship** rs = new Rocketship*[rocketCount];
     rs[rocketCount-1] = r;
 }
-void LaunchInterface::storeFile(LaunchFile* f){
-    if (!launchCaretaker->contains(f)){
+void LaunchInterface::storeFile(){//store current file into Caretaker
+    LaunchFile* f = retrieveLaunchFile();
+    if (!launchCaretaker->contains(f))
         launchCaretaker->setFile(f);
-    }
 }
-void LaunchInterface::getFile(){
+void LaunchInterface::restoreFile(){//return description
     
 }

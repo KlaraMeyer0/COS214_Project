@@ -16,8 +16,8 @@ public:
 	void setLaunchFile(LaunchFile*);
 	void TestLaunch();
 	void addRocketship(Rocketship*);
-	void storeFile(LaunchFile*);
-	void getFile();//?
+	void storeFile();
+	void restoreFile();
 private:
     Rocketship** rocketships;
 	LaunchCaretaker* launchCaretaker;
