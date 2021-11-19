@@ -3,7 +3,6 @@
 
 using namespace std;
 
-#include "LaunchInterface.h"
 #include "Work.h"
 
 class Backup : public Work{
