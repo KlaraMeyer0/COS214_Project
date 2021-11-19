@@ -54,3 +54,12 @@ bool LaunchCaretaker::contains(LaunchFile* f){
     }
     return false;
 }
+bool LaunchCaretaker::contains(Rocketship** r){
+    for (int i = 0; i < FileSize; i++){
+        if (r == file[i]->getLaunch()) return true;
+    }
+    return false;
+}
+int LaunchCaretaker::getSize(){
+    return FileSize;
+}

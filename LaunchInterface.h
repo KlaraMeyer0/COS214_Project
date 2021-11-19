@@ -7,6 +7,7 @@ using namespace std;
 #include "LaunchCareTaker.h"
 #include "TestLaunch.h"
 #include "LaunchFile.h"
+#include <sstream>
 
 class LaunchInterface {//Memento Originator
 public:
@@ -18,6 +19,7 @@ public:
 	void addRocketship(Rocketship*);
 	void storeFile();
 	void restoreFile();
+	void outputDesc();
 private:
     Rocketship** rocketships;
 	LaunchCaretaker* launchCaretaker;

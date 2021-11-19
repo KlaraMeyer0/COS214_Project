@@ -1,20 +1,20 @@
 #ifndef STATION_H
 #define STATION_H
-#include "PointOfCommunication.h"
-#include "Cargo.h"
-#include <string>
+
 using namespace std;
 
+#include "Cargo.h"
 
-class Station : public PointOfCommunication{
-    private:
-        Station* next;
+class Station
+{
     public:
         Station();
         ~Station();
         void add(Station* stat);
         virtual void receiveCargo(Cargo* c);
         virtual void receiveCommunication(string com);
-    };
+    private:
+        Station* next;
+};
 
 #endif

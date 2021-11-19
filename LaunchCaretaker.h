@@ -18,6 +18,8 @@ public:
 	string getDesc(int i);
 	void removeFile(int i);
 	bool contains(LaunchFile*);
+	bool contains(Rocketship**);
+	int getSize();
 };
 
 #endif
