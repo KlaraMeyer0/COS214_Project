@@ -26,4 +26,5 @@ void HeavyEngine::TurnOff(FalconRocket* r) {
 		cores[i]->TurnOff();
 	}
 	r->attach(new Stage2Engine());
+	cout << "The first stage engine has landed on the drone ship." << endl;
 };

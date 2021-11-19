@@ -13,4 +13,5 @@ void _9Engine::TurnOn(FalconRocket* r) {
 void _9Engine::TurnOff(FalconRocket* r) {
 	core->TurnOff();
 	r->attach(new Stage2Engine());
+	cout << "The first stage engine has landed on the drone ship." << endl;
 };
