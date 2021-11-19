@@ -6,6 +6,10 @@ using namespace std;
 
 SatelliteIterator::SatelliteIterator(StarlinkSatellite *) : head(0), current(0) {}
 
+SatelliteIterator::SatelliteIterator(StarlinkCollection *satCol, StarlinkSatellite *sat) : head(satCol->getFirstSat())
+{
+}
+
 SatelliteIterator::~SatelliteIterator() {}
 
 StarlinkSatellite *SatelliteIterator::next() {
@@ -13,6 +17,10 @@ StarlinkSatellite *SatelliteIterator::next() {
     {
         this->current = this->current->next;
     }
+}
+
+StarlinkSatellite *SatelliteIterator::currentSatellite() {
+    return current;
 }
 
 
