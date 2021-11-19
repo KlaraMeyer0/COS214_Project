@@ -7,6 +7,7 @@ class Launch {
 public:
 	Launch();
 	~Launch();
+	virtual void startLaunch() = 0;
 };
 
 #endif

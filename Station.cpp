@@ -4,7 +4,6 @@ using namespace std;
 
 #include "Station.h"
 
-
 Station::Station() : next(0) {}
 
 Station::~Station() {}
@@ -23,7 +22,7 @@ void Station::receiveCargo(Cargo *c)
         if (next)
             next->receiveCargo(c);
         else
-            cout << "Cargo " << c->getName() << " cannot be delivered."<< endl;
+            cout << "Cargo " << c->getName() << " cannot be delivered to the station."<< endl;
 }
 
 void Station::receiveCommunication(string com)

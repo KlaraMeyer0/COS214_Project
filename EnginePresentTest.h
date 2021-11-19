@@ -7,9 +7,10 @@ using namespace std;
 
 class EnginePresentTest : public LaunchTest {
 public:
-	EnginePresentTest();
+	EnginePresentTest(Launch*);
 	~EnginePresentTest();
     void output();
+	virtual void startLaunch();
 };
 
 #endif
