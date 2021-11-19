@@ -1,12 +1,12 @@
 #ifndef STATION_H
 #define STATION_H
-#include "Satellite.h"
+#include "PointOfCommunication.h"
 #include "Cargo.h"
 #include <string>
 using namespace std;
 
 
-class Station : public Satellite{
+class Station : public PointOfCommunication{
     private:
         Station* next;
     public:

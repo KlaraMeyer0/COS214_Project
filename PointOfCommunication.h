@@ -3,10 +3,10 @@
 
 using namespace std;
 
-class Satellite {
+class PointOfCommunication {
     public:
-	    Satellite(int);
-	    ~Satellite();
+	    PointOfCommunication(int);
+	    ~PointOfCommunication();
     private:
         int name;
         bool status;

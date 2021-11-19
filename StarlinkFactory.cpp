@@ -3,7 +3,7 @@
 StarlinkFactory::StarlinkFactory() {}
 StarlinkFactory::~StarlinkFactory() {}
 
-Satellite *StarlinkFactory::createSatellite()
+PointOfCommunication *StarlinkFactory::createSatellite()
 {
     return new...;
 }

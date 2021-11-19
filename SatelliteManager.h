@@ -4,10 +4,10 @@
 using namespace std;
 
 #include "StarlinkSatellite.h"
-#include "Satellite.h"
+#include "PointOfCommunication.h"
 #include <vector>
 
-class SatelliteManager : public Satellite {
+class SatelliteManager : public PointOfCommunication {
 public:
 	SatelliteManager();
 	~SatelliteManager();
