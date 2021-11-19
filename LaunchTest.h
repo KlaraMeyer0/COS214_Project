@@ -7,11 +7,16 @@ using namespace std;
 
 class LaunchTest : public Launch {
 public:
-	LaunchTest();
-	virtual ~LaunchTest();
-	virtual void add(Launch*) = 0;
+	LaunchTest(Launch* la){
+		l = la;
+	};
+	virtual ~LaunchTest(){
+		delete l;
+	};
     virtual void output() = 0;
 	virtual void startLaunch() = 0;
+protected:
+	Launch* l;
 };
 
 #endif

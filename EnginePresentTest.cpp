@@ -1,14 +1,10 @@
 #include "EnginePresentTest.h"
 
-EnginePresentTest::EnginePresentTest(){
-
-}
-EnginePresentTest::~EnginePresentTest(){
-
-}
+EnginePresentTest::EnginePresentTest(Launch* la):LaunchTest(la){}
+EnginePresentTest::~EnginePresentTest(){}
 void EnginePresentTest::output(){
 
 }
-void EnginePresentTest::add(Launch* l){
-
+void EnginePresentTest::startLaunch(){
+    
 }

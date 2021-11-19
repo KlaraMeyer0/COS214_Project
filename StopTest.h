@@ -7,11 +7,10 @@ using namespace std;
 
 class StopTest : public LaunchTest {
 public:
-	StopTest();
+	StopTest(Launch*);
 	~StopTest();
     void output();
 	virtual void startLaunch();
-	void add(Launch*);
 };
 
 #endif
