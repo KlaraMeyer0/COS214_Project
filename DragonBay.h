@@ -5,7 +5,7 @@
 #include "DragonRocketship.h"
 #include "DragonFactory.h"
 #include "CargoFactory.h"
-#include "RocketFactory.h"
+#include "FalconHeavyFactory.h"
 
 class DragonBay : public RocketshipBay
 {
@@ -16,6 +16,9 @@ public:
 	void buildRocket();
 	void buildBody();
 	void addCargo();
+
+private:
+	DragonRocketship *dragon;
 };
 
 #endif
