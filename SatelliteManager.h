@@ -1,13 +1,11 @@
 #ifndef SATELLITEMANAGER_H
 #define SATELLITEMANAGER_H
-
-using namespace std;
-
 #include "StarlinkSatellite.h"
 #include "Satellite.h"
 #include <vector>
+using namespace std;
 
-class SatelliteManager : public Satellite {
+class SatelliteManager {
 public:
 	SatelliteManager();
 	~SatelliteManager();
