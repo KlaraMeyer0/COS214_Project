@@ -7,13 +7,14 @@ using namespace std;
 
 class SpaceStaion : public Station
 {
-    private:
-        Cargo* cargo;
     public:
         SpaceStaion(Cargo* c);
         ~SpaceStaion();
         void receiveCargo(Cargo* c);
         void receiveCommunication(string s);
+    private:
+        Cargo* cargo;
+        Cargo* humans;
 };
 
 #endif

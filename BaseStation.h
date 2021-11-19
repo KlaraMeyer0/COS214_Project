@@ -6,13 +6,19 @@ using namespace std;
 
 class BaseStation : public Station
 {
-    private:
-        Cargo* cargo;
     public:
         BaseStation(Cargo* c);
         ~BaseStation();
         void receiveCargo(Cargo* c);
         void receiveCommunication(string s);
+    private:
+        Cargo* cargo;
+        Cargo* humans;
+
+        //humans arriving at base station: call factory for humans
+        //cargo delivered to base station: call factory for cargo
+
+        //add cargo to rockets from here
 };
 
 #endif

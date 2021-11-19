@@ -11,6 +11,7 @@ private:
 public:
 	Cargo(string);
 	~Cargo();
+    string getName();
 };
 
 #endif
