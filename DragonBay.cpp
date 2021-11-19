@@ -2,22 +2,34 @@
 
 DragonBay::DragonBay()
 {
-    dragon = new DragonRocketship();
+    dragon = nullptr;
+    falconheavy_factory = new FalconHeavyFactory();
+    dragon_factory = new DragonFactory();
 }
-DragonBay::~DragonBay() {}
+DragonBay::~DragonBay()
+{
+    delete falconheavy_factory;
+    delete dragon_factory;
+}
 
-DragonRocketship *DragonBay::getRocketship() {}
+DragonRocketship *DragonBay::getRocketship()
+{
+    return dragon;
+}
+
+void DragonBay::setName(string n)
+{
+    dragon = new DragonRocketship(n);
+}
 
 void DragonBay::buildRocket()
 {
-    RocketFactory *factorty = new FalconHeavyFactory();
-    dragon->attachRocket(factorty->startFactory());
+    dragon->attachRocket(falconheavy_factory->startFactory());
 }
 
 void DragonBay::buildBody()
 {
-    SpacecraftFactory *factorty = new DragonFactory();
-    dragon->attachSpacecraft(factorty->startFactory());
+    dragon->attachSpacecraft(dragon_factory->startFactory());
 }
 
 void DragonBay::addCargo()

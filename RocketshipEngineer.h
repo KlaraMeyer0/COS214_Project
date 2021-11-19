@@ -10,7 +10,7 @@ class RocketshipEngineer
 public:
 	RocketshipEngineer();
 	~RocketshipEngineer();
-	void construct(int bay);
+	void construct(int bay,string name);
 
 private:
 	RocketshipBay **rb;

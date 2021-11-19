@@ -15,8 +15,9 @@ RocketshipEngineer::~RocketshipEngineer()
     delete[] rb;
 }
 
-void RocketshipEngineer::construct(int bay)
+void RocketshipEngineer::construct(int bay, string name)
 {
+    rb[bay]->setName(name);
     rb[bay]->buildBody();
     rb[bay]->buildRocket();
     rb[bay]->addCargo();
