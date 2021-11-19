@@ -9,6 +9,7 @@ class FalconHeavyFactory : public RocketFactory {
 public:
 	FalconHeavyFactory();
 	~FalconHeavyFactory();
+protected:
     FalconRocket* createRocket();
 };
 
