@@ -3,9 +3,7 @@
 Rocketship** LaunchFile::getLaunch(){
     return rocketships;
 }
-LaunchFile::LaunchFile(){
-
-}
+LaunchFile::LaunchFile(){}
 void LaunchFile::setLaunch(Rocketship** rocketships,int c){
     this->rocketships = rocketships;
     count = c;

@@ -1,8 +1,6 @@
 #include "LaunchCaretaker.h"
 
-LaunchCaretaker::LaunchCaretaker(){
-    //add description? would help with organising and selecting a new launch setup
-}
+LaunchCaretaker::LaunchCaretaker(){}
 LaunchCaretaker::~LaunchCaretaker(){
     delete file;
 }
@@ -12,3 +10,4 @@ LaunchFile* LaunchCaretaker::getFile(){
 void LaunchCaretaker::setFile(LaunchFile* file){
     this->file = file;
 }
+//add description? would help with organising and selecting a new launch setup
