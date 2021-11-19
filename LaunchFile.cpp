@@ -14,3 +14,10 @@ LaunchFile::~LaunchFile(){
     }
     delete rocketships;
 }
+void LaunchFile::setLaunch(Rocketship** rocketships, int c){
+    count = c;
+    this->rocketships = rocketships;
+}
+int LaunchFile::getCount(){
+    return count;
+}

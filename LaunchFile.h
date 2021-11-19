@@ -14,6 +14,7 @@ public:
 	~LaunchFile();
     Rocketship** getLaunch();
     void setLaunch(Rocketship** rocketships,int c);
+    int getCount();
 };
 
 #endif
