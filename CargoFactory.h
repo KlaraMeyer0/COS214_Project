@@ -5,14 +5,16 @@ using namespace std;
 
 #include "Cargo.h"
 
-class CargoFactory {
-private:
-    Cargo* cargo;
+class CargoFactory
+{
 public:
-	CargoFactory();
-	~CargoFactory();
-    virtual Cargo* createCargo(string n) = 0;
-    Cargo* startFactory();
+    CargoFactory();
+    ~CargoFactory();
+    virtual Cargo *getCargo(string n) = 0;
+    Cargo *startFactory();
+
+private:
+    Cargo *cargo;
 };
 
 #endif

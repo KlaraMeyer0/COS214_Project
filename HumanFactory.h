@@ -12,7 +12,7 @@ class HumanFactory : public CargoFactory
 public:
 	HumanFactory();
 	~HumanFactory();
-	Cargo *createCargo(string n);
+	Cargo *getCargo(string n);
 };
 
 #endif

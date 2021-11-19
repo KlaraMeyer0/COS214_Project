@@ -4,7 +4,7 @@
 EquipmentFactory::EquipmentFactory() {}
 EquipmentFactory::~EquipmentFactory() {}
 
-Cargo *EquipmentFactory::createCargo(string n)
+Cargo *EquipmentFactory::getCargo(string n)
 {
     return new Equipment(n);
 }

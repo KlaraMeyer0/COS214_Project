@@ -9,7 +9,7 @@ class EquipmentFactory : public CargoFactory {
 public:
 	EquipmentFactory();
 	~EquipmentFactory();
-    Cargo* createCargo(string n);
+    Cargo* getCargo(string n);
 };
 
 #endif
