@@ -4,22 +4,19 @@ using namespace std;
 
 #include "SpaceStation.h"
 
-SpaceStation::SpaceStation(Cargo *c) : Station(),
-{
+SpaceStation::SpaceStation() : Station() {}
 
-}
-
-SpaceStation::~SpaceStation()
-{
-
-}
+SpaceStation::~SpaceStation() {}
 
 void SpaceStation::receiveCargo(Cargo *c)
 {
-    Station::receiveCargo(c);
+    if (c->isHuman())
+        humans.push_back(c);
+    else
+        equipment.push_back(c);
 }
 
 void SpaceStation::receiveCommunication(string s)
 {
-    Station::receiveCommunication(s);
+    cout << "Communication: " << s << " received at base station." << endl;
 }
