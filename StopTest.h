@@ -10,6 +10,7 @@ public:
 	StopTest();
 	~StopTest();
     void output();
+	virtual void startLaunch();
 };
 
 #endif

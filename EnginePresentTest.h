@@ -10,6 +10,7 @@ public:
 	EnginePresentTest();
 	~EnginePresentTest();
     void output();
+	virtual void startLaunch();
 };
 
 #endif

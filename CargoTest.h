@@ -10,6 +10,7 @@ public:
 	CargoTest();
 	~CargoTest();
     void output();
+	virtual void startLaunch();
 };
 
 #endif
