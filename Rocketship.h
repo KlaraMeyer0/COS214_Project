@@ -12,6 +12,7 @@ public:
 	virtual void Launch() = 0;
 	virtual Rocketship *clone() = 0;
 	string getName();
+	void countdown();
 
 private:
 	string name;
