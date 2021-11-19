@@ -13,6 +13,8 @@ public:
     SatelliteManager* clone();
 private:
     vector<StarlinkSatellite*>* list;
+    StarlinkSatellite* proto1;
+    StarlinkSatellite* proto2;
 };
 
 #endif

@@ -26,17 +26,15 @@ void StarlinkBay::setName(string n)
 
 void StarlinkBay::buildRocket()
 {
-    falcon9_factory->startFactory();
+    starlink_collection->attachRocket(falcon9_factory->startFactory());
 }
 
 void StarlinkBay::buildBody()
 {
-    // adds SatelliteManager
-    manager_factory->startFactory();
+    starlink_collection->attachManager(manager_factory->startFactory());
 }
 
 void StarlinkBay::addCargo()
 {
-    // adds all the StarlinkSatellites
     starlink_factory->startFactory();
 }
