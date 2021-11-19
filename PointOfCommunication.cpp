@@ -3,12 +3,12 @@
 #include "PointOfCommunication.h"
 using namespace std;
 
-Satellite::Satellite(int name){
+PointOfCommunication::PointOfCommunication(int name){
     this->name =name;
     status =false;
 }
 
-Satellite::~Satellite(){
+PointOfCommunication::~PointOfCommunication(){
 }
 
 #endif
