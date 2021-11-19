@@ -11,6 +11,7 @@ public:
 	~EngineFireTest();
     void output();
 	virtual void startLaunch();
+	void add(Launch*);
 };
 
 #endif
