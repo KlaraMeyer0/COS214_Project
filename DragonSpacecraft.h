@@ -8,6 +8,7 @@ using namespace std;
 class DragonSpacecraft : public Spacecraft {
 public:
 	DragonSpacecraft();
+	DragonSpacecraft(const DragonSpacecraft &obj);
 	~DragonSpacecraft();
 };
 
