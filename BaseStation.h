@@ -7,12 +7,12 @@ using namespace std;
 class BaseStation : public Station
 {
     public:
-        BaseStation(Cargo* c);
+        BaseStation();
         ~BaseStation();
         void receiveCargo(Cargo* c);
         void receiveCommunication(string s);
     private:
-        Cargo* cargo;
+        Cargo* equipment;
         Cargo* humans;
 
         //humans arriving at base station: call factory for humans

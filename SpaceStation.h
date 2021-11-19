@@ -10,7 +10,7 @@ using namespace std;
 class SpaceStation : public Station
 {
     public:
-        SpaceStation(Cargo* c);
+        SpaceStation();
         ~SpaceStation();
         void receiveCargo(Cargo* c);
         void receiveCommunication(string s);
