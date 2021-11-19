@@ -6,10 +6,6 @@
 
 class Director
 {
-private:
-    Work **command;
-    LaunchCaretaker **LaunchCaretakers;
-
 public:
     Director();
     ~Director();
@@ -19,6 +15,9 @@ public:
     bool createBackup();
     bool retrieveBackup();
     bool startTestLaunch();
+private:
+    Work **command;
+    LaunchCaretaker **LaunchCaretakers;
 };
 
 #endif
