@@ -9,9 +9,9 @@ class LaunchReal {
 private:
     Rocketship* ship;
 public:
-	LaunchReal();
+	LaunchReal(Rocketship*);
 	~LaunchReal();
-    void startLaunch();
+    virtual void startLaunch();
 };
 
 #endif
