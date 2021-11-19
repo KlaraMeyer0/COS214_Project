@@ -8,10 +8,13 @@ using namespace std;
 
 class Backup : public Work{
 public:
-	Backup();
+	Backup(LaunchInterface*);
     ~Backup();
     void execute();
     void undo();
+    void setInterface(LaunchInterface*);
+private:
+    LaunchInterface* interface;
 };
 
 #endif

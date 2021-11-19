@@ -17,6 +17,7 @@ public:
 	void setFile(LaunchFile* newfile);
 	string getDesc(int i);
 	void removeFile(int i);
+	bool contains(LaunchFile*);
 };
 
 #endif

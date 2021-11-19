@@ -4,13 +4,13 @@ void LaunchInterface::setLaunchFile(LaunchFile* file){//sets the given Launchfil
     rocketCount = file->getCount();
     rocketships = file->getLaunch();
 }
-LaunchFile* LaunchInterface::retieveLaunchFile(){//create backup Launchfile for current selection of rockets
+LaunchFile* LaunchInterface::retrieveLaunchFile(){//create backup Launchfile for current selection of rockets
     LaunchFile* f = new LaunchFile();
     //make deepcopy of current rocket array
     Rocketship** r = new Rocketship*[rocketCount];
     for (int i = 0; i < rocketCount; i++)
         r[i] = rocketships[i]->clone();
-    f->setLaunch(r,rocketCount);//put deepcopy here
+    f->setLaunch(r,rocketCount);
     return f;
 }
 LaunchInterface::LaunchInterface(){
@@ -29,4 +29,12 @@ void LaunchInterface::addRocketship(Rocketship* r){
     rocketCount++;
     Rocketship** rs = new Rocketship*[rocketCount];
     rs[rocketCount-1] = r;
+}
+void LaunchInterface::storeFile(LaunchFile* f){
+    if (!launchCaretaker->contains(f)){
+        launchCaretaker->setFile(f);
+    }
+}
+void LaunchInterface::getFile(){
+    
 }
