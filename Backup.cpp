@@ -7,5 +7,5 @@ void Backup::execute(){
     interface->storeFile();
 }
 void Backup::undo(){
-
+    interface->restoreFile();
 }
