@@ -12,11 +12,10 @@ using namespace std;
 	~StarlinkCollection();
     void Launch();
 
-    //Luca -> Klara is this for your iterator ?
-    StarlinkCollection(int, int, int);
+
     SatelliteIterator* begin();
     SatelliteIterator* end();
-    //
+    
     Rocketship* clone();
     StarlinkSatellite* getFirstSat();
 

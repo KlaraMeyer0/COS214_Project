@@ -6,19 +6,19 @@ using namespace std;
 #include <vector>
 #include "StarlinkSatellite.h"
 #include "Station.h"
+#include "map"
 
 class CommunicationRelay {
 private:
-    vector<bool> SatStatus;
-    //vector<> logs;
-    int size;
-    vector<Station*> RelayTo;
-    vector<Station*> RelayTo2;
+    map<int ,bool> SatStatus;
+    Station* RelayTo;
+    vector<StarlinkSatellite*> satellites;
+    int numSats;
 public:
-	CommunicationRelay();
+	CommunicationRelay(Station*,int);
 	~CommunicationRelay();
-    void notify(StarlinkSatellite*, int);
-    void addRelay(Station*);
+    void notify(StarlinkSatellite*);
+    void addSatellite(StarlinkSatellite*);
 };
 
 #endif

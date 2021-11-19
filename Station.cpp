@@ -34,3 +34,7 @@ void Station::receiveCommunication(string com)
         else
             cout << "Communication did not reach the station." << endl;
 }
+
+void Station:: updateStatus(StarlinkSatellite* obj){
+    SatStatus[obj->getName()]=obj->getStatus();
+}

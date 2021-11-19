@@ -4,6 +4,8 @@
 using namespace std;
 
 #include "Cargo.h"
+#include "StarlinkSatellite.h"
+#include <map>
 
 class Station
 {
@@ -13,8 +15,10 @@ class Station
         void add(Station* stat);
         virtual void receiveCargo(Cargo* c);
         virtual void receiveCommunication(string com);
+        void updateStatus(StarlinkSatellite*);
     private:
         Station* next;
+        map<int ,bool> SatStatus;
 };
 
 #endif
