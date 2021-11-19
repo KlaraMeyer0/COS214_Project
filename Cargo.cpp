@@ -8,3 +8,8 @@ string Cargo::getName()
 {
     return name;
 }
+
+bool Cargo::isHuman()
+{
+    return human;
+}

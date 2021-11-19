@@ -8,10 +8,12 @@ using namespace std;
 class Cargo {
 private:
     string name;
+    bool human;
 public:
 	Cargo(string);
 	~Cargo();
     string getName();
+    bool isHuman();
 };
 
 #endif
