@@ -12,7 +12,6 @@ using namespace std;
 
 class StarlinkCollection : public Rocketship {
 public:
-	StarlinkCollection(int, int, int);
     StarlinkCollection(string name); //Talk to me ~ Xander
 	~StarlinkCollection();
     void Launch();

@@ -3,7 +3,11 @@
 
 #include "SatelliteManager.h"
 
-SatelliteManager::SatelliteManager() {} //if you paramaterise constructor edit ManagerFactory.cpp creation of SatelliteManager
+SatelliteManager::SatelliteManager(){
+    //Note to self: implement constructor of this
+    //CommunicationRelay* relay1 = new 
+    //proto1= new StarlinkSatellite("BaseStation")
+} 
 
 SatelliteManager::~SatelliteManager() {}
 
