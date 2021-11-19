@@ -1,4 +1,4 @@
-
+#include <iostream>
 
 using namespace std;
 
@@ -23,10 +23,14 @@ void Station::receiveCargo(Cargo *c)
         if (next)
             next->receiveCargo(c);
         else
-            cout <<
+            cout << "Cargo " << c->getName() << " cannot be delivered."<< endl;
 }
 
 void Station::receiveCommunication(string com)
 {
-
+    if (!com.empty())
+        if (next)
+            next->receiveCommunication(com);
+        else
+            cout << "Communication did not reach the station." << endl;
 }
