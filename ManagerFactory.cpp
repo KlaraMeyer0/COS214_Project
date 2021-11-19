@@ -3,7 +3,7 @@
 ManagerFactory::ManagerFactory() {}
 ManagerFactory::~ManagerFactory() {}
 
-Satellite *ManagerFactory::createSatellite()
+PointOfCommunication *ManagerFactory::createSatellite()
 {
     return new SatelliteManager();
 }

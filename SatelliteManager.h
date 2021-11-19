@@ -1,7 +1,7 @@
 #ifndef SATELLITEMANAGER_H
 #define SATELLITEMANAGER_H
 #include "StarlinkSatellite.h"
-#include "Satellite.h"
+#include "PointOfCommunication.h"
 #include <vector>
 using namespace std;
 

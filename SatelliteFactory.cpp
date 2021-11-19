@@ -3,7 +3,7 @@
 SatelliteFactory::SatelliteFactory() {}
 SatelliteFactory::~SatelliteFactory() {}
 
-Satellite *SatelliteFactory::startFactory()
+PointOfCommunication *SatelliteFactory::startFactory()
 {
     return createSatellite();
 }

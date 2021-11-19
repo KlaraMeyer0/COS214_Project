@@ -1,6 +1,6 @@
 #ifndef SATELLITE_CPP
 #define SATELLITE_CPP
-#include "Satellite.h"
+#include "PointOfCommunication.h"
 using namespace std;
 
 Satellite::Satellite(int name){

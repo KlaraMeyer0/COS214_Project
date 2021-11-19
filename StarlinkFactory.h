@@ -11,7 +11,7 @@ public:
 	StarlinkFactory();
 	~StarlinkFactory();
 protected:
-    Satellite* createSatellite();
+    PointOfCommunication* createSatellite();
 };
 
 #endif

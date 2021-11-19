@@ -1,16 +1,16 @@
 #ifndef SATELLITEFACTORY_H
 #define SATELLITEFACTORY_H
 
-#include "Satellite.h"
+#include "PointOfCommunication.h"
 
 class SatelliteFactory
 {
 public:
     SatelliteFactory();
     ~SatelliteFactory();
-    Satellite *startFactory();
+    PointOfCommunication *startFactory();
 protected:
-    virtual Satellite *createSatellite() = 0;
+    virtual PointOfCommunication *createSatellite() = 0;
 };
 
 #endif

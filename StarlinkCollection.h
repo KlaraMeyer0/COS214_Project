@@ -19,10 +19,10 @@ public:
     SatelliteIterator* begin();
     SatelliteIterator* end();
     Rocketship* clone();
-    Satellite* getFirstSat();
+    StarlinkSatellite* getFirstSat();
 private:
     FalconRocket* rocket;
-    vector<Satellite*> satellites;
+    vector<StarlinkSatellite*>* satellites;
     int numSatellites;
     SatelliteManager* satelitteCreator;
     int num_G;

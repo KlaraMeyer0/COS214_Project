@@ -9,7 +9,7 @@ public:
 	ManagerFactory();
 	~ManagerFactory();
 protected:
-    Satellite* createSatellite();
+    PointOfCommunication* createSatellite();
 };
 
 #endif
