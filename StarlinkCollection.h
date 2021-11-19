@@ -20,10 +20,12 @@ private:
     int num_O;
 public:
 	StarlinkCollection(int, int, int);
+    StarlinkCollection(string name); //Talk to me ~ Xander
 	~StarlinkCollection();
     void Launch();
     SatelliteIterator* begin();
     SatelliteIterator* end();
+    Rocketship* clone();
 };
 
 #endif
