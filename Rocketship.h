@@ -3,11 +3,17 @@
 
 using namespace std;
 
-class Rocketship {
+class Rocketship
+{
 public:
 	Rocketship();
 	~Rocketship();
-    virtual void Launch() = 0;
+	virtual void Launch() = 0;
+	virtual Rocketship *clone() = 0;
+	string getName() { return name; };
+
+private:
+	string name;
 };
 
 #endif
