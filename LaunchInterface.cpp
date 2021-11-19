@@ -13,3 +13,18 @@ LaunchFile* LaunchInterface::retieveLaunchFile(){//create backup Launchfile for 
     f->setLaunch(r,rocketCount);//put deepcopy here
     return f;
 }
+LaunchInterface::LaunchInterface(){
+    launchCaretaker = new LaunchCaretaker();
+}
+LaunchInterface::~LaunchInterface(){
+    delete launchCaretaker;
+    for (int i = 0; i < rocketCount; i++)
+        delete rocketships[i];
+    delete rocketships;
+}
+void LaunchInterface::TestLaunch(){
+
+}
+void LaunchInterface::addRocketship(Rocketship* r){
+    
+}
