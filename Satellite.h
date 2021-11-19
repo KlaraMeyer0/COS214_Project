@@ -4,9 +4,12 @@
 using namespace std;
 
 class Satellite {
-public:
-	Satellite();
-	~Satellite();
+    public:
+	    Satellite(int);
+	    ~Satellite();
+    private:
+        int name;
+        bool status;
 };
 
 #endif

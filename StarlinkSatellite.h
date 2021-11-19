@@ -1,14 +1,12 @@
 #ifndef STARLINKSATELLITE_H
 #define STARLINKSATELLITE_H
-
-using namespace std;
-
 #include "Satellite.h"
-#include "Station.h"
 #include "CommunicationRelay.h"
 #include <string>
+using namespace std;
 
-class StarlinkSatellite : public Satellite, public Station {
+
+class StarlinkSatellite : public Satellite{
 public:
 	StarlinkSatellite(string, CommunicationRelay*);//talk to me (Xander) when you are done/starting with this such that I can update the Factory Method
 	~StarlinkSatellite();
@@ -18,12 +16,10 @@ public:
     StarlinkSatellite* clone();
     void setName(int);
 private:
-    bool status;
     CommunicationRelay* relay;
     string communicatesWith;
     StarlinkSatellite* next;
     StarlinkSatellite* previous;
-    int name;
 };
 
 #endif

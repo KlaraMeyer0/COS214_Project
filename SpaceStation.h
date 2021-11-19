@@ -5,13 +5,13 @@ using namespace std;
 
 #include "Station.h"
 
-class BaseStation : public Station
+class SpaceStaion : public Station
 {
     private:
         Cargo* cargo;
     public:
         SpaceStaion(Cargo* c);
-        ~SpaceStation();
+        ~SpaceStaion();
         void receiveCargo(Cargo* c);
         void receiveCommunication(string s);
 };

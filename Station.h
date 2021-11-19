@@ -1,19 +1,20 @@
 #ifndef STATION_H
 #define STATION_H
-
+#include "Satellite.h"
+#include "Cargo.h"
+#include <string>
 using namespace std;
 
-#include "Cargo.h"
 
-class Station {
-private:
-    Station* next;
-public:
-    Station();
-    ~Station();
-    void add(Station* stat);
-    virtual void receiveCargo(Cargo* c);
-    virtual void receiveCommunication(string com);
-};
+class Station : public Satellite{
+    private:
+        Station* next;
+    public:
+        Station();
+        ~Station();
+        void add(Station* stat);
+        virtual void receiveCargo(Cargo* c);
+        virtual void receiveCommunication(string com);
+    };
 
 #endif
