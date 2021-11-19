@@ -4,11 +4,13 @@
 using namespace std;
 
 #include "StarlinkSatellite.h"
+#include "StarlinkCollection.h"
 
 class SatelliteIterator
 {
     public:
         SatelliteIterator(StarlinkSatellite* sat);
+        SatelliteIterator(StarlinkCollection* satCol, StarlinkSatellite* sat);
         ~SatelliteIterator();
         StarlinkSatellite* next();
         StarlinkSatellite* currentSatellite();
