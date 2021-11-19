@@ -23,7 +23,7 @@ void Station::receiveCargo(Cargo *c)
         if (next)
             next->receiveCargo(c);
         else
-            cout << "Cargo " << c->getName() << " cannot be delivered."<< endl;
+            cout << "Cargo " << c->getName() << " cannot be delivered to the space station."<< endl;
 }
 
 void Station::receiveCommunication(string com)
@@ -32,5 +32,5 @@ void Station::receiveCommunication(string com)
         if (next)
             next->receiveCommunication(com);
         else
-            cout << "Communication did not reach the station." << endl;
+            cout << "Communication did not reach the space station." << endl;
 }
