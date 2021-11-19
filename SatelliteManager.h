@@ -8,12 +8,13 @@ using namespace std;
 #include <vector>
 
 class SatelliteManager : public Satellite {
-private:
-    vector<StarlinkSatellite*>* list;
 public:
 	SatelliteManager();
 	~SatelliteManager();
     vector<StarlinkSatellite*>* getSatellite(int, int);
+    SatelliteManager* clone();
+private:
+    vector<StarlinkSatellite*>* list;
 };
 
 #endif

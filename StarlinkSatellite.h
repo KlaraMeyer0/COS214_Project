@@ -9,13 +9,6 @@ using namespace std;
 #include <string>
 
 class StarlinkSatellite : public Satellite, public Station {
-private:
-    bool status;
-    CommunicationRelay* relay;
-    string communicatesWith;
-    StarlinkSatellite* next;
-    StarlinkSatellite* previous;
-    int name;
 public:
 	StarlinkSatellite(string, CommunicationRelay*);
 	~StarlinkSatellite();
@@ -24,6 +17,13 @@ public:
     bool getStatus();
     StarlinkSatellite* clone();
     void setName(int);
+private:
+    bool status;
+    CommunicationRelay* relay;
+    string communicatesWith;
+    StarlinkSatellite* next;
+    StarlinkSatellite* previous;
+    int name;
 };
 
 #endif
