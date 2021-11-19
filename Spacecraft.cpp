@@ -6,3 +6,8 @@ Spacecraft::Spacecraft(int capacity)
 }
 
 Spacecraft::~Spacecraft() {}
+
+int Spacecraft::getCapacity()
+{
+    return cargoCapacity;
+}

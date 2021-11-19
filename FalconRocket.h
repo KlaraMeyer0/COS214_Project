@@ -15,6 +15,7 @@ public:
 	void attach(StageEngine*);
 	void turnOn();
 	void turnOff();
+	virtual FalconRocket* clone();
 };
 
 #endif

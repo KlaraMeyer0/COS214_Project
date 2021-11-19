@@ -10,6 +10,7 @@ class Falcon9 : public FalconRocket {
 public:
 	Falcon9();
 	~Falcon9();
+	FalconRocket* clone();
 };
 
 #endif

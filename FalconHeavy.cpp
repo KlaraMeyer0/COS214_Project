@@ -5,3 +5,7 @@ FalconHeavy::FalconHeavy() {
 };
 
 FalconHeavy::~FalconHeavy() {};
+
+FalconRocket* FalconHeavy::clone(){
+    return new FalconHeavy();
+}

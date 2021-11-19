@@ -1,7 +1,10 @@
 #include "DragonSpacecraft.h"
 
-DragonSpacecraft::DragonSpacecraft() {}
-
-DragonSpacecraft::DragonSpacecraft(const DragonSpacecraft &obj) {}
+DragonSpacecraft::DragonSpacecraft(int capacity) : Spacecraft(capacity) {}
 
 DragonSpacecraft::~DragonSpacecraft() {}
+
+Spacecraft *DragonSpacecraft::clone()
+{
+    return new DragonSpacecraft(getCapacity());
+}

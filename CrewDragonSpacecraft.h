@@ -7,8 +7,9 @@ using namespace std;
 
 class CrewDragonSpacecraft : public Spacecraft {
 public:
-	CrewDragonSpacecraft();
+	CrewDragonSpacecraft(int capacity);
 	~CrewDragonSpacecraft();
+	Spacecraft* clone();
 };
 
 #endif

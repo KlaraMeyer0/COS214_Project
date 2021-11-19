@@ -5,3 +5,7 @@ Falcon9::Falcon9() {
 };
 
 Falcon9::~Falcon9() {};
+
+FalconRocket* Falcon9::clone(){
+    return new Falcon9();
+}
