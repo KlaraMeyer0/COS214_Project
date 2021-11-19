@@ -8,11 +8,13 @@ using namespace std;
 class LaunchCaretaker {//Memento caretaker
 private:
     LaunchFile* file;
+	string desc;
 public:
 	LaunchCaretaker();
 	~LaunchCaretaker();
 	LaunchFile* getFile();
 	void setFile(LaunchFile* file);
+	string getDesc();
 };
 
 #endif
