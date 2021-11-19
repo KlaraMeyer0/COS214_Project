@@ -7,7 +7,7 @@ Director::Director(LaunchInterface *i)
     command[0] = new CreateDragon();
     command[1] = new CreateCrewDragon();
     command[2] = new CreateStarlink();
-    command[3] = new Backup();
+    command[3] = new Backup(interface);
     command[4] = new TestLaunch();
 }
 Director::~Director()
