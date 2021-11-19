@@ -5,14 +5,15 @@ using namespace std;
 
 #include "Rocketship.h"
 
-class LaunchFile {
+class LaunchFile {//Memento
 private:
     Rocketship** rocketships;
+    int count;
 public:
 	LaunchFile();
 	~LaunchFile();
     Rocketship** getLaunch();
-    void setLaunch(Rocketship** rocketships);
+    void setLaunch(Rocketship** rocketships,int c);
 };
 
 #endif

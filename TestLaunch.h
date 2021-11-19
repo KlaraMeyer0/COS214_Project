@@ -4,8 +4,9 @@
 using namespace std;
 
 #include "Launch.h"
+#include "Work.h"
 
-class TestLaunch {
+class TestLaunch : public Work{//Memento client
 public:
 	TestLaunch();
 	~TestLaunch();

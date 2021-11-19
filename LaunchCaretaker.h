@@ -5,7 +5,7 @@ using namespace std;
 
 #include "LaunchFile.h"
 
-class LaunchCaretaker {
+class LaunchCaretaker {//Memento caretaker
 private:
     LaunchFile* file;
 public:
