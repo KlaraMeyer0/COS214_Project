@@ -5,8 +5,10 @@ using namespace std;
 
 class Spacecraft {
 public:
-	Spacecraft();
+	Spacecraft(int capacity);
 	~Spacecraft();
+private:
+	int cargoCapacity;
 };
 
 #endif

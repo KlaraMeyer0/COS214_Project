@@ -1,5 +1,8 @@
 #include "Spacecraft.h"
 
-Spacecraft::Spacecraft() {};
+Spacecraft::Spacecraft(int capacity)
+{
+    cargoCapacity = capacity;
+}
 
-Spacecraft::~Spacecraft() {};
+Spacecraft::~Spacecraft() {}
