@@ -22,3 +22,5 @@ void BaseStation::receiveCommunication(string s)
 {
     cout << "Communication: " << s << " received at base station." << endl;
 }
+
+// call receiveCargo from another function that calls the factory for human or equipment respectively
