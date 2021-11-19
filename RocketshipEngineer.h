@@ -1,7 +1,9 @@
 #ifndef ROCKETSHIPENGINEER_H
 #define ROCKETSHIPENGINEER_H
 
-#include "RocketShipBay.h"
+#include "StarlinkBay.h"
+#include "DragonBay.h"
+#include "CrewDragonBay.h"
 
 class RocketshipEngineer
 {
