@@ -16,7 +16,7 @@ SatelliteManager *SatelliteManager::clone()
 // BaseStation and num_O sattelites communicating with space station
 vector<StarlinkSatellite *> *getSatellite(int num_B, int num_S)
 {
-    vector<PointOfCommunication*> *ptr = new vector<PointOfCommunication *>();
+    vector<StarlinkSatellite*> *ptr = new vector<StarlinkSatellite *>();
     for(int i=0;i<num_B;++i)
         ptr->push_back(new StarlinkSatellite())
 

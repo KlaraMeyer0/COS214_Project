@@ -5,8 +5,11 @@ using namespace std;
 
 class PointOfCommunication {
     public:
-	    PointOfCommunication(int);
+        PointOfCommunication();    
 	    ~PointOfCommunication();
+        bool getStatus();
+        void setStauts(bool);
+        int getName();
     private:
         int name;
         bool status;

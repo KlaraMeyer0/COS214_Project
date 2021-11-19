@@ -3,18 +3,22 @@
 #include "StarlinkSatellite.h"
 using namespace std;
 
+    StarlinkSatellite:: StarlinkSatellite(string communicatesWith, CommunicationRelay* obj):
+        PointOfCommunication(){
+        
+        this->communicatesWith = communicatesWith;
+        relay = obj;
+    }
 
-	StarlinkSatellite(string, CommunicationRelay*);//talk to me (Xander) when you are done/starting with this such that I can update the Factory Method
-	~StarlinkSatellite();
-    void setStatus();
-    string getCommunicatesWith();
-    bool getStatus();
-    StarlinkSatellite* clone();
-    void setName(int);
+	StarlinkSatellite::~StarlinkSatellite(){
+    }
+    
+    string StarlinkSatellite:: getCommunicatesWith(){
+        return communicatesWith;
+    }
 
-    CommunicationRelay* relay;
-    string communicatesWith;
-    StarlinkSatellite* next;
-    StarlinkSatellite* previous;
+    StarlinkSatellite* StarlinkSatellite:: clone(){
+        return new StarlinkSatellite(communicatesWith,relay);
+    }
 
 #endif
