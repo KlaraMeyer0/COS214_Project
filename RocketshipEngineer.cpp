@@ -1,18 +1,18 @@
 #include "RocketshipEngineer.h"
 
-RocketshipEngineer::RocketshipEngineer()
+RocketshipEngineer::RocketshipEngineer(CrewDragonBay *cd, DragonBay *d, StarlinkBay *s)
 {
     rb = new RocketshipBay *[3];
-    rb[0] = new StarlinkBay();
-    rb[1] = new CrewDragonBay();
-    rb[2] = new DragonBay();
+    rb[0] = cd;
+    rb[1] = d;
+    rb[2] = s;
 }
 
 RocketshipEngineer::~RocketshipEngineer()
 {
     for (int i = 0; i < 3; i++)
-        delete rb[i];
-    delete[] rb;
+        rb[i] = nullptr;
+    rb = nullptr;
 }
 
 void RocketshipEngineer::construct(int bay, string name)

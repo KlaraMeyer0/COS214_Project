@@ -8,9 +8,9 @@
 class RocketshipEngineer
 {
 public:
-	RocketshipEngineer();
+	RocketshipEngineer(CrewDragonBay *cd, DragonBay *d, StarlinkBay *s);
 	~RocketshipEngineer();
-	void construct(int bay,string name);
+	void construct(int bay, string name);
 
 private:
 	RocketshipBay **rb;
