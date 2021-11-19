@@ -8,8 +8,10 @@ using namespace std;
 class LaunchTest : public Launch {
 public:
 	LaunchTest();
-	~LaunchTest();
+	virtual ~LaunchTest();
+	virtual void add(Launch*) = 0;
     virtual void output() = 0;
+	virtual void startLaunch() = 0;
 };
 
 #endif
