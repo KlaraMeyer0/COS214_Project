@@ -26,5 +26,7 @@ void LaunchInterface::TestLaunch(){
 
 }
 void LaunchInterface::addRocketship(Rocketship* r){
-    
+    rocketCount++;
+    Rocketship** rs = new Rocketship*[rocketCount];
+    rs[rocketCount-1] = r;
 }
