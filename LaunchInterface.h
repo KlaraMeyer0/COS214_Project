@@ -8,10 +8,11 @@ using namespace std;
 #include "TestLaunch.h"
 #include "LaunchFile.h"
 
-class LaunchInterface {
+class LaunchInterface {//Memento Originator
 private:
     Rocketship** rocketships;
 	LaunchCaretaker** launchCaretakers;
+	int rocketCount;//added to help with deleting
 public:
 	LaunchInterface();
 	~LaunchInterface();
