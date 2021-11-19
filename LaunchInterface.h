@@ -12,10 +12,12 @@ class LaunchInterface {//Memento Originator
 public:
 	LaunchInterface();
 	~LaunchInterface();
-	LaunchFile* retieveLaunchFile();
+	LaunchFile* retrieveLaunchFile();
 	void setLaunchFile(LaunchFile*);
 	void TestLaunch();
 	void addRocketship(Rocketship*);
+	void storeFile();
+	void restoreFile();
 private:
     Rocketship** rocketships;
 	LaunchCaretaker* launchCaretaker;

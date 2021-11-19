@@ -15,9 +15,12 @@ public:
     bool getStatus();
     StarlinkSatellite* clone();
     void setName(int);
+    StarlinkSatellite* next;
+    StarlinkSatellite* previous;
 private:
     CommunicationRelay* relay;
     string communicatesWith;
+
     StarlinkSatellite* next;
     StarlinkSatellite* previous;
 };

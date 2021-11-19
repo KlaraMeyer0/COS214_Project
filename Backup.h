@@ -3,15 +3,16 @@
 
 using namespace std;
 
-#include "LaunchInterface.h"
 #include "Work.h"
 
 class Backup : public Work{
 public:
-	Backup();
+	Backup(LaunchInterface*);
     ~Backup();
     void execute();
     void undo();
+private:
+    LaunchInterface* interface;
 };
 
 #endif

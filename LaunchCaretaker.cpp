@@ -48,3 +48,9 @@ void LaunchCaretaker::removeFile(int i){
     file = f;
     desc = ss;
 }
+bool LaunchCaretaker::contains(LaunchFile* f){
+    for (int i = 0; i < FileSize; i++){
+        if (f == file[i]) return true;
+    }
+    return false;
+}
