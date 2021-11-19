@@ -35,6 +35,56 @@ void LaunchInterface::storeFile(){//store current file into Caretaker
     if (!launchCaretaker->contains(f))
         launchCaretaker->setFile(f);
 }
-void LaunchInterface::restoreFile(){//return description
-    
+void LaunchInterface::outputDesc(){
+    //output all descriptions
+    for (int i = 0; i < rocketCount; i++)
+        cout<<i<<endl<<launchCaretaker->getDesc(i)<<endl;
+}
+void LaunchInterface::restoreFile(){
+    //check if current setup is backed up
+    if (!launchCaretaker->contains(rocketships)) {
+        bool flag = false;
+        do{
+            cout<<"Do you want to make a backup of the current launch arrangement before overwriting? (input y/n)"<<endl;
+            string s;
+            cin>>s;
+            if (s == "y") {
+                storeFile();
+                flag = false;
+                }
+            if (s == "n") flag = false;
+            else {
+                cout<<"Please input y or n only."<<endl;
+                flag = true;
+            }
+        } while (flag);
+    }
+    outputDesc();
+    //allow a number to be inputted determining which file to load
+    bool flag = false;
+    int t;
+    do {
+        cout<<"Input the number of which file to load, d to output the descriptions again, or q to cancel the overwrite"<<endl;
+        string n;
+        cin>>n;
+        if (n == "q"){
+            cout<<"Cancelling..."<<endl;
+            return;
+        }
+        if (n == "d"){
+            outputDesc();
+            flag = true;
+            continue;
+        }
+        stringstream ss;
+        ss<<n;
+        ss>>t;
+        if (t == NULL) flag = true;
+        if (t >= launchCaretaker->getSize() || t < 0){
+            cout<<"The number is out of the range!"<<endl;
+            flag = true;
+        } else flag = false;
+    } while (flag);
+    //load file
+    setLaunchFile(launchCaretaker->getFile(t));
 }
