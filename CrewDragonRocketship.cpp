@@ -1,14 +1,13 @@
-#include "DragonRocketship.h"
+#include "CrewDragonRocketship.h"
 
-DragonRocketship::DragonRocketship(string n) : Rocketship(n)
+CrewDragonRocketship::CrewDragonRocketship(string n) : Rocketship(n)
 {
-
     cargo = nullptr;
     spacecraft = nullptr;
     rocket = nullptr;
 }
 
-DragonRocketship::~DragonRocketship()
+CrewDragonRocketship::~CrewDragonRocketship()
 {
     if (cargo != nullptr)
     {
@@ -19,26 +18,26 @@ DragonRocketship::~DragonRocketship()
     }
 }
 
-void DragonRocketship::Launch() {}
+void CrewDragonRocketship::Launch() {}
 
-Rocketship *DragonRocketship::clone()
+Rocketship *CrewDragonRocketship::clone()
 {
-    DragonRocketship *temp = new DragonRocketship(this->getName());
+    CrewDragonRocketship *temp = new CrewDragonRocketship(this->getName());
     temp->spacecraft = (this->spacecraft)->clone();
     temp->rocket = (this->rocket)->clone();
 }
 
-void DragonRocketship::attachSpacecraft(Spacecraft *s)
+void CrewDragonRocketship::attachSpacecraft(Spacecraft *s)
 {
     spacecraft = s;
 }
 
-void DragonRocketship::attachRocket(FalconRocket *r)
+void CrewDragonRocketship::attachRocket(FalconRocket *r)
 {
     rocket = r;
 }
 
-void DragonRocketship::attachCargo(Cargo **c, int size)
+void CrewDragonRocketship::attachCargo(Cargo **c, int size)
 {
     cargo = new Cargo *[spacecraft->getCapacity()];
     int toFill = size;
@@ -51,7 +50,7 @@ void DragonRocketship::attachCargo(Cargo **c, int size)
         cargo[i] = c[i];
 }
 
-Cargo *DragonRocketship::dropCargo()
+Cargo *CrewDragonRocketship::dropCargo()
 {
     cout << "Implement dropCargo" << endl;
 }

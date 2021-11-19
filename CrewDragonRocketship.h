@@ -8,15 +8,22 @@ using namespace std;
 #include "Cargo.h"
 #include "Spacecraft.h"
 
-class DragonRocketship : public Rocketship {
-private:
-    Cargo* cargo;
-    Spacecraft* spacecraft;
-    FalconHeavy* rocket;
+class CrewDragonRocketship : public Rocketship
+{
 public:
-	DragonRocketship();
-	~DragonRocketship();
+    CrewDragonRocketship(string n);
+    ~CrewDragonRocketship();
     void Launch();
+    Rocketship *clone();
+    void attachSpacecraft(Spacecraft *s);
+    void attachRocket(FalconRocket *r);
+    void attachCargo(Cargo **c, int size);
+    Cargo *dropCargo();
+
+private:
+    Cargo **cargo;
+    Spacecraft *spacecraft;
+    FalconRocket *rocket;
 };
 
 #endif

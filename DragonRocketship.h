@@ -11,14 +11,14 @@ using namespace std;
 class DragonRocketship : public Rocketship
 {
 public:
-    DragonRocketship();
+    DragonRocketship(string n);
     ~DragonRocketship();
     void Launch();
     Rocketship *clone();
     void attachSpacecraft(Spacecraft *s);
     void attachRocket(FalconRocket *r);
     void attachCargo(Cargo **c, int size);
-    Cargo *dropCargo();
+    Cargo *dropCargo(); // might change -->drops cargo at SpaceStation
 
 private:
     Cargo **cargo;
