@@ -2,7 +2,7 @@
 #define DIRECTOR_H
 
 #include "Work.h"
-#include "LaunchCaretaker.h"
+#include "LaunchInterface.h"
 
 class Director
 {
@@ -17,7 +17,7 @@ public:
     bool startTestLaunch();
 private:
     Work **command;
-    LaunchCaretaker **LaunchCaretakers;
+    LaunchInterface* interface;
 };
 
 #endif
