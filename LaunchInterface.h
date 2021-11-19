@@ -9,10 +9,6 @@ using namespace std;
 #include "LaunchFile.h"
 
 class LaunchInterface {//Memento Originator
-private:
-    Rocketship** rocketships;
-	LaunchCaretaker* launchCaretaker;
-	int rocketCount;//added to help with deleting
 public:
 	LaunchInterface();
 	~LaunchInterface();
@@ -20,6 +16,10 @@ public:
 	void setLaunchFile(LaunchFile*);
 	void TestLaunch();
 	void addRocketship(Rocketship*);
+private:
+    Rocketship** rocketships;
+	LaunchCaretaker* launchCaretaker;
+	int rocketCount;//added to help with deleting
 };
 
 #endif
