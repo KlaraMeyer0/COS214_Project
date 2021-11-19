@@ -1,6 +1,6 @@
 #include "Cargo.h"
 
-Cargo::Cargo(string n) : name(n) {};
+Cargo::Cargo(string n, bool h) : name(n) {};
 
 Cargo::~Cargo() {};
 

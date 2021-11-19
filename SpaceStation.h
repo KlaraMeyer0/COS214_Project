@@ -15,7 +15,7 @@ class SpaceStation : public Station
         void receiveCargo(Cargo* c);
         void receiveCommunication(string s);
     private:
-        vector<Cargo*> cargo;
+        vector<Cargo*> equipment;
         vector<Cargo*> humans;
 };
 

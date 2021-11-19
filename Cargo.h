@@ -10,7 +10,7 @@ private:
     string name;
     bool human;
 public:
-	Cargo(string);
+	Cargo(string, bool h);
 	~Cargo();
     string getName();
     bool isHuman();
