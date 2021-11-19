@@ -12,7 +12,6 @@ public:
     ~Backup();
     void execute();
     void undo();
-    void setInterface(LaunchInterface*);
 private:
     LaunchInterface* interface;
 };
