@@ -18,5 +18,5 @@ void SpaceStation::receiveCargo(Cargo *c)
 
 void SpaceStation::receiveCommunication(string s)
 {
-    cout << "Communication: " << s << " received at base station." << endl;
+    cout << "Communication: " << s << " received at space station." << endl;
 }
