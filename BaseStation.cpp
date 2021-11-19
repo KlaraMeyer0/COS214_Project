@@ -1,4 +1,4 @@
-
+#include <iostream>
 
 using namespace std;
 
@@ -14,6 +14,8 @@ void BaseStation::receiveCargo(Cargo *c)
         humans.push_back(c);
     else
         equipment.push_back(c);
+
+    cout << c->getName() << " has arrived at the base station." << endl;
 }
 
 void BaseStation::receiveCommunication(string s)

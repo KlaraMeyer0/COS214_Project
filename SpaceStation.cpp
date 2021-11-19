@@ -14,6 +14,8 @@ void SpaceStation::receiveCargo(Cargo *c)
         humans.push_back(c);
     else
         equipment.push_back(c);
+
+    cout << c->getName() << " has arrived at the space station." << endl;
 }
 
 void SpaceStation::receiveCommunication(string s)
