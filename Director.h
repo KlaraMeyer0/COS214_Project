@@ -26,6 +26,9 @@ private:
     Work **command;
     LaunchInterface *interface;
     RocketshipEngineer *engineer;
+    CrewDragonBay *crewdragon_Bay;
+    DragonBay *dragon_Bay;
+    StarlinkBay *starlink_Bay;
 };
 
 #endif
