@@ -7,14 +7,16 @@ using namespace std;
 
 class LaunchCaretaker {//Memento caretaker
 private:
-    LaunchFile* file;
-	string desc;
+    LaunchFile** file;
+	string* desc;
+	int FileSize;
 public:
 	LaunchCaretaker();
 	~LaunchCaretaker();
-	LaunchFile* getFile();
-	void setFile(LaunchFile* file);
-	string getDesc();
+	LaunchFile* getFile(int i);
+	void setFile(LaunchFile* newfile);
+	string getDesc(int i);
+	void removeFile(int i);
 };
 
 #endif

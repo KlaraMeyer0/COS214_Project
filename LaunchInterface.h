@@ -11,7 +11,7 @@ using namespace std;
 class LaunchInterface {//Memento Originator
 private:
     Rocketship** rocketships;
-	LaunchCaretaker** launchCaretakers;
+	LaunchCaretaker* launchCaretakers;
 	int rocketCount;//added to help with deleting
 public:
 	LaunchInterface();
