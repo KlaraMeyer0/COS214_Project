@@ -4,7 +4,10 @@ using namespace std;
 
 #include "BaseStation.h"
 
-BaseStation::BaseStation() : Station() {}
+BaseStation::BaseStation() : Station()
+{
+    name = "Base Station";
+}
 
 BaseStation::~BaseStation() {}
 
@@ -30,3 +33,31 @@ void BaseStation::receiveCommunication(string s)
 }
 
 // call receiveCargo from another function that calls the factory for human or equipment respectively
+void BaseStation::printEquipment()
+{
+    for (int i = 0; i < equipment.size(); i++)
+        cout << "Index: " << i << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
+}
+
+void BaseStation::printHumans()
+{
+    for (int i = 0; i < humans.size(); i++)
+        cout << "index: " << i << " Name: " << humans.at(i) << endl;
+}
+
+pair<Cargo *, int> *BaseStation::loadCargo(int idx)
+{
+    pair<Cargo*, int> * p;
+    p->first = equipment.at(idx).first;
+    p->second = equipment.at(idx).second;
+    equipment.erase(equipment.begin() + idx);
+
+    return p;
+}
+
+Cargo *BaseStation::loadHumans(int idx)
+{
+    Cargo* h = humans.at(idx);
+    humans.erase(humans.begin() + idx);
+    return h;
+}

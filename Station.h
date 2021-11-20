@@ -17,14 +17,20 @@ class Station
         void add(Station* stat);
         virtual void receiveCargo(Cargo* c);
         virtual void receiveCommunication(string com);
+        virtual void printEquipment() = 0;
+        virtual void printHumans() = 0;
+        virtual pair<Cargo*, int>* loadCargo(int idx) = 0;
+        virtual Cargo* loadHumans(int idx) = 0;
 
         //used to update Space station of any changes to the StarlinkSatellites
         void updateStatus(StarlinkSatellite*);
+        string name;
     private:
         Station* next;
 
         //Holds information on each StatlinkSatellite associated with it
         map<int ,bool> SatStatus;
+
 };
 
 #endif

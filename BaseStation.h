@@ -17,8 +17,7 @@ public:
     void printEquipment();
     void printHumans();
     pair<Cargo*, int>* loadCargo(int idx);
-    Cargo*
-
+    Cargo* loadHumans(int idx);
 
 private:
     vector<pair<Cargo *, int>> equipment;
