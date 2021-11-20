@@ -34,20 +34,29 @@ void SpaceStation::receiveCommunication(string s)
 
 void SpaceStation::printEquipment()
 {
-
+    for (int i = 0; i < equipment.size(); i++)
+        cout << "Index: " << i << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
 }
 
 void SpaceStation::printHumans()
 {
-
+    for (int i = 0; i < humans.size(); i++)
+        cout << "index: " << i << " Name: " << humans.at(i) << endl;
 }
 
 pair<Cargo *, int> *SpaceStation::loadCargo(int idx)
 {
-    return nullptr;
+    pair<Cargo*, int> * p;
+    p->first = equipment.at(idx).first;
+    p->second = equipment.at(idx).second;
+    equipment.erase(equipment.begin() + idx);
+
+    return p;
 }
 
 Cargo *SpaceStation::loadHumans(int idx)
 {
-    return nullptr;
+    Cargo* h = humans.at(idx);
+    humans.erase(humans.begin() + idx);
+    return h;
 }

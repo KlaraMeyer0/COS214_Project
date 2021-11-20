@@ -35,7 +35,6 @@ void DragonBay::buildBody()
 
 void DragonBay::addCargo()
 {
-    dragon->getStation()->
-
-    cout << "LOAD FROM BASE STATION" << endl;
+    cout << "Load from " << dragon->getStation()->name << endl;
+    dragon->getStation()->printEquipment();
 }
