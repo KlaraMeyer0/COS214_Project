@@ -79,6 +79,7 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
         stringstream ss;
         ss<<n;
         ss>>t;
+        ss.clear();
         if (t == NULL) flag = true;
         if (t >= launchCaretaker->getSize() || t < 0){
             cout<<"The number is out of the range!"<<endl;
