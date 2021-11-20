@@ -23,7 +23,7 @@ using namespace std;
     FalconRocket* rocket;
     vector<StarlinkSatellite*>* satellites;
     int numSatellites;
-    SatelliteManager* satelitteCreator;
+    SatelliteManager* satelliteCreator;
     int num_G;
     int num_O;
 
