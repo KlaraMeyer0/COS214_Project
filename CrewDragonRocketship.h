@@ -19,6 +19,7 @@ public:
     void attachCargo(Cargo **c, int size);
     Cargo *dropCargo();
     virtual int getRockets();
+    virtual bool testFire();
 private:
     Cargo **cargo;
     Spacecraft *spacecraft;

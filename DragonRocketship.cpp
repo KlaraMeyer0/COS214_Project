@@ -58,3 +58,9 @@ Cargo *DragonRocketship::dropCargo()
 int DragonRocketship::getRockets(){
     return rocket->getEngine()->EngineCount();
 }
+bool DragonRocketship::testFire(){
+    rocket->turnOn();
+    bool b = rocket->getState();
+    rocket->turnOff();
+    return b;
+}

@@ -5,23 +5,9 @@ EngineFireTest::~EngineFireTest(){}
 void EngineFireTest::output(){
     Rocketship* ship = getShip();
     string res,s;
-    char tp = ship->getType();
     bool test = false;
-    switch (tp){
-    case 'c':
-        
-        break;
-    case 'd':
-        
-        break;
-    case 's':
-        
-        break;
-    default:
-        break;
-    }
     cout<<"Testing if all engines fire correctly..."<<endl;
-    //code to start engine fire and check if all fire
+    test = ship->testFire();//code to start engine fire and check if all fire
     if (test){
         res = "Passed";
         s = "Proceeding to next test...";

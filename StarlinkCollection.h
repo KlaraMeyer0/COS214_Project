@@ -36,6 +36,7 @@ public:
     void setCommunicationRelaySS(CommunicationRelay*);
 
     virtual int getRockets();
+    virtual bool testFire();
 private:
     FalconRocket* rocket;
     int numSatellites;

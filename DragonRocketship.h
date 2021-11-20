@@ -19,6 +19,7 @@ public:
     void attachCargo(Cargo **c, int size);
     Cargo *dropCargo(); // might change -->drops cargo at SpaceStation
     virtual int getRockets();
+    virtual bool testFire();
 private:
     Cargo **cargo;
     Spacecraft *spacecraft;

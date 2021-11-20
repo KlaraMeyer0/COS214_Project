@@ -31,3 +31,6 @@ void HeavyEngine::TurnOff(FalconRocket* r) {
 int HeavyEngine::EngineCount(){
 	return cores[0]->getCount() + cores[1]->getCount() + cores[2]->getCount();
 }
+bool HeavyEngine::getState(){
+	return cores[0]->getState() & cores[1]->getState() & cores[2]->getState();
+}

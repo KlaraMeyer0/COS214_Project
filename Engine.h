@@ -11,6 +11,7 @@ public:
 	~Engine();
 	virtual void TurnOn() = 0; // Turn on the engine
 	virtual void TurnOff() = 0; // Turn off the engine
+	virtual bool getState();
 };
 
 #endif

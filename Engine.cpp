@@ -5,3 +5,6 @@ Engine::Engine() {
 };
 
 Engine::~Engine() {};
+bool Engine::getState(){
+    return On;
+}
