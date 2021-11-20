@@ -10,8 +10,8 @@ class MerlinEngine : public Engine {
 public:
 	MerlinEngine();
 	~MerlinEngine();
-	void TurnOn();
-	void TurnOff();
+	void TurnOn(); // Turn on the engine
+	void TurnOff(); // Turn off the engine
 };
 
 #endif

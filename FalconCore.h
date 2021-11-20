@@ -9,12 +9,12 @@ using namespace std;
 
 class FalconCore : public Engine {
 private:
-	MerlinEngine** merlins;
+	MerlinEngine** merlins; // Array of merlin engines
 public:
 	FalconCore();
 	~FalconCore();
-	void TurnOn();
-	void TurnOff();
+	void TurnOn(); // Turn on the engine
+	void TurnOff(); // Turn off the engine
 };
 
 #endif
