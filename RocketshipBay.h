@@ -2,6 +2,7 @@
 #define ROCKETSHIPBAY_H
 
 using namespace std;
+#include <string>
 
 class RocketshipBay
 {
