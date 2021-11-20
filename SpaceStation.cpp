@@ -70,3 +70,21 @@ Cargo *SpaceStation::loadHumans(int idx)
     humans.erase(humans.begin() + idx);
     return h;
 }
+
+SpaceStation *SpaceStation::clone()
+{
+    SpaceStation* temp = new SpaceStation();
+
+    for (int i = 0; i < equipment.size(); i++)
+    {
+        pair<Cargo*,int> p;
+        p.first = equipment.at(i).first;
+        p.second = equipment.at(i).second;
+        temp->equipment.push_back(p);
+    }
+
+    for (int i = 0; i < humans.size(); i++)
+        temp->humans.push_back(humans.at(i));
+
+    return temp;
+}
