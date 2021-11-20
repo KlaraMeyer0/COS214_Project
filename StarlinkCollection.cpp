@@ -8,9 +8,9 @@ using namespace std;
 StarlinkCollection:: StarlinkCollection(string name): Rocketship(name, 's')
 {
     head = 0;
-    BS = new BaseStation();
-    SS = new SpaceStation();
-
+    
+    //BS and SS set by Xander in CreateStarlink
+    
     //must create the Satelites uisng SatelliteManager
 }
 

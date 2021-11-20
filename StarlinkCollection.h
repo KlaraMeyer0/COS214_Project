@@ -13,8 +13,8 @@ using namespace std;
 
 class StarlinkCollection : public Rocketship {
 public:
-    //Luca->Klara: is this OK ? sets the BaseStation and SpaceStation automatically
-    StarlinkCollection(string name); //Talk to me ~ Xander
+    //Luca->Xander: is this OK ? sets the BaseStation and SpaceStation automatically
+    StarlinkCollection(string name); 
 	
     //deallocates everuthing associated with the StarlinkCollection ,
     //except the : FalconRocket instance
@@ -45,8 +45,8 @@ private:
     StarlinkSatellite* head;
 
     //Created in StarlinkCollection
-    Station* BS;
-    Station* SS;
+    BaseStation* BS;
+    SpaceStation* SS;
 
     //Created and assigned in the SatelliteManager
     CommunicationRelay* relayBS;

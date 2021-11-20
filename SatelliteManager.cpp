@@ -35,7 +35,7 @@ SatelliteManager::~SatelliteManager(){
     SS =NULL;
 }
 
-//Talk To Xander and James for use case, CONTINUE HERE
+//Talk To Xander and James for use case
 SatelliteManager* SatelliteManager::clone(StarlinkCollection* obj)
 {
     BaseStation* BScopy = BS->clone();
