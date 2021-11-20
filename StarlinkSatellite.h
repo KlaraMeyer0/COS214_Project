@@ -1,10 +1,14 @@
 #ifndef STARLINKSATELLITE_H
 #define STARLINKSATELLITE_H
+
+using namespace std;
+
 #include "PointOfCommunication.h"
 #include "CommunicationRelay.h"
 #include <string>
-using namespace std;
 
+
+class CommunicationRelay;
 //Participant: 
 //Colleague in Mediator ,ConcretePrototype in Prototyep Pattern
 //ConcreteAggregate in the Iterator 
