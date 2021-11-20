@@ -75,6 +75,6 @@ StarlinkCollection* StarlinkCollection:: clone(){
     temp->head = temp->satelliteManager->getHead();
 
 }
-FalconRocket* CrewDragonRocketship::getRocket(){
+FalconRocket* StarlinkCollection::getRocket(){
     
 }
