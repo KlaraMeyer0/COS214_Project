@@ -27,3 +27,13 @@ char Rocketship::getType()
 {
     return rocketshipType;
 }
+
+void Rocketship::attachToStation(Station *s)
+{
+    current_Station = s;
+}
+
+Station* Rocketship::getStation()
+{
+    return current_Station;
+}

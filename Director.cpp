@@ -9,9 +9,9 @@ Director::Director(LaunchInterface *i, BaseStation *b)
     starlink_Bay = new StarlinkBay();
     engineer = new RocketshipEngineer(crewdragon_Bay, dragon_Bay, starlink_Bay);
     command = new Work *[5];
-    command[0] = new CreateCrewDragon(engineer, interface, crewdragon_Bay);
-    command[1] = new CreateDragon(engineer, interface, dragon_Bay);
-    command[2] = new CreateStarlink(engineer, interface, starlink_Bay);
+    command[0] = new CreateCrewDragon(engineer, interface, crewdragon_Bay, base_station);
+    command[1] = new CreateDragon(engineer, interface, dragon_Bay, base_station);
+    command[2] = new CreateStarlink(engineer, interface, starlink_Bay, base_station);
     command[3] = new Backup(interface);
     command[4] = new TestLaunch();
     command[5] = new OrderCargo(base_station);

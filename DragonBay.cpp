@@ -17,9 +17,10 @@ DragonRocketship *DragonBay::getRocketship()
     return dragon;
 }
 
-void DragonBay::setName(string n)
+void DragonBay::setName(string n, Station *s)
 {
     dragon = new DragonRocketship(n);
+    dragon->attachToStation(s);
 }
 
 void DragonBay::buildRocket()
@@ -34,6 +35,6 @@ void DragonBay::buildBody()
 
 void DragonBay::addCargo()
 {
-    // use Base station to load cargo ;)
+
     cout << "LOAD FROM BASE STATION" << endl;
 }

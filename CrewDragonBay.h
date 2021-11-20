@@ -12,7 +12,7 @@ public:
 	CrewDragonBay();
 	~CrewDragonBay();
 	CrewDragonRocketship *getRocketship();
-	void setName(string n);
+	void setName(string n, Station *s);
 	void buildRocket();
 	void buildBody();
 	void addCargo();

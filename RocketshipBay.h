@@ -8,7 +8,7 @@ class RocketshipBay
 public:
 	RocketshipBay();
 	~RocketshipBay();
-	virtual void setName(string n) = 0;
+	virtual void setName(string n, Station *s) = 0;
 	virtual void buildRocket() = 0;
 	virtual void buildBody() = 0;
 	virtual void addCargo() = 0;

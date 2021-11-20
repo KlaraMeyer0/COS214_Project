@@ -19,9 +19,10 @@ StarlinkCollection *StarlinkBay::getRocketship()
     return starlink_collection;
 }
 
-void StarlinkBay::setName(string n)
+void StarlinkBay::setName(string n, Station *s)
 {
     starlink_collection = new StarlinkCollection(n);
+    starlink_collection->attachToStation(s);
 }
 
 void StarlinkBay::buildRocket()
@@ -36,5 +37,5 @@ void StarlinkBay::buildBody()
 
 void StarlinkBay::addCargo()
 {
-    starlink_factory->startFactory();
+    starlink_collection->attachHead(starlink_factory->startFactory());
 }

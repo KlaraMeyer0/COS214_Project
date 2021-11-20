@@ -17,9 +17,10 @@ CrewDragonRocketship *CrewDragonBay::getRocketship()
     return crew_dragon;
 }
 
-void CrewDragonBay::setName(string n)
+void CrewDragonBay::setName(string n, Station *s)
 {
     crew_dragon = new CrewDragonRocketship(n);
+    crew_dragon->attachToStation(s);
 }
 
 void CrewDragonBay::buildRocket()
@@ -34,6 +35,5 @@ void CrewDragonBay::buildBody()
 
 void CrewDragonBay::addCargo()
 {
-    // use Base station to load cargo ;)
     cout << "LOAD FROM BASE STATION" << endl;
 }
