@@ -10,15 +10,19 @@ SatelliteIterator::SatelliteIterator(StarlinkCollection *satCol, StarlinkSatelli
 
 SatelliteIterator::~SatelliteIterator() {}
 
-StarlinkSatellite *SatelliteIterator::next() {
+SatelliteIterator SatelliteIterator::next() {
     if (this != nullptr)
     {
         this->current = this->current->next;
     }
+    return *this;
 }
 
 StarlinkSatellite *SatelliteIterator::currentSatellite() {
     return current;
 }
 
-
+bool SatelliteIterator::equals(SatelliteIterator * s)
+{
+    return current == s->current;
+}

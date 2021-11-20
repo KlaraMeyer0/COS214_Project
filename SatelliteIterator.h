@@ -12,8 +12,9 @@ class SatelliteIterator
         SatelliteIterator(StarlinkSatellite* sat);
         SatelliteIterator(StarlinkCollection* satCol, StarlinkSatellite* sat);
         ~SatelliteIterator();
-        StarlinkSatellite* next();
+        SatelliteIterator next();
         StarlinkSatellite* currentSatellite();
+        bool equals(SatelliteIterator*);
     protected:
         StarlinkSatellite* head;
         StarlinkSatellite* current;
