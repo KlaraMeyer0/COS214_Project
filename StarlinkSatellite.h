@@ -17,10 +17,12 @@ public:
 
     //Used by the prototype pattern
     StarlinkSatellite* clone();
+    StarlinkSatellite* cloneExact(string communicatesWith, CommunicationRelay* obj);
 
     //Used in the Iterator Pattern
     StarlinkSatellite* next;
     StarlinkSatellite* previous;
+
 private:
     CommunicationRelay* relay;
     string communicatesWith;

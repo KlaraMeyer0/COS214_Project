@@ -27,4 +27,8 @@ int PointOfCommunication:: getName(){
     return name;
 }
 
+void PointOfCommunication::setName(int name){
+    this->name =name;
+}
+
 #endif

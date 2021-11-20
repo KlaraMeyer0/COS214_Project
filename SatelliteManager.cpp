@@ -3,12 +3,16 @@
 
 #include "SatelliteManager.h"
 
-SatelliteManager::SatelliteManager(Station* BS ,Station* SS){
+SatelliteManager::SatelliteManager(Station* BS ,Station* SS, StarlinkCollection* SC){
     relayBS = new CommunicationRelay(BS);
     relaySS = new CommunicationRelay(SS);
 
     protoBSSatellite= new StarlinkSatellite("BaseStation",relayBS);
     protoSTSatellite= new StarlinkSatellite("SpaceStation",relaySS);
+
+    this->SC =SC;
+
+    head =NULL;
 } 
 
 CommunicationRelay* SatelliteManager:: getCommunicationRelayBS(){
@@ -25,24 +29,35 @@ SatelliteManager::~SatelliteManager(){
     delete protoSTSatellite;
 }
 
-//Talk To Xander and James for use case
-SatelliteManager* SatelliteManager::clone()
+//Talk To Xander and James for use case, CONTINUE HERE
+SatelliteManager* SatelliteManager::clone(StarlinkCollection* obj)
 {
-    SatelliteManager* temp = new SatelliteManager(Station* BS,Station* SS);
+    SatelliteManager* temp = new SatelliteManager(obj->getBaseStation(),obj->getBaseStation(),obj);
+
+    //create a exact copy of the list pointed to by this->head
+
+    //set it to the temp->head
+
 }
 
 // creates a vector of satelites with num_B satallites communicating with
 // BaseStation and num_O sattelites communicating with space station
-vector<StarlinkSatellite *>* SatelliteManager:: getSatellite(int num_B, int num_S)
+void SatelliteManager:: setSatellites(int num_B, int num_S)
 {
-    vector<StarlinkSatellite*> *ptr = new vector<StarlinkSatellite *>();
     for(int i=0;i<num_B+num_S;++i)
         if(i<=num_B)
-            ptr->push_back(protoBSSatellite->clone());
+            if(i==0){
+                head=protoBSSatellite->clone();
+                SC->insert(head);
+            }
+            else
+                SC->insert(protoBSSatellite->clone());           
         else
-            ptr->push_back(protoSTSatellite->clone());
+            SC->insert(protoSTSatellite->clone());
+}
 
-    return ptr;
+StarlinkSatellite* SatelliteManager:: getHead(){
+    return head;
 }
 
 #endif

@@ -10,6 +10,7 @@ class PointOfCommunication {
         bool getStatus();
         void setStauts(bool);
         int getName();
+        void setName(int);
     private:
         int name;
         bool status;

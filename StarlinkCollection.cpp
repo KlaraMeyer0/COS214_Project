@@ -3,10 +3,12 @@
 using namespace std;
 
 #include "StarlinkCollection.h"
-	
+
 StarlinkCollection:: StarlinkCollection(string name): Rocketship(name)
 {
     head = 0;
+    BS = new BaseStation();
+    SS = new SpaceStation();
 }
 
 void StarlinkCollection::insert(StarlinkSatellite * s)
@@ -49,15 +51,26 @@ StarlinkSatellite *StarlinkCollection::remove()
 
 SatelliteIterator *StarlinkCollection::begin()
 {
-    return new SatelliteIterator(*this, head);
+    return new SatelliteIterator(this, head);
 }
 
 SatelliteIterator *StarlinkCollection::end()
 {
-    return new SatelliteIterator(*this, head->previous);
+    return new SatelliteIterator(this, head->previous);
 }
 
 StarlinkSatellite *StarlinkCollection::getFirstSat()
 {
     return head;
+}
+
+StarlinkCollection* StarlinkCollection:: clone(){
+    StarlinkCollection* temp = new StarlinkCollection(this->getName());
+    //Falcon Rocket needs to implemnet a clone method and set to rocket of temp
+    temp->numSatellites = numSatellites;
+    temp->satelliteManager = this->satelliteManager->clone(temp);
+    temp->num_B = num_B;
+    temp->num_S = num_S;
+    temp->head = temp->satelliteManager->getHead();
+
 }

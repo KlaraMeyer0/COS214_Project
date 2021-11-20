@@ -9,6 +9,8 @@ using namespace std;
 #include "FalconRocket.h"
 #include "SatelliteIterator.h"
 #include <vector>
+#include "BaseStation.h"
+#include "SpaceStation.h"
 
 class StarlinkCollection : public Rocketship {
 public:
@@ -24,17 +26,20 @@ public:
     SatelliteIterator* end();
     StarlinkSatellite* getFirstSat();
     
-    Rocketship* clone();
+    StarlinkCollection* clone();
 
-    void CreateStarlinkSatellites(int );
+    Station* getBaseStation();
+    Station* getSpaseStation();
+
 private:
     FalconRocket* rocket;
-    //vector<StarlinkSatellite*>* satellites;
     int numSatellites;
     SatelliteManager* satelliteManager;
-    int num_G;
-    int num_O;
+    int num_B;
+    int num_S;
     StarlinkSatellite* head;
+    Station* BS;
+    Station* SS;
 };
 
 #endif
