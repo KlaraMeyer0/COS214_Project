@@ -16,7 +16,7 @@ class SpaceStation : public Station
         void receiveCommunication(string s);
         void printEquipment();
         void printHumans();
-        pair<Cargo*, int>* loadCargo(int idx);
+        pair<Cargo*, int>* loadEquipment(int idx, int num);
         Cargo* loadHumans(int idx);
 
         //Luca->Klara :Please implement me 

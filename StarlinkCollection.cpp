@@ -92,11 +92,8 @@ StarlinkCollection* StarlinkCollection:: clone(){
     temp->num_B = num_B;
     temp->num_S = num_S;
     temp->head = temp->satelliteManager->getHead();
-
     //BS and SS 
     //BS ,SS ,relayBS and relaySS needs to be set
-
-
 }
 
 StarlinkSatellite* StarlinkCollection:: getHead(){
@@ -109,4 +106,7 @@ void StarlinkCollection::setCommunicationRelayBS(CommunicationRelay* obj){
 
 void StarlinkCollection::setCommunicationRelaySS(CommunicationRelay* obj){
     relaySS =obj;
+}
+
+int StarlinkCollection::getRockets(){
 }

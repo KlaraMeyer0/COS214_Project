@@ -4,7 +4,6 @@
 using namespace std;
 
 #include "Rocketship.h"
-#include "FalconHeavy.h"
 #include "Equipment.h"
 #include "DragonSpacecraft.h"
 
@@ -19,7 +18,7 @@ public:
     void attachRocket(FalconRocket *r);
     void attachCargo(Cargo **c, int size);
     Cargo *dropCargo(); // might change -->drops cargo at SpaceStation
-
+    virtual int getRockets();
 private:
     Cargo **cargo;
     Spacecraft *spacecraft;

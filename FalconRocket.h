@@ -4,6 +4,7 @@
 using namespace std;
 
 #include "StageEngine.h"
+class StageEngine;
 
 class FalconRocket {
 protected:

@@ -6,7 +6,6 @@ using namespace std;
 #include "StarlinkSatellite.h"
 #include "SatelliteManager.h"
 #include "Rocketship.h"
-#include "FalconRocket.h"
 #include "SatelliteIterator.h"
 #include <vector>
 #include "BaseStation.h"
@@ -36,6 +35,7 @@ public:
     void setCommunicationRelayBS(CommunicationRelay*);
     void setCommunicationRelaySS(CommunicationRelay*);
 
+    virtual int getRockets();
 private:
     FalconRocket* rocket;
     int numSatellites;

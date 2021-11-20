@@ -5,6 +5,7 @@ using namespace std;
 
 #include "Launch.h"
 #include <iostream>
+#include <sstream>
 
 class LaunchTest : public Launch {
 public:

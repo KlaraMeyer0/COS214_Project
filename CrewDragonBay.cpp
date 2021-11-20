@@ -35,5 +35,30 @@ void CrewDragonBay::buildBody()
 
 void CrewDragonBay::addCargo()
 {
-    cout << "LOAD FROM BASE STATION" << endl;
+    cout << "Load from " << crew_dragon->getStation()->name << endl;
+
+    bool stop = false;
+    int c, idx;
+    vector<cargo*> tempCargo;
+    while (!stop)
+    {
+        cout << "0: Choose humans to board the rocket" << endl;
+        cout << "1: Exit" << endl;
+        cin >> c;
+
+        if (cin == 0)
+        {
+            crew_dragon->getStation()->printEquipment();
+            cout << "Enter the index of the human to board the rocket: " << endl;
+            cin >> idx;
+
+            Cargo* h = crew_dragon->getStation()->loadHumans(idx);
+            tempCargo.push_back(h);
+
+            cout << h->getName() << "has boarded the rocket." << endl;
+        }
+        else
+            stop = true;
+    }
+    crew_dragon->attachCargo(tempCargo);
 }
