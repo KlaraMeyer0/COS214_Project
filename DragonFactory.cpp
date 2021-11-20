@@ -6,5 +6,5 @@ DragonFactory::~DragonFactory() {}
 
 Spacecraft *DragonFactory::createRocket()
 {
-    return new DragonSpacecraft();
+    return new DragonSpacecraft(50);
 }
