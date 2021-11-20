@@ -5,7 +5,7 @@ using namespace std;
 #include <iostream>
 #include <unistd.h>
 #include "Station.h"
-
+#include "FalconRocket.h"
 
 class Rocketship
 {
@@ -19,7 +19,7 @@ public:
 	char getType();//returns the type of the rocket(DragonRocketship, CrewDragonRocketship or StarlinkCollection)
 	void attachToStation(Station *); //attaches the specefic rocketship to a base or space station
 	Station *getStation(); //returns the station that the rocketship is currently attached to.
-
+	virtual FalconRocket* getRocket() = 0;
 private:
 	string name;
 	char rocketshipType; // s d c
