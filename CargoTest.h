@@ -11,6 +11,7 @@ public:
 	~CargoTest();
     void output();
 	virtual void startLaunch();
+	
 };
 
 #endif

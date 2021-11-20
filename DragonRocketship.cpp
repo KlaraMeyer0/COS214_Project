@@ -1,6 +1,6 @@
 #include "DragonRocketship.h"
 
-DragonRocketship::DragonRocketship(string n) : Rocketship(n)
+DragonRocketship::DragonRocketship(string n) : Rocketship(n,'d')
 {
 
     cargo = nullptr;

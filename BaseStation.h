@@ -9,19 +9,20 @@ using namespace std;
 
 class BaseStation : public Station
 {
-    public:
-        BaseStation();
-        ~BaseStation();
-        void receiveCargo(Cargo* c);
-        void receiveCommunication(string s);
-    private:
-        vector<Cargo*> equipment;
-        vector<Cargo*> humans;
+public:
+    BaseStation();
+    ~BaseStation();
+    void receiveCargo(Cargo *c, int amount);
+    void receiveCommunication(string s);
 
-        //humans arriving at base station: call factory for humans
-        //cargo delivered to base station: call factory for cargo
+private:
+    vector<pair<Cargo *, int>> equipment;
+    vector<Cargo *> humans;
 
-        //add cargo to rockets from here
+    // humans arriving at base station: call factory for humans
+    // cargo delivered to base station: call factory for cargo
+
+    // add cargo to rockets from here
 };
 
 #endif

@@ -18,6 +18,7 @@ void OrderCargo::execute()
     int choice;
     bool valid;
     bool flag;
+    int amount = 0;
     do
     {
         flag = false;
@@ -29,7 +30,6 @@ void OrderCargo::execute()
         cin >> choice;
 
         string cargo_string;
-        int amount;
         switch (choice)
         {
         case 1:
@@ -42,9 +42,10 @@ void OrderCargo::execute()
             cin >> cargo_string;
             cout << "How many " << cargo_string << "s do you want to order: ";
             cin >> amount;
-            while (!cin.good())
+            while (!cin.good() || amount <= 0)
             {
                 cin.clear();
+                cin.ignore(15, '\n');
                 cout << "Please enter a valid number: ";
                 cin >> amount;
             }
@@ -61,7 +62,9 @@ void OrderCargo::execute()
         }
     } while (flag);
     if (valid)
-        base_station->receiveCargo(cargo);
+    {
+        base_station->receiveCargo(cargo, amount);
+    }
 }
 
 void OrderCargo::undo() {}
