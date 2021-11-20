@@ -6,5 +6,6 @@ void EngineFireTest::output(){
 
 }
 void EngineFireTest::startLaunch(){
-    
+    output();
+    l->startLaunch();
 }
