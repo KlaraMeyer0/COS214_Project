@@ -9,6 +9,7 @@
 #include "CreateStarlink.h"
 #include "Backup.h"
 #include "TestLaunch.h"
+#include "CargoCommand.h"
 
 class Director
 {
@@ -21,6 +22,7 @@ public:
     bool createBackup();
     bool retrieveBackup();
     bool startTestLaunch();
+    bool receiveCargo();
 
 private:
     Work **command;

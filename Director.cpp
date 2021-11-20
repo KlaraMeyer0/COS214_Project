@@ -13,11 +13,12 @@ Director::Director(LaunchInterface *i)
     command[2] = new CreateStarlink(engineer, interface, starlink_Bay);
     command[3] = new Backup(interface);
     command[4] = new TestLaunch();
+    command[5] = new CargoCommand();
 }
 Director::~Director()
 {
     delete interface;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i++)
         delete command[i];
     delete[] command;
     delete crewdragon_Bay;
@@ -54,4 +55,9 @@ bool Director::retrieveBackup()
 bool Director::startTestLaunch()
 {
     command[4]->execute();
+}
+
+bool Director::receiveCargo()
+{
+    command[5]->execute();
 }
