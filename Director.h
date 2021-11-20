@@ -14,15 +14,15 @@
 class Director
 {
 public:
-    Director(LaunchInterface *i);
+    Director(LaunchInterface *i, BaseStation *b);
     ~Director();
-    bool makeDragon();
-    bool makeCrewDragon();
-    bool makeStarlink();
-    bool createBackup();
-    bool retrieveBackup();
-    bool startTestLaunch();
-    bool receiveCargo();
+    void makeDragon();
+    void makeCrewDragon();
+    void makeStarlink();
+    void createBackup();
+    void retrieveBackup();
+    void startTestLaunch();
+    void receiveCargo();
 
 private:
     Work **command;
@@ -31,6 +31,7 @@ private:
     CrewDragonBay *crewdragon_Bay;
     DragonBay *dragon_Bay;
     StarlinkBay *starlink_Bay;
+    BaseStation *base_station;
 };
 
 #endif
