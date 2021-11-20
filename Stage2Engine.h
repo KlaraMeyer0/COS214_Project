@@ -9,12 +9,12 @@ using namespace std;
 
 class Stage2Engine : public StageEngine {
 private:
-	VacuumEngine* engine;
+	VacuumEngine* engine; // Variable holding a pointer to the engine
 public:
 	Stage2Engine();
 	~Stage2Engine();
-	void TurnOn(FalconRocket*);
-	void TurnOff(FalconRocket*);
+	void TurnOn(FalconRocket*); // Turn on the engine
+	void TurnOff(FalconRocket*); // Turn off the engine
 };
 
 #endif

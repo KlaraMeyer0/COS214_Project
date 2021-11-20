@@ -10,12 +10,12 @@ using namespace std;
 
 class _9Engine : public Stage1Engine {
 private:
-	FalconCore* core;
+	FalconCore* core; // Pointer to FalconCore engine
 public:
 	_9Engine();
 	~_9Engine();
-	void TurnOn(FalconRocket*);
-	void TurnOff(FalconRocket*);
+	void TurnOn(FalconRocket*); // Turns on the engine
+	void TurnOff(FalconRocket*); // Turns off the engine
 };
 
 #endif

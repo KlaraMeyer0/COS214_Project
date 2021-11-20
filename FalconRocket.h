@@ -7,15 +7,15 @@ using namespace std;
 
 class FalconRocket {
 protected:
-	StageEngine* stage;
+	StageEngine* stage; // Variable storing the state of the rocket
 public:
 	FalconRocket();
 	~FalconRocket();
-	void detach();
-	void attach(StageEngine*);
-	void turnOn();
-	void turnOff();
-	virtual FalconRocket* clone();
+	void detach(); // Detach the state
+	void attach(StageEngine*); // Attach a new state
+	void turnOn(); // Turn on the engine
+	void turnOff(); // Turn off the engine
+	virtual FalconRocket* clone(); // Part of the Protoype DP that is used my the Memento DP to copy the Falon9
 };
 
 #endif

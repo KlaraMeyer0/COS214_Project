@@ -1,8 +1,9 @@
 #include "Director.h"
 
-Director::Director(LaunchInterface *i)
+Director::Director(LaunchInterface *i, BaseStation *b)
 {
     interface = i;
+    base_station = b;
     crewdragon_Bay = new CrewDragonBay();
     dragon_Bay = new DragonBay();
     starlink_Bay = new StarlinkBay();
@@ -13,7 +14,7 @@ Director::Director(LaunchInterface *i)
     command[2] = new CreateStarlink(engineer, interface, starlink_Bay);
     command[3] = new Backup(interface);
     command[4] = new TestLaunch();
-    command[5] = new CargoCommand();
+    command[5] = new OrderCargo(base_station);
 }
 Director::~Director()
 {
@@ -27,37 +28,37 @@ Director::~Director()
     delete engineer;
 }
 
-bool Director::makeCrewDragon()
+void Director::makeCrewDragon()
 {
     command[0]->execute();
 }
 
-bool Director::makeDragon()
+void Director::makeDragon()
 {
     command[1]->execute();
 }
 
-bool Director::makeStarlink()
+void Director::makeStarlink()
 {
     command[2]->execute();
 }
 
-bool Director::createBackup()
+void Director::createBackup()
 {
     command[3]->execute();
 }
 
-bool Director::retrieveBackup()
+void Director::retrieveBackup()
 {
     command[3]->undo();
 }
 
-bool Director::startTestLaunch()
+void Director::startTestLaunch()
 {
     command[4]->execute();
 }
 
-bool Director::receiveCargo()
+void Director::receiveCargo()
 {
     command[5]->execute();
 }

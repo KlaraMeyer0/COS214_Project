@@ -10,8 +10,8 @@ class VacuumEngine : public Engine {
 public:
 	VacuumEngine();
 	~VacuumEngine();
-	void TurnOn();
-	void TurnOff();
+	void TurnOn(); // Turn on the engine
+	void TurnOff(); // Turn off the engine
 };
 
 #endif

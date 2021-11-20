@@ -10,12 +10,12 @@ using namespace std;
 
 class HeavyEngine : public Stage1Engine {
 private:
-	FalconCore** cores;
+	FalconCore** cores; // Array of falcon cores, the engine used in this state
 public:
 	HeavyEngine();
 	~HeavyEngine();
-	void TurnOn(FalconRocket*);
-	void TurnOff(FalconRocket*);
+	void TurnOn(FalconRocket*); // Turn on the rocket's engine
+	void TurnOff(FalconRocket*); // Turn off the rocket's engine
 };
 
 #endif
