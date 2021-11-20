@@ -12,12 +12,8 @@ using namespace std;
 	~StarlinkCollection();
     void Launch();
 
-
-    SatelliteIterator* begin();
-    SatelliteIterator* end();
     
     Rocketship* clone();
-    StarlinkSatellite* getFirstSat();
 
 ///members
     FalconRocket* rocket;

@@ -14,11 +14,17 @@ class StarlinkCollection : public Rocketship {
 public:
     StarlinkCollection(string name); //Talk to me ~ Xander
 	~StarlinkCollection();
+
     void Launch();
+
+    //Used by the Iterator Design Pattern
     SatelliteIterator* begin();
     SatelliteIterator* end();
-    Rocketship* clone();
     StarlinkSatellite* getFirstSat();
+    
+    Rocketship* clone();
+
+    void CreateStarlinkSatellites(int )
 private:
     FalconRocket* rocket;
     vector<StarlinkSatellite*>* satellites;

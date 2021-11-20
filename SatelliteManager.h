@@ -7,14 +7,26 @@ using namespace std;
 
 class SatelliteManager {
 public:
-	SatelliteManager();
+    //parameter: BaseStation and SpaceStation passed 
+	SatelliteManager(Station* BS ,Station* ST);
 	~SatelliteManager();
-    vector<StarlinkSatellite*>* getSatellite(int, int);
+
+    //Lazy Creation
+    vector<StarlinkSatellite*>* getSatellite(int num_B, int num_S);
+    
+    //Clones the Sattelite manager
     SatelliteManager* clone();
+
+    //getters for Communication relays to enable destruction
+    CommunicationRelay* getCommunicationRelayBS();
+    CommunicationRelay* getCommunicationRelaySS();
 private:
     vector<StarlinkSatellite*>* list;
-    StarlinkSatellite* proto1;
-    StarlinkSatellite* proto2;
+    StarlinkSatellite* protoBSSatellite;
+    StarlinkSatellite* protoSTSatellite;
+
+    CommunicationRelay* relayBS;
+    CommunicationRelay* relaySS;
 };
 
 #endif
