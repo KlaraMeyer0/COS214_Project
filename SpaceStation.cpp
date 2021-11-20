@@ -44,7 +44,7 @@ void SpaceStation::printHumans()
         cout << "index: " << i << " Name: " << humans.at(i) << endl;
 }
 
-pair<Cargo *, int> *SpaceStation::loadCargo(int idx)
+pair<Cargo *, int> *SpaceStation::loadCargo(int idx, int num)
 {
     pair<Cargo*, int> * p;
     p->first = equipment.at(idx).first;
