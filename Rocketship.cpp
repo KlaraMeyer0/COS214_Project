@@ -19,7 +19,7 @@ void Rocketship()
     for (int i = 5; i > 0; i--)
     {
         cout << i << "..." << endl;
-        _sleep(500);
+        sleep(1);
     }
 }
 
