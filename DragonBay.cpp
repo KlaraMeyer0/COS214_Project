@@ -58,6 +58,7 @@ void DragonBay::addCargo()
             for (int i = 0; i < p->second)
                 tempCargo.push_back(p->first);
 
+            cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
         }
         else
             stop = true;
