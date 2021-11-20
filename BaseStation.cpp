@@ -45,12 +45,23 @@ void BaseStation::printHumans()
         cout << "index: " << i << " Name: " << humans.at(i) << endl;
 }
 
-pair<Cargo *, int> *BaseStation::loadCargo(int idx)
+pair<Cargo *, int> *BaseStation::loadCargo(int idx, int num)
 {
     pair<Cargo*, int> * p;
     p->first = equipment.at(idx).first;
-    p->second = equipment.at(idx).second;
-    equipment.erase(equipment.begin() + idx);
+    p->second = num;
+
+    if (equipment.at(idx).second > num)
+    {
+        equipment.at(idx).second -= num;
+    }
+    else
+        if (equipment.at(idx).second <= num)
+        {
+            p->second = equipment.at(idx).second;
+            equipment.erase(equipment.begin() + idx);
+        }
+
 
     return p;
 }
