@@ -6,9 +6,7 @@ using namespace std;
 
 SatelliteIterator::SatelliteIterator(StarlinkSatellite *) : head(0), current(0) {}
 
-SatelliteIterator::SatelliteIterator(StarlinkCollection *satCol, StarlinkSatellite *sat) : head(satCol->getFirstSat())
-{
-}
+SatelliteIterator::SatelliteIterator(StarlinkCollection *satCol, StarlinkSatellite *sat) : head(satCol->getFirstSat()) {}
 
 SatelliteIterator::~SatelliteIterator() {}
 
