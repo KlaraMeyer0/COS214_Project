@@ -27,7 +27,7 @@ void EnginePresentTest::output(){
         s = "Proceeding to next test...";
     } else {
         res = "Failed";
-        s = "There are "+s+" attached. "+s+" are required.";
+        s = "There are "+s+" attached. "+s+" are required.";//get real and expected number as strings
     }
     cout<<"Result: Test "<<res<<endl<<s<<endl;
 }
