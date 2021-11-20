@@ -16,7 +16,7 @@ public:
     void receiveCommunication(string s);
     void printEquipment();
     void printHumans();
-    pair<Cargo*, int>* loadCargo(int idx, int num);
+    pair<Cargo*, int>* loadEquipment(int idx, int num);
     Cargo* loadHumans(int idx);
 
 private:
