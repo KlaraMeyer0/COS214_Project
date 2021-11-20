@@ -35,6 +35,7 @@ void DragonBay::buildBody()
 
 void DragonBay::addCargo()
 {
+    dragon->getStation()->
 
     cout << "LOAD FROM BASE STATION" << endl;
 }

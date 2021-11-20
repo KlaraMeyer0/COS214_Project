@@ -18,12 +18,12 @@ class Station
         virtual void receiveCargo(Cargo* c);
         virtual void receiveCommunication(string com);
 
-        //used to update Space station of any changes to the StarlinkSattelites
+        //used to update Space station of any changes to the StarlinkSatellites
         void updateStatus(StarlinkSatellite*);
     private:
         Station* next;
 
-        //Holds information on each StatlinkSattellite associated with it
+        //Holds information on each StatlinkSatellite associated with it
         map<int ,bool> SatStatus;
 };
 

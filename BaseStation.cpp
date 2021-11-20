@@ -14,7 +14,10 @@ void BaseStation::receiveCargo(Cargo *c,int amount)
         humans.push_back(c);
     else
     {
-        pair<Cargo*,int> p = pair(c,amount);
+        pair<Cargo*,int> p;
+        p.first = c;
+        p.second = amount;
+
         equipment.push_back(p);
     }
 

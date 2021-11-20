@@ -14,6 +14,11 @@ public:
     ~BaseStation();
     void receiveCargo(Cargo *c, int amount);
     void receiveCommunication(string s);
+    void printEquipment();
+    void printHumans();
+    pair<Cargo*, int>* loadCargo(int idx);
+    Cargo*
+
 
 private:
     vector<pair<Cargo *, int>> equipment;
