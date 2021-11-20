@@ -1,17 +1,19 @@
 #ifndef LAUNCHREAL_H
 #define LAUNCHREAL_H
 
+#include "Rocketship.h"
+#include "Launch.h"
+
 using namespace std;
 
-#include "Rocketship.h"
-
-class LaunchReal {
+class LaunchReal : public Launch{
 private:
     Rocketship* ship;
 public:
 	LaunchReal(Rocketship*);
 	~LaunchReal();
     virtual void startLaunch();
+    virtual Rocketship* getShip();
 };
 
 #endif
