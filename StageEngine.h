@@ -5,6 +5,8 @@ using namespace std;
 
 #include "FalconRocket.h"
 
+class FalconRocket;
+
 class StageEngine {
 public:
 	StageEngine();
