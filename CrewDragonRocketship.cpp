@@ -55,6 +55,6 @@ Cargo *CrewDragonRocketship::dropCargo()
     cout << "Implement dropCargo" << endl;
 }
 
-int CrewDragonRocketship::getRocket(){
+int CrewDragonRocketship::getRockets(){
 
 }
