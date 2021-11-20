@@ -16,7 +16,7 @@ public:
 private:
     CargoFactory *equipment_factory;
     CargoFactory *human_factory;
-    BaseStation* base_station;
+    BaseStation *base_station;
 };
 
 #endif

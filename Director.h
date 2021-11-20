@@ -9,7 +9,7 @@
 #include "CreateStarlink.h"
 #include "Backup.h"
 #include "TestLaunch.h"
-#include "CargoCommand.h"
+#include "OrderCargo.h"
 
 class Director
 {
