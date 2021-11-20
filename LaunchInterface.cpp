@@ -80,8 +80,11 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
         ss<<n;
         ss>>t;
         ss.clear();
-        if (t == NULL) flag = true;
-        if (t >= launchCaretaker->getSize() || t < 0){
+        if (t == NULL){
+            cout<<"Please input a number!"<<endl;
+            flag = true;
+            }
+        else if (t >= launchCaretaker->getSize() || t < 0){
             cout<<"The number is out of the range!"<<endl;
             flag = true;
         } else flag = false;
