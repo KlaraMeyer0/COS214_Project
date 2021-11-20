@@ -16,3 +16,6 @@ void Stage2Engine::TurnOff(FalconRocket* r) {
     engine->TurnOff();
 	//r->detach();
 };
+int Stage2Engine::EngineCount(){
+    return 1;
+}

@@ -28,3 +28,6 @@ void HeavyEngine::TurnOff(FalconRocket* r) {
 	r->attach(new Stage2Engine());
 	cout << "The first stage engine has landed on the drone ship." << endl;
 };
+int HeavyEngine::EngineCount(){
+	return cores[0]->getCount() + cores[1]->getCount() + cores[2]->getCount();
+}
