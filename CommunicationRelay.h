@@ -7,7 +7,8 @@
 using namespace std;
 
 //Prticipant: ConcreteMediator in the Mediator pattern
-
+class StarlinkSatellite;
+class Station;
 
 class CommunicationRelay {
 private:

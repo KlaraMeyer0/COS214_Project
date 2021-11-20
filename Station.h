@@ -1,13 +1,13 @@
 #ifndef STATION_H
 #define STATION_H
 
-using namespace std;
-
 #include "Cargo.h"
 #include "StarlinkSatellite.h"
 #include <map>
 
 //Participant: ConcreteColleage in the Mediator Pattern
+
+class StarlinkSatellite;
 
 class Station
 {
