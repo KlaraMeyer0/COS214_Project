@@ -10,13 +10,13 @@ void EnginePresentTest::output(){
     bool test = false;
     switch (tp){
     case 'c':
-        if (n = 27) test = true;
+        if (n == 27) test = true;
         break;
     case 'd':
-        if (n = 27) test = true;
+        if (n == 27) test = true;
         break;
     case 's':
-        if (n = 9) {
+        if (n == 9) {
             test = true;
             i = 9;
             }
