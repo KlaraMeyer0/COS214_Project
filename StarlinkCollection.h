@@ -37,6 +37,7 @@ public:
 
     virtual int getRockets();
     virtual bool testFire();
+    virtual bool testLoading();
 private:
     FalconRocket* rocket;
     int numSatellites;

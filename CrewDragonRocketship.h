@@ -20,6 +20,7 @@ public:
     Cargo *dropCargo();
     virtual int getRockets();
     virtual bool testFire();
+    virtual bool testLoading();
 private:
     Cargo **cargo;
     Spacecraft *spacecraft;
