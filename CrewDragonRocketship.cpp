@@ -1,6 +1,6 @@
 #include "CrewDragonRocketship.h"
 
-CrewDragonRocketship::CrewDragonRocketship(string n) : Rocketship(n)
+CrewDragonRocketship::CrewDragonRocketship(string n) : Rocketship(n,'c')
 {
     cargo = nullptr;
     spacecraft = nullptr;

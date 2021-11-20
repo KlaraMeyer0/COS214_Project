@@ -1,8 +1,9 @@
 #include "Rocketship.h"
 
-Rocketship::Rocketship(string n)
+Rocketship::Rocketship(string n, char t)
 {
     name = n;
+    rocketshipType = t;
 }
 
 Rocketship::~Rocketship() {}
@@ -20,4 +21,9 @@ void Rocketship()
         cout << i << "..." << endl;
         _sleep(500);
     }
+}
+
+char Rocketship::getType()
+{
+    return rocketshipType;
 }
