@@ -19,7 +19,7 @@ public:
 	char getType();//returns the type of the rocket(DragonRocketship, CrewDragonRocketship or StarlinkCollection)
 	void attachToStation(Station *); //attaches the specefic rocketship to a base or space station
 	Station *getStation(); //returns the station that the rocketship is currently attached to.
-	virtual int getRocket() = 0;//gives a count of the engines on this spaceship setup
+	virtual int getRockets() = 0;//gives a count of the engines on this spaceship setup
 private:
 	string name;
 	char rocketshipType; // s d c

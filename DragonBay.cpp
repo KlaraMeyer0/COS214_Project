@@ -36,5 +36,32 @@ void DragonBay::buildBody()
 void DragonBay::addCargo()
 {
     cout << "Load from " << dragon->getStation()->name << endl;
-    dragon->getStation()->printEquipment();
+
+    bool stop = false;
+    int c, idx, num;
+    vector<cargo*> tempCargo;
+    while (!stop)
+    {
+        cout << "0: Choose equipment to load" << endl;
+        cout << "1: Exit" << endl;
+        cin >> c;
+
+        if (cin == 0)
+        {
+            dragon->getStation()->printEquipment();
+            cout << "Enter the index of the type of equipment you want to load: " << endl;
+            cin >> idx;
+            cout << "Enter the number of equipment you want to load: " << endl;
+            cin >> num;
+
+            pair<Cargo*, int> * p = dragon->getStation()->loadEquipment(idx, num);
+            for (int i = 0; i < p->second)
+                tempCargo.push_back(p->first);
+
+        }
+        else
+            stop = true;
+    }
+    dragon->attachCargo(tempCargo);
+
 }
