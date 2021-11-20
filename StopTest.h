@@ -4,6 +4,7 @@
 using namespace std;
 
 #include "LaunchTest.h"
+#include <iostream>
 
 class StopTest : public LaunchTest {
 public:
@@ -11,6 +12,8 @@ public:
 	~StopTest();
     void output();
 	virtual void startLaunch();
+private:
+	bool flag;
 };
 
 #endif
