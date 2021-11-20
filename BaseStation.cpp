@@ -8,12 +8,15 @@ BaseStation::BaseStation() : Station() {}
 
 BaseStation::~BaseStation() {}
 
-void BaseStation::receiveCargo(Cargo *c)
+void BaseStation::receiveCargo(Cargo *c,int amount)
 {
     if (c->isHuman())
         humans.push_back(c);
     else
-        equipment.push_back(c);
+    {
+        pair<Cargo*,int> p = pair(c,amount);
+        equipment.push_back(p);
+    }
 
     cout << c->getName() << " has arrived at the base station." << endl;
 }
