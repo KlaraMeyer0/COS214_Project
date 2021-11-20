@@ -62,6 +62,6 @@ void DragonBay::addCargo()
         else
             stop = true;
     }
-    dragon->attachCargo(tempCargo,size);
+    dragon->attachCargo(tempCargo);
 
 }
