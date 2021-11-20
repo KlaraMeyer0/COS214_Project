@@ -6,7 +6,7 @@ void EnginePresentTest::output(){
     Rocketship* ship = getShip();
     string res,s;
     char tp = ship->getType();
-    int n = ship->getRockets();//get number of engines
+    int i = 27,n = ship->getRockets();//get number of engines
     bool test = false;
     switch (tp){
     case 'c':
@@ -16,7 +16,10 @@ void EnginePresentTest::output(){
         if (n = 27) test = true;
         break;
     case 's':
-        if (n = 9) test = true;
+        if (n = 9) {
+            test = true;
+            i = 9;
+            }
         break;
     default:
         break;
@@ -27,7 +30,14 @@ void EnginePresentTest::output(){
         s = "Proceeding to next test...";
     } else {
         res = "Failed";
-        s = "There are "+s+" attached. "+s+" are required.";//get real and expected number as strings
+        stringstream ss;
+        string aa,aaa;
+        ss<<n;
+        ss>>aa;
+        ss.clear();
+        ss<<i;
+        ss>>aaa;
+        s = "There are "+aaa+" attached. "+aa+" are required.";//get real and expected number as strings
     }
     cout<<"Result: Test "<<res<<endl<<s<<endl;
 }
