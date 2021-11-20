@@ -8,12 +8,18 @@ SpaceStation::SpaceStation() : Station() {}
 
 SpaceStation::~SpaceStation() {}
 
-void SpaceStation::receiveCargo(Cargo *c)
+void SpaceStation::receiveCargo(Cargo *c,int amount)
 {
     if (c->isHuman())
         humans.push_back(c);
     else
-        equipment.push_back(c);
+    {
+        pair<Cargo*,int> p;
+        p.first = c;
+        p.second = amount;
+
+        equipment.push_back(p);
+    }
 
     cout << c->getName() << " has arrived at the space station." << endl;
 }

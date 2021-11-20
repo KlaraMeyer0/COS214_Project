@@ -12,15 +12,15 @@ class SpaceStation : public Station
     public:
         SpaceStation();
         ~SpaceStation();
-        void receiveCargo(Cargo* c);
+        void receiveCargo(Cargo *c, int amount);
         void receiveCommunication(string s);
         void printEquipment();
         void printHumans();
         pair<Cargo*, int>* loadCargo(int idx);
         Cargo* loadHumans(int idx);
     private:
-        vector<Cargo*> equipment;
-        vector<Cargo*> humans;
+        vector<pair<Cargo *, int>> equipment;
+        vector<Cargo *> humans;
 };
 
 #endif
