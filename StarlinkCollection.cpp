@@ -109,4 +109,5 @@ void StarlinkCollection::setCommunicationRelaySS(CommunicationRelay* obj){
 }
 
 int StarlinkCollection::getRockets(){
+    return rocket->getEngine()->EngineCount();
 }
