@@ -4,7 +4,7 @@ using namespace std;
 
 #include "StarlinkCollection.h"
 	
-StarlinkCollection:: StarlinkCollection(string name): Rocketship(name)
+StarlinkCollection:: StarlinkCollection(string name): Rocketship(name, 's')
 {
     head = 0;
 }
