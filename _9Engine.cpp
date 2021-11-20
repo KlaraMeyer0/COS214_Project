@@ -15,3 +15,6 @@ void _9Engine::TurnOff(FalconRocket* r) {
 	r->attach(new Stage2Engine());
 	cout << "The first stage engine has landed on the drone ship." << endl;
 };
+int _9Engine::EngineCount(){
+	return core->getCount();
+};

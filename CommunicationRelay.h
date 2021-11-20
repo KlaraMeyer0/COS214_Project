@@ -39,6 +39,8 @@ public:
 
     //used by a Station to update the Status of a StarlinkSattellite
     void reslove(StarlinkSatellite*);
+
+    CommunicationRelay* clone(Station*);
 };
 
 #endif

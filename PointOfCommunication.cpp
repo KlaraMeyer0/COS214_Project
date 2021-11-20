@@ -9,7 +9,7 @@ PointOfCommunication::PointOfCommunication(){
     srand(time(0));
     //random number between 1-1000 serves as identifier of PointOfCommunication 
     name = rand() % (1000) +1;
-    status =false;
+    status =true;
 }
 
 PointOfCommunication::~PointOfCommunication(){

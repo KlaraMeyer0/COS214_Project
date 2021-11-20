@@ -16,6 +16,7 @@ public:
 	~_9Engine();
 	void TurnOn(FalconRocket*); // Turns on the engine
 	void TurnOff(FalconRocket*); // Turns off the engine
+	virtual int EngineCount();//Returns the number of engines
 };
 
 #endif
