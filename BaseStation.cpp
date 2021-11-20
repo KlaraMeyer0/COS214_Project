@@ -30,3 +30,24 @@ void BaseStation::receiveCommunication(string s)
 }
 
 // call receiveCargo from another function that calls the factory for human or equipment respectively
+void BaseStation::printEquipment()
+{
+    for (int i = 0; i < equipment.size(); i++)
+        cout << "Index: " << i << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
+}
+
+void BaseStation::printHumans()
+{
+    for (int i = 0; i < humans.size(); i++)
+        cout << "index: " << i << " Name: " << humans.at(i) << endl;
+}
+
+pair<Cargo *, int> *BaseStation::loadCargo(int idx)
+{
+    return nullptr;
+}
+
+Cargo *BaseStation::loadHumans(int idx)
+{
+    return nullptr;
+}
