@@ -4,7 +4,10 @@ using namespace std;
 
 #include "StarlinkCollection.h"
 	
-StarlinkCollection:: StarlinkCollection(string name): Rocketship(name) {}
+StarlinkCollection:: StarlinkCollection(string name): Rocketship(name)
+{
+    head = 0;
+}
 
 void StarlinkCollection::insert(StarlinkSatellite * s)
 {
@@ -42,4 +45,14 @@ StarlinkSatellite *StarlinkCollection::remove()
             head->previous->next = head;
             return temp;
         }
+}
+
+SatelliteIterator *StarlinkCollection::begin()
+{
+    return nullptr;
+}
+
+SatelliteIterator *StarlinkCollection::end()
+{
+    return nullptr;
 }
