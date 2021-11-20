@@ -6,7 +6,7 @@ void EnginePresentTest::output(){
     Rocketship* ship = getShip();
     string res,s;
     char tp = ship->getType();
-    int n = ship->;//get number of engines
+    int n = ship->getRockets();//get number of engines
     bool test = false;
     switch (tp){
     case 'c':
