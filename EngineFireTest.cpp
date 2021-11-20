@@ -9,34 +9,25 @@ void EngineFireTest::output(){
     bool test = false;
     switch (tp){
     case 'c':
-        if (n = 27) test = true;
+        
         break;
     case 'd':
-        if (n = 27) test = true;
+        
         break;
     case 's':
-        if (n = 9) {
-            test = true;
-            i = 9;
-            }
+        
         break;
     default:
         break;
     }
-    cout<<"Testing if all engines are attached correctly..."<<endl;
+    cout<<"Testing if all engines fire correctly..."<<endl;
+    //code to start engine fire and check if all fire
     if (test){
         res = "Passed";
         s = "Proceeding to next test...";
     } else {
         res = "Failed";
-        stringstream ss;
-        string aa,aaa;
-        ss<<n;
-        ss>>aa;
-        ss.clear();
-        ss<<i;
-        ss>>aaa;
-        s = "There are "+aaa+" attached. "+aa+" are required.";//get real and expected number as strings
+        s = "The engines are not firing correctly";
     }
     cout<<"Result: Test "<<res<<endl<<s<<endl;
 }
