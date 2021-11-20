@@ -13,10 +13,12 @@ void StopTest::output(){
             b = true;
         } if (c == 'a')
             b = true;
+        else cout<<"Please input only c or a!"<<endl;
     } while (b);
 }
 void StopTest::startLaunch(){
     output();
     if (flag)
         l->startLaunch();
+    else cout<<"Launch aborted!"<<endl;
 }
