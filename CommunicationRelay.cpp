@@ -29,10 +29,12 @@ void CommunicationRelay:: reslove(StarlinkSatellite* obj){
         }
 }
 
+//obj is a new Station ,not the same station
 CommunicationRelay* CommunicationRelay:: clone(Station* obj){
     CommunicationRelay* temp = new CommunicationRelay(obj);
     temp->numSats = numSats;
     this->SatStatus = SatStatus;
     return temp;
 }
+
 #endif

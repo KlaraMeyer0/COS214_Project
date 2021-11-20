@@ -3,7 +3,11 @@
 
 #include "SatelliteManager.h"
 
-SatelliteManager::SatelliteManager(Station* BS ,Station* SS, StarlinkCollection* SC){
+SatelliteManager::SatelliteManager(BaseStation* BS ,SpaceStation* SS, StarlinkCollection* SC){
+
+    this->BS =BS;
+    this->SS =SS;
+
     relayBS = new CommunicationRelay(BS);
     relaySS = new CommunicationRelay(SS);
 
@@ -11,47 +15,52 @@ SatelliteManager::SatelliteManager(Station* BS ,Station* SS, StarlinkCollection*
     protoSTSatellite= new StarlinkSatellite("SpaceStation",relaySS);
 
     this->SC =SC;
+    this->SC->setCommunicationRelayBS(relayBS);
+    this->SC->setCommunicationRelayBS(relaySS);
 
     head =NULL;
 } 
-
-CommunicationRelay* SatelliteManager:: getCommunicationRelayBS(){
-    return relayBS;
-}
-
-CommunicationRelay* SatelliteManager:: getCommunicationRelaySS(){
-    return relaySS;
-}
 
 //Not responsible for any deallication of StarlinkeSatellites handled in StarlinkCollection
 SatelliteManager::~SatelliteManager(){
     delete protoBSSatellite;
     delete protoSTSatellite;
 
-    //remove all references to other classes
+    //remove all associations to other classes
     head =NULL;
     relayBS =NULL;
-    relaySS=NULL;
-    SC=NULL;
+    relaySS =NULL;
+    SC =NULL;
+    BS =NULL;
+    SS =NULL;
 }
 
 //Talk To Xander and James for use case, CONTINUE HERE
 SatelliteManager* SatelliteManager::clone(StarlinkCollection* obj)
 {
-    SatelliteManager* temp = new SatelliteManager()
-    //needs a new connumication realy
+    BaseStation* BScopy = BS->clone();
+    SpaceStation* SScopy = SS->clone();
+
+    SatelliteManager* temp = new SatelliteManager(BScopy ,SScopy ,obj);
+    delete temp->relayBS;
+    delete temp->relaySS;
+
+    temp->relayBS = relayBS->clone(BScopy);
+    temp->relaySS = relaySS->clone(SScopy);
     
-    //need to attatch all sattelites to communication realy 
 
-
-    StarlinkSatellite* newHead = head->cloneExact();
-    //create a exact copy of the list pointed to by this->head
-    StarlinkSatellite* temp = head->next;
-    while(temp->next !=NULL){   
-        head
+    //create a exact copy of the list pointed to by this->head in the StarlinkCollection
+    StarlinkSatellite* ptr = head;
+    while(ptr != NULL){
+        if(ptr->getCommunicatesWith() == "BaseStation")
+            obj->insert(ptr->cloneExact("BaseStation",temp->relayBS));
+        else
+            obj->insert(ptr->cloneExact("SpaceStation",temp->relaySS));
+        ptr =ptr->next;
     }
 
     //set it to the temp->head
+    temp->head =obj->getHead();
 
 }
 

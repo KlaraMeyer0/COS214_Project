@@ -9,13 +9,13 @@ using namespace std;
 class SatelliteManager {
 public:
     //parameter: BaseStation and SpaceStation passed 
-	SatelliteManager(Station* BS ,Station* ST, StarlinkCollection* SC);
+	SatelliteManager(BaseStation* BS ,SpaceStation* ST, StarlinkCollection* SC);
 	~SatelliteManager();
 
     //Lazy Creation ,dierctly into the associated StarlinkCollection
     void SatelliteManager:: setSatellites(int num_B, int num_S);
     
-    //Clones the Sattelite manager
+    //Clones the Sattelite manager, if called will not have to call setSatellites(...)
     SatelliteManager* clone(StarlinkCollection*);
 
     //getters for Communication relays to enable destruction
@@ -30,6 +30,9 @@ private:
 
     CommunicationRelay* relayBS;
     CommunicationRelay* relaySS;
+
+    BaseStation* BS;
+    SpaceStation* SS;
 
     StarlinkCollection* SC;
 };

@@ -18,6 +18,9 @@ public:
     void printHumans();
     pair<Cargo*, int>* loadCargo(int idx);
     Cargo* loadHumans(int idx);
+    
+    //Luca->Klara :Please implement me 
+    BaseStation* clone();
 
 private:
     vector<pair<Cargo *, int>> equipment;
