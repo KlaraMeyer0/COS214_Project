@@ -30,7 +30,7 @@ public:
     Station* getBaseStation();
     Station* getSpaseStation();
 
-    virtual FalconRocket* getRocket()
+    virtual int getRocket();
 private:
     FalconRocket* rocket;
     int numSatellites;

@@ -18,7 +18,7 @@ public:
     void attachRocket(FalconRocket *r);
     void attachCargo(Cargo **c, int size);
     Cargo *dropCargo();
-    virtual FalconRocket* getRocket()
+    virtual int getRocket();
 private:
     Cargo **cargo;
     Spacecraft *spacecraft;
