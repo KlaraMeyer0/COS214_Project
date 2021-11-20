@@ -109,4 +109,8 @@ void StarlinkCollection::setCommunicationRelaySS(CommunicationRelay* obj){
 }
 
 int StarlinkCollection::getRockets(){
+<<<<<<< Updated upstream
+=======
+    return rocket->getEngine()->EngineCount();
+>>>>>>> Stashed changes
 }

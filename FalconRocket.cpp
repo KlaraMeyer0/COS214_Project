@@ -31,3 +31,6 @@ void FalconRocket::turnOff()
     if (stage != 0)
         stage->TurnOff(this);
 };
+StageEngine* FalconRocket::getEngine(){
+    return stage;
+}
