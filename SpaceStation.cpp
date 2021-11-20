@@ -4,7 +4,10 @@ using namespace std;
 
 #include "SpaceStation.h"
 
-SpaceStation::SpaceStation() : Station() {}
+SpaceStation::SpaceStation() : Station()
+{
+    name = "Space Station";
+}
 
 SpaceStation::~SpaceStation() {}
 

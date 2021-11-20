@@ -24,12 +24,13 @@ class Station
 
         //used to update Space station of any changes to the StarlinkSatellites
         void updateStatus(StarlinkSatellite*);
+        string name;
     private:
         Station* next;
 
         //Holds information on each StatlinkSatellite associated with it
         map<int ,bool> SatStatus;
-        string name;
+
 };
 
 #endif
