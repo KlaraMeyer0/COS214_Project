@@ -18,20 +18,23 @@ public:
     void Launch();
 
     //Used by the Iterator Design Pattern
+    void insert(StarlinkSatellite*);
+    StarlinkSatellite* remove();
     SatelliteIterator* begin();
     SatelliteIterator* end();
     StarlinkSatellite* getFirstSat();
     
     Rocketship* clone();
 
-    void CreateStarlinkSatellites(int )
+    void CreateStarlinkSatellites(int );
 private:
     FalconRocket* rocket;
-    vector<StarlinkSatellite*>* satellites;
+    //vector<StarlinkSatellite*>* satellites;
     int numSatellites;
     SatelliteManager* satelliteManager;
     int num_G;
     int num_O;
+    StarlinkSatellite* head;
 };
 
 #endif

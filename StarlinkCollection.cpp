@@ -1,27 +1,45 @@
-#ifndef STARLINKCOLLECTION_CPP
-#define STARLINKCOLLECTION_CPP
-#include "StarlinkCollection.h"
+
+
 using namespace std;
 
-
+#include "StarlinkCollection.h"
 	
-    StarlinkCollection:: StarlinkCollection(string name): Rocketship(name){
+StarlinkCollection:: StarlinkCollection(string name): Rocketship(name) {}
 
+void StarlinkCollection::insert(StarlinkSatellite * s)
+{
+    if (head == 0)
+    {
+        s->next = s;
+        s->previous = s;
     }
-    
-	~StarlinkCollection();
-    void Launch();
+    else
+    {
+        s->next = head;
+        s->previous = head->previous;
+        head->previous->next = s;
+        head->previous = s;
+    }
 
-    
-    Rocketship* clone();
+    head = s;
+}
 
-///members
-    FalconRocket* rocket;
-    vector<StarlinkSatellite*>* satellites;
-    int numSatellites;
-    SatelliteManager* satelliteCreator;
-    int num_G;
-    int num_O;
-
-
-#endif
+StarlinkSatellite *StarlinkCollection::remove()
+{
+    if (head == 0)
+        return 0;
+    else
+        if (head->previous == head)
+        {
+            StarlinkSatellite *temp = head;
+            head = 0;
+            return temp;
+        }
+        else
+        {
+            StarlinkSatellite* temp = head->previous;
+            head->previous = head->previous->previous;
+            head->previous->next = head;
+            return temp;
+        }
+}
