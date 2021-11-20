@@ -117,3 +117,6 @@ bool StarlinkCollection::testFire(){
     rocket->turnOff();
     return b;
 }
+bool StarlinkCollection::testLoading(){
+    
+}

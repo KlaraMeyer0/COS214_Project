@@ -64,3 +64,6 @@ bool DragonRocketship::testFire(){
     rocket->turnOff();
     return b;
 }
+bool DragonRocketship::testLoading(){
+    //Require help from Klara/Luca
+}

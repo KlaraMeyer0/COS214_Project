@@ -64,3 +64,6 @@ bool CrewDragonRocketship::testFire(){
     rocket->turnOff();
     return b;
 }
+bool CrewDragonRocketship::testLoading(){
+    
+}
