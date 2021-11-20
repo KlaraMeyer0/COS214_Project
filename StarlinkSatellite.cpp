@@ -5,15 +5,14 @@ using namespace std;
 
     StarlinkSatellite:: StarlinkSatellite(string communicatesWith, CommunicationRelay* obj):
         PointOfCommunication(){
-        
         this->communicatesWith = communicatesWith;
         relay = obj;
-
         next = NULL;
         previous =NULL;
     }
 
 	StarlinkSatellite::~StarlinkSatellite(){
+        relay =NULL;
     }
     
     string StarlinkSatellite:: getCommunicatesWith(){
@@ -25,11 +24,9 @@ using namespace std;
         return new StarlinkSatellite(communicatesWith,relay);
     }
 
-    //Creates exact copy
+    //Creates exact copy ,with the same name as the calling object
     StarlinkSatellite* StarlinkSatellite::cloneExact(string communicatesWith, CommunicationRelay* obj){
         StarlinkSatellite* temp = new StarlinkSatellite(communicatesWith,obj);
-        temp->communicatesWith =communicatesWith;
-        temp->relay =obj;
         this->setName(this->getName());
     }
 

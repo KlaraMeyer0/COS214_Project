@@ -12,6 +12,7 @@ class CommunicationRelay;
 //Participant: 
 //Colleague in Mediator ,ConcretePrototype in Prototyep Pattern
 //ConcreteAggregate in the Iterator 
+
 class StarlinkSatellite : public PointOfCommunication{
 public:
     //Must passed a Communicationrelay that serves as the Mediator participant

@@ -27,14 +27,29 @@ CommunicationRelay* SatelliteManager:: getCommunicationRelaySS(){
 SatelliteManager::~SatelliteManager(){
     delete protoBSSatellite;
     delete protoSTSatellite;
+
+    //remove all references to other classes
+    head =NULL;
+    relayBS =NULL;
+    relaySS=NULL;
+    SC=NULL;
 }
 
 //Talk To Xander and James for use case, CONTINUE HERE
 SatelliteManager* SatelliteManager::clone(StarlinkCollection* obj)
 {
-    SatelliteManager* temp = new SatelliteManager(obj->getBaseStation(),obj->getBaseStation(),obj);
+    SatelliteManager* temp = new SatelliteManager()
+    //needs a new connumication realy
+    
+    //need to attatch all sattelites to communication realy 
 
+
+    StarlinkSatellite* newHead = head->cloneExact();
     //create a exact copy of the list pointed to by this->head
+    StarlinkSatellite* temp = head->next;
+    while(temp->next !=NULL){   
+        head
+    }
 
     //set it to the temp->head
 
