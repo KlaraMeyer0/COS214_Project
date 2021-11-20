@@ -44,10 +44,17 @@ void BaseStation::printHumans()
 
 pair<Cargo *, int> *BaseStation::loadCargo(int idx)
 {
-    return nullptr;
+    pair<Cargo*, int> * p;
+    p->first = equipment.at(idx).first;
+    p->second = equipment.at(idx).second;
+    equipment.erase(equipment.begin() + idx);
+
+    return p;
 }
 
 Cargo *BaseStation::loadHumans(int idx)
 {
-    return nullptr;
+    Cargo* h = humans.at(idx);
+    humans.erase(humans.begin() + idx);
+    return h;
 }
