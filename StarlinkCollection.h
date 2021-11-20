@@ -23,7 +23,7 @@ private:
     FalconRocket* rocket;
     vector<StarlinkSatellite*>* satellites;
     int numSatellites;
-    SatelliteManager* satelitteCreator;
+    SatelliteManager* satelliteManager;
     int num_G;
     int num_O;
 };
