@@ -14,6 +14,10 @@ class SpaceStation : public Station
         ~SpaceStation();
         void receiveCargo(Cargo* c);
         void receiveCommunication(string s);
+        void printEquipment();
+        void printHumans();
+        pair<Cargo*, int>* loadCargo(int idx);
+        Cargo* loadHumans(int idx);
     private:
         vector<Cargo*> equipment;
         vector<Cargo*> humans;

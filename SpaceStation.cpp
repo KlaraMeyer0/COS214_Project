@@ -22,3 +22,23 @@ void SpaceStation::receiveCommunication(string s)
 {
     cout << "Communication: " << s << " received at space station." << endl;
 }
+
+void SpaceStation::printEquipment()
+{
+
+}
+
+void SpaceStation::printHumans()
+{
+
+}
+
+pair<Cargo *, int> *SpaceStation::loadCargo(int idx)
+{
+    return nullptr;
+}
+
+Cargo *SpaceStation::loadHumans(int idx)
+{
+    return nullptr;
+}

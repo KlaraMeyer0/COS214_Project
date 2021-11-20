@@ -29,6 +29,7 @@ class Station
 
         //Holds information on each StatlinkSatellite associated with it
         map<int ,bool> SatStatus;
+        string name;
 };
 
 #endif
