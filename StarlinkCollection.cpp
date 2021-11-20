@@ -49,10 +49,15 @@ StarlinkSatellite *StarlinkCollection::remove()
 
 SatelliteIterator *StarlinkCollection::begin()
 {
-    return nullptr;
+    return new SatelliteIterator(*this, head);
 }
 
 SatelliteIterator *StarlinkCollection::end()
 {
-    return nullptr;
+    return new SatelliteIterator(*this, head->previous);
+}
+
+StarlinkSatellite *StarlinkCollection::getFirstSat()
+{
+    return head;
 }
