@@ -6,7 +6,6 @@ using namespace std;
 #include "StarlinkSatellite.h"
 #include "SatelliteManager.h"
 #include "Rocketship.h"
-#include "FalconRocket.h"
 #include "SatelliteIterator.h"
 #include <vector>
 #include "BaseStation.h"
@@ -31,6 +30,7 @@ public:
     Station* getBaseStation();
     Station* getSpaseStation();
 
+    virtual int getRockets();
 private:
     FalconRocket* rocket;
     int numSatellites;
