@@ -10,7 +10,7 @@ class FalconHeavy : public FalconRocket {
 public:
 	FalconHeavy();
 	virtual ~FalconHeavy();
-	FalconRocket* clone(); // Part of the Protoype DP that is used my the Memento DP to copy the Falon9
+	FalconRocket* clone(); // Part of the Prototype DP that is used my the Memento DP to copy the Falon9
 };
 
 #endif

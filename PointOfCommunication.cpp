@@ -19,7 +19,7 @@ bool PointOfCommunication:: getStatus(){
     return status;
 }
 
-void PointOfCommunication:: setStauts(bool status){
+void PointOfCommunication:: setStatus(bool status){
     this->status = status;
 }
 

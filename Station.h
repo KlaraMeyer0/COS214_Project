@@ -26,7 +26,7 @@ class Station
         //used to update Space station of any changes to the StarlinkSatellites
         void updateStatus(StarlinkSatellite*);
 
-        //wrapper on the sation to resolve an error on one of the starlinksattelites
+        //wrapper on the station to resolve an error on one of the starlink satellites
         void resolve(StarlinkSatellite* obj);
 
         void attachRelay(CommunicationRelay*);
@@ -35,7 +35,7 @@ class Station
     private:
         Station* next;
 
-        //Holds information on each StatlinkSatellite associated with it
+        //Holds information on each StarlinkSatellite associated with it
         map<int ,bool> SatStatus;
 
         //Mediator this colleague communicates with 

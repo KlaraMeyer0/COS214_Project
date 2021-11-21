@@ -29,7 +29,7 @@ void CommunicationRelay:: notify(StarlinkSatellite* obj){
 void CommunicationRelay:: resolve(StarlinkSatellite* obj){
     for(int i=0; i < satellites.size(); ++i)
         if(obj->getName() == satellites[i]->getName()){
-            satellites[i]->setStauts(true);
+            satellites[i]->setStatus(true);
             return;
         }
 }
