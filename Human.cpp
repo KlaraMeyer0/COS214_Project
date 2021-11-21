@@ -6,5 +6,5 @@ Human::~Human() {}
 
 Cargo *Human::clone()
 {
-    return new Cargo(getName(), isHuman());
+    return new Human(getName());
 };

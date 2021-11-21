@@ -4,7 +4,12 @@
 #include "PointOfCommunication.h"
 #include "StarlinkCollection.h"
 #include <vector>
+#include "SpaceStation.h"
+#include "BaseStation.h"
+#include <vector>
 using namespace std;
+
+class StarlinkCollection;
 
 class SatelliteManager {
 public:

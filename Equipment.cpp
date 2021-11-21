@@ -9,5 +9,5 @@ Equipment::~Equipment(){};
 
 Cargo *Equipment::clone()
 {
-    return new Cargo(getName(), isHuman());
+    return new Equipment(getName());
 };

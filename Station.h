@@ -8,6 +8,7 @@
 //Participant: ConcreteColleage in the Mediator Pattern
 
 class StarlinkSatellite;
+class CommunicationRelay;
 
 class Station
 {

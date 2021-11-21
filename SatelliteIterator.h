@@ -6,6 +6,8 @@ using namespace std;
 #include "StarlinkSatellite.h"
 #include "StarlinkCollection.h"
 
+class StarlinkCollection;
+
 class SatelliteIterator
 {
     public:

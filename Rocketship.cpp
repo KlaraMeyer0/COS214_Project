@@ -6,10 +6,6 @@ Rocketship::Rocketship(string n, char t)
     rocketshipType = t;
 }
 
-string Rocketship::getName(){
-    return name;
-}
-
 Rocketship::~Rocketship() {}
 
 string Rocketship::getName()

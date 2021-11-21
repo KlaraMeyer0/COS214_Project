@@ -11,6 +11,9 @@ using namespace std;
 #include "BaseStation.h"
 #include "SpaceStation.h"
 
+class SatelliteManager;
+class SatelliteIterator;
+
 class StarlinkCollection : public Rocketship {
 public:
     StarlinkCollection(string name,BaseStation* BS ,SpaceStation* SS); 
