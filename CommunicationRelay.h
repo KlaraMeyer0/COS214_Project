@@ -16,29 +16,29 @@ public:
     //Constructor to set the RelayTo colleague 
 	CommunicationRelay(Station*);
 
-    //Disconencts it from the StarlinkSatellite it is associated with 
+    //Disconnects it from the StarlinkSatellite it is associated with
 virtual	~CommunicationRelay();
 
-    //used to notify the Station of any changes ,made to the Sattellite
+    //used to notify the Station of any changes ,made to the Satellite
     void notify(StarlinkSatellite*);
 
-    //used to track a colleauge 
+    //used to track a colleague
     void addSatellite(StarlinkSatellite*);
 
-    //used by a Station to update the Status of a StarlinkSattellite
-    void reslove(StarlinkSatellite*);
+    //used by a Station to update the Status of a StarlinkSatellite
+    void resolve(StarlinkSatellite*);
 
     CommunicationRelay* clone(Station*);
 private:
     //Associates a colleague with a status value 
-    //this attribute is dulpicated in Station
+    //this attribute is duplicated in Station
     map<int ,bool> SatStatus;
 
     //Colleague that is communicated with: Station
     Station* RelayTo;
 
-    //the StarlinkSattellite communicating with the Station: RelayTo
-    vector<StarlinkSatellite*> sattelites;
+    //the StarlinkSatellite communicating with the Station: RelayTo
+    vector<StarlinkSatellite*> satellites;
 
 };
 

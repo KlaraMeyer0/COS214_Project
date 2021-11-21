@@ -8,15 +8,15 @@ CommunicationRelay::CommunicationRelay(Station* obj){
 }
 
 CommunicationRelay::~CommunicationRelay(){
-    while(sattelites.size())
-        sattelites.pop_back();
+    while(satellites.size())
+        satellites.pop_back();
     
     RelayTo=NULL;
 }
 
 void CommunicationRelay:: addSatellite(StarlinkSatellite* obj){
     SatStatus[obj->getName()]=obj->getStatus();
-    sattelites.push_back(obj);
+    satellites.push_back(obj);
     RelayTo->updateStatus(obj);
 }
 
@@ -26,10 +26,10 @@ void CommunicationRelay:: notify(StarlinkSatellite* obj){
 }
 
 //used to set the status of a StatlinkSattelite to true indicating it is functional
-void CommunicationRelay:: reslove(StarlinkSatellite* obj){
-    for(int i=0;i<sattelites.size();++i)
-        if(obj->getName() == sattelites[i]->getName()){
-            sattelites[i]->setStauts(true);
+void CommunicationRelay:: resolve(StarlinkSatellite* obj){
+    for(int i=0; i < satellites.size(); ++i)
+        if(obj->getName() == satellites[i]->getName()){
+            satellites[i]->setStauts(true);
             return;
         }
 }
