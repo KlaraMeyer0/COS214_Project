@@ -68,6 +68,5 @@ bool DragonRocketship::testFire()
 }
 bool DragonRocketship::testLoading()
 {
-    // Require help from Klara/Luca
-    //Luca->James :implemented in StarlinkCollection
+    //Luca->James :implemented in StarlinkCollection is this correct ?
 }

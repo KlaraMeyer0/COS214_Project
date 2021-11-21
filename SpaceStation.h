@@ -19,7 +19,6 @@ class SpaceStation : public Station
         pair<Cargo*, int>* loadEquipment(int idx, int num);
         Cargo* loadHumans(int idx);
 
-        //Luca->Klara :Please implement me 
         SpaceStation* clone();
         
     private:

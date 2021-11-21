@@ -16,7 +16,7 @@ public:
     ~SatelliteManager();
 
     //Lazy Creation ,dierctly into the associated StarlinkCollection
-    void SatelliteManager:: setSatellites(int num_B, int num_S);
+    void setSatellites(int num_B, int num_S);
     
     //Clones the Sattelite manager, if called will not have to call setSatellites(...)
     SatelliteManager* clone(StarlinkCollection*,BaseStation* BScopy ,SpaceStation* SScopy);
