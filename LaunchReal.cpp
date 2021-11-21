@@ -10,6 +10,6 @@ LaunchReal::~LaunchReal(){
 void LaunchReal::startLaunch(){
     ship->Launch();
 }
-Rocketship* getShip(){
-    
+Rocketship* LaunchReal::getShip(){
+    return ship;
 }
