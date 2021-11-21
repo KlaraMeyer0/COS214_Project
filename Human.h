@@ -3,7 +3,8 @@
  * @author Xander Coetzer
  * @brief 
  * 
- * 
+ * Design Pattern: Factory
+ * Participant: Concrete Product
  */
 #ifndef HUMAN_H
 #define HUMAN_H
