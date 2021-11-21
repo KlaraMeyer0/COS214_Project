@@ -28,7 +28,7 @@ public:
 private:
     Rocketship** rocketships;
 	LaunchCaretaker* launchCaretaker;
-	int rocketCount;//added to help with deleting
+	int rocketCount;
 };
 
 #endif
