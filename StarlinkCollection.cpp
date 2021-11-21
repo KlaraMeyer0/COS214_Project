@@ -120,3 +120,16 @@ bool StarlinkCollection::testFire(){
 bool StarlinkCollection::testLoading(){
     
 }
+
+void StarlinkCollection::attachRocket(FalconRocket* r)
+{
+    rocket = r;
+}
+void StarlinkCollection::attachManager(SatelliteManager* m)
+{
+    satelliteManager = m;
+}
+void StarlinkCollection::attachHead(StarlinkSatellite* s)
+{
+    head = s;
+}
