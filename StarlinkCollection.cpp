@@ -4,7 +4,6 @@ using namespace std;
 
 #include "StarlinkCollection.h"
 
-//CONTINUE HERE
 StarlinkCollection:: StarlinkCollection(string name,BaseStation* BS ,SpaceStation* SS): Rocketship(name, 's')
 {
     head = 0;
@@ -30,6 +29,8 @@ StarlinkCollection::~StarlinkCollection(){
     delete SS;
     delete relayBS;
     delete relaySS;
+
+    rocket =NULL;
 }
 
 void StarlinkCollection::insert(StarlinkSatellite * s)
@@ -120,7 +121,7 @@ bool StarlinkCollection::testFire(){
     return b;
 }
 bool StarlinkCollection::testLoading(){
-    
+    return head==NULL? false:true;
 }
 
 void StarlinkCollection::attachRocket(FalconRocket* r)

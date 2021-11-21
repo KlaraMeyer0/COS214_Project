@@ -11,6 +11,9 @@ SatelliteManager::SatelliteManager(BaseStation* BS ,SpaceStation* SS, StarlinkCo
     relayBS = new CommunicationRelay(BS);
     relaySS = new CommunicationRelay(SS);
 
+    BS->attatchRelay(relayBS);
+    SS->attatchRelay(relaySS);
+
     protoBSSatellite= new StarlinkSatellite("BaseStation",relayBS);
     protoSTSatellite= new StarlinkSatellite("SpaceStation",relaySS);
 
@@ -35,7 +38,7 @@ SatelliteManager::~SatelliteManager(){
     SS =NULL;
 }
 
-//Talk To Xander and James for use case
+//Luca->Xander&James
 SatelliteManager* SatelliteManager::clone(StarlinkCollection* objcopy,BaseStation* BScopy ,SpaceStation* SScopy)
 {
     SatelliteManager* temp = new SatelliteManager(BScopy ,SScopy ,objcopy);

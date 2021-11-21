@@ -8,9 +8,12 @@ using namespace std;
 
 class SatelliteManager {
 public:
-    //parameter: BaseStation and SpaceStation passed 
+    
 	SatelliteManager(BaseStation* BS ,SpaceStation* ST, StarlinkCollection* SC);
-	~SatelliteManager();
+	
+    //deletes the prototypical insntaces and removes the 
+    //associations between this class and all other classes 
+    ~SatelliteManager();
 
     //Lazy Creation ,dierctly into the associated StarlinkCollection
     void SatelliteManager:: setSatellites(int num_B, int num_S);

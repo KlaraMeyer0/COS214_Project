@@ -13,12 +13,11 @@ class Station;
 class CommunicationRelay {
 private:
     //Associates a colleague with a status value 
-    //this attribute is dulpicated in Station, is this redundant
+    //this attribute is dulpicated in Station
     map<int ,bool> SatStatus;
 
     //Colleague that is communicated with: Station
     Station* RelayTo;
-    int numSats;
 
     //the StarlinkSattellite communicating with the Station: RelayTo
     vector<StarlinkSatellite*> sattelites;

@@ -6,7 +6,9 @@ using namespace std;
 
 Station::Station() : next(0) {}
 
-Station::~Station() {}
+Station::~Station(){
+    relayTo =NULL;
+}
 
 void Station::add(Station *stat)
 {
@@ -36,4 +38,12 @@ void Station::receiveCommunication(string com)
 
 void Station:: updateStatus(StarlinkSatellite* obj){
     SatStatus[obj->getName()]=obj->getStatus();
+}
+
+void Station:: reslove(StarlinkSatellite* obj){
+    relayTo->reslove(obj);
+}
+
+void Station:: attatchRelay(CommunicationRelay* obj){
+    relayTo = obj;
 }
