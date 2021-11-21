@@ -11,7 +11,7 @@ class SpaceStation : public Station
 {
     public:
         SpaceStation();
-        ~SpaceStation();
+        virtual ~SpaceStation();
         void receiveCargo(Cargo *c, int amount);
         void receiveCommunication(string s);
         void printEquipment();

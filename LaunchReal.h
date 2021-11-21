@@ -11,7 +11,7 @@ private:
     Rocketship* ship;
 public:
 	LaunchReal(Rocketship*);
-	~LaunchReal();
+	virtual ~LaunchReal();
     virtual void startLaunch();
     virtual Rocketship* getShip();
 };

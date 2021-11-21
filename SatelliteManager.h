@@ -18,7 +18,7 @@ public:
 	
     //deletes the prototypical instances and removes the
     //associations between this class and all other classes 
-    ~SatelliteManager();
+    virtual ~SatelliteManager();
 
     //Lazy Creation ,directly into the associated StarlinkCollection
     void setSatellites(int num_B, int num_S);

@@ -6,7 +6,7 @@ using namespace std;
 class PointOfCommunication {
     public:
         PointOfCommunication();    
-	    ~PointOfCommunication();
+	    virtual ~PointOfCommunication();
         bool getStatus();
         void setStauts(bool);
         int getName();

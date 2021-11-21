@@ -6,7 +6,7 @@
 class SpacecraftFactory {
 public:
 	SpacecraftFactory();
-	~SpacecraftFactory();
+	virtual ~SpacecraftFactory();
     Spacecraft* startFactory();
 protected:
     virtual Spacecraft* createRocket() = 0;

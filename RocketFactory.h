@@ -6,7 +6,7 @@
 class RocketFactory {
 public:
 	RocketFactory();
-	~RocketFactory();
+	virtual ~RocketFactory();
     FalconRocket* startFactory();
 protected:
     virtual FalconRocket* createRocket() = 0;

@@ -20,7 +20,7 @@ public:
 	
     //deallocates everything associated with the StarlinkCollection ,
     //except the : FalconRocket instance
-    ~StarlinkCollection();
+    virtual ~StarlinkCollection();
 
     void Launch();
 

@@ -16,7 +16,7 @@ using namespace std;
 class LaunchInterface {//Memento Originator
 public:
 	LaunchInterface();
-	~LaunchInterface();
+	virtual ~LaunchInterface();
 	LaunchFile* retrieveLaunchFile();
 	void setLaunchFile(LaunchFile*);
 	void TestLaunch();

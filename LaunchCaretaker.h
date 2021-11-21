@@ -8,7 +8,7 @@ using namespace std;
 class LaunchCaretaker {//Memento caretaker
 public:
 	LaunchCaretaker();
-	~LaunchCaretaker();
+	virtual ~LaunchCaretaker();
 	LaunchFile* getFile(int i);
 	void setFile(LaunchFile* newfile);
 	string getDesc(int i);

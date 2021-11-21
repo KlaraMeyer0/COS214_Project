@@ -8,7 +8,7 @@ using namespace std;
 class StopTest : public LaunchTest {
 public:
 	StopTest(Launch*);
-	~StopTest();
+	virtual ~StopTest();
     void output();
 	virtual void startLaunch();
 private:

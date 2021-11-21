@@ -9,7 +9,7 @@ using namespace std;
 class VacuumEngine : public Engine {
 public:
 	VacuumEngine();
-	~VacuumEngine();
+	virtual ~VacuumEngine();
 	void TurnOn(); // Turn on the engine
 	void TurnOff(); // Turn off the engine
 };

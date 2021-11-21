@@ -12,7 +12,7 @@ private:
 	VacuumEngine* engine; // Variable holding a pointer to the engine
 public:
 	Stage2Engine();
-	~Stage2Engine();
+	virtual ~Stage2Engine();
 	void TurnOn(FalconRocket*); // Turn on the engine
 	void TurnOff(FalconRocket*); // Turn off the engine
 	virtual int EngineCount();//Returns the number of engines//Blank//Required for testing

@@ -8,7 +8,7 @@ using namespace std;
 class TestLaunch : public Work{//Memento client
 public:
 	TestLaunch(LaunchInterface*);
-	~TestLaunch();
+	 virtual ~TestLaunch();
     void execute();
     void undo();
 private:

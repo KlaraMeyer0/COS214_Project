@@ -9,7 +9,7 @@ class StarlinkBay : public RocketshipBay
 {
 public:
 	StarlinkBay();
-	~StarlinkBay();
+	virtual ~StarlinkBay();
 	StarlinkCollection *getRocketship();
 
 	void setName(string n, BaseStation* BS ,SpaceStation* SS=0);

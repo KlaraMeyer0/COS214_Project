@@ -11,7 +11,7 @@ class HumanFactory : public CargoFactory
 {
 public:
 	HumanFactory();
-	~HumanFactory();
+	virtual ~HumanFactory();
 protected:
 	Cargo *getCargo(string n);
 };

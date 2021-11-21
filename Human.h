@@ -8,7 +8,7 @@ using namespace std;
 class Human : public Cargo {
 public:
 	Human(string);
-	~Human();
+	virtual ~Human();
     Cargo* clone();
 };
 

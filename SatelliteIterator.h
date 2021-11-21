@@ -13,7 +13,7 @@ class SatelliteIterator
     public:
         SatelliteIterator(StarlinkSatellite* sat);
         SatelliteIterator(StarlinkCollection* satCol, StarlinkSatellite* sat);
-        ~SatelliteIterator();
+        virtual ~SatelliteIterator();
         SatelliteIterator next();
         StarlinkSatellite* currentSatellite();
         bool equals(SatelliteIterator*);

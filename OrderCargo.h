@@ -10,7 +10,7 @@ class OrderCargo : public Work
 {
 public:
     OrderCargo(BaseStation* b);
-    ~OrderCargo();
+    virtual ~OrderCargo();
     void execute();
     void undo();
 private:

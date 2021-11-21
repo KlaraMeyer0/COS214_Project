@@ -11,7 +11,7 @@ class Rocketship
 {
 public:
 	Rocketship(string n, char);//initialises 
-	~Rocketship();
+	virtual ~Rocketship();
 	virtual void Launch() = 0;//launches the rocket into space and attaches it to the space station
 	virtual Rocketship *clone() = 0;
 	string getName();//return name of the rocketship

@@ -6,7 +6,7 @@ using namespace std;
 class Spacecraft {
 public:
 	Spacecraft(int capacity);
-	~Spacecraft();
+	virtual ~Spacecraft();
 	int getCapacity();
 	virtual Spacecraft* clone () = 0;
 private:

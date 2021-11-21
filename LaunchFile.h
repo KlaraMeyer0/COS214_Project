@@ -11,7 +11,7 @@ private:
     int count;
 public:
 	LaunchFile();
-	~LaunchFile();
+	virtual ~LaunchFile();
     Rocketship** getLaunch();
     void setLaunch(Rocketship** rocketships,int c);
     int getCount();

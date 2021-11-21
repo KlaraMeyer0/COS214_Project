@@ -9,7 +9,7 @@ using namespace std;
 class Stage1Engine : public StageEngine {
 public:
 	Stage1Engine();
-	~Stage1Engine();
+	virtual ~Stage1Engine();
 	virtual void TurnOn(FalconRocket*) = 0; // Turn on the engine
 	virtual void TurnOff(FalconRocket*) = 0; // Turn off the engine
 	virtual int EngineCount() = 0;//Returns the number of engines

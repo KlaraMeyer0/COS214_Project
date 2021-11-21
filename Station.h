@@ -14,7 +14,7 @@ class Station
 {
     public:
         Station();
-        ~Station();
+        virtual ~Station();
         void add(Station* stat);
         virtual void receiveCargo(Cargo* c);
         virtual void receiveCommunication(string com);
