@@ -47,6 +47,9 @@ void BaseStation::printHumans()
 
 pair<Cargo *, int> *BaseStation::loadEquipment(int idx, int num)
 {
+    if (idx > equipment.size() - 1)
+        return nullptr;
+
     pair<Cargo*, int> * p;
     p->first = equipment.at(idx).first;
     p->second = num;
@@ -67,6 +70,9 @@ pair<Cargo *, int> *BaseStation::loadEquipment(int idx, int num)
 
 Cargo *BaseStation::loadHumans(int idx)
 {
+    if (idx > humans.size() - 1)
+        return nullptr;
+
     Cargo* h = humans.at(idx);
     humans.erase(humans.begin() + idx);
     return h;
