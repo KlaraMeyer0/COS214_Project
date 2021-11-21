@@ -7,25 +7,21 @@ using namespace std;
 BaseStation::BaseStation() : Station()
 {
     setName("Base Station");
+    handler = new CargoHandler();
+    handler->add(new ConcreteCargoHandler(true));
+    handler->add(new ConcreteCargoHandler(false));
 }
 
-BaseStation::~BaseStation() {}
-
-void BaseStation::receiveCargo(Cargo *c, int amount)
+BaseStation::~BaseStation()
 {
-    if (c->isHuman())
-        humans.push_back(c);
-    else
-    {
-        pair<Cargo *, int> p;
-        p.first = c;
-        p.second = amount;
+    delete handler;
+}
 
-        equipment.push_back(p);
-        cout << amount << " ";
-    }
+void BaseStation::receiveCargo(Cargo *c)
+{
 
-    cout << c->getName() << " has arrived at the base station." << endl;
+    handler->handleCargo(c);
+
 }
 
 void BaseStation::receiveCommunication(string s)

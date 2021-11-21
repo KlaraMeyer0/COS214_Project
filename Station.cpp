@@ -7,7 +7,7 @@ using namespace std;
 Station::Station() : next(0) {}
 
 Station::~Station(){
-    relayTo =NULL;
+    relayTo = NULL;
 }
 
 void Station::add(Station *stat)
@@ -16,15 +16,6 @@ void Station::add(Station *stat)
         next->add(stat);
     else
         next = stat;
-}
-
-void Station::receiveCargo(Cargo *c)
-{
-    if (c != nullptr)
-        if (next)
-            next->receiveCargo(c);
-        else
-            cout << "Cargo " << c->getName() << " cannot be delivered to the station."<< endl;
 }
 
 void Station::receiveCommunication(string com)
