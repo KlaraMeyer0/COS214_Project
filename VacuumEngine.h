@@ -1,3 +1,13 @@
+/**
+ * @file
+ * @author Rina Rene du Toit
+ *
+ * @brief
+ *
+ * Design Pattern: Template in State
+ * Participant: Concrete class
+ */
+
 #ifndef VACUUMENGINE_H
 #define VACUUMENGINE_H
 
@@ -8,10 +18,22 @@ using namespace std;
 
 class VacuumEngine : public Engine {
 public:
+	/**
+	 * Constructor for VacuumEngine Class
+	 */
 	VacuumEngine();
-	virtual ~VacuumEngine();
-	void TurnOn(); // Turn on the engine
-	void TurnOff(); // Turn off the engine
+	/**
+	 * Destructor for VacuumEngine Class
+	 */
+	~VacuumEngine();
+	/**
+	 * Turn on the engine
+	 */
+	void TurnOn();
+	/**
+	 * Turn off the engine
+	 */
+	void TurnOff();
 };
 
 #endif

@@ -1,3 +1,13 @@
+/**
+ * @file
+ * @author Rina Rene du Toit
+ *
+ * @brief
+ *
+ * Design Pattern: Template in State
+ * Participant: Concrete class
+ */
+
 #ifndef FALCONCORE_H
 #define FALCONCORE_H
 
@@ -9,14 +19,36 @@ using namespace std;
 
 class FalconCore : public Engine {
 private:
-	MerlinEngine** merlins; // Array of merlin engines
-	const int EngineCount = 9;// Used for testing//Don't remove
+	/**
+	 * Array of merlin engines
+	 */
+	MerlinEngine** merlins; 
+	/**
+	 * Used for testing
+	 */
+	const int EngineCount = 9; //Don't remove
 public:
+	/**
+	 * Constructor that initialises its the Merlin engines
+	 */
 	FalconCore();
-	virtual ~FalconCore();
-	void TurnOn(); // Turn on the engine
-	void TurnOff(); // Turn off the engine
-	int getCount();// Returns number of engines in core
+	/**
+	 * Destructor for the FalconCore class
+	 */
+	~FalconCore();
+	/**
+	 * Turn on the Falcon Core engine as well as its Merlin egines
+	 */
+	void TurnOn();
+	/**
+	 * Turn off the Falcon Core engine as well as its Merlin egines
+	 */
+	void TurnOff();
+	/**
+	 * Returns number of engines in core
+	 * @return number of merlin engines attached
+	 */
+	int getCount();
 };
 
 #endif
