@@ -3,8 +3,6 @@
 
 #include "RocketshipBay.h"
 #include "StarlinkCollection.h"
-#include "StarlinkFactory.h"
-#include "ManagerFactory.h"
 #include "Falcon9Factory.h"
 
 class StarlinkBay : public RocketshipBay
@@ -13,7 +11,7 @@ public:
 	StarlinkBay();
 	~StarlinkBay();
 	StarlinkCollection *getRocketship();
-	void setName(string n,Station* s);
+	void setName(string n, BaseStation* BS ,SpaceStation* SS);
 	void buildRocket();
 	void buildBody();
 	void addCargo();
@@ -21,8 +19,6 @@ public:
 private:
 	StarlinkCollection *starlink_collection;
 	RocketFactory *falcon9_factory;
-	SatelliteFactory *manager_factory;
-	SatelliteFactory *starlink_factory;
 
 };
 
