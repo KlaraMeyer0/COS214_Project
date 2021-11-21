@@ -2,7 +2,6 @@
 
 LaunchReal::LaunchReal(Rocketship* r){
     ship = r;
-    t = true;
 }
 LaunchReal::~LaunchReal(){
     ship = nullptr;

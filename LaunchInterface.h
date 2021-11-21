@@ -1,7 +1,13 @@
+/**
+ * @file LaunchInterface.h
+ * @author James Butler
+ * @brief 
+ * 
+ * Design Pattern: Memento
+ * Participant: Originator
+ */
 #ifndef LAUNCHINTERFACE_H
 #define LAUNCHINTERFACE_H
-
-using namespace std;
 
 #include "Rocketship.h"
 #include "LaunchCaretaker.h"
@@ -13,7 +19,9 @@ using namespace std;
 #include "LaunchFile.h"
 #include <sstream>
 
-class LaunchInterface {//Memento Originator
+using namespace std;
+
+class LaunchInterface {
 public:
 	LaunchInterface();
 	virtual ~LaunchInterface();

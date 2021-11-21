@@ -1,3 +1,11 @@
+/**
+ * @file Launch.h
+ * @author James Butler
+ * @brief 
+ * 
+ * Design Pattern: Decorator
+ * Participant: Component
+ */
 #ifndef LAUNCH_H
 #define LAUNCH_H
 
@@ -7,13 +15,18 @@ using namespace std;
 
 class Launch {
 public:
+	/**
+	 * @brief Starts the launch of the rocket and all tests leading up to it
+	 * 
+	 */
 	virtual void startLaunch() = 0;
-	bool getType(){
-		return t;
-	}
+
+	/**
+	 * @brief Get the Ship object
+	 * 
+	 * @return Rocketship* 
+	 */
 	virtual Rocketship* getShip() = 0; 
-protected:
-	bool t;
 };
 
 #endif
