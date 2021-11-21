@@ -29,7 +29,7 @@ public:
     StarlinkSatellite* getFirstSat();
     
     StarlinkCollection* clone();
-    StarlinkSatellite* getHead();
+    //StarlinkSatellite* getHead();
     
     void attachRocket(FalconRocket*);
 

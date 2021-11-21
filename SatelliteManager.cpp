@@ -24,7 +24,7 @@ SatelliteManager::SatelliteManager(BaseStation* BS ,SpaceStation* SS, StarlinkCo
     head =NULL;
 } 
 
-//Not responsible for any deallication of StarlinkeSatellites handled in StarlinkCollection
+//Not responsible for any deallocation of StarlinkSatellites handled in StarlinkCollection
 SatelliteManager::~SatelliteManager(){
     delete protoBSSatellite;
     delete protoSTSatellite;
