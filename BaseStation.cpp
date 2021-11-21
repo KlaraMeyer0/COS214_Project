@@ -6,7 +6,7 @@ using namespace std;
 
 BaseStation::BaseStation() : Station()
 {
-    name = "Base Station";
+    setName("Base Station");
 }
 
 BaseStation::~BaseStation() {}

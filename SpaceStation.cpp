@@ -6,7 +6,7 @@ using namespace std;
 
 SpaceStation::SpaceStation() : Station()
 {
-    name = "Space Station";
+    setName("Space Station");
 }
 
 SpaceStation::~SpaceStation() {}
