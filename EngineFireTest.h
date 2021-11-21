@@ -10,7 +10,7 @@ public:
 	EngineFireTest(Launch*);
 	~EngineFireTest();
     void output();
-	virtual void startLaunch();
+	virtual void startLaunch(); 
 };
 
 #endif
