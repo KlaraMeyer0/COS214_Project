@@ -61,7 +61,44 @@ void LaunchInterface::TestLaunch(){
                     m.push_back(false);
                     w = false;
                     //prompt user for tests and assemble decorator
-                    
+                    cout<<"Setup of test launch for launch "<<i<<endl;
+                    bool d = true;
+                    do{
+                        cout<<"Do you want to have an engine present test? (y or n)"<<endl;
+                        cin>>a;
+                        if (a == 'y'){
+                            
+                        } else if (a == 'n'){
+                            
+                        } else {
+                            cout<<"Please input either n or y."<<endl;
+                        }
+                    } while (d);
+                    d = true;
+                    do{
+                        cout<<"Do you want to have an engine fire test? (y or n)"<<endl;
+                        cin>>a;
+                        if (a == 'y'){
+                            
+                        } else if (a == 'n'){
+                            
+                        } else {
+                            cout<<"Please input either n or y."<<endl;
+                        }
+                    } while (d);
+                    d = true;
+                    do{
+                        cout<<"Do you want to have a cargo present test? (y or n)"<<endl;
+                        cin>>a;
+                        if (a == 'y'){
+                            
+                        } else if (a == 'n'){
+                            
+                        } else {
+                            cout<<"Please input either n or y."<<endl;
+                        }
+                    } while (d);
+                    cout<<"Setup complete"<<endl;
                 } else {
                     cout<<"Please input either r or t."<<endl;
                 }
