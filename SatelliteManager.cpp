@@ -65,8 +65,8 @@ SatelliteManager* SatelliteManager::clone(StarlinkCollection* objcopy,BaseStatio
 
 }
 
-// creates a vector of satelites with num_B satallites communicating with
-// BaseStation and num_O sattelites communicating with space station
+// creates a vector of satellites with num_B satellites communicating with
+// BaseStation and num_O satellites communicating with space station
 void SatelliteManager:: setSatellites(int num_B, int num_S)
 {
     for(int i=0;i<num_B+num_S;++i)

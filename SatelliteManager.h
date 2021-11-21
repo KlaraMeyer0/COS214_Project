@@ -11,14 +11,14 @@ public:
     
 	SatelliteManager(BaseStation* BS ,SpaceStation* ST, StarlinkCollection* SC);
 	
-    //deletes the prototypical insntaces and removes the 
+    //deletes the prototypical instances and removes the
     //associations between this class and all other classes 
     ~SatelliteManager();
 
-    //Lazy Creation ,dierctly into the associated StarlinkCollection
+    //Lazy Creation ,directly into the associated StarlinkCollection
     void setSatellites(int num_B, int num_S);
     
-    //Clones the Sattelite manager, if called will not have to call setSatellites(...)
+    //Clones the Satellite manager, if called will not have to call setSatellites(...)
     SatelliteManager* clone(StarlinkCollection*,BaseStation* BScopy ,SpaceStation* SScopy);
 
     //getters for Communication relays to enable destruction
