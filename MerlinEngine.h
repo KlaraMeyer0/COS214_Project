@@ -1,5 +1,5 @@
 /**
- * @file
+ * @file MerlinEngine.h
  * @author Rina Rene du Toit
  *
  * @brief
