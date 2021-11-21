@@ -14,8 +14,7 @@ SpaceStation::SpaceStation() : Station()
 
 SpaceStation::~SpaceStation()
 {
-    while (handler->next)
-        delete handler;
+
 }
 
 void SpaceStation::receiveCargo(Cargo *c)

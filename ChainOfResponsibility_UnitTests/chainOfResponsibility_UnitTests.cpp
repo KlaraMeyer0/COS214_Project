@@ -15,9 +15,6 @@ namespace
     // Tests chain of responsibility
     void runChainOfResponsibilityTests()
     {
-        Station* testStation = new BaseStation();
-        testStation->add(new SpaceStation());
 
-        testStation->receiveCargo()
     }
 }
