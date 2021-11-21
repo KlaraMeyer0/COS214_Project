@@ -18,7 +18,7 @@ class StarlinkCollection : public Rocketship {
 public:
     StarlinkCollection(string name,BaseStation* BS ,SpaceStation* SS); 
 	
-    //deallocates everuthing associated with the StarlinkCollection ,
+    //deallocates everything associated with the StarlinkCollection ,
     //except the : FalconRocket instance
     ~StarlinkCollection();
 
