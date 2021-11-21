@@ -7,12 +7,12 @@ using namespace std;
         PointOfCommunication(){
         this->communicatesWith = communicatesWith;
         relay = obj;
-        next = NULL;
-        previous =NULL;
+        next = nullptr;
+        previous =nullptr;
     }
 
 	StarlinkSatellite::~StarlinkSatellite(){
-        relay =NULL;
+        relay =nullptr;
     }
     
     string StarlinkSatellite:: getCommunicatesWith(){
