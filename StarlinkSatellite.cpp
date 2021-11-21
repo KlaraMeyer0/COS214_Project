@@ -7,24 +7,24 @@ using namespace std;
         PointOfCommunication(){
         this->communicatesWith = communicatesWith;
         relay = obj;
-        next = nullptr;
-        previous =nullptr;
+        next = NULL;
+        previous =NULL;
     }
 
 	StarlinkSatellite::~StarlinkSatellite(){
-        relay = nullptr;
+        relay = NULL;
+        next = NULL;
+        previous =NULL;
     }
     
     string StarlinkSatellite:: getCommunicatesWith(){
         return communicatesWith;
     }
 
-    //the names of the StarlinkSatellite will differ
     StarlinkSatellite* StarlinkSatellite:: clone(){
         return new StarlinkSatellite(communicatesWith,relay);
     }
 
-    //Creates exact copy ,with the same name as the calling object
     StarlinkSatellite* StarlinkSatellite::cloneExact(string communicatesWith, CommunicationRelay* obj){
         StarlinkSatellite* temp = new StarlinkSatellite(this->communicatesWith,obj);
         temp->setName(this->getName());

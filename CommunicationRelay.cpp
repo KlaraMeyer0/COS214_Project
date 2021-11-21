@@ -25,16 +25,15 @@ void CommunicationRelay:: notify(StarlinkSatellite* obj){
     RelayTo->updateStatus(obj);
 }
 
-//used to set the status of a StatlinkSattelite to true indicating it is functional
 void CommunicationRelay:: resolve(StarlinkSatellite* obj){
     for(int i=0; i < satellites.size(); ++i)
         if(obj->getName() == satellites[i]->getName()){
             satellites[i]->setStatus(true);
+            notify(obj);
             return;
         }
 }
 
-//obj is a new Station ,not the same station
 CommunicationRelay* CommunicationRelay:: clone(Station* obj){
     CommunicationRelay* temp = new CommunicationRelay(obj);
     temp->SatStatus = this->SatStatus;

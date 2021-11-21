@@ -1,3 +1,13 @@
+/**
+ * @file Station.h
+ * @class Station
+ * @author Klara Meyer ,Luca Loubser
+ * 
+ * @brief
+ * Design Pattern: Mediator
+ * Participant: ConcreteColleage
+ */
+
 #ifndef STATION_H
 #define STATION_H
 
@@ -5,13 +15,10 @@
 #include "StarlinkSatellite.h"
 #include <map>
 
-//Participant: ConcreteColleage in the Mediator Pattern
-
 class StarlinkSatellite;
 class CommunicationRelay;
 
-class Station
-{
+class Station{
     public:
         Station();
         virtual ~Station();
@@ -23,26 +30,50 @@ class Station
         virtual pair<Cargo*, int>* loadEquipment(int idx, int num) = 0;
         virtual Cargo* loadHumans(int idx) = 0;
 
+        /**
+         * @brief used to update a Station of any changes to a StarlinkSatellites ,
+         *        through the CommunicationRelay
+         * @param StarlinkSatellite that updates the Station
+        */
         //used to update Space station of any changes to the StarlinkSatellites
         void updateStatus(StarlinkSatellite*);
 
-        //wrapper on the station to resolve an error on one of the starlink satellites
+        /**
+         * @brief resolve an error on one of the StarlinkSatellite, by setting its status to true
+         *        indicating it is functional ,through the CommunicationRelay member
+         * @param StarlinkSatellite to communicate with
+         */
         void resolve(StarlinkSatellite* obj);
 
+        /**
+         * @brief sets the CommunicationRelay* member: relayTo
+         * @param CommunicationRelay pointer
+         */ 
         void attachRelay(CommunicationRelay*);
+
+        /**
+         * @brief returns the name of the Station
+         * @return string
+         */ 
         string getName();
 
+        /**
+         * @brief returns the status of the StarlinkSatellites assocciated with this station
+         * @return map<int ,bool> 
+         */ 
         map<int ,bool> getSatStatus();
 
         
     private:
         Station* next;
+
+        ///@brief name of the station
         string name;
         
-        //Holds information on each StarlinkSatellite associated with it
+        ///@brief Holds information on each StarlinkSatellite associated with it
         map<int ,bool> SatStatus;
 
-        //Mediator this colleague communicates with 
+        ///@brief CommunicationRelay this station communicates with
         CommunicationRelay* relayTo;
 
 };
