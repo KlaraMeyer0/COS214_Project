@@ -41,7 +41,7 @@ void Station:: updateStatus(StarlinkSatellite* obj){
 }
 
 void Station:: resolve(StarlinkSatellite* obj){
-    relayTo->reslove(obj);
+    relayTo->resolve(obj);
 }
 
 void Station:: attachRelay(CommunicationRelay* obj){

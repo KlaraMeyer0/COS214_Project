@@ -8,7 +8,7 @@ class PointOfCommunication {
         PointOfCommunication();    
 	    virtual ~PointOfCommunication();
         bool getStatus();
-        void setStauts(bool);
+        void setStatus(bool);
         int getName();
         void setName(int);
     private:
