@@ -24,17 +24,20 @@ public:
 
     StarlinkSatellite* getHead();
 private:
+
+    //set after creation in this class
     StarlinkSatellite* head;
+    
+    //set in creation of this class
     StarlinkSatellite* protoBSSatellite;
     StarlinkSatellite* protoSTSatellite;
-
     CommunicationRelay* relayBS;
     CommunicationRelay* relaySS;
 
+    //passed to this class in the Constructor
+    StarlinkCollection* SC;
     BaseStation* BS;
     SpaceStation* SS;
-
-    StarlinkCollection* SC;
 };
 
 #endif

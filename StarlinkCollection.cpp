@@ -5,14 +5,15 @@ using namespace std;
 #include "StarlinkCollection.h"
 
 //CONTINUE HERE
-StarlinkCollection:: StarlinkCollection(string name): Rocketship(name, 's')
+StarlinkCollection:: StarlinkCollection(string name,BaseStation* BS ,SpaceStation* SS): Rocketship(name, 's')
 {
     head = 0;
-    
-    //BS and SS set by Xander in CreateStarlink
+    this->BS = BS;
+    this->SS = SS;
 
-    //must create the Satelites uisng SatelliteManager
+    satelliteManager = new SatelliteManager(BS,SS,this);
 }
+
 
 StarlinkCollection::~StarlinkCollection(){
     
@@ -85,9 +86,13 @@ StarlinkSatellite *StarlinkCollection::getFirstSat()
 }
 
 StarlinkCollection* StarlinkCollection:: clone(){
-    StarlinkCollection* temp = new StarlinkCollection(this->getName());
-    //Falcon Rocket needs to implemnet a clone method and set to rocket of temp
-    temp->numSatellites = numSatellites;
+    
+    BaseStation* BScopy =BS->clone();
+    SpaceStation* SScopy =SS->clone();
+    FalconRocket* rocketCopy =rocket->clone();
+    
+    StarlinkCollection* temp = new StarlinkCollection(this->getName(),BScopy ,SScopy);
+    
     temp->satelliteManager = this->satelliteManager->clone(temp);
     temp->num_B = num_B;
     temp->num_S = num_S;
@@ -124,4 +129,18 @@ bool StarlinkCollection::testLoading(){
 void StarlinkCollection::attachRocket(FalconRocket* r)
 {
     rocket = r;
+}
+
+
+void StarlinkCollection:: setNums(int num_B ,int num_S){
+    this->num_B =num_B;
+    this->num_S =num_S;
+}
+
+void StarlinkCollection:: setHead(StarlinkSatellite* head){
+    this->head = head;
+}
+
+void StarlinkCollection:: setSatellites(int num_B,int num_S){
+    satelliteManager->setSatellites(num_B,num_S);
 }

@@ -62,6 +62,8 @@ SatelliteManager* SatelliteManager::clone(StarlinkCollection* obj)
     //set it to the temp->head
     temp->head =obj->getHead();
 
+    return temp;
+
 }
 
 // creates a vector of satelites with num_B satallites communicating with
@@ -78,6 +80,8 @@ void SatelliteManager:: setSatellites(int num_B, int num_S)
                 SC->insert(protoBSSatellite->clone());           
         else
             SC->insert(protoSTSatellite->clone());
+
+    SC->setHead(head);
 }
 
 StarlinkSatellite* SatelliteManager:: getHead(){

@@ -13,8 +13,7 @@ using namespace std;
 
 class StarlinkCollection : public Rocketship {
 public:
-    //Luca->Xander: is this OK ? sets the BaseStation and SpaceStation automatically
-    StarlinkCollection(string name); 
+    StarlinkCollection(string name,BaseStation* BS ,SpaceStation* SS); 
 	
     //deallocates everuthing associated with the StarlinkCollection ,
     //except the : FalconRocket instance
@@ -40,21 +39,30 @@ public:
     virtual int getRockets();
     virtual bool testFire();
     virtual bool testLoading();
+
+    void setNums(int num_B ,int num_S);
+    void setHead(StarlinkSatellite*);
+
+    void setSatellites(int num_B,int num_S);
+
 private:
-    FalconRocket* rocket;
-    int numSatellites;
-    SatelliteManager* satelliteManager;
+
+    //set in the StarlinkBay
     int num_B;
     int num_S;
-    StarlinkSatellite* head;
-
-    //Created in StarlinkCollection
+    FalconRocket* rocket;
+    
+    //Created in Main and assigned in constructor
     BaseStation* BS;
     SpaceStation* SS;
+
+    //created in this class
+    SatelliteManager* satelliteManager;
 
     //Created and assigned in the SatelliteManager
     CommunicationRelay* relayBS;
     CommunicationRelay* relaySS;
+    StarlinkSatellite* head;
 
 };
 

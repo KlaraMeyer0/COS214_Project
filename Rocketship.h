@@ -22,6 +22,7 @@ public:
 	virtual int getRockets() = 0;//gives a count of the engines on this spaceship setup
 	virtual bool testFire() = 0;//returns if the engines are on or not
 	virtual bool testLoading() = 0;//returns if cargo has been loaded
+    string getName();
 private:
 	string name;
 	char rocketshipType; // s d c

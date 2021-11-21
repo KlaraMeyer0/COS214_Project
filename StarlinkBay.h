@@ -13,7 +13,7 @@ public:
 	StarlinkBay();
 	~StarlinkBay();
 	StarlinkCollection *getRocketship();
-	void setName(string n,Station* s);
+    void StarlinkBay::setName(string n, BaseStation* BS ,SpaceStation* SS=0); 
 	void buildRocket();
 	void buildBody();
 	void addCargo();
@@ -21,9 +21,6 @@ public:
 private:
 	StarlinkCollection *starlink_collection;
 	RocketFactory *falcon9_factory;
-	SatelliteFactory *manager_factory;
-	SatelliteFactory *starlink_factory;
-
 };
 
 #endif
