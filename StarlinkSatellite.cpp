@@ -27,7 +27,9 @@ using namespace std;
     //Creates exact copy ,with the same name as the calling object
     StarlinkSatellite* StarlinkSatellite::cloneExact(string communicatesWith, CommunicationRelay* obj){
         StarlinkSatellite* temp = new StarlinkSatellite(communicatesWith,obj);
-        this->setName(this->getName());
+        temp->setName(this->getName());
+
+        return temp;
     }
 
 #endif
