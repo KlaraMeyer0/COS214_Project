@@ -19,7 +19,7 @@ class Station
         virtual void receiveCommunication(string com);
         virtual void printEquipment() = 0;
         virtual void printHumans() = 0;
-        virtual pair<Cargo*, int>* loadEquipment(int idx) = 0;
+        virtual pair<Cargo*, int>* loadEquipment(int idx, int num) = 0;
         virtual Cargo* loadHumans(int idx) = 0;
 
         //used to update Space station of any changes to the StarlinkSatellites
