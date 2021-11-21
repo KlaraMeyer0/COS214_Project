@@ -67,7 +67,8 @@ void OrderCargo::execute()
         } while (flag);
         if (valid)
         {
-            base_station->receiveCargo(cargo, amount);
+            for (int i = 0; i < amount; i++)
+                base_station->receiveCargo(cargo);  //Many instances of cargo must be created. How?
         }
     }
 }
