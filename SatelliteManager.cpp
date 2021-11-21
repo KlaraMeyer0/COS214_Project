@@ -11,8 +11,8 @@ SatelliteManager::SatelliteManager(BaseStation* BS ,SpaceStation* SS, StarlinkCo
     relayBS = new CommunicationRelay(BS);
     relaySS = new CommunicationRelay(SS);
 
-    BS->attatchRelay(relayBS);
-    SS->attatchRelay(relaySS);
+    BS->attachRelay(relayBS);
+    SS->attachRelay(relaySS);
 
     protoBSSatellite= new StarlinkSatellite("BaseStation",relayBS);
     protoSTSatellite= new StarlinkSatellite("SpaceStation",relaySS);
