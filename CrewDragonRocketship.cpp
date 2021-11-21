@@ -47,7 +47,7 @@ void CrewDragonRocketship::attachCargo(vector<Cargo *> cvect)
         toFill = spacecraft->getCapacity(); // only fill the available space
     }
     for (int i = 0; i < toFill; i++)
-        cargo[i] = cvect.pop_back();
+        cargo[i] = cvect[i];
 }
 
 Cargo *CrewDragonRocketship::dropCargo()
