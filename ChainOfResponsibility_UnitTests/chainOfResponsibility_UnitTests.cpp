@@ -5,28 +5,19 @@
 using namespace std;
 
 //#include "gtest/gtest.h"
-#include "StarlinkCollection.h"
+#include "BaseStation.h"
+#include "SpaceStation.h"
+#include "Human.h"
+#include "Equipment.h"
 
 namespace
 {
     // Tests chain of responsibility
-    void runIteratorTests() {
-        cout << "Creating a StarlinkCollection for testing." << endl;
-        StarlinkCollection* testCollection = new StarlinkCollection("TestCollection", nullptr, nullptr);
-        StarlinkSatellite* testSatellite1 = new StarlinkSatellite("Test location 1", nullptr);
-        StarlinkSatellite* testSatellite2 = new StarlinkSatellite("Test location 1", nullptr);
-        StarlinkSatellite* testSatellite3 = new StarlinkSatellite("Test location 1", nullptr);
+    void runChainOfResponsibilityTests()
+    {
+        Station* testStation = new BaseStation();
+        testStation->add(new SpaceStation());
 
-        testCollection->insert(testSatellite1);
-        testCollection->insert(testSatellite2);
-        testCollection->insert(testSatellite2);
-
-        int idx = 0;
-        SatelliteIterator* i;
-        for (i = testCollection->begin(); !(testCollection->end()); ++i)
-        {
-            cout << "Satellite " << idx << " communicates with: " << i->currentSatellite()->getCommunicatesWith() << endl;
-            idx++;
-        }
+        testStation->receiveCargo()
     }
 }

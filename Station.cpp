@@ -40,10 +40,10 @@ void Station:: updateStatus(StarlinkSatellite* obj){
     SatStatus[obj->getName()]=obj->getStatus();
 }
 
-void Station:: reslove(StarlinkSatellite* obj){
+void Station:: resolve(StarlinkSatellite* obj){
     relayTo->reslove(obj);
 }
 
-void Station:: attatchRelay(CommunicationRelay* obj){
+void Station:: attachRelay(CommunicationRelay* obj){
     relayTo = obj;
 }

@@ -26,10 +26,10 @@ class Station
         //used to update Space station of any changes to the StarlinkSatellites
         void updateStatus(StarlinkSatellite*);
 
-        //wrapper on the sation to reslove an error on one of the starlinksattelites
-        void reslove(StarlinkSatellite* obj);
+        //wrapper on the sation to resolve an error on one of the starlinksattelites
+        void resolve(StarlinkSatellite* obj);
 
-        void attatchRelay(CommunicationRelay*);
+        void attachRelay(CommunicationRelay*);
 
         string name;
     private:
