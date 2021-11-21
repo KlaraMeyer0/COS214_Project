@@ -36,12 +36,9 @@ SatelliteManager::~SatelliteManager(){
 }
 
 //Talk To Xander and James for use case
-SatelliteManager* SatelliteManager::clone(StarlinkCollection* obj)
+SatelliteManager* SatelliteManager::clone(StarlinkCollection* objcopy,BaseStation* BScopy ,SpaceStation* SScopy)
 {
-    BaseStation* BScopy = BS->clone();
-    SpaceStation* SScopy = SS->clone();
-
-    SatelliteManager* temp = new SatelliteManager(BScopy ,SScopy ,obj);
+    SatelliteManager* temp = new SatelliteManager(BScopy ,SScopy ,objcopy);
     delete temp->relayBS;
     delete temp->relaySS;
 
@@ -53,14 +50,13 @@ SatelliteManager* SatelliteManager::clone(StarlinkCollection* obj)
     StarlinkSatellite* ptr = head;
     while(ptr != NULL){
         if(ptr->getCommunicatesWith() == "BaseStation")
-            obj->insert(ptr->cloneExact("BaseStation",temp->relayBS));
+            objcopy->insert(ptr->cloneExact("BaseStation",temp->relayBS));
         else
-            obj->insert(ptr->cloneExact("SpaceStation",temp->relaySS));
+            objcopy->insert(ptr->cloneExact("SpaceStation",temp->relaySS));
         ptr =ptr->next;
     }
 
-    //set it to the temp->head
-    temp->head =obj->getHead();
+    temp->head =objcopy->getFirstSat();
 
     return temp;
 

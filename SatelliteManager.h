@@ -16,7 +16,7 @@ public:
     void SatelliteManager:: setSatellites(int num_B, int num_S);
     
     //Clones the Sattelite manager, if called will not have to call setSatellites(...)
-    SatelliteManager* clone(StarlinkCollection*);
+    SatelliteManager* clone(StarlinkCollection*,BaseStation* BScopy ,SpaceStation* SScopy);
 
     //getters for Communication relays to enable destruction
     CommunicationRelay* getCommunicationRelayBS();

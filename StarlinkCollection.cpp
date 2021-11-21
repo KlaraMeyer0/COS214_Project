@@ -89,20 +89,17 @@ StarlinkCollection* StarlinkCollection:: clone(){
     
     BaseStation* BScopy =BS->clone();
     SpaceStation* SScopy =SS->clone();
-    FalconRocket* rocketCopy =rocket->clone();
     
     StarlinkCollection* temp = new StarlinkCollection(this->getName(),BScopy ,SScopy);
     
-    temp->satelliteManager = this->satelliteManager->clone(temp);
+    delete temp->satelliteManager;
+    temp->satelliteManager = this->satelliteManager->clone(temp,BScopy ,SScopy);
+
+    temp->rocket =rocket->clone();
+
     temp->num_B = num_B;
     temp->num_S = num_S;
     temp->head = temp->satelliteManager->getHead();
-    //BS and SS 
-    //BS ,SS ,relayBS and relaySS needs to be set
-}
-
-StarlinkSatellite* StarlinkCollection:: getHead(){
-    return head;
 }
 
 void StarlinkCollection::setCommunicationRelayBS(CommunicationRelay* obj){
