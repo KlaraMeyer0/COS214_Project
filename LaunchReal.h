@@ -1,3 +1,11 @@
+/**
+ * @file LaunchReal.h
+ * @author James Butler
+ * @brief 
+ * 
+ * Design Pattern: Decorator
+ * Participant: Concrete Component
+ */
 #ifndef LAUNCHREAL_H
 #define LAUNCHREAL_H
 
@@ -7,13 +15,38 @@
 using namespace std;
 
 class LaunchReal : public Launch{
-private:
-    Rocketship* ship;
 public:
-	LaunchReal(Rocketship*);
+    /**
+     * @brief Construct a new Launch Real object
+     * 
+     * @param r The rocketship to launch
+     */
+	LaunchReal(Rocketship* r);
+
+    /**
+     * @brief Destroy the Launch Real object
+     * 
+     */
 	virtual ~LaunchReal();
+
+    /**
+     * @brief Launch the stored rocketship
+     * 
+     */
     virtual void startLaunch();
+
+    /**
+     * @brief Get the Ship object
+     * 
+     * @return Rocketship* 
+     */
     virtual Rocketship* getShip();
+private:
+    /**
+     * @brief The rocketship to launch
+     * 
+     */
+    Rocketship* ship;
 };
 
 #endif
