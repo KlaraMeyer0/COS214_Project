@@ -21,7 +21,7 @@ void FalconCore::TurnOn() {
 	for (int i = 0; i < EngineCount; i++) {
 		merlins[i]->TurnOn();
 	}
-	cout << "All merlin engines are firing";
+	cout << "All merlin engines are firing" <<endl;
 };
 
 void FalconCore::TurnOff() {

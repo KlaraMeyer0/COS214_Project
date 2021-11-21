@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//#include "gtest/gtest.h"
+#include "gtest/gtest.h"
 #include "StarlinkCollection.h"
 
 namespace
