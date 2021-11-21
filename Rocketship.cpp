@@ -37,3 +37,8 @@ Station* Rocketship::getStation()
 {
     return current_Station;
 }
+
+void Rocketship::startRockets()
+{
+    
+}
