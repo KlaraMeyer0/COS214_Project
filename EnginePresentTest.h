@@ -5,7 +5,7 @@ using namespace std;
 
 #include "LaunchTest.h"
 
-class EnginePresentTest : public LaunchTest {
+class EnginePresentTest : public LaunchTest{
 public:
 	EnginePresentTest(Launch*);
 	~EnginePresentTest();

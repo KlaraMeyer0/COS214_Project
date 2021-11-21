@@ -5,7 +5,7 @@ using namespace std;
 
 #include "LaunchTest.h"
 
-class CargoTest : public LaunchTest {
+class CargoTest : public LaunchTest{
 public:
 	CargoTest(Launch*);
 	~CargoTest();
