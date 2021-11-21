@@ -60,5 +60,31 @@ void CrewDragonBay::addCargo()
         else
             stop = true;
     }
+
+    stop = false;
+    int num;
+    while (!stop)
+    {
+        cout << "0: Choose equipment to load" << endl;
+        cout << "1: Exit" << endl;
+        cin >> c;
+
+        if (c == 0)
+        {
+            crew_dragon->getStation()->printEquipment();
+            cout << "Enter the index of the type of equipment you want to load: " << endl;
+            cin >> idx;
+            cout << "Enter the number of equipment you want to load: " << endl;
+            cin >> num;
+
+            pair<Cargo *, int> *p = crew_dragon->getStation()->loadEquipment(idx, num);
+            for (int i = 0; i < p->second; i++)
+                tempCargo.push_back(p->first);
+
+            cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
+        }
+        else
+            stop = true;
+    }
     crew_dragon->attachCargo(tempCargo);
 }
