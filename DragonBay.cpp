@@ -39,7 +39,7 @@ void DragonBay::addCargo()
 
     bool stop = false;
     int c, idx, num;
-    vector<cargo*> tempCargo;
+    vector<Cargo*> tempCargo;
     while (!stop)
     {
         cout << "0: Choose equipment to load" << endl;
