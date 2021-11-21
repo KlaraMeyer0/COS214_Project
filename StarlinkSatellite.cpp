@@ -12,7 +12,7 @@ using namespace std;
     }
 
 	StarlinkSatellite::~StarlinkSatellite(){
-        relay =nullptr;
+        relay = nullptr;
     }
     
     string StarlinkSatellite:: getCommunicatesWith(){
@@ -26,7 +26,7 @@ using namespace std;
 
     //Creates exact copy ,with the same name as the calling object
     StarlinkSatellite* StarlinkSatellite::cloneExact(string communicatesWith, CommunicationRelay* obj){
-        StarlinkSatellite* temp = new StarlinkSatellite(communicatesWith,obj);
+        StarlinkSatellite* temp = new StarlinkSatellite(this->communicatesWith,obj);
         temp->setName(this->getName());
 
         return temp;
