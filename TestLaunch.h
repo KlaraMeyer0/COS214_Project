@@ -7,10 +7,12 @@ using namespace std;
 
 class TestLaunch : public Work{//Memento client
 public:
-	TestLaunch();
+	TestLaunch(LaunchInterface*);
 	~TestLaunch();
     void execute();
     void undo();
+private:
+    LaunchInterface* l;
 };
 
 #endif
