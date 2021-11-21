@@ -1,3 +1,11 @@
+/**
+ * @file CreateDragon.h
+ * @author Xander Coetzer
+ * @brief 
+ * Design Pattern:
+ * Participant
+ * 
+ */
 #ifndef DRAGONFACTORY_H
 #define DRAGONFACTORY_H
 
