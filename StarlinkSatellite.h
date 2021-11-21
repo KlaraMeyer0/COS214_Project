@@ -15,7 +15,7 @@ class CommunicationRelay;
 
 class StarlinkSatellite : public PointOfCommunication{
 public:
-    //Must passed a Communicationrelay that serves as the Mediator participant
+    //Must pass a CommunicationRelay that serves as the Mediator participant
 	StarlinkSatellite(string communicatesWith, CommunicationRelay* obj);
 	~StarlinkSatellite();
     string getCommunicatesWith();
