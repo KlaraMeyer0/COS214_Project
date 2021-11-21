@@ -31,10 +31,8 @@ public:
     
     StarlinkCollection* clone();
     StarlinkSatellite* getHead();
-
+    
     void attachRocket(FalconRocket*);
-    void attachManager(SatelliteManager*);
-    void attachHead(StarlinkSatellite*);
 
     void setCommunicationRelayBS(CommunicationRelay*);
     void setCommunicationRelaySS(CommunicationRelay*);
