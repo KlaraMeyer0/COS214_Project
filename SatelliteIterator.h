@@ -1,3 +1,13 @@
+/**
+ * @file
+ * @author Klara Meyer
+ *
+ * @brief
+ *
+ * Design Pattern: Iterator
+ * Participant: Iterator
+ */
+
 #ifndef SATELLITEITERATOR_H
 #define SATELLITEITERATOR_H
 
@@ -11,7 +21,6 @@ class StarlinkCollection;
 class SatelliteIterator
 {
     public:
-        SatelliteIterator(StarlinkSatellite* sat);
         SatelliteIterator(StarlinkCollection* satCol, StarlinkSatellite* sat);
         virtual ~SatelliteIterator();
         SatelliteIterator next();

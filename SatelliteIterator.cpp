@@ -1,17 +1,8 @@
-/**
- * @file
- * @author Klara Meyer
- *
- * @section
- */
-
 #include <iostream>
 
 using namespace std;
 
 #include "SatelliteIterator.h"
-
-SatelliteIterator::SatelliteIterator(StarlinkSatellite *) : head(0), current(0) {}
 
 SatelliteIterator::SatelliteIterator(StarlinkCollection *satCol, StarlinkSatellite *sat) : head(satCol->getFirstSat()), current(sat) {}
 
