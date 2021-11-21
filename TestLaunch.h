@@ -1,3 +1,12 @@
+/**
+ * @file TestLaunch.h
+ * @author James Butler
+ * 
+ * @brief
+ * 
+ * Design Pattern: Memento
+ * Participant: Client
+ */
 #ifndef TESTLAUNCH_H
 #define TESTLAUNCH_H
 
@@ -5,13 +14,37 @@ using namespace std;
 
 #include "Work.h"
 
-class TestLaunch : public Work{//Memento client
+class TestLaunch : public Work{
 public:
-	TestLaunch(LaunchInterface*);
-	 virtual ~TestLaunch();
+    /**
+     * @brief Construct a new Test Launch object
+     * 
+     * @param l Pointer to the launch interface to launch with
+     */
+	TestLaunch(LaunchInterface* l);
+
+    /**
+     * @brief Destroy the Test Launch object
+     * 
+     */
+	virtual ~TestLaunch();
+
+    /**
+     * @brief Executes the contained interface's testLaunch() function
+     * 
+     */
     void execute();
+
+    /**
+     * @brief Not used in this implementation
+     * 
+     */
     void undo();
 private:
+    /**
+     * @brief Stores a pointer to the launch interface used
+     * 
+     */
     LaunchInterface* l;
 };
 

@@ -9,13 +9,17 @@ Stage2Engine::~Stage2Engine() {
 };
 
 void Stage2Engine::TurnOn(FalconRocket* r) {
+    cout << "Entering stage 2" << endl;
     engine->TurnOn();
+    // add a pause?
+	TurnOff(r);
 };
 
 void Stage2Engine::TurnOff(FalconRocket* r) {
+    cout << "Payload is in desired ordit" << endl;
     engine->TurnOff();
-	//r->detach();
 };
-int Stage2Engine::EngineCount(){
+
+int Stage2Engine::EngineCount() {
     return 1;
-}
+};
