@@ -24,6 +24,7 @@ public:
 	void storeFile();
 	void restoreFile();
 	void outputDesc();
+	void getDesc();
 private:
     Rocketship** rocketships;
 	LaunchCaretaker* launchCaretaker;
