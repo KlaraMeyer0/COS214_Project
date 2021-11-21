@@ -1,6 +1,6 @@
 #include "CreateDragon.h"
 
-CreateDragon::CreateDragon(RocketshipEngineer *e, LaunchInterface *l, DragonBay *d, Station *s)
+CreateDragon::CreateDragon(RocketshipEngineer *e, LaunchInterface *l, DragonBay *d, BaseStation *s)
 {
     engineer = e;
     launch_interface = l;
