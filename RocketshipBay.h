@@ -2,6 +2,8 @@
 #define ROCKETSHIPBAY_H
 
 using namespace std;
+#include <string>
+#include "Station.h"
 
 class RocketshipBay
 {

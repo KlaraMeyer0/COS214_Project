@@ -111,3 +111,25 @@ void StarlinkCollection::setCommunicationRelaySS(CommunicationRelay* obj){
 int StarlinkCollection::getRockets(){
     return rocket->getEngine()->EngineCount();
 }
+bool StarlinkCollection::testFire(){
+    rocket->turnOn();
+    bool b = rocket->getState();
+    rocket->turnOff();
+    return b;
+}
+bool StarlinkCollection::testLoading(){
+    
+}
+
+void StarlinkCollection::attachRocket(FalconRocket* r)
+{
+    rocket = r;
+}
+void StarlinkCollection::attachManager(SatelliteManager* m)
+{
+    satelliteManager = m;
+}
+void StarlinkCollection::attachHead(StarlinkSatellite* s)
+{
+    head = s;
+}

@@ -18,3 +18,6 @@ void _9Engine::TurnOff(FalconRocket* r) {
 int _9Engine::EngineCount(){
 	return core->getCount();
 };
+bool _9Engine::getState(){
+	return core->getState();
+}

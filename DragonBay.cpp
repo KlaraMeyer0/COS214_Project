@@ -39,14 +39,14 @@ void DragonBay::addCargo()
 
     bool stop = false;
     int c, idx, num;
-    vector<cargo*> tempCargo;
+    vector<Cargo *> tempCargo;
     while (!stop)
     {
         cout << "0: Choose equipment to load" << endl;
         cout << "1: Exit" << endl;
         cin >> c;
 
-        if (cin == 0)
+        if (c == 0)
         {
             dragon->getStation()->printEquipment();
             cout << "Enter the index of the type of equipment you want to load: " << endl;
@@ -54,8 +54,8 @@ void DragonBay::addCargo()
             cout << "Enter the number of equipment you want to load: " << endl;
             cin >> num;
 
-            pair<Cargo*, int> * p = dragon->getStation()->loadEquipment(idx, num);
-            for (int i = 0; i < p->second)
+            pair<Cargo *, int> *p = dragon->getStation()->loadEquipment(idx, num);
+            for (int i = 0; i < p->second; i++)
                 tempCargo.push_back(p->first);
 
             cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
@@ -64,5 +64,4 @@ void DragonBay::addCargo()
             stop = true;
     }
     dragon->attachCargo(tempCargo);
-
 }

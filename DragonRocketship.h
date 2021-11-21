@@ -16,9 +16,11 @@ public:
     Rocketship *clone();
     void attachSpacecraft(Spacecraft *s);
     void attachRocket(FalconRocket *r);
-    void attachCargo(Cargo **c, int size);
+    void attachCargo(vector<Cargo*>);
     Cargo *dropCargo(); // might change -->drops cargo at SpaceStation
     virtual int getRockets();
+    virtual bool testFire();
+    virtual bool testLoading();
 private:
     Cargo **cargo;
     Spacecraft *spacecraft;

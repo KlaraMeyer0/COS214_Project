@@ -17,6 +17,7 @@ public:
 	void TurnOn(FalconRocket*); // Turn on the rocket's engine
 	void TurnOff(FalconRocket*); // Turn off the rocket's engine
 	virtual int EngineCount();//Returns the number of engines
+	virtual bool getState();// Get state of engines
 };
 
 #endif

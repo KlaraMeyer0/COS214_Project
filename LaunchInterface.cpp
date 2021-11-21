@@ -23,7 +23,7 @@ LaunchInterface::~LaunchInterface(){
     delete rocketships;
 }
 void LaunchInterface::TestLaunch(){
-
+    
 }
 void LaunchInterface::addRocketship(Rocketship* r){//add rocket to current array
     rocketCount++;

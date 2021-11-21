@@ -17,7 +17,8 @@ public:
 	void turnOn(); // Turn on the engine
 	void turnOff(); // Turn off the engine
 	virtual FalconRocket* clone(); // Part of the Protoype DP that is used my the Memento DP to copy the Falon9
-	StageEngine* getEngine();
+	StageEngine* getEngine();// Returns the attached engine
+	bool getState();// Returns if engines are currently on
 };
 
 #endif
