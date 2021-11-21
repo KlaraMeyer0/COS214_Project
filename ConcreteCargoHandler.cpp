@@ -1,11 +1,16 @@
+
+#include <string>
+
+using namespace std;
+
 #include "ConcreteCargoHandler.h"
 
-ConcreteCargoHandler(bool h) : human(h) {}
+ConcreteCargoHandler::ConcreteCargoHandler(bool h) : human(h) {}
 
-void ConcreteCargoHandler::handleCargo(Cargo* c)
+void ConcreteCargoHandler::handleCargo(Cargo* c, Station* s)
 {
     if (c->isHuman() && human)
-        humans.push_back(c);
+        s->humans.push_back(c);
 
     if (!c->isHuman() && !human)
     {
@@ -13,10 +18,10 @@ void ConcreteCargoHandler::handleCargo(Cargo* c)
 
         pair<Cargo *, int> p;
         int i = 0;
-        while ( i < equipment.size() && !found)
+        while ( i < s->equipment.size() && !found)
         {
-            p = equipment.at(i);
-            if (strcmp(p.first,c->getName()) == 0)
+            p = s->equipment.at(i);
+            if (p.first->getName() == c->getName())
             {
                 found = true;
                 p.second = p.second + 1;
@@ -28,7 +33,7 @@ void ConcreteCargoHandler::handleCargo(Cargo* c)
         {
             p.first = c;
             p.second = 0;
-            equipment.push_back(p);
+            s->equipment.push_back(p);
         }
     }
 }

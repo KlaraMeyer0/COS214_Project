@@ -35,6 +35,9 @@ class Station
 
         map<int ,bool> getSatStatus();
 
+        vector<pair<Cargo *, int>> equipment;
+        vector<Cargo *> humans;
+
         
     private:
         Station* next;

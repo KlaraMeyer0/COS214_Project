@@ -7,7 +7,7 @@ class ConcreteCargoHandler : public CargoHandler
 {
     public:
         ConcreteCargoHandler(bool h);
-        void handleCargo(Cargo* c);
+        void handleCargo(Cargo* c, Station* s);
     public:
         bool human;
 };

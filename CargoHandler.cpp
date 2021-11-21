@@ -10,13 +10,13 @@ void CargoHandler::add(CargoHandler* n)
         next = n;
 }
 
-void CargoHandler::handleCargo(Cargo* c)
+void CargoHandler::handleCargo(Cargo* c, Station* s)
 {
     if (c != nullptr)
     {
         if (next)
         {
-            next->handleCargo(c);
+            next->handleCargo(c, s);
         }
         else
         {

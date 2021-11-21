@@ -22,9 +22,6 @@ public:
     
     BaseStation* clone();
 
-    vector<pair<Cargo *, int>> equipment;
-    vector<Cargo *> humans;
-
     private:
         CargoHandler* handler;
 };

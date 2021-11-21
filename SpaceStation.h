@@ -21,8 +21,6 @@ class SpaceStation : public Station
         Cargo* loadHumans(int idx);
 
         SpaceStation* clone();
-        vector<pair<Cargo *, int>> equipment;
-        vector<Cargo *> humans;
 
     private:
         CargoHandler* handler;
