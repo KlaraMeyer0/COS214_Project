@@ -20,7 +20,7 @@ BaseStation::~BaseStation()
 void BaseStation::receiveCargo(Cargo *c)
 {
 
-    handler->handleCargo(c);
+    handler->handleCargo(c, this);
 
 }
 

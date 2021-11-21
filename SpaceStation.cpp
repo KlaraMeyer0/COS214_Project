@@ -19,7 +19,7 @@ SpaceStation::~SpaceStation()
 
 void SpaceStation::receiveCargo(Cargo *c)
 {
-    handler->handleCargo(c);
+    handler->handleCargo(c, this);
 }
 
 void SpaceStation::receiveCommunication(string s)
