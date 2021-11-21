@@ -52,13 +52,30 @@ void CrewDragonBay::addCargo()
             cout << "Enter the index of the human to board the rocket: " << endl;
             cin >> idx;
 
-            Cargo* h = crew_dragon->getStation()->loadHumans(idx);
-            tempCargo.push_back(h);
+            while (!cin.good() || idx <= 0)
+            {
+                cin.clear();
+                cin.ignore(15, '\n');
+                cout << "Please enter a valid index: ";
+                cin >> idx;
+            }
 
-            cout << h->getName() << "has boarded the rocket." << endl;
+            Cargo* h = crew_dragon->getStation()->loadHumans(idx);
+
+            if (h == nullptr)
+                cout << "Please enter a valid index." << endl;
+            else
+            {
+                tempCargo.push_back(h);
+
+                cout << h->getName() << "has boarded the rocket." << endl;
+            }
         }
         else
-            stop = true;
+            if (c == 1)
+                stop = true;
+            else
+                cout << "Please choose a valid option." << endl;
     }
 
     stop = false;
@@ -77,14 +94,38 @@ void CrewDragonBay::addCargo()
             cout << "Enter the number of equipment you want to load: " << endl;
             cin >> num;
 
-            pair<Cargo *, int> *p = crew_dragon->getStation()->loadEquipment(idx, num);
-            for (int i = 0; i < p->second; i++)
-                tempCargo.push_back(p->first);
+            while (!cin.good() || idx <= 0)
+            {
+                cin.clear();
+                cin.ignore(15, '\n');
+                cout << "Please enter a valid index: ";
+                cin >> idx;
+            }
 
-            cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
+            while (!cin.good() || num <= 0)
+            {
+                cin.clear();
+                cin.ignore(15, '\n');
+                cout << "Please enter a valid number: ";
+                cin >> num;
+            }
+
+            pair<Cargo *, int> *p = crew_dragon->getStation()->loadEquipment(idx, num);
+            if (p == nullptr)
+                cout << "Please enter a valid index." << endl;
+            else
+            {
+                for (int i = 0; i < p->second; i++)
+                    tempCargo.push_back(p->first);
+
+                cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
+            }
         }
         else
-            stop = true;
+            if (c == 1)
+                stop = true;
+            else
+                cout << "Please choose a valid option." << endl;
     }
     crew_dragon->attachCargo(tempCargo);
 }

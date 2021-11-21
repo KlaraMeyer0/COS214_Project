@@ -54,14 +54,39 @@ void DragonBay::addCargo()
             cout << "Enter the number of equipment you want to load: " << endl;
             cin >> num;
 
-            pair<Cargo *, int> *p = dragon->getStation()->loadEquipment(idx, num);
-            for (int i = 0; i < p->second; i++)
-                tempCargo.push_back(p->first);
+            while (!cin.good() || idx <= 0)
+            {
+                cin.clear();
+                cin.ignore(15, '\n');
+                cout << "Please enter a valid index: ";
+                cin >> idx;
+            }
 
-            cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
+            while (!cin.good() || num <= 0)
+            {
+                cin.clear();
+                cin.ignore(15, '\n');
+                cout << "Please enter a valid number: ";
+                cin >> num;
+            }
+
+            pair<Cargo *, int> *p = dragon->getStation()->loadEquipment(idx, num);
+
+            if (p == nullptr)
+                cout << "Please enter a valid index." << endl;
+            else
+            {
+                for (int i = 0; i < p->second; i++)
+                    tempCargo.push_back(p->first);
+
+                cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
+            }
         }
         else
-            stop = true;
+            if (c == 1)
+                stop = true;
+            else
+                cout << "Please choose a valid option." << endl;
     }
     dragon->attachCargo(tempCargo);
 }
