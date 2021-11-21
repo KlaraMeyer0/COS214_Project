@@ -27,6 +27,8 @@ Rocketship *CrewDragonRocketship::clone()
     CrewDragonRocketship *temp = new CrewDragonRocketship(this->getName());
     temp->spacecraft = (this->spacecraft)->clone();
     temp->rocket = (this->rocket)->clone();
+
+    return temp;
 }
 
 void CrewDragonRocketship::attachSpacecraft(Spacecraft *s)
