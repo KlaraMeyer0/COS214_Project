@@ -31,6 +31,7 @@ class Station
 
         void attachRelay(CommunicationRelay*);
         string getName();
+        void setName(string n);
 
         map<int ,bool> getSatStatus();
 
