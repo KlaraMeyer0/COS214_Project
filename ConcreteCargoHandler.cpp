@@ -13,7 +13,7 @@ void ConcreteCargoHandler::handleCargo(Cargo* c)
 
         pair<Cargo *, int> p;
         int i = 0;
-        while ( i < eqiopment.size() && !found)
+        while ( i < equipment.size() && !found)
         {
             p = equipment.at(i);
             if (strcmp(p.first,c->getName()) == 0)
