@@ -18,52 +18,57 @@ void OrderCargo::execute()
     int choice;
     bool valid;
     bool flag;
+    bool done = false;
     int amount = 0;
-    do
+    while (!done)
     {
-        flag = false;
-        valid = true;
-        cout << "What do you want to do? Choose the corresponding number: " << endl;
-        cout << "1. Recruit humans" << endl;
-        cout << "2. Order equipment" << endl;
-        cout << "3. Quit" << endl;
-        cin >> choice;
-
-        string cargo_string;
-        switch (choice)
+        do
         {
-        case 1:
-            cout << "Enter the name of the human you want to recruit: ";
-            cin >> cargo_string;
-            cargo = human_factory->startFactory(cargo_string);
-            break;
-        case 2:
-            cout << "What equipment do you want to order: ";
-            cin >> cargo_string;
-            cout << "How many " << cargo_string << "s do you want to order: ";
-            cin >> amount;
-            while (!cin.good() || amount <= 0)
+            flag = false;
+            valid = true;
+            cout << "What do you want to do? Choose the corresponding number: " << endl;
+            cout << "1. Recruit humans" << endl;
+            cout << "2. Order equipment" << endl;
+            cout << "3. Quit" << endl;
+            cin >> choice;
+
+            string cargo_string;
+            switch (choice)
             {
-                cin.clear();
-                cin.ignore(15, '\n');
-                cout << "Please enter a valid number: ";
+            case 1:
+                cout << "Enter the name of the human you want to recruit: ";
+                cin >> cargo_string;
+                cargo = human_factory->startFactory(cargo_string);
+                break;
+            case 2:
+                cout << "What equipment do you want to order: ";
+                cin >> cargo_string;
+                cout << "How many " << cargo_string << "s do you want to order: ";
                 cin >> amount;
+                while (!cin.good() || amount <= 0)
+                {
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid number: ";
+                    cin >> amount;
+                }
+                cargo = equipment_factory->startFactory(cargo_string);
+                break;
+            case 3:
+                cout << "Exiting..." << endl;
+                valid = false;
+                done = true;
+                break;
+            default:
+                cout << "Input was not a number or out of range" << endl;
+                flag = true;
+                break;
             }
-            cargo = equipment_factory->startFactory(cargo_string);
-            break;
-        case 3:
-            cout << "Order cancelled" << endl;
-            valid = false;
-            break;
-        default:
-            cout << "Input was not a number or out of range" << endl;
-            flag = true;
-            break;
+        } while (flag);
+        if (valid)
+        {
+            base_station->receiveCargo(cargo, amount);
         }
-    } while (flag);
-    if (valid)
-    {
-        base_station->receiveCargo(cargo, amount);
     }
 }
 

@@ -11,17 +11,18 @@ BaseStation::BaseStation() : Station()
 
 BaseStation::~BaseStation() {}
 
-void BaseStation::receiveCargo(Cargo *c,int amount)
+void BaseStation::receiveCargo(Cargo *c, int amount)
 {
     if (c->isHuman())
         humans.push_back(c);
     else
     {
-        pair<Cargo*,int> p;
+        pair<Cargo *, int> p;
         p.first = c;
         p.second = amount;
 
         equipment.push_back(p);
+        cout << amount << " ";
     }
 
     cout << c->getName() << " has arrived at the base station." << endl;
@@ -50,7 +51,7 @@ pair<Cargo *, int> *BaseStation::loadEquipment(int idx, int num)
     if (idx > equipment.size() - 1)
         return nullptr;
 
-    pair<Cargo*, int> * p;
+    pair<Cargo *, int> *p;
     p->first = equipment.at(idx).first;
     p->second = num;
 
@@ -58,12 +59,11 @@ pair<Cargo *, int> *BaseStation::loadEquipment(int idx, int num)
     {
         equipment.at(idx).second -= num;
     }
-    else
-        if (equipment.at(idx).second <= num)
-        {
-            p->second = equipment.at(idx).second;
-            equipment.erase(equipment.begin() + idx);
-        }
+    else if (equipment.at(idx).second <= num)
+    {
+        p->second = equipment.at(idx).second;
+        equipment.erase(equipment.begin() + idx);
+    }
 
     return p;
 }
@@ -73,18 +73,18 @@ Cargo *BaseStation::loadHumans(int idx)
     if (idx > humans.size() - 1)
         return nullptr;
 
-    Cargo* h = humans.at(idx);
+    Cargo *h = humans.at(idx);
     humans.erase(humans.begin() + idx);
     return h;
 }
 
 BaseStation *BaseStation::clone()
 {
-    BaseStation* temp = new BaseStation();
+    BaseStation *temp = new BaseStation();
 
     for (int i = 0; i < equipment.size(); i++)
     {
-        pair<Cargo*,int> p;
+        pair<Cargo *, int> p;
         p.first = equipment.at(i).first;
         p.second = equipment.at(i).second;
         temp->equipment.push_back(p);
