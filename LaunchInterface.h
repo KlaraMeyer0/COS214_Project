@@ -5,7 +5,11 @@ using namespace std;
 
 #include "Rocketship.h"
 #include "LaunchCaretaker.h"
-#include "Launch.h"
+#include "LaunchReal.h"
+#include "EnginePresentTest.h"
+#include "EngineFireTest.h"
+#include "StopTest.h"
+#include "CargoTest.h"
 #include "LaunchFile.h"
 #include <sstream>
 

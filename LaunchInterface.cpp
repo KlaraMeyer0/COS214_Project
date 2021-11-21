@@ -23,7 +23,11 @@ LaunchInterface::~LaunchInterface(){
     delete rocketships;
 }
 void LaunchInterface::TestLaunch(){
+    //prompt about which rockets to launch
     //prompt about type of launch
+
+    //Launch* l = new LaunchReal();
+
     //prompt user for tests and assemble decorator
     //Run tests
 }
