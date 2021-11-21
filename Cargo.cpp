@@ -1,8 +1,8 @@
 #include "Cargo.h"
 
-Cargo::Cargo(string n, bool h) : name(n) {};
+Cargo::Cargo(string n, bool h) : name(n){};
 
-Cargo::~Cargo() {};
+Cargo::~Cargo(){};
 
 string Cargo::getName()
 {
@@ -16,5 +16,5 @@ bool Cargo::isHuman()
 
 Cargo *Cargo::clone()
 {
-    return new Cargo(name, Human);
+    return new Cargo(name, human); 
 }

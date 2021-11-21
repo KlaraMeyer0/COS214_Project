@@ -39,14 +39,14 @@ void CrewDragonBay::addCargo()
 
     bool stop = false;
     int c, idx;
-    vector<cargo*> tempCargo;
+    vector<Cargo*> tempCargo;
     while (!stop)
     {
         cout << "0: Choose humans to board the rocket" << endl;
         cout << "1: Exit" << endl;
         cin >> c;
 
-        if (cin == 0)
+        if (c == 0)
         {
             crew_dragon->getStation()->printEquipment();
             cout << "Enter the index of the human to board the rocket: " << endl;
