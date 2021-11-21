@@ -14,7 +14,7 @@ Director::Director(LaunchInterface *i, BaseStation *b, SpaceStation* s)
     command[1] = new CreateDragon(engineer, interface, dragon_Bay, base_station);
     command[2] = new CreateStarlink(engineer, interface, starlink_Bay, base_station, space_station);
     command[3] = new Backup(interface);
-    command[4] = new TestLaunch();
+    command[4] = new TestLaunch(interface);
     command[5] = new OrderCargo(base_station);
 }
 Director::~Director()
