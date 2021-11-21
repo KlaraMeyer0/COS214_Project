@@ -13,7 +13,7 @@ string Rocketship::getName()
     return name;
 }
 
-void Rocketship()
+void Rocketship::countdown()
 {
     cout << "Starting countdown:" << endl;
     for (int i = 5; i > 0; i--)

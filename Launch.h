@@ -11,7 +11,7 @@ public:
 	bool getType(){
 		return t;
 	}
-	virtual Rocketship* getShip(); 
+	virtual Rocketship* getShip() = 0; 
 protected:
 	bool t;
 };

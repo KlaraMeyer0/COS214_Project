@@ -3,6 +3,9 @@
 Backup::Backup(LaunchInterface* i){
     interface = i;
 }
+
+Backup::~Backup(){}
+
 void Backup::execute(){
     interface->storeFile();
 }
