@@ -15,9 +15,9 @@ RocketshipEngineer::~RocketshipEngineer()
     rb = nullptr;
 }
 
-void RocketshipEngineer::construct(int bay, string name,Station* s)
+void RocketshipEngineer::construct(int bay, string name, BaseStation *bs, SpaceStation *ss)
 {
-    rb[bay]->setName(name,s);
+    rb[bay]->setName(name, bs, ss);
     rb[bay]->buildBody();
     rb[bay]->buildRocket();
     rb[bay]->addCargo();

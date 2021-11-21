@@ -17,10 +17,10 @@ DragonRocketship *DragonBay::getRocketship()
     return dragon;
 }
 
-void DragonBay::setName(string n, Station *s)
+void DragonBay::setName(string n, BaseStation *bs, SpaceStation *sp)
 {
     dragon = new DragonRocketship(n);
-    dragon->attachToStation(s);
+    dragon->attachToStation(bs);
 }
 
 void DragonBay::buildRocket()

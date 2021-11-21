@@ -3,14 +3,15 @@
 
 using namespace std;
 #include <string>
-#include "Station.h"
+#include "BaseStation.h"
+#include "SpaceStation.h"
 
 class RocketshipBay
 {
 public:
 	RocketshipBay();
 	~RocketshipBay();
-	virtual void setName(string n, Station *s) = 0;
+	virtual void setName(string n, BaseStation* BS ,SpaceStation* SS = nullptr) = 0;
 	virtual void buildRocket() = 0;
 	virtual void buildBody() = 0;
 	virtual void addCargo() = 0;
