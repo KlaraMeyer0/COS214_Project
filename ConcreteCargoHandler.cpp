@@ -1,0 +1,39 @@
+
+#include <string>
+
+using namespace std;
+
+#include "ConcreteCargoHandler.h"
+
+ConcreteCargoHandler::ConcreteCargoHandler(bool h) : human(h) {}
+
+void ConcreteCargoHandler::handleCargo(Cargo* c, Station* s)
+{
+    if (c->isHuman() && human)
+        s->humans.push_back(c);
+
+    if (!c->isHuman() && !human)
+    {
+        bool found = false;
+
+        pair<Cargo *, int> p;
+        int i = 0;
+        while ( i < s->equipment.size() && !found)
+        {
+            p = s->equipment.at(i);
+            if (p.first->getName() == c->getName())
+            {
+                found = true;
+                p.second = p.second + 1;
+            }
+            i++;
+        }
+
+        if (!found)
+        {
+            p.first = c;
+            p.second = 0;
+            s->equipment.push_back(p);
+        }
+    }
+}

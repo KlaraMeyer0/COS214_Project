@@ -6,13 +6,14 @@
 using namespace std;
 
 #include "Station.h"
+#include "ConcreteCargoHandler.h"
 
 class BaseStation : public Station
 {
 public:
     BaseStation();
     virtual ~BaseStation();
-    void receiveCargo(Cargo *c, int amount);
+    void receiveCargo(Cargo *c);
     void receiveCommunication(string s);
     void printEquipment();
     void printHumans();
@@ -21,14 +22,8 @@ public:
     
     BaseStation* clone();
 
-private:
-    vector<pair<Cargo *, int>> equipment;
-    vector<Cargo *> humans;
-
-    // humans arriving at base station: call factory for humans
-    // cargo delivered to base station: call factory for cargo
-
-    // add cargo to rockets from here
+    private:
+        CargoHandler* handler;
 };
 
 #endif

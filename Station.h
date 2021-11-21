@@ -23,7 +23,7 @@ class Station{
         Station();
         virtual ~Station();
         void add(Station* stat);
-        virtual void receiveCargo(Cargo* c);
+        //virtual void receiveCargo(Cargo* c);
         virtual void receiveCommunication(string com);
         virtual void printEquipment() = 0;
         virtual void printHumans() = 0;
@@ -56,12 +56,16 @@ class Station{
          * @return string
          */ 
         string getName();
+        void setName(string n);
 
         /**
          * @brief returns the status of the StarlinkSatellites assocciated with this station
          * @return map<int ,bool> 
          */ 
         map<int ,bool> getSatStatus();
+
+        vector<pair<Cargo *, int>> equipment;
+        vector<Cargo *> humans;
 
         
     private:

@@ -1,3 +1,13 @@
+/**
+ * @file FalconRocket.h
+ * @author Rina Rene du Toit
+ *
+ * @brief
+ *
+ * Design Pattern: State
+ * Participant: Context
+ */
+
 #ifndef FALCONROCKET_H
 #define FALCONROCKET_H
 
@@ -8,17 +18,50 @@ class StageEngine;
 
 class FalconRocket {
 protected:
-	StageEngine* stage; // Variable storing the state of the rocket
+	/**
+	 * Variable storing the state of the rocket
+	 */
+	StageEngine* stage;
 public:
+	/**
+	 * Constructor for FalconRocket Class
+	 */
 	FalconRocket();
+	/**
+	 * Destructor for FalconRocket Class
+	 */
 	virtual ~FalconRocket();
-	void detach(); // Detach the state
-	void attach(StageEngine*); // Attach a new state
-	void turnOn(); // Turn on the engine
-	void turnOff(); // Turn off the engine
-	virtual FalconRocket* clone() = 0; // Part of the Prototype DP that is used my the Memento DP to copy the Falon9
-	StageEngine* getEngine();// Returns the attached engine
-	bool getState();// Returns if engines are currently on
+	/**
+	 * Detach the state
+	 */
+	void detach();
+	/**
+	 * Attach a new state
+	 */
+	void attach(StageEngine*);
+	/**
+	 * Turn on the engine
+	 */
+	void turnOn();
+	/**
+	 * Turn off the engine
+	 */
+	void turnOff();
+	/**
+	 * Pure virtaul function - Part of the Prototype DP that is used my the Memento DP to copy the Falon9
+	 * @return Copy of the current object
+	 */
+	virtual FalconRocket* clone() = 0;
+	/**
+	 * Returns the attached engine
+	 * @return Current StageEngine storing the stage of the rocket
+	 */
+	StageEngine* getEngine();
+	/**
+	 * Returns if engines are currently on
+	 * @return The state of the engines
+	 */
+	bool getState();
 };
 
 #endif

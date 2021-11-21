@@ -35,7 +35,7 @@ void DragonBay::buildBody()
 
 void DragonBay::addCargo()
 {
-    cout << "Load from " << dragon->getStation()->name << endl;
+    cout << "Load from " << dragon->getStation()->getName() << endl;
 
     bool stop = false;
     int c, idx, num;

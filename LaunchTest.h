@@ -25,7 +25,6 @@ public:
 	 */
 	LaunchTest(Launch* la){
 		l = la;
-		t = false;
 	};
 
 	/**

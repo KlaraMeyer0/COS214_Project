@@ -27,8 +27,7 @@ void StarlinkBay::buildRocket()
     starlink_collection->attachRocket(falcon9_factory->startFactory());
 }
 
-void StarlinkBay::buildBody(){
-}
+void StarlinkBay::buildBody(){}
 
 void StarlinkBay::addCargo()
 {

@@ -6,25 +6,20 @@ using namespace std;
 
 SpaceStation::SpaceStation() : Station()
 {
-    name = "Space Station";
+    setName("Space Station");
+    handler = new CargoHandler();
+    handler->add(new ConcreteCargoHandler(true));
+    handler->add(new ConcreteCargoHandler(false));
 }
 
-SpaceStation::~SpaceStation() {}
-
-void SpaceStation::receiveCargo(Cargo *c,int amount)
+SpaceStation::~SpaceStation()
 {
-    if (c->isHuman())
-        humans.push_back(c);
-    else
-    {
-        pair<Cargo*,int> p;
-        p.first = c;
-        p.second = amount;
 
-        equipment.push_back(p);
-    }
+}
 
-    cout << c->getName() << " has arrived at the space station." << endl;
+void SpaceStation::receiveCargo(Cargo *c)
+{
+    handler->handleCargo(c, this);
 }
 
 void SpaceStation::receiveCommunication(string s)

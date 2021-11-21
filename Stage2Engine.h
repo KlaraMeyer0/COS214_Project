@@ -1,3 +1,13 @@
+/**
+ * @file Stage2Engine.h
+ * @author Rina Rene du Toit
+ *
+ * @brief
+ *
+ * Design Pattern: State
+ * Participant: Concrete State
+ */
+
 #ifndef STAGE2ENGINE_H
 #define STAGE2ENGINE_H
 
@@ -9,14 +19,37 @@ using namespace std;
 
 class Stage2Engine : public StageEngine {
 private:
-	VacuumEngine* engine; // Variable holding a pointer to the engine
+	/**
+	 * Variable holding a pointer to the engine
+	 */
+	VacuumEngine* engine;
 public:
+	/**
+	 * Constructor for Stage2Engine Class
+	 */
 	Stage2Engine();
+	/**
+	 * Destructor for Stage2Engine Class
+	 */
 	virtual ~Stage2Engine();
-	void TurnOn(FalconRocket*); // Turn on the engine
-	void TurnOff(FalconRocket*); // Turn off the engine
-	virtual int EngineCount();//Returns the number of engines//Blank//Required for testing
-	virtual bool getState(){return true;};
+	/**
+	 * Turn on the engine
+	 */
+	void TurnOn(FalconRocket*);
+	/**
+	 * Turn off the engine
+	 */
+	void TurnOff(FalconRocket*);
+	/**
+	 * Returns the number of engines//Blank//Required for testing
+	 * @return Current StageEngine storing the stage of the rocket
+	 */
+	int EngineCount();
+	/**
+	 * Returns the state that the engine is in
+	 * @return The state of the engines
+	 */
+	bool getState(){return true;};
 };
 
 #endif

@@ -1,3 +1,11 @@
+/**
+ * @file CreateDragon.h
+ * @author Xander Coetzer
+ * @brief 
+ * Design Pattern: Factory Method
+ * Participant: Abstract Factory
+ * 
+ */
 #ifndef CREWDRAGONFACTORY_H
 #define CREWDRAGONFACTORY_H
 
