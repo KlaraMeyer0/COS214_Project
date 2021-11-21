@@ -10,6 +10,7 @@ class Equipment : public Cargo
 public:
 	Equipment(string);
 	~Equipment();
+    Cargo* clone();
 };
 
 #endif

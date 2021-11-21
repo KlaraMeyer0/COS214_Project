@@ -13,8 +13,3 @@ bool Cargo::isHuman()
 {
     return human;
 }
-
-Cargo *Cargo::clone()
-{
-    return new Cargo(name, human); 
-}

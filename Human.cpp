@@ -2,4 +2,9 @@
 
 Human::Human(string name) : Cargo(name, true) {};
 
-Human::~Human() {};
+Human::~Human() {}
+
+Cargo *Human::clone()
+{
+    return new Cargo(getName(), isHuman());
+};

@@ -14,7 +14,7 @@ public:
 	~Cargo();
     string getName();
     bool isHuman();
-    Cargo* clone();
+    virtual Cargo* clone() = 0;
 };
 
 #endif

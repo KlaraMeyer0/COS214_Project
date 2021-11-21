@@ -9,6 +9,7 @@ class Human : public Cargo {
 public:
 	Human(string);
 	~Human();
+    Cargo* clone();
 };
 
 #endif
