@@ -1,3 +1,11 @@
+/**
+ * @file HumanFactory.h
+ * @author Xander Coetzer
+ * @brief 
+ * 
+ * Design Pattern: Factory
+ * Participant: Concrete Factory
+ */
 #ifndef HUMANFACTORY_H
 #define HUMANFACTORY_H
 
@@ -10,9 +18,23 @@ using namespace std;
 class HumanFactory : public CargoFactory
 {
 public:
+	/**
+	 * @brief Construct a new Human Factory object
+	 * 
+	 */
 	HumanFactory();
+	/**
+	 * @brief Destroy the Human Factory object
+	 * 
+	 */
 	virtual ~HumanFactory();
 protected:
+	/**
+	 * @brief Creates a new Human object with name n
+	 * 
+	 * @param n The name
+	 * @return Cargo* 
+	 */
 	Cargo *getCargo(string n);
 };
 
