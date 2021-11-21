@@ -7,17 +7,25 @@ _9Engine::_9Engine() {
 _9Engine::~_9Engine() {};
 
 void _9Engine::TurnOn(FalconRocket* r) {
+	cout << "Entering stage 1" << endl;
 	core->TurnOn();
+	// add a pause?
+	TurnOff(r);
 };
 
 void _9Engine::TurnOff(FalconRocket* r) {
+	cout << "The payload almost in orbit, detach Falcon Core" << endl;
 	core->TurnOff();
 	r->attach(new Stage2Engine());
+	r->turnOn();
+	// add a pause?
 	cout << "The first stage engine has landed on the drone ship." << endl;
 };
+
 int _9Engine::EngineCount(){
 	return core->getCount();
 };
+
 bool _9Engine::getState(){
 	return core->getState();
-}
+};
