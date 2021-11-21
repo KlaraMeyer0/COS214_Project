@@ -16,7 +16,6 @@ public:
 	virtual Rocketship *clone() = 0;
 	string getName();//return name of the rocketship
 	void countdown();//countdown before launch
-	void startRockets();
 	char getType();//returns the type of the rocket(DragonRocketship, CrewDragonRocketship or StarlinkCollection)
 	void attachToStation(Station *); //attaches the specefic rocketship to a base or space station
 	Station *getStation(); //returns the station that the rocketship is currently attached to.

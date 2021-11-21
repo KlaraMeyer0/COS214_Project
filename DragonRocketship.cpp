@@ -19,7 +19,11 @@ DragonRocketship::~DragonRocketship()
     }
 }
 
-void DragonRocketship::Launch() {}
+void DragonRocketship::Launch()
+{
+    Rocketship::countdown();
+    rocket->turnOn();
+}
 
 Rocketship *DragonRocketship::clone()
 {
@@ -70,5 +74,5 @@ bool DragonRocketship::testFire()
 }
 bool DragonRocketship::testLoading()
 {
-    return cargo==NULL? false:true;
+    return cargo == NULL ? false : true;
 }
