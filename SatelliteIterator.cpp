@@ -1,3 +1,10 @@
+/**
+ * @file
+ * @author Klara Meyer
+ *
+ * @section
+ */
+
 #include <iostream>
 
 using namespace std;
