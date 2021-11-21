@@ -10,9 +10,9 @@ void StopTest::output(){
         cin>>c;
         if (c == 'c'){
             flag = true;
-            b = true;
+            b = false;
         } if (c == 'a')
-            b = true;
+            b = false;
         else cout<<"Please input only c or a!"<<endl;
     } while (b);
 }

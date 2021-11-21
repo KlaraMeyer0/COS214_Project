@@ -68,6 +68,7 @@ void LaunchInterface::TestLaunch(){
                         cin>>a;
                         if (a == 'y'){
                             l[i] = new CargoTest(new StopTest(l.at(i)));
+                            d = false;
                         } else if (a == 'n'){
                             d = false;
                         } else {
@@ -80,6 +81,7 @@ void LaunchInterface::TestLaunch(){
                         cin>>a;
                         if (a == 'y'){
                             l[i] = new EngineFireTest(new StopTest(l.at(i)));
+                            d = false;
                         } else if (a == 'n'){
                             d = false;
                         } else {
