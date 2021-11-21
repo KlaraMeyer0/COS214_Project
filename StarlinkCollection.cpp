@@ -10,7 +10,7 @@ StarlinkCollection:: StarlinkCollection(string name): Rocketship(name, 's')
     head = 0;
     
     //BS and SS set by Xander in CreateStarlink
-    
+
     //must create the Satelites uisng SatelliteManager
 }
 
