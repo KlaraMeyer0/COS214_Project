@@ -1,10 +1,10 @@
 #include "LaunchInterface.h"
 
-void LaunchInterface::setLaunchFile(LaunchFile* file){//sets the given Launchfile as the current rocket setup
+void LaunchInterface::setLaunchFile(LaunchFile* file){
     rocketCount = file->getCount();
     rocketships = file->getLaunch();
 }
-LaunchFile* LaunchInterface::retrieveLaunchFile(){//create backup Launchfile for current selection of rockets
+LaunchFile* LaunchInterface::retrieveLaunchFile(){
     LaunchFile* f = new LaunchFile();
     //make deepcopy of current rocket array
     Rocketship** r = new Rocketship*[rocketCount];
@@ -161,7 +161,6 @@ void LaunchInterface::outputDesc(){
         cout<<i<<endl<<launchCaretaker->getDesc(i)<<endl;
 }
 void LaunchInterface::restoreFile(){//needs to be tested!!!
-    //check if current setup is backed up
     if (!launchCaretaker->contains(rocketships)) {
         bool flag = false;
         do{

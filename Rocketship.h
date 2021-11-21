@@ -1,8 +1,17 @@
+/**
+ * @file Rocketship.h
+ * @author {Xander Coetzer, James Butler}
+ * @brief 
+ * 
+ * Design Patterns: Builder
+ * Participant: Product
+ */
 #ifndef ROCKETSHIP_H
 #define ROCKETSHIP_H
 
 using namespace std;
 #include <iostream>
+#include <string>
 #include <unistd.h>
 #include "Station.h"
 #include "FalconRocket.h"
@@ -10,22 +19,109 @@ using namespace std;
 class Rocketship
 {
 public:
-	Rocketship(string n, char);//initialises 
+	/**
+	 * @brief Construct a new Rocketship object
+	 * 
+	 * @param n Name of the rocketship
+	 * @param t Type of rocketship
+	 */
+	Rocketship(string n, char t);
+
+	/**
+	 * @brief Destroy the Rocketship object
+	 * 
+	 */
 	virtual ~Rocketship();
-	virtual void Launch() = 0;//launches the rocket into space and attaches it to the space station
+
+	/**
+	 * @brief launches the rocket into space and attaches it to the space station
+	 * 
+	 */
+	virtual void Launch() = 0;
+
+	/**
+	 * @brief Creates a deepcopy of the rocketship and returns it
+	 * 
+	 * @return Rocketship* 
+	 */
 	virtual Rocketship *clone() = 0;
-	string getName();//return name of the rocketship
-	void countdown();//countdown before launch
-	char getType();//returns the type of the rocket(DragonRocketship, CrewDragonRocketship or StarlinkCollection)
-	void attachToStation(Station *); //attaches the specific rocketship to a base or space station
-	Station *getStation(); //returns the station that the rocketship is currently attached to.
-	virtual int getRockets() = 0;//gives a count of the engines on this spaceship setup
-	virtual bool testFire() = 0;//returns if the engines are on or not
-	virtual bool testLoading() = 0;//returns if cargo has been loaded
+
+	/**
+	 * @brief Return name of the rocketship
+	 * 
+	 * @return string 
+	 */
+	string getName();
+
+	/**
+	 * @brief Starts the countdown before launch
+	 * 
+	 */
+	void countdown();
+
+	/**
+	 * @brief Returns the type of the rocket(DragonRocketship, CrewDragonRocketship or StarlinkCollection)
+	 * 
+	 * @return char 
+	 */
+	char getType();
+
+	/**
+	 * @brief Attaches the specific rocketship to a base or space station
+	 * 
+	 * @param s The station to attach to
+	 */
+	void attachToStation(Station *s);
+
+	/**
+	 * @brief Returns the station that the rocketship is currently attached to
+	 * 
+	 * @return Station* 
+	 */
+	Station *getStation();
+
+	/**
+	 * @brief Gives a count of the engines on this spaceship setup
+	 * 
+	 * @return int 
+	 */
+	virtual int getRockets() = 0;
+
+	/**
+	 * @brief Returns if the engines are on or not
+	 * 
+	 * @return true 
+	 * @return false 
+	 */
+	virtual bool testFire() = 0;
+
+	/**
+	 * @brief Returns if cargo has been loaded or not
+	 * 
+	 * @return true 
+	 * @return false 
+	 */
+	virtual bool testLoading() = 0;
 
 private:
+	/**
+	 * @brief The name of the rocketship
+	 * 
+	 */
 	string name;
-	char rocketshipType; // s d c
+
+	/**
+	 * @brief The type of the rocketship
+	 * (DragonRocketship, CrewDragonRocketship or StarlinkCollection)
+	 * d or c or s
+	 * 
+	 */
+	char rocketshipType;
+	
+	/**
+	 * @brief The station that the rocketship is currently attached to
+	 * 
+	 */
 	Station *current_Station;
 };
 

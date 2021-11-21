@@ -1,3 +1,11 @@
+/**
+ * @file CreateDragon.h
+ * @author Xander Coetzer
+ * @brief 
+ * Design Pattern:
+ * Participant
+ * 
+ */
 #ifndef CREWDRAGONROCKETSHIP_H
 #define CREWDRAGONROCKETSHIP_H
 

@@ -4,8 +4,8 @@
  * 
  * @brief
  * 
- * Design Pattern: Memento
- * Participant: Client
+ * Design Pattern: Memento, Command
+ * Participant: Client, Concrete Command
  */
 #ifndef TESTLAUNCH_H
 #define TESTLAUNCH_H
