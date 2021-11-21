@@ -64,12 +64,12 @@ void LaunchInterface::TestLaunch(){
                     cout<<"Setup of test launch for launch "<<i<<endl;
                     bool d = true;
                     do{
-                        cout<<"Do you want to have an engine present test? (y or n)"<<endl;
+                        cout<<"Do you want to have a cargo present test? (y or n)"<<endl;
                         cin>>a;
                         if (a == 'y'){
-                            
+                            l[i] = new CargoTest(new StopTest(l.at(i)));
                         } else if (a == 'n'){
-                            
+                            d = false;
                         } else {
                             cout<<"Please input either n or y."<<endl;
                         }
@@ -79,21 +79,22 @@ void LaunchInterface::TestLaunch(){
                         cout<<"Do you want to have an engine fire test? (y or n)"<<endl;
                         cin>>a;
                         if (a == 'y'){
-                            
+                            l[i] = new EngineFireTest(new StopTest(l.at(i)));
                         } else if (a == 'n'){
-                            
+                            d = false;
                         } else {
                             cout<<"Please input either n or y."<<endl;
                         }
                     } while (d);
                     d = true;
                     do{
-                        cout<<"Do you want to have a cargo present test? (y or n)"<<endl;
+                        cout<<"Do you want to have an engine present test? (y or n)"<<endl;
                         cin>>a;
                         if (a == 'y'){
-                            
+                            d = false;
+                            l[i] = new EnginePresentTest(new StopTest(l.at(i)));
                         } else if (a == 'n'){
-                            
+                            d = false;
                         } else {
                             cout<<"Please input either n or y."<<endl;
                         }
@@ -106,8 +107,15 @@ void LaunchInterface::TestLaunch(){
         }
     }
     //run tests
-
+    vector<Launch*>::iterator it;
+    for (it = l.begin(); it != l.end(); it++){
+        (*it)->startLaunch();
+    }
     //delete pointers
+    for (it = l.begin(); it != l.end(); it++){
+        delete (*it);
+    }
+    delete b;
 }
 void LaunchInterface::getDesc(){
     cout<<"This is the current setup, please select which rockets to launch:"<<endl;
