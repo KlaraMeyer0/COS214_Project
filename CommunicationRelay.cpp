@@ -37,8 +37,12 @@ void CommunicationRelay:: resolve(StarlinkSatellite* obj){
 //obj is a new Station ,not the same station
 CommunicationRelay* CommunicationRelay:: clone(Station* obj){
     CommunicationRelay* temp = new CommunicationRelay(obj);
-    this->SatStatus = SatStatus;
+    temp->SatStatus = this->SatStatus;
     return temp;
+}
+
+map<int ,bool> CommunicationRelay:: getStatStatus(){
+    return SatStatus;
 }
 
 #endif

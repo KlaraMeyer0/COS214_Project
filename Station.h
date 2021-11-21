@@ -30,11 +30,15 @@ class Station
         void resolve(StarlinkSatellite* obj);
 
         void attachRelay(CommunicationRelay*);
+        string getName();
 
-        string name;
+        map<int ,bool> getSatStatus();
+
+        
     private:
         Station* next;
-
+        string name;
+        
         //Holds information on each StarlinkSatellite associated with it
         map<int ,bool> SatStatus;
 

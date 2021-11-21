@@ -32,7 +32,6 @@ public:
     StarlinkSatellite* getFirstSat();
     
     StarlinkCollection* clone();
-    //StarlinkSatellite* getHead();
     
     void attachRocket(FalconRocket*);
 
@@ -47,6 +46,9 @@ public:
     void setHead(StarlinkSatellite*);
 
     void setSatellites(int num_B,int num_S);
+
+    //Function used in testing
+    bool isViableClone(StarlinkCollection*);
 
 private:
 

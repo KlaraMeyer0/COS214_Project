@@ -50,12 +50,19 @@ SatelliteManager* SatelliteManager::clone(StarlinkCollection* objcopy,BaseStatio
     
 
     //create a exact copy of the list pointed to by this->head in the StarlinkCollection
-    StarlinkSatellite* ptr = head;
+    StarlinkSatellite* ptr =head;
+    StarlinkSatellite* tempSat =NULL;
     while(ptr != NULL){
-        if(ptr->getCommunicatesWith() == "BaseStation")
-            objcopy->insert(ptr->cloneExact("BaseStation",temp->relayBS));
-        else
+        if(ptr->getCommunicatesWith() == "BaseStation"){
+            tempSat=ptr->cloneExact("BaseStation",temp->relayBS);
+            objcopy->insert(tempSat);
+            relayBS->addSatellite(tempSat);
+        }
+        else{
+            tempSat=ptr->cloneExact("SpaceStation",temp->relaySS);
             objcopy->insert(ptr->cloneExact("SpaceStation",temp->relaySS));
+            relaySS->addSatellite(tempSat);
+        }
         ptr =ptr->next;
     }
 

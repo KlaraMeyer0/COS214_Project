@@ -13,7 +13,7 @@ class PointOfCommunication {
         void setName(int);
     private:
         int name;       //randomly generated identifier 
-        bool status;  //true ,if functional false otherwise
+        bool status;    //true ,if functional false otherwise
 };
 
 #endif

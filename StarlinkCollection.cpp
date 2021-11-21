@@ -150,3 +150,31 @@ void StarlinkCollection::Launch()
     this->countdown();
     rocket->turnOn();
 }
+
+bool StarlinkCollection:: isViableClone(StarlinkCollection* obj){
+
+    if((this->num_B != obj->num_B)||(this->num_S != obj->num_S))
+        return false;
+
+    if(&(this->rocket)==&(obj->rocket))
+        return false;
+
+    if((&(this->BS) == &(obj->BS))||(&(this->SS) == &(obj->SS)))
+        return false;
+
+    if(this->SS->getSatStatus() != obj->SS->getSatStatus())
+        return false;
+    
+    if(this->BS->getSatStatus() != obj->BS->getSatStatus())
+        return false;
+    
+    if((this->BS->getName() != obj->BS->getName()) || (this->SS->getName() != obj->SS->getName()))
+        return false;
+
+    if(this->relayBS->getStatStatus() != obj->relayBS->getStatStatus())
+        return false;
+    
+    if(this->relaySS->getStatStatus() != obj->relaySS->getStatStatus())
+        return false;
+
+}

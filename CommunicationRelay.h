@@ -29,6 +29,9 @@ virtual	~CommunicationRelay();
     void resolve(StarlinkSatellite*);
 
     CommunicationRelay* clone(Station*);
+
+    map<int ,bool> getStatStatus();
+
 private:
     //Associates a colleague with a status value 
     //this attribute is duplicated in Station

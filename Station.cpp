@@ -47,3 +47,11 @@ void Station:: resolve(StarlinkSatellite* obj){
 void Station:: attachRelay(CommunicationRelay* obj){
     relayTo = obj;
 }
+
+string Station:: getName(){
+    return name;
+}
+
+map<int ,bool> Station:: getSatStatus(){
+    return SatStatus;
+}
