@@ -35,7 +35,7 @@ void CrewDragonBay::buildBody()
 
 void CrewDragonBay::addCargo()
 {
-    cout << "Load from " << crew_dragon->getStation()->name << endl;
+    cout << "Load from " << crew_dragon->getStation()->getName() << endl;
 
     bool stop = false;
     int c, idx;
