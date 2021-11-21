@@ -18,7 +18,9 @@ CrewDragonRocketship::~CrewDragonRocketship()
     }
 }
 
-void CrewDragonRocketship::Launch() {}
+void CrewDragonRocketship::Launch() {
+    
+}
 
 Rocketship *CrewDragonRocketship::clone()
 {
@@ -68,4 +70,5 @@ bool CrewDragonRocketship::testFire()
 }
 bool CrewDragonRocketship::testLoading()
 {
+    return cargo==NULL? false:true;
 }

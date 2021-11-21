@@ -68,5 +68,5 @@ bool DragonRocketship::testFire()
 }
 bool DragonRocketship::testLoading()
 {
-    //Luca->James :implemented in StarlinkCollection is this correct ?
+    return cargo==NULL? false:true;
 }
