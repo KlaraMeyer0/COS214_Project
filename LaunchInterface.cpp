@@ -140,7 +140,13 @@ void LaunchInterface::getDesc(){
 void LaunchInterface::addRocketship(Rocketship* r){//add rocket to current array
     rocketCount++;
     Rocketship** rs = new Rocketship*[rocketCount];
+    for (int i = 0; i < rocketCount-1; i++){
+        rs[i] = rocketships[i];
+        rocketships[i] = nullptr;
+    }
     rs[rocketCount-1] = r;
+    delete rocketships;
+    rocketships = rs;
 }
 void LaunchInterface::storeFile(){//store current file into Caretaker
     LaunchFile* f = retrieveLaunchFile();
