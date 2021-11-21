@@ -101,6 +101,8 @@ StarlinkCollection* StarlinkCollection:: clone(){
     temp->num_B = num_B;
     temp->num_S = num_S;
     temp->head = temp->satelliteManager->getHead();
+
+    return temp;
 }
 
 void StarlinkCollection::setCommunicationRelayBS(CommunicationRelay* obj){
