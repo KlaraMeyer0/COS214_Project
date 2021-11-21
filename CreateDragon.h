@@ -8,7 +8,7 @@
 class CreateDragon : public Work {
 public:
 	CreateDragon(RocketshipEngineer *e, LaunchInterface *l, DragonBay *d, BaseStation *s);
-	~CreateDragon();
+	virtual ~CreateDragon();
 	void execute();
 	void undo();
 private:

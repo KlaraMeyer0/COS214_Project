@@ -8,7 +8,7 @@ using namespace std;
 class CargoTest : public LaunchTest{
 public:
 	CargoTest(Launch*);
-	~CargoTest();
+	virtual ~CargoTest();
     void output();
 	virtual void startLaunch();
 	

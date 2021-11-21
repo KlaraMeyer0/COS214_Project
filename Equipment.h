@@ -9,7 +9,7 @@ class Equipment : public Cargo
 {
 public:
 	Equipment(string);
-	~Equipment();
+	virtual ~Equipment();
     Cargo* clone();
 };
 

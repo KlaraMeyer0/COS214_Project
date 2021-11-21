@@ -11,7 +11,7 @@ class CrewDragonRocketship : public Rocketship
 {
 public:
     CrewDragonRocketship(string n);
-    ~CrewDragonRocketship();
+    virtual ~CrewDragonRocketship();
     void Launch();
     Rocketship *clone();
     void attachSpacecraft(Spacecraft *s);

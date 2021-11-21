@@ -11,7 +11,7 @@ private:
     bool human;
 public:
 	Cargo(string, bool h);
-	~Cargo();
+	virtual ~Cargo();
     string getName();
     bool isHuman();
     virtual Cargo* clone() = 0;

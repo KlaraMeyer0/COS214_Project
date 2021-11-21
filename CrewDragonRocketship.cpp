@@ -20,7 +20,7 @@ CrewDragonRocketship::~CrewDragonRocketship()
 
 void CrewDragonRocketship::Launch()
 {
-    Rocketship::countdown();
+    this->countdown();
     rocket->turnOn();
 }
 

@@ -11,7 +11,7 @@ protected:
 	StageEngine* stage; // Variable storing the state of the rocket
 public:
 	FalconRocket();
-	~FalconRocket();
+	virtual ~FalconRocket();
 	void detach(); // Detach the state
 	void attach(StageEngine*); // Attach a new state
 	void turnOn(); // Turn on the engine

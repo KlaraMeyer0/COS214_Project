@@ -8,7 +8,7 @@
 class CreateStarlink : public Work{
 public:
 	CreateStarlink(RocketshipEngineer *e, LaunchInterface *l, StarlinkBay *s, BaseStation *b, SpaceStation* ss);
-	~CreateStarlink();
+	virtual ~CreateStarlink();
 	void execute();
 	void undo();
 private:

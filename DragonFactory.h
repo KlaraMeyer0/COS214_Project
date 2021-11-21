@@ -8,7 +8,7 @@ using namespace std;
 class DragonFactory : public SpacecraftFactory {
 public:
 	DragonFactory();
-	~DragonFactory();
+	virtual ~DragonFactory();
 protected:
     Spacecraft* createRocket();
 };

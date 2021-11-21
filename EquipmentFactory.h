@@ -8,7 +8,7 @@ using namespace std;
 class EquipmentFactory : public CargoFactory {
 public:
 	EquipmentFactory();
-	~EquipmentFactory();
+	virtual ~EquipmentFactory();
 protected:
     Cargo* getCargo(string n);
 };

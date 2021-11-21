@@ -11,7 +11,7 @@ class BaseStation : public Station
 {
 public:
     BaseStation();
-    ~BaseStation();
+    virtual ~BaseStation();
     void receiveCargo(Cargo *c, int amount);
     void receiveCommunication(string s);
     void printEquipment();

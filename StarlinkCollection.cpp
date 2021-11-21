@@ -147,6 +147,6 @@ void StarlinkCollection:: setSatellites(int num_B,int num_S){
 
 void StarlinkCollection::Launch()
 {
-    Rocketship::countdown();
+    this->countdown();
     rocket->turnOn();
 }

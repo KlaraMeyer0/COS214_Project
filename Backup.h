@@ -8,7 +8,7 @@ using namespace std;
 class Backup : public Work{
 public:
 	Backup(LaunchInterface*);
-    ~Backup();
+    virtual ~Backup();
     void execute();
     void undo();
 private:

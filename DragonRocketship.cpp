@@ -21,7 +21,7 @@ DragonRocketship::~DragonRocketship()
 
 void DragonRocketship::Launch()
 {
-    Rocketship::countdown();
+    this->countdown();
     rocket->turnOn();
 }
 

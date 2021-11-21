@@ -7,7 +7,7 @@ class CargoFactory
 {
 public:
     CargoFactory();
-    ~CargoFactory();
+    virtual ~CargoFactory();
     Cargo *startFactory(string n);
 protected:
     virtual Cargo *getCargo(string n) = 0;

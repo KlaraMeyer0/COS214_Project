@@ -10,7 +10,7 @@ class DragonBay : public RocketshipBay
 {
 public:
 	DragonBay();
-	~DragonBay();
+	virtual ~DragonBay();
 	DragonRocketship *getRocketship();
 	void setName(string n, BaseStation *bs, SpaceStation *sp = nullptr);
 	void buildRocket();

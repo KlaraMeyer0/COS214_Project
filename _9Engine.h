@@ -13,7 +13,7 @@ private:
 	FalconCore* core; // Pointer to FalconCore engine
 public:
 	_9Engine();
-	~_9Engine();
+	virtual ~_9Engine();
 	void TurnOn(FalconRocket*); // Turns on the engine
 	void TurnOff(FalconRocket*); // Turns off the engine
 	virtual int EngineCount();//Returns the number of engines

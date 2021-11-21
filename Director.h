@@ -15,7 +15,7 @@ class Director
 {
 public:
     Director(LaunchInterface *i, BaseStation *b, SpaceStation* s);
-    ~Director();
+    virtual ~Director();
     void makeDragon();
     void makeCrewDragon();
     void makeStarlink();

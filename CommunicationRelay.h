@@ -11,24 +11,13 @@ class StarlinkSatellite;
 class Station;
 
 class CommunicationRelay {
-private:
-    //Associates a colleague with a status value 
-    //this attribute is dulpicated in Station
-    map<int ,bool> SatStatus;
-
-    //Colleague that is communicated with: Station
-    Station* RelayTo;
-
-    //the StarlinkSattellite communicating with the Station: RelayTo
-    vector<StarlinkSatellite*> sattelites;
-
 public:
     
     //Constructor to set the RelayTo colleague 
 	CommunicationRelay(Station*);
 
     //Disconencts it from the StarlinkSatellite it is associated with 
-	~CommunicationRelay();
+virtual	~CommunicationRelay();
 
     //used to notify the Station of any changes ,made to the Sattellite
     void notify(StarlinkSatellite*);
@@ -40,6 +29,17 @@ public:
     void reslove(StarlinkSatellite*);
 
     CommunicationRelay* clone(Station*);
+private:
+    //Associates a colleague with a status value 
+    //this attribute is dulpicated in Station
+    map<int ,bool> SatStatus;
+
+    //Colleague that is communicated with: Station
+    Station* RelayTo;
+
+    //the StarlinkSattellite communicating with the Station: RelayTo
+    vector<StarlinkSatellite*> sattelites;
+
 };
 
 #endif
