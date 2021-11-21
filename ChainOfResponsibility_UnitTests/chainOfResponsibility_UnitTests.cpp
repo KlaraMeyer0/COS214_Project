@@ -9,7 +9,7 @@ using namespace std;
 
 namespace
 {
-    // Tests iterator
+    // Tests chain of responsibility
     void runIteratorTests() {
         cout << "Creating a StarlinkCollection for testing." << endl;
         StarlinkCollection* testCollection = new StarlinkCollection("TestCollection", nullptr, nullptr);
