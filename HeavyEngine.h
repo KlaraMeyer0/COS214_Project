@@ -1,3 +1,13 @@
+/**
+ * @file
+ * @author Rina Rene du Toit
+ *
+ * @brief
+ *
+ * Design Pattern: State
+ * Participant: Concrete State
+ */
+
 #ifndef HeavyENGINE_H
 #define HeavyENGINE_H
 
@@ -10,14 +20,37 @@ using namespace std;
 
 class HeavyEngine : public Stage1Engine {
 private:
-	FalconCore** cores; // Array of falcon cores, the engine used in this state
+	/**
+	 * Array of falcon cores, the engine used in this state
+	 */
+	FalconCore** cores;
 public:
+	/**
+	 * Constructor for HeavyEngine Class
+	 */
 	HeavyEngine();
+	/**
+	 * Destructor for HeavyEngine Class
+	 */
 	virtual ~HeavyEngine();
-	void TurnOn(FalconRocket*); // Turn on the rocket's engine
-	void TurnOff(FalconRocket*); // Turn off the rocket's engine
-	virtual int EngineCount();//Returns the number of engines
-	virtual bool getState();// Get state of engines
+	/**
+	 * Turn on the rocket's engine
+	 */
+	void TurnOn(FalconRocket*);
+	/**
+	 * Turn off the rocket's engine
+	 */
+	void TurnOff(FalconRocket*);
+	/**
+	 * Returns the number of engines
+	 * @return Current StageEngine storing the stage of the rocket
+	 */
+	virtual int EngineCount();
+	/**
+	 * Get state of engines
+	 * @return The state of the engines
+	 */
+	virtual bool getState(); 
 };
 
 #endif

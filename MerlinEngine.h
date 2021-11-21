@@ -1,3 +1,13 @@
+/**
+ * @file
+ * @author Rina Rene du Toit
+ *
+ * @brief
+ *
+ * Design Pattern: Template in State
+ * Participant: Concrete class
+ */
+
 #ifndef MERLINENGINE_H
 #define MERLINENGINE_H
 
@@ -8,10 +18,22 @@ using namespace std;
 
 class MerlinEngine : public Engine {
 public:
+	/**
+	 * Constructor for MerlinEngine Class
+	 */
 	MerlinEngine();
-	virtual ~MerlinEngine();
-	void TurnOn(); // Turn on the engine
-	void TurnOff(); // Turn off the engine
+	/**
+	 * Destructor for MerlinEngine Class
+	 */
+	~MerlinEngine();
+	/**
+	 * Turn on the engine
+	 */
+	void TurnOn();
+	/**
+	 * Turn off the engine
+	 */
+	void TurnOff();
 };
 
 #endif
