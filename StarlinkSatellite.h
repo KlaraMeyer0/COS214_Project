@@ -7,10 +7,9 @@ using namespace std;
 #include "CommunicationRelay.h"
 #include <string>
 
-
 class CommunicationRelay;
 //Participant: 
-//Colleague in Mediator ,ConcretePrototype in Prototype Pattern
+//Colleague in Mediator, ConcretePrototype in Prototype Pattern
 //ConcreteAggregate in the Iterator 
 
 class StarlinkSatellite : public PointOfCommunication{
