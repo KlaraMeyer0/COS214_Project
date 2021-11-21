@@ -17,10 +17,10 @@ CrewDragonRocketship *CrewDragonBay::getRocketship()
     return crew_dragon;
 }
 
-void CrewDragonBay::setName(string n, Station *s)
+void CrewDragonBay::setName(string n, BaseStation *bs, SpaceStation *sp)
 {
     crew_dragon = new CrewDragonRocketship(n);
-    crew_dragon->attachToStation(s);
+    crew_dragon->attachToStation(bs);
 }
 
 void CrewDragonBay::buildRocket()

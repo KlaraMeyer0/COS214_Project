@@ -14,7 +14,7 @@
 class Director
 {
 public:
-    Director(LaunchInterface *i, BaseStation *b);
+    Director(LaunchInterface *i, BaseStation *b, SpaceStation* s);
     ~Director();
     void makeDragon();
     void makeCrewDragon();
@@ -32,6 +32,7 @@ private:
     DragonBay *dragon_Bay;
     StarlinkBay *starlink_Bay;
     BaseStation *base_station;
+    SpaceStation *space_station;
 };
 
 #endif

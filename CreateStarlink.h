@@ -7,7 +7,7 @@
 
 class CreateStarlink : public Work{
 public:
-	CreateStarlink(RocketshipEngineer *e, LaunchInterface *l, StarlinkBay *s, Station *station);
+	CreateStarlink(RocketshipEngineer *e, LaunchInterface *l, StarlinkBay *s, BaseStation *b, SpaceStation* ss);
 	~CreateStarlink();
 	void execute();
 	void undo();
@@ -15,7 +15,8 @@ private:
 	RocketshipEngineer *engineer;
 	LaunchInterface *launch_interface;
 	StarlinkBay *starlink_bay;
-	Station* base_station;
+	BaseStation* base_station;
+	SpaceStation* space_station;
 };
 
 #endif
