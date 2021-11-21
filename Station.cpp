@@ -55,3 +55,8 @@ string Station:: getName(){
 map<int ,bool> Station:: getSatStatus(){
     return SatStatus;
 }
+
+void Station::setName(string n)
+{
+    name = n;
+}

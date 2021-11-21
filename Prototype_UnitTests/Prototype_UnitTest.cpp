@@ -1,8 +1,11 @@
 #include <iostream>
+#include <limits.h>
+#include <stdexcept>
 #include "StarlinkCollection.h"
 #include "BaseStation.h"
 #include "SpaceStation.h"
 #include "FalconRocket.h"
+#include "gtest/gtest.h"
 using namespace std;
 
 namespace

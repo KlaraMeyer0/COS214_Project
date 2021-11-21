@@ -177,4 +177,6 @@ bool StarlinkCollection:: isViableClone(StarlinkCollection* obj){
     if(this->relaySS->getStatStatus() != obj->relaySS->getStatStatus())
         return false;
 
+    return true;
+
 }

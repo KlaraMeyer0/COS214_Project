@@ -24,11 +24,6 @@ public:
 private:
     vector<pair<Cargo *, int>> equipment;
     vector<Cargo *> humans;
-
-    // humans arriving at base station: call factory for humans
-    // cargo delivered to base station: call factory for cargo
-
-    // add cargo to rockets from here
 };
 
 #endif
