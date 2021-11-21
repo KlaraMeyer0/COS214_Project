@@ -7,8 +7,6 @@ using namespace std;
 
 class Launch {
 public:
-	Launch();
-	~Launch();
 	virtual void startLaunch() = 0;
 	bool getType(){
 		return t;

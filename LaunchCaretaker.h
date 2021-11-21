@@ -6,10 +6,6 @@ using namespace std;
 #include "LaunchFile.h"
 
 class LaunchCaretaker {//Memento caretaker
-private:
-    LaunchFile** file;
-	string* desc;
-	int FileSize;
 public:
 	LaunchCaretaker();
 	~LaunchCaretaker();
@@ -20,6 +16,10 @@ public:
 	bool contains(LaunchFile*);
 	bool contains(Rocketship**);
 	int getSize();
+private:
+    LaunchFile** file;
+	string* desc;
+	int FileSize;
 };
 
 #endif
