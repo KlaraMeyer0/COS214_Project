@@ -89,6 +89,12 @@ public:
     */
     StarlinkSatellite* getHead();
 
+    ///@return BaseStation ,returns BS member
+    BaseStation* getBaseStation();
+
+    ///@return SpaceStation ,returns SS member
+    SpaceStation* getSpaceStation();
+
 private:
 
     /**

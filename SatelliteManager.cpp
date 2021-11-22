@@ -14,8 +14,10 @@ SatelliteManager::SatelliteManager(BaseStation* BS ,SpaceStation* SS, StarlinkCo
     BS->attachRelay(relayBS);
     SS->attachRelay(relaySS);
 
+    cout<<"\nCreating protoBSSatellite and protoSTSatellite\n";
     protoBSSatellite= new StarlinkSatellite("BaseStation",relayBS);
     protoSTSatellite= new StarlinkSatellite("SpaceStation",relaySS);
+    cout<<"Done creating protoBSSatellite and protoSTSatellite\n\n";
 
     this->SC =SC;
     this->SC->setCommunicationRelayBS(relayBS);
@@ -68,19 +70,27 @@ SatelliteManager* SatelliteManager::clone(StarlinkCollection* objcopy,BaseStatio
 
 }
 
+void SatelliteManager:: setSatellites(int num_B, int num_S){
 
-void SatelliteManager:: setSatellites(int num_B, int num_S)
-{
+    StarlinkSatellite* tempSat=NULL;
     for(int i=0;i<num_B+num_S;++i)
-        if(i<=num_B)
+        if(i<num_B)
             if(i==0){
                 head=protoBSSatellite->clone();
                 SC->insert(head);
+                relayBS->addSatellite(head);
+                SC->setHead(head);
             }
-            else
-                SC->insert(protoBSSatellite->clone());           
-        else
-            SC->insert(protoSTSatellite->clone());
+            else{
+                tempSat = protoBSSatellite->clone();
+                SC->insert(tempSat); 
+                relayBS->addSatellite(tempSat);          
+            }
+        else{
+            tempSat = protoSTSatellite->clone();
+            SC->insert(tempSat);
+            relaySS->addSatellite(tempSat);
+        }
 
     SC->setHead(head);
 }
@@ -88,5 +98,15 @@ void SatelliteManager:: setSatellites(int num_B, int num_S)
 StarlinkSatellite* SatelliteManager:: getHead(){
     return head;
 }
+
+
+BaseStation* SatelliteManager:: getBaseStation(){
+    return BS;
+}
+
+SpaceStation* SatelliteManager:: getSpaceStation(){
+    return SS;
+}
+
 
 #endif

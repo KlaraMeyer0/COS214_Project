@@ -13,7 +13,7 @@
 #include <vector>
 #include "StarlinkSatellite.h"
 #include "Station.h"
-#include "map"
+#include <map>
 using namespace std;
 
 class StarlinkSatellite;
@@ -65,6 +65,13 @@ public:
      * @return map<int ,bool> that is currenlty held in the CommunicationRelay
     */
     map<int ,bool> getStatStatus();
+
+    /**
+     * @brief Returns the Station associated with this CommunicationRelay ,mainly for
+     *        testing purposes
+     * @return Station
+    */
+    Station* getRelayTo();
 
 private:
     ///@brief Associates a colleague with a status value ,this attribute is duplicated in Station
