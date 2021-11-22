@@ -152,14 +152,21 @@ void LaunchInterface::getDesc(){
     }
 }
 void LaunchInterface::addRocketship(Rocketship* r){//add rocket to current array
+    cout<<"Begin"<<endl;
     rocketCount++;
     Rocketship** rs = new Rocketship*[rocketCount];
     for (int i = 0; i < rocketCount-1; i++){
+        cout<<"for"<<endl;
         rs[i] = rocketships[i];
+        cout<<"for1"<<endl;
         rocketships[i] = nullptr;
+        cout<<"for2"<<endl;
+        delete rocketships[i];
+        cout<<"for3"<<endl;
     }
     rs[rocketCount-1] = r;
     delete rocketships;
+    cout<<"end"<<endl;
     rocketships = rs;
 }
 void LaunchInterface::storeFile(){//store current file into Caretaker

@@ -3,6 +3,7 @@
 #include "../LaunchInterface.h"
 #include "../DragonRocketship.h"
 #include "../SpaceStation.h"
+#include "../BaseStation.h"
 #include <gtest/gtest.h>
 
 namespace
@@ -13,7 +14,8 @@ namespace
     TEST(InterfaceTest, AddRocketTest)
     {
         Station* s = new SpaceStation();
-        LaunchInterface* l = new LaunchInterface(s);
+        Station* b = new BaseStation();
+        LaunchInterface* l = new LaunchInterface(s,b);
         Rocketship** r = new Rocketship*[3];
         for (int i = 0; i < 3; i++){
             r[i] = new DragonRocketship("foo");
@@ -25,7 +27,8 @@ namespace
     TEST(InterfaceTest, RetrieveLaunchTest)
     {
         Station* s = new SpaceStation();
-        LaunchInterface* l = new LaunchInterface(s);
+        Station* b = new BaseStation();
+        LaunchInterface* l = new LaunchInterface(s,b);
         Rocketship** r = new Rocketship*[3];
         for (int i = 0; i < 3; i++){
             r[i] = new DragonRocketship("foo");
@@ -45,7 +48,7 @@ namespace
         EXPECT_EQ(f->getLaunch(),r);
     }
     // Checks if the setLaunch works correctly, Invalid argument 1
-    TEST(FileTest, setLaunchTest)
+    TEST(FileTest, setLaunchTest1)
     {
         LaunchFile* f = new LaunchFile();
         Rocketship** r = new Rocketship*[1];
@@ -60,7 +63,7 @@ namespace
         } 
     }
     // Checks if the setLaunch works correctly, Invalid argument 2
-    TEST(FileTest, setLaunchTest)
+    TEST(FileTest, setLaunchTest2)
     {
         LaunchFile* f = new LaunchFile();
         try {
@@ -144,7 +147,7 @@ namespace
         EXPECT_EQ(c->getFile(0),f);
     }
     // Checks if the file gets returned correctly, Invalid argument
-    TEST(CaretakerTest, getTest)
+    TEST(CaretakerTest, getTest1)
     {
         LaunchCaretaker* c = new LaunchCaretaker();
         LaunchFile* f = new LaunchFile();
