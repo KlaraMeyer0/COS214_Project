@@ -22,7 +22,7 @@ class Station{
     public:
         Station();
         virtual ~Station();
-        void add(Station* stat);
+        //void add(Station* stat);
         //virtual void receiveCargo(Cargo* c);
         virtual void receiveCommunication(string com);
         virtual void printEquipment() = 0;
@@ -69,7 +69,7 @@ class Station{
 
         
     private:
-        Station* next;
+        //Station* next;
 
         ///@brief name of the station
         string name;
