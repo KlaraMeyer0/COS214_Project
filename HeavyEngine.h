@@ -2,10 +2,7 @@
  * @file HeavyEngine.h
  * @author Rina Rene du Toit
  * @class HeavyEngine
- * @brief
- *
- * Design Pattern: State
- * Participant: Concrete State
+ * @brief Design Pattern: State Participant: Concrete State
  */
 
 #ifndef HeavyENGINE_H

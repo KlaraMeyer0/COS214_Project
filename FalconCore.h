@@ -2,9 +2,7 @@
  * @file FalconCore.h
  * @author Rina Rene du Toit
  * @class FalconCore
- * @brief
- * Design Pattern: Template in State
- * Participant: Concrete class
+ * @brief Design Pattern: Template in State Participant: Concrete class
  */
 
 #ifndef FALCONCORE_H
