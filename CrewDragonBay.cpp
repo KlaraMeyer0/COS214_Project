@@ -68,7 +68,7 @@ void CrewDragonBay::addCargo()
             {
                 tempCargo.push_back(h);
 
-                cout << h->getName() << "has boarded the rocket." << endl;
+                cout << h->getName() << " has boarded the rocket." << endl;
             }
         }
         else
