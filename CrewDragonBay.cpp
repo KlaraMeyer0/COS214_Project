@@ -60,7 +60,15 @@ void CrewDragonBay::addCargo()
             cout << "Enter the index of the human to board the rocket: " << endl;
             cin >> idx;
 
-            Cargo* h = crew_dragon->getStation()->loadHumans(idx);
+            while (!cin.good() || idx <= 0)
+            {
+                cin.clear();
+                cin.ignore(15, '\n');
+                cout << "Please enter a valid index: ";
+                cin >> idx;
+            }
+
+            Cargo* h = crew_dragon->getStation()->loadHumans(idx-1);
 
             if (h == nullptr)
                 cout << "Please enter a valid index." << endl;
@@ -110,7 +118,7 @@ void CrewDragonBay::addCargo()
                 cin >> num;
             }
 
-            pair<Cargo *, int> *p = crew_dragon->getStation()->loadEquipment(idx, num);
+            pair<Cargo *, int> *p = crew_dragon->getStation()->loadEquipment(idx-1, num);
             if (p == nullptr)
                 cout << "Please enter a valid index." << endl;
             else
