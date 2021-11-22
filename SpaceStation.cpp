@@ -37,7 +37,7 @@ void SpaceStation::printEquipment()
 void SpaceStation::printHumans()
 {
     for (int i = 0; i < humans.size(); i++)
-        cout << "index: " << i << " Name: " << humans.at(i) << endl;
+        cout << "index: " << i << " Name: " << humans.at(i)->getName() << endl;
 }
 
 pair<Cargo *, int> *SpaceStation::loadEquipment(int idx, int num)
