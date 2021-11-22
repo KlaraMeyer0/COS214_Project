@@ -6,7 +6,7 @@ using namespace std;
 
 SpaceStation::SpaceStation() : Station()
 {
-    setName("Space Station");
+    setName("RXKJL-68348");
     handler = new CargoHandler();
     handler->add(new ConcreteCargoHandler(true));
     handler->add(new ConcreteCargoHandler(false));
