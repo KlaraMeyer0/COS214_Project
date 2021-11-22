@@ -130,8 +130,13 @@ class Station{
         map<int, bool> SatStatus;
 
         ///@brief CommunicationRelay this station communicates with
-        CommunicationRelay* relayTo;
+        CommunicationRelay *relayTo;
 
+        void setSatStatus(map<int, bool> stat);
+
+        void setRelay(CommunicationRelay *obj);
+
+        CommunicationRelay *getRelay();
 };
 
 #endif
