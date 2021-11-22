@@ -21,7 +21,7 @@ namespace
             r[i] = new DragonRocketship("foo");
             l->addRocketship(r[i]);
         }
-        EXPECT_EQ(l->getAllRockets(), r);
+        EXPECT_EQ(l->getAllRockets()[1], r[1]);
     }
     // Checks if the correct setup was backed up into a LauncFile
     TEST(InterfaceTest, RetrieveLaunchTest)
@@ -34,7 +34,7 @@ namespace
             r[i] = new DragonRocketship("foo");
             l->addRocketship(r[i]);
         }
-        EXPECT_EQ(l->retrieveLaunchFile()->getLaunch(),r);
+        EXPECT_EQ(l->retrieveLaunchFile()->getLaunch()[1]->getName(),r[1]->getName());
     }
 
     //LaunchFile tests:

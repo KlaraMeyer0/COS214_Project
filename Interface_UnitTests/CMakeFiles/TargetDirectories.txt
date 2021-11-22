@@ -1,0 +1,3 @@
+/mnt/c/TUKSCourse/COS/214/P/Project/Code/COS214_Project/Interface_UnitTests/CMakeFiles/rebuild_cache.dir
+/mnt/c/TUKSCourse/COS/214/P/Project/Code/COS214_Project/Interface_UnitTests/CMakeFiles/edit_cache.dir
+/mnt/c/TUKSCourse/COS/214/P/Project/Code/COS214_Project/Interface_UnitTests/CMakeFiles/runTests.dir

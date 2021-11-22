@@ -32,7 +32,14 @@ Rocketship *DragonRocketship::clone()
     DragonRocketship *temp = new DragonRocketship(this->getName());
     temp->spacecraft = (this->spacecraft)->clone();
     temp->rocket = (this->rocket)->clone();
-
+    if (this->cargo != NULL)
+    {
+        temp->cargo = new Cargo*[temp->spacecraft->getCapacity()];
+        for (int i=0; i<this->spacecraft->getCapacity(); i++)
+        {
+            temp->cargo[i] = this->cargo[i]->clone();
+        }
+    }
     return temp;
 }
 
