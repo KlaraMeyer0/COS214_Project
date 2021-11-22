@@ -7,7 +7,7 @@ using namespace std;
 Station::Station(){}
 
 Station::~Station(){
-    relayTo = NULL;
+    relayTo = nullptr;
 }
 
 void Station:: updateStatus(StarlinkSatellite* obj){
