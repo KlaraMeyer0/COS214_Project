@@ -78,7 +78,7 @@ namespace
     {
         LaunchFile* f = new LaunchFile();
         LaunchCaretaker* c = new LaunchCaretaker();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         EXPECT_EQ(c->contains(f),true);
     }
     // Checks if the launchfile is set correctly, Invalid argument
@@ -99,7 +99,7 @@ namespace
     {
         LaunchFile* f = new LaunchFile();
         LaunchCaretaker* c = new LaunchCaretaker();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         c->getDesc(0);
         std::string output = testing::internal::GetCapturedStdout();
         EXPECT_EQ(output, "test2\n");
@@ -108,7 +108,7 @@ namespace
     TEST(CaretakerTest, descTest1)
     {
         LaunchCaretaker* c = new LaunchCaretaker();
-        c->setFile(new LaunchFile());//Push parameter
+        c->setFile(new LaunchFile());
         try {
             c->getDesc(2);
             FAIL();
@@ -123,7 +123,7 @@ namespace
     {
         LaunchFile* f = new LaunchFile();
         LaunchCaretaker* c = new LaunchCaretaker();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         EXPECT_EQ(c->contains(f),true);
     }
     // Checks if the launchfile is contained, Invalid argument
@@ -132,7 +132,7 @@ namespace
         LaunchFile* f = new LaunchFile();
         LaunchFile* l = new LaunchFile();
         LaunchCaretaker* c = new LaunchCaretaker();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         EXPECT_EQ(c->contains(l),false);
     }
     // Checks if the file gets returned correctly, Valid argument
@@ -140,7 +140,7 @@ namespace
     {
         LaunchCaretaker* c = new LaunchCaretaker();
         LaunchFile* f = new LaunchFile();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         EXPECT_EQ(c->getFile(0),f);
     }
     // Checks if the file gets returned correctly, Invalid argument
@@ -148,7 +148,7 @@ namespace
     {
         LaunchCaretaker* c = new LaunchCaretaker();
         LaunchFile* f = new LaunchFile();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         try {
             c->getFile(2);
             FAIL();
@@ -163,7 +163,7 @@ namespace
     {
         LaunchCaretaker* c = new LaunchCaretaker();
         LaunchFile* f = new LaunchFile();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         c->removeFile(0);
         EXPECT_EQ(c->contains(f),false);
     }
@@ -172,7 +172,7 @@ namespace
     {
         LaunchCaretaker* c = new LaunchCaretaker();
         LaunchFile* f = new LaunchFile();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         try {
             c->removeFile(1);
             FAIL();
@@ -187,7 +187,7 @@ namespace
     {
         LaunchCaretaker* c = new LaunchCaretaker();
         LaunchFile* f = new LaunchFile();
-        c->setFile(f);//Push parameter
+        c->setFile(f);
         EXPECT_EQ(c->getSize(),1);
     }
 }

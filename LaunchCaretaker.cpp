@@ -16,11 +16,10 @@ LaunchFile* LaunchCaretaker::getFile(int i){
 }
 void LaunchCaretaker::setFile(LaunchFile* newfile){
     if (newfile == nullptr) throw "Argument is null.\n";
-    string s;
-    cout<<"Please input a description:"<<endl;//add description? would help with organising and selecting a new launch setup, replace with automatic?
-    cin>>s;
-    cin.clear();
-    cin.ignore(15, '\n');
+    string s = "";
+    for (int i = 0; i < newfile->getCount(); i++){
+        s = s + newfile->getLaunch()[i]->getName() + newfile->getLaunch()[i]->getType() +"\n";
+    }
     FileSize++;
     LaunchFile** f = new LaunchFile*[FileSize];
     string* ss = new string[FileSize];
