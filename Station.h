@@ -120,6 +120,12 @@ class Station{
          */
         vector<Cargo *> humans;
 
+        void setSatStatus(map<int, bool> stat);
+
+        void setRelay(CommunicationRelay *obj);
+
+        CommunicationRelay *getRelay();
+
     private:
         //Station* next;
 
@@ -132,11 +138,6 @@ class Station{
         ///@brief CommunicationRelay this station communicates with
         CommunicationRelay *relayTo;
 
-        void setSatStatus(map<int, bool> stat);
-
-        void setRelay(CommunicationRelay *obj);
-
-        CommunicationRelay *getRelay();
 };
 
 #endif
