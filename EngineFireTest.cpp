@@ -14,6 +14,7 @@ void EngineFireTest::output(){
     } else {
         res = "Failed";
         s = "The engines are not firing correctly";
+        Cancel();
     }
     cout<<"Result: Test "<<res<<endl<<s<<endl;
 }
