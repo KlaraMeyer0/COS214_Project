@@ -18,7 +18,7 @@ class SpaceStation : public Station
         void receiveCommunication(string s);
         void printEquipment();
         void printHumans();
-        pair<Cargo*, int>* loadEquipment(int idx, int num);
+        pair<Cargo*, int> loadEquipment(int idx, int num);
         Cargo* loadHumans(int idx);
 
         SpaceStation* clone();

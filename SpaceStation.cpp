@@ -40,23 +40,27 @@ void SpaceStation::printHumans()
         cout << "index: " << (i+1) << " Name: " << humans.at(i)->getName() << endl;
 }
 
-pair<Cargo *, int> *SpaceStation::loadEquipment(int idx, int num)
+pair<Cargo *, int> SpaceStation::loadEquipment(int idx, int num)
 {
+    cout << "BLAH" << endl;
+    pair<Cargo *, int> p;
+    p = make_pair(equipment.at(idx).first,p.second = num);
+
     if (idx > equipment.size() - 1)
-        return nullptr;
+    {
+        p.second = -1;
+        return p;
+    }
 
-    pair<Cargo*, int> * p;
-    p->first = equipment.at(idx).first;
-    p->second = num;
-
+    cout << "Hi" << endl;
     if (equipment.at(idx).second > num)
     {
         equipment.at(idx).second -= num;
     }
-    else
-    if (equipment.at(idx).second <= num)
+    else if (equipment.at(idx).second <= num)
     {
-        p->second = equipment.at(idx).second;
+        cout << "HERE PERHAPS???" << endl;
+        p.second = equipment.at(idx).second;
         equipment.erase(equipment.begin() + idx);
     }
 

@@ -36,7 +36,7 @@ class Station{
         virtual void receiveCommunication(string com) = 0;
         virtual void printEquipment() = 0;
         virtual void printHumans() = 0;
-        virtual pair<Cargo*, int>* loadEquipment(int idx, int num) = 0;
+        virtual pair<Cargo*, int> loadEquipment(int idx, int num) = 0;
         virtual Cargo* loadHumans(int idx) = 0;
 
         /**

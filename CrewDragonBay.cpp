@@ -118,15 +118,15 @@ void CrewDragonBay::addCargo()
                 cin >> num;
             }
 
-            pair<Cargo *, int> *p = crew_dragon->getStation()->loadEquipment(idx-1, num);
-            if (p == nullptr)
+            pair<Cargo *, int> p = crew_dragon->getStation()->loadEquipment(idx-1, num);
+            if (p.second < 0)
                 cout << "Please enter a valid index." << endl;
             else
             {
-                for (int i = 0; i < p->second; i++)
-                    tempCargo.push_back(p->first);
+                for (int i = 0; i < p.second; i++)
+                    tempCargo.push_back(p.first);
 
-                cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
+                cout << "Loaded " << p.second << " " << p.first->getName() << "s." << endl;
             }
         }
         else
