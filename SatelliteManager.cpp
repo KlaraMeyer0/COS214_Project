@@ -24,12 +24,10 @@ SatelliteManager::SatelliteManager(BaseStation* BS ,SpaceStation* SS, StarlinkCo
     head =NULL;
 } 
 
-//Not responsible for any deallocation of StarlinkSatellites handled in StarlinkCollection
 SatelliteManager::~SatelliteManager(){
     delete protoBSSatellite;
     delete protoSTSatellite;
 
-    //remove all associations to other classes
     head =NULL;
     relayBS =NULL;
     relaySS =NULL;
@@ -48,8 +46,6 @@ SatelliteManager* SatelliteManager::clone(StarlinkCollection* objcopy,BaseStatio
     temp->relayBS = relayBS->clone(BScopy);
     temp->relaySS = relaySS->clone(SScopy);
     
-
-    //create a exact copy of the list pointed to by this->head in the StarlinkCollection
     StarlinkSatellite* ptr =head;
     StarlinkSatellite* tempSat =NULL;
     while(ptr != NULL){
@@ -72,8 +68,7 @@ SatelliteManager* SatelliteManager::clone(StarlinkCollection* objcopy,BaseStatio
 
 }
 
-// creates a vector of satellites with num_B satellites communicating with
-// BaseStation and num_O satellites communicating with space station
+
 void SatelliteManager:: setSatellites(int num_B, int num_S)
 {
     for(int i=0;i<num_B+num_S;++i)
