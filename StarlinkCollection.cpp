@@ -132,16 +132,13 @@ void StarlinkCollection::attachRocket(FalconRocket* r)
 }
 
 
-void StarlinkCollection:: setNums(int num_B ,int num_S){
-    this->num_B =num_B;
-    this->num_S =num_S;
-}
-
 void StarlinkCollection:: setHead(StarlinkSatellite* head){
     this->head = head;
 }
 
 void StarlinkCollection:: setSatellites(int num_B,int num_S){
+    this->num_B =num_B;
+    this->num_S =num_S;
     satelliteManager->setSatellites(num_B,num_S);
 }
 
@@ -191,4 +188,32 @@ bool StarlinkCollection:: isViableClone(StarlinkCollection* obj){
 
     return true;
 
+}
+
+int StarlinkCollection:: getB(){
+    return num_B;
+}
+
+int StarlinkCollection:: getS(){
+    return num_S;
+}
+
+BaseStation* StarlinkCollection:: getBS(){
+    return BS;
+}
+
+SpaceStation* StarlinkCollection:: getSS(){
+    return SS;
+}
+
+CommunicationRelay* StarlinkCollection:: getCommunicationRelaySS(){
+    return relaySS;
+}
+
+CommunicationRelay* StarlinkCollection::  getCommunicationRelayBS(){
+    return relayBS;
+}
+
+SatelliteManager* StarlinkCollection:: getSatelliteManager(){
+    return satelliteManager;
 }
