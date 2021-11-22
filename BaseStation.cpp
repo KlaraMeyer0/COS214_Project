@@ -51,7 +51,6 @@ void BaseStation::printHumans()
 
 pair<Cargo *, int> BaseStation::loadEquipment(int idx, int num)
 {
-cout << "BLAH" << endl;
     pair<Cargo *, int> p;
     p = make_pair(equipment.at(idx).first,p.second = num);
 
@@ -61,14 +60,12 @@ cout << "BLAH" << endl;
         return p;
     }
 
-cout << "Hi" << endl;
     if (equipment.at(idx).second > num)
     {
         equipment.at(idx).second -= num;
     }
     else if (equipment.at(idx).second <= num)
     {
-        cout << "HERE PERHAPS???" << endl;
         p.second = equipment.at(idx).second;
         equipment.erase(equipment.begin() + idx);
     }
