@@ -30,16 +30,16 @@ void DragonRocketship::Launch(Station *ss)
 Rocketship *DragonRocketship::clone()
 {
     DragonRocketship *temp = new DragonRocketship(this->getName());
-    temp->setSpacecraft((this->getSpacecraft())->clone());
-    temp->setRocket((this->getRocket())->clone());
-    if (this->getCargo() != nullptr)
+    temp->attachSpacecraft((this->getSpacecraft())->clone());
+    temp->attachRocket((this->getRocket())->clone());
+    if (this->getCargo() == nullptr)
     {
-        Cargo** c = new Cargo*[temp->getSpacecraft()->getCapacity()];
+        vector<Cargo*> c;
         for (int i=0; i<this->getSpacecraft()->getCapacity(); i++)
         {
-            c[i] = this->getCargo()[i]->clone();
+            c.push_back(this->getCargo()[i]->clone());
         }
-        temp->setCargo(c);
+        temp->attachCargo(c);
     }
     return temp;
 }
@@ -178,13 +178,4 @@ FalconRocket* DragonRocketship::getRocket(){
 }
 Cargo** DragonRocketship::getCargo(){
     return cargo;
-}
-void DragonRocketship::setSpacecraft(Spacecraft* s){
-    spacecraft = s;
-}
-void DragonRocketship::setRocket(FalconRocket* r){
-    rocket = r;
-}
-void DragonRocketship::setCargo(Cargo** c){
-    cargo = c;
 }

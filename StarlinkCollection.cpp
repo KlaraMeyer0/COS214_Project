@@ -236,3 +236,14 @@ void StarlinkCollection::startLanding(Station* base)
 {
 
 }
+Spacecraft* StarlinkCollection::getSpacecraft(){
+    return nullptr;
+}
+FalconRocket* StarlinkCollection::getRocket(){
+    return nullptr;
+}
+Cargo** StarlinkCollection::getCargo(){
+    return nullptr;
+}
+void StarlinkCollection::attachSpacecraft(Spacecraft* s){}
+void StarlinkCollection::attachCargo(vector<Cargo*> cvect){}

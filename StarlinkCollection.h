@@ -36,9 +36,6 @@ public:
      * @param BS BaseStation some StarlinkSatellite communicate with
      */
     StarlinkCollection(string name,BaseStation* BS ,SpaceStation* SS); 
-	
-    
-
     /**
      * @brief Deallocates all members associated with the StarlinkCollection ,bar
      *        the FalconRocket instance 
@@ -182,6 +179,36 @@ public:
      * 
      */
     void startLanding(Station* base);
+    /**
+     * @brief Get the Spacecraft object
+     * 
+     * @return Spacecraft* 
+     */
+    virtual Spacecraft* getSpacecraft();
+    /**
+     * @brief Get the Rocket object
+     * 
+     * @return FalconRocket* 
+     */
+    virtual FalconRocket* getRocket();
+    /**
+     * @brief Get the Cargo object
+     * 
+     * @return Cargo** 
+     */
+    virtual Cargo** getCargo();
+	/**
+     * @brief Attaches a spacecraft to the rocketship
+     * 
+     * @param s 
+     */
+	virtual void attachSpacecraft(Spacecraft *s);
+    /**
+     * @brief Attaches cargo to the Dragon rocketship
+     * 
+     * @param cvect A vector with all the cargo to be attached to the Dragon rocketship
+     */
+    virtual void attachCargo(vector<Cargo*> cvect);
 private:
     
     /** @brief exact same functionality as the StarlinkCollection bud does not 
