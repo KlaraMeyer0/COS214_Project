@@ -31,10 +31,10 @@ void HeavyEngine::TurnOff(FalconRocket* r) {
 		cout << "Turning off Falcon Core " << i+1 << ":" << endl;
 		cores[i]->TurnOff();
 	}
+	cout << "The first stage engine has landed on the drone ship." << endl;
 	r->attach(new Stage2Engine());
 	r->turnOn();
 	// add a pause?
-	cout << "The first stage engine has landed on the drone ship." << endl;
 };
 
 int HeavyEngine::EngineCount() {
