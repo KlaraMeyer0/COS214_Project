@@ -22,10 +22,11 @@ void CargoHandler::handleCargo(Cargo* c, Station* s)
 {
     if (c != nullptr)
     {
-
         if (next)
         {
             next->handleCargo(c, s);
+            if (next->next)
+                next->next->handleCargo(c,s);
         }
         else
         {
