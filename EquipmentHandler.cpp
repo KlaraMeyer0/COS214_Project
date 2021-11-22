@@ -21,9 +21,7 @@ void EquipmentHandler::handleCargo(Cargo* c, Station* s)
             if (p.first->getName() == c->getName())
             {
                 found = true;
-                cout << "P.SECOND STATE BEFORE: " << p.second << endl;
                 p.second = p.second + 1;
-                cout << "P.SECOND STATE AFTER: " << p.second << endl;
                 s->equipment.at(i) = p;
             }
             i++;
