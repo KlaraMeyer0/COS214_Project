@@ -56,8 +56,10 @@ public:
     */
     StarlinkSatellite* cloneExact(string communicatesWith, CommunicationRelay* obj);
 
-    ///@brief Used in the Iterator Pattern ,points to StarlinkSatellite instanse
+    ///@brief Used in the Iterator Pattern ,points to StarlinkSatellite instanse ,set in creation process
     StarlinkSatellite* next;
+
+    ///@brief Used in the Iterator Pattern ,points to StarlinkSatellite instanse ,set in creation process
     StarlinkSatellite* previous;
 
 private:
