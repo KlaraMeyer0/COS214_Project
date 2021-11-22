@@ -1,7 +1,7 @@
 /**
  * @file StarlinkCollection.h
  * @class StarlinkCollection
- * @author Luca Loubser ,Klara Meyer 
+ * @author {Luca Loubser ,Klara Meyer}
  * 
  * @brief
  * StarlinkCollection inherits from Rocketship
@@ -45,10 +45,31 @@ public:
      */
     virtual ~StarlinkCollection();
 
-    //Talk To Xander
+    /**
+     * @brief Launches the Starlink collection into space and deploys and starts the starlink satellites
+     * 
+     * @param ss Space station with which the starlink satellites communicate
+     */
     void Launch(Station* ss);
+    /**
+     * @brief Returns the rocket, in this case a Falcon9 rocket
+     * 
+     * @return int 
+     */
     virtual int getRockets();
+    /**
+     * @brief Returns if cargo has been loaded or not
+     * 
+     * @return true 
+     * @return false 
+     */
     virtual bool testFire();
+    /**
+     * @brief Returns if the head is null or not
+     * 
+     * @return true 
+     * @return false 
+     */
     virtual bool testLoading();
 
     /**
@@ -156,6 +177,11 @@ public:
     ///@return SatelliteManager ,returns the satelliteManager member
     SatelliteManager* getSatelliteManager();
 
+    /**
+     * @brief Sends the rocketship back to BaseStation
+     * 
+     */
+    void startLanding(Station* base);
 private:
     
     /** @brief exact same functionality as the StarlinkCollection bud does not 

@@ -7,9 +7,18 @@ using namespace std;
 BaseStation::BaseStation() : Station()
 {
     setName("Base-KJLXR-28564");
+<<<<<<< HEAD
     handler = new CargoHandler();
     handler->add(new EquipmentHandler(true));
     handler->add(new EquipmentHandler(false));
+=======
+    //handler = new CargoHandler();
+    //handler->add(new EquipmentHandler(true));
+    handler = new HumanHandler();
+    handler->add(new EquipmentHandler());
+
+    cout << "Base station " << getName() << " has been created." << endl;
+>>>>>>> c1c8c46b7c24c5a30032f2a43b2c9a79820e1b83
 }
 
 BaseStation::~BaseStation()

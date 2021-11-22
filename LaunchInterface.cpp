@@ -13,9 +13,12 @@ LaunchFile* LaunchInterface::retrieveLaunchFile(){
     f->setLaunch(r,rocketCount);
     return f;
 }
-LaunchInterface::LaunchInterface(Station * s){
+LaunchInterface::LaunchInterface(Station * s, Station* b){
+    rocketships = new Rocketship*[0];
+    rocketCount = 0;
     launchCaretaker = new LaunchCaretaker();
     space_station = s;
+    base_station = b;
 }
 LaunchInterface::~LaunchInterface(){
     delete launchCaretaker;
@@ -156,6 +159,7 @@ void LaunchInterface::addRocketship(Rocketship* r){//add rocket to current array
     for (int i = 0; i < rocketCount-1; i++){
         rs[i] = rocketships[i];
         rocketships[i] = nullptr;
+        delete rocketships[i];
     }
     rs[rocketCount-1] = r;
     delete rocketships;
@@ -228,4 +232,19 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
     } while (flag);
     //load file
     setLaunchFile(launchCaretaker->getFile(t));
+}
+
+int LaunchInterface::getRocketCount()
+{
+    return rocketCount;
+}
+
+Rocketship** LaunchInterface::getAllRockets()
+{
+    return rocketships;
+}
+
+Station* LaunchInterface::getBaseStation()
+{
+    return base_station;
 }

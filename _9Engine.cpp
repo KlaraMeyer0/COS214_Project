@@ -17,9 +17,8 @@ void _9Engine::TurnOff(FalconRocket* r) {
 	cout << "The payload almost in orbit, detach Falcon Core" << endl;
 	core->TurnOff();
 	r->attach(new Stage2Engine());
-	r->turnOn();
-	// add a pause?
 	cout << "The first stage engine has landed on the drone ship." << endl;
+	r->turnOn();
 };
 
 int _9Engine::EngineCount(){

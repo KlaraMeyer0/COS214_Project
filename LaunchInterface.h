@@ -27,7 +27,7 @@ public:
 	 * 
 	 * @param s Space station to which the rocketship is being launched
 	 */
-	LaunchInterface(Station* s);
+	LaunchInterface(Station* s,Station* bs);
 
 	/**
 	 * @brief Destroy the Launch Interface object
@@ -84,19 +84,35 @@ public:
 	 * 
 	 */
 	void getDesc();
+	/**
+	 * @brief Returns the number of Rocketships in the array
+	 * 
+	 * @return int 
+	 */
+	int getRocketCount();
+	/**
+	 * @brief Get the All the rocketships that are currently stored in launchinterface
+	 * 
+	 * @return Rocketship** 
+	 */
+	Rocketship** getAllRockets();
+	/**
+	 * @brief Returns a pointer to the base station
+	 * 
+	 * @return Station* 
+	 */
+	Station* getBaseStation();
 private:
 	/**
 	 * @brief An array of rocketships, the current setup
 	 * 
 	 */
     Rocketship** rocketships;
-
 	/**
 	 * @brief The caretaker to store and retreives setups of rocketships
 	 * 
 	 */
 	LaunchCaretaker* launchCaretaker;
-
 	/**
 	 * @brief The number of rockets in the current setup
 	 * 
@@ -107,6 +123,11 @@ private:
 	 * 
 	 */
 	Station* space_station;
+	/**
+	 * @brief Base station where rocketships can be landed
+	 * 
+	 */
+	Station* base_station;
 };
 
 #endif

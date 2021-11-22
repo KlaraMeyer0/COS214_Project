@@ -59,6 +59,11 @@ void Director::startTestLaunch()
     command[4]->execute();
 }
 
+void Director::returnRocketship()
+{
+    command[4]->undo();
+}
+
 void Director::receiveCargo()
 {
     command[5]->execute();

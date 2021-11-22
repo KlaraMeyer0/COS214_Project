@@ -1,5 +1,6 @@
 /**
  * @file EquipmentHandler.h
+ * @class EquipmentHandler
  * @author Klara Meyer
  *
  * @brief

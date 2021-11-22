@@ -1,9 +1,8 @@
 /**
  * @file Falcon9.h
  * @author Rina Rene du Toit
- *
+ * @class Falcon9
  * @brief
- *
  * Design Pattern: State
  * Participant: Context
  */

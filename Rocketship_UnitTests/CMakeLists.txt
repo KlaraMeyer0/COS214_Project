@@ -5,13 +5,9 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
  
 # Link runTests with what we want to test and the GTest and pthread library
-add_executable(runTests main.cpp ../DragonSpacecraft.h ../DragonSpacecraft.cpp ../CrewDragonSpacecraft.h ../CrewDragonSpacecraft.cpp ../Spacecraft.h ../Spacecraft.cpp ../DragonFactory.h ../DragonFactory.cpp ../CrewDragonFactory.h ../CrewDragonFactory.cpp ../SpacecraftFactory.h ../SpacecraftFactory.cpp factorymethod_unitTests.cpp)
+add_executable(runTests main.cpp factorymethod_unitTests.cpp)
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 
-#include "CrewDragonFactory.h"
-#include "DragonFactory.h"
-#include "DragonSpacecraft.h"
-#include "CrewDragonSpacecraft.h"
 
 #../CrewDragonFactory.cpp ../CrewDragonFactory.h ../DragonFactory.cpp ../DragonFactory.h ../DragonSpacecraft.h ../DragonSpacecraft.cpp ../CrewDragonSpacecraft.h ../CrewDragonSpacecraft.cpp
 

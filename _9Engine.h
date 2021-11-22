@@ -1,9 +1,8 @@
 /**
  * @file _9Engine.h
  * @author Rina Rene du Toit
- *
+ * @class _9Engine
  * @brief
- *
  * Design Pattern: State
  * Participant: Concrete State
  */

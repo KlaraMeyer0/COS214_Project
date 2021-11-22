@@ -22,6 +22,7 @@ public:
     void createBackup();
     void retrieveBackup();
     void startTestLaunch();
+    void returnRocketship();
     void receiveCargo();
 
 private:

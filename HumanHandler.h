@@ -1,5 +1,6 @@
 /**
  * @file HumanHandler.h
+ * @class HumanHandler
  * @author Klara Meyer
  *
  * @brief

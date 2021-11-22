@@ -1,5 +1,7 @@
 #include "CrewDragonRocketship.h"
 
+using namespace std;
+
 CrewDragonRocketship::CrewDragonRocketship(string n) : Rocketship(n, 'c')
 {
     cargo = nullptr;
@@ -29,9 +31,17 @@ void CrewDragonRocketship::Launch(Station *ss)
 Rocketship *CrewDragonRocketship::clone()
 {
     CrewDragonRocketship *temp = new CrewDragonRocketship(this->getName());
-    temp->spacecraft = (this->spacecraft)->clone();
-    temp->rocket = (this->rocket)->clone();
-
+    temp->setSpacecraft((this->spacecraft)->clone());
+    temp->setRocket((this->rocket)->clone());
+    if (this->getCargo() != nullptr)
+    {
+        Cargo** c = new Cargo*[temp->spacecraft->getCapacity()];
+        for (int i=0; i<this->getSpacecraft()->getCapacity(); i++)
+        {
+            c[i] = this->getCargo()[i]->clone();
+        }
+        temp->setCargo(c);
+    }
     return temp;
 }
 
@@ -77,14 +87,154 @@ int CrewDragonRocketship::getRockets()
 {
     return rocket->getEngine()->EngineCount();
 }
+
 bool CrewDragonRocketship::testFire()
 {
-    rocket->turnOn();
-    bool b = rocket->getState();
-    rocket->turnOff();
-    return b;
+    return rocket->getEngine()->testFire();
 }
+
 bool CrewDragonRocketship::testLoading()
 {
     return cargo == NULL ? false : true;
+}
+
+void CrewDragonRocketship::startLanding(Station *base)
+{
+    Station *s = this->getStation();
+    bool loopBack;
+    loopBack = false;
+    string response;
+    string addOn;
+    vector<Cargo *> temp;
+    cout << "Landing for " << this->getName() << " initialised" << endl;
+    // cargo loop
+    do
+    {
+        loopBack = false;
+        cout << "Do you want to load " << addOn << "equipment from the space station? (Y/N): ";
+        cin >> response;
+        if (response == "Y")
+        {
+            if (!s->equipment.empty())
+            {
+                int index;
+                int amount;
+                cout << "Choose an index from the list: " << endl;
+                s->printEquipment();
+                cin >> index;
+
+                while (!cin.good() || index <= 0)
+                {
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid index: ";
+                    cin >> index;
+                }
+
+                cout << "How many " << s->equipment.at(index - 1).first->getName() << "s do you want to load";
+                cin >> amount;
+
+                while (!cin.good() || amount <= 0)
+                {
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid amount: ";
+                    cin >> amount;
+                }
+
+                pair<Cargo *, int> p = s->loadEquipment(index - 1, amount);
+
+                if (p.second < 0)
+                    cout << "Please enter a valid index." << endl;
+                else
+                {
+                    for (int i = 0; i < p.second - 1; i++)
+                    {
+                        temp.push_back(p.first->clone());
+                    }
+                    temp.push_back(p.first);
+                }
+
+                loopBack = true;
+                addOn = "more ";
+            }
+            else
+            {
+                cout << "No equipment to load" << endl;
+                loopBack = false;
+            }
+        }
+        else if (response != "N")
+        {
+            cout << "Please input only Y or N." << endl;
+            loopBack = true;
+        }
+    } while (loopBack);
+    // human loop
+    addOn = "";
+    do
+    {
+        cout << "Do you want to board " << addOn << "humans from the space station? (Y/N): ";
+        cin >> response;
+        if (response == "Y")
+        {
+            if (!s->humans.empty())
+            {
+                int index;
+                int amount;
+                cout << "Choose an index from the list: " << endl;
+                s->printHumans();
+                cin >> index;
+
+                while (!cin.good() || index <= 0)
+                {
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid index: ";
+                    cin >> index;
+                }
+
+                Cargo *c = s->loadHumans(index - 1);
+
+                if (c == nullptr)
+                    cout << "Please enter a valid index." << endl;
+                else
+                    temp.push_back(c);
+
+                loopBack = true;
+                addOn = "more ";
+            }
+            else
+            {
+                cout << "No humans to board" << endl;
+                loopBack = false;
+            }
+        }
+        else if (response != "N")
+        {
+            cout << "Please input only Y or N. " << endl;
+            loopBack = true;
+        }
+    } while (loopBack);
+    this->attachCargo(temp);
+    cout << this->getName() << " begins its journey back to earth" << endl;
+    this->attachToStation(base);
+}
+Spacecraft* CrewDragonRocketship::getSpacecraft(){
+    return spacecraft;
+}
+FalconRocket* CrewDragonRocketship::getRocket(){
+    return rocket;
+}
+Cargo** CrewDragonRocketship::getCargo(){
+    return cargo;
+}
+void CrewDragonRocketship::setSpacecraft(Spacecraft* s){
+    spacecraft = s;
+}
+void CrewDragonRocketship::setRocket(FalconRocket* r){
+    rocket = r;
+}
+void CrewDragonRocketship::setCargo(Cargo** c){
+    cargo = c;
 }

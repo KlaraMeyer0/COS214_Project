@@ -1,7 +1,7 @@
 /**
  * @file HeavyEngine.h
  * @author Rina Rene du Toit
- *
+ * @class HeavyEngine
  * @brief
  *
  * Design Pattern: State

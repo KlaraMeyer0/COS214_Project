@@ -7,9 +7,12 @@ using namespace std;
 SpaceStation::SpaceStation() : Station()
 {
     setName("Space-RXKJL-68348");
-    handler = new CargoHandler();
-    handler->add(new EquipmentHandler(true));
-    handler->add(new EquipmentHandler(false));
+    //handler = new CargoHandler();
+    //handler->add(new HumanHandler(true));
+    handler = new HumanHandler();
+    handler->add(new EquipmentHandler());
+
+    cout << "Space station " << getName() << " has been created." << endl;
 }
 
 SpaceStation::~SpaceStation()

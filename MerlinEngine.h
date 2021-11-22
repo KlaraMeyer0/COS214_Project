@@ -1,9 +1,8 @@
 /**
  * @file MerlinEngine.h
  * @author Rina Rene du Toit
- *
+ * @class MerlinEngine
  * @brief
- *
  * Design Pattern: Template in State
  * Participant: Concrete class
  */
