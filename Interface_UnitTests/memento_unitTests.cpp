@@ -4,6 +4,7 @@
 #include "../DragonRocketship.h"
 #include "../SpaceStation.h"
 #include "../BaseStation.h"
+#include "../FalconHeavy.h"
 #include <gtest/gtest.h>
 
 namespace
@@ -32,6 +33,9 @@ namespace
         Rocketship** r = new Rocketship*[3];
         for (int i = 0; i < 3; i++){
             r[i] = new DragonRocketship("foo");
+            r[i]->setSpacecraft(new DragonSpacecraft(0));
+            r[i]->setRocket(new FalconHeavy());
+            r[i]->setCargo(new Cargo*[0]);
             l->addRocketship(r[i]);
         }
         EXPECT_EQ(l->retrieveLaunchFile()->getLaunch()[1]->getName(),r[1]->getName());
