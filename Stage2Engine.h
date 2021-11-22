@@ -1,9 +1,8 @@
 /**
  * @file Stage2Engine.h
  * @author Rina Rene du Toit
- *
+ * @class Stage2Engine
  * @brief
- *
  * Design Pattern: State
  * Participant: Concrete State
  */

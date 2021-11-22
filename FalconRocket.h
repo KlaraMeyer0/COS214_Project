@@ -1,9 +1,8 @@
 /**
  * @file FalconRocket.h
  * @author Rina Rene du Toit
- *
+ * @class FalconRocket
  * @brief
- *
  * Design Pattern: State
  * Participant: Context
  */
