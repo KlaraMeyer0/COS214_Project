@@ -26,11 +26,14 @@ class EquipmentHandler : public CargoHandler
         /**
          * Adds equipment to the specified station
          *
-         * @param c
-         * @param s
+         * @param c The cargo (equipment) to be added
+         * @param s The station where the cargo must be added
          */
         void handleCargo(Cargo* c, Station* s);
     public:
+        /**
+         * Indicates whether the concrete CargoHandler handles humans or equipment. In this case, equipment.
+         */
         bool human;
 };
 
