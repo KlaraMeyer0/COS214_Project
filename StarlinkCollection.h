@@ -43,7 +43,7 @@ public:
      */
     virtual ~StarlinkCollection();
 
-    void Launch();
+    void Launch(Station* ss);
     virtual int getRockets();
     virtual bool testFire();
     virtual bool testLoading();

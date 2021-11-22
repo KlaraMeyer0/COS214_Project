@@ -145,7 +145,7 @@ void StarlinkCollection:: setSatellites(int num_B,int num_S){
     satelliteManager->setSatellites(num_B,num_S);
 }
 
-void StarlinkCollection::Launch()
+void StarlinkCollection::Launch(Station* ss)
 {
     this->countdown();
     rocket->turnOn();
