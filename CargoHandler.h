@@ -1,3 +1,12 @@
+/**
+ * @file CargoHandler.h
+ * @author Klara Meyer
+ *
+ * @brief
+ *
+ * Design Pattern: Chain of Responsibility
+ * Participant: Handler
+ */
 
 #ifndef CARGOHANDLER_H
 #define CARGOHANDLER_H

@@ -1,5 +1,5 @@
 /**
- * @file ConcreteCargoHandler.h
+ * @file HumanHandler.h
  * @author Klara Meyer
  *
  * @brief
