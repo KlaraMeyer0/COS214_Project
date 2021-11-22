@@ -30,14 +30,46 @@ class Station{
          */
         virtual ~Station();
 
-        //Talk To klara
-        //void add(Station* stat);
-        virtual void receiveCargo(Cargo* c) = 0;
+        /**
+         * @brief Pure virtual function for receiving cargo at a station
+         *
+         * @param c Cargo to be received
+         */
+        virtual void receiveCargo(Cargo *c) = 0;
+
+        /**
+         * @brief Pure virtual function for receiving communication at a station
+         *
+         * @param com Communication to be received
+         */
         virtual void receiveCommunication(string com) = 0;
+
+        /**
+         * @brief Pure virtual function for printing equipment stored at a station
+         */
         virtual void printEquipment() = 0;
+
+        /**
+         * @brief Pure virtual function for printing humans present at a station
+         */
         virtual void printHumans() = 0;
-        virtual pair<Cargo*, int>* loadEquipment(int idx, int num) = 0;
-        virtual Cargo* loadHumans(int idx) = 0;
+
+        /**
+         * @brief Pure virtual function for loading equipment from a station into a rocket
+         *
+         * @param idx Specifies which equipment should be loaded
+         * @param num Specifies how many pieces of equipment should be loaded
+         * @return A pair containing the item and the number of items to be loaded
+         */
+        virtual pair<Cargo *, int> loadEquipment(int idx, int num) = 0;
+
+        /**
+         * @brief Pure virtual function for having humans board a rocket from a station
+         *
+         * @param idx Specifies which humans should board the rocket
+         * @return The item of cargo (human) to be loaded onto the rocket
+         */
+        virtual Cargo *loadHumans(int idx) = 0;
 
         /**
          * @brief used to update a Station of any changes to a StarlinkSatellites ,
@@ -45,7 +77,7 @@ class Station{
          * @param StarlinkSatellite that updates the Station
         */
         //used to update Space station of any changes to the StarlinkSatellites
-        void updateStatus(StarlinkSatellite*);
+        void updateStatus(StarlinkSatellite *);
 
         /**
          * @brief resolve an error on one of the StarlinkSatellite, by setting its status to true
@@ -75,40 +107,27 @@ class Station{
         /**
          * @brief returns the status of the StarlinkSatellites assocciated with this station
          * @return map<int ,bool> 
-         */ 
-        map<int ,bool> getSatStatus();
+         */
+        map<int, bool> getSatStatus();
 
         /**
-         * @brief sets the SatStatus member to the passed in parameter used for cloning the Station
-         * @param map<int ,bool> 
-         */ 
-        void setSatStatus(map<int ,bool> stat);
-
-        /**
-         * @brief sets the relayTo member ,used in cloning the Station
-         * @param CommunicationRelay
-         */ 
-        void setRelay(CommunicationRelay*);
-
-        /**
-         * @brief returns the relayTo member
-         * @return CommunicationRelay
-         */ 
-        CommunicationRelay* getRelay();
-
-
+         * @brief Vector of pairs storing each item at a station along with the number of an item
+         */
         vector<pair<Cargo *, int>> equipment;
+
+        /**
+         * @brief Vector of cargo pointers storing pointers to humans at a station
+         */
         vector<Cargo *> humans;
 
-        
     private:
         //Station* next;
 
         ///@brief name of the station
         string name;
-        
+
         ///@brief Holds information on each StarlinkSatellite associated with it
-        map<int ,bool> SatStatus;
+        map<int, bool> SatStatus;
 
         ///@brief CommunicationRelay this station communicates with
         CommunicationRelay* relayTo;
