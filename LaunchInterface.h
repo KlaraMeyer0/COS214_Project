@@ -84,6 +84,18 @@ public:
 	 * 
 	 */
 	void getDesc();
+	/**
+	 * @brief Returns the number of Rocketships in the array
+	 * 
+	 * @return int 
+	 */
+	int getRocketCount();
+	/**
+	 * @brief Get the All the rocketships that are currently stored in launchinterface
+	 * 
+	 * @return Rocketship** 
+	 */
+	Rocketship** getAllRockets();
 private:
 	/**
 	 * @brief An array of rocketships, the current setup

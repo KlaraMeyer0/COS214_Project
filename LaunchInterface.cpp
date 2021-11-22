@@ -229,3 +229,13 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
     //load file
     setLaunchFile(launchCaretaker->getFile(t));
 }
+
+int LaunchInterface::getRocketCount()
+{
+    return rocketCount;
+}
+
+Rocketship** getAllRockets()
+{
+    return rocketships;
+}
