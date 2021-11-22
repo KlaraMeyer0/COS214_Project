@@ -1,12 +1,12 @@
 #include "TestLaunch.h"
 
 TestLaunch::TestLaunch(LaunchInterface* l) {
-    interface = l;
+    launch_interface = l;
 }
 TestLaunch::~TestLaunch() {}
 
 void TestLaunch::execute() {
-    interface->TestLaunch();
+    launch_interface->TestLaunch();
 }
 
 void TestLaunch::undo() {}

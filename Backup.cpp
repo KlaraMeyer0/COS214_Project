@@ -1,14 +1,14 @@
 #include "Backup.h"
 
 Backup::Backup(LaunchInterface* i){
-    interface = i;
+    launch_interface = i;
 }
 
 Backup::~Backup(){}
 
 void Backup::execute(){
-    interface->storeFile();
+    launch_interface->storeFile();
 }
 void Backup::undo(){
-    interface->restoreFile();
+    launch_interface->restoreFile();
 }

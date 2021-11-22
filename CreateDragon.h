@@ -47,11 +47,6 @@ private:
 	 */
 	RocketshipEngineer *engineer;
 	/**
-	 * @brief holds the launch interface to which all the rocketships will be added
-	 *
-	 */
-	LaunchInterface *launch_interface;
-	/**
 	 * @brief contains the rocketship created by the engineer
 	 *
 	 */
