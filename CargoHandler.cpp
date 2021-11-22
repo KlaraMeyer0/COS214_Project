@@ -4,6 +4,10 @@ using namespace std;
 
 #include "CargoHandler.h"
 
+using namespace std;
+
+#include <iostream>
+
 CargoHandler::CargoHandler(): next(0) {}
 
 void CargoHandler::add(CargoHandler* n)

@@ -20,8 +20,9 @@ public:
      * @brief Construct a new Launch Real object
      * 
      * @param r The rocketship to launch
+     * @param s The spacestation to which the rocket is being launched to
      */
-	LaunchReal(Rocketship* r);
+	LaunchReal(Rocketship* r,Station* s);
 
     /**
      * @brief Destroy the Launch Real object
@@ -47,6 +48,11 @@ private:
      * 
      */
     Rocketship* ship;
+    /**
+     * @brief The space station to launch the rocketship to
+     * 
+     */
+    Station* space_station;
 };
 
 #endif

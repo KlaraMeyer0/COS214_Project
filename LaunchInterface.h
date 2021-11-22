@@ -26,8 +26,9 @@ public:
 	/**
 	 * @brief Construct a new Launch Interface object
 	 * 
+	 * @param s Space station to which the rocketship is being launched
 	 */
-	LaunchInterface();
+	LaunchInterface(Station* s);
 
 	/**
 	 * @brief Destroy the Launch Interface object
@@ -102,6 +103,11 @@ private:
 	 * 
 	 */
 	int rocketCount;
+	/**
+	 * @brief Space station to which the rocketship is being launched
+	 * 
+	 */
+	Station* space_station;
 };
 
 #endif

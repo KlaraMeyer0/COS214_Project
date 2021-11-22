@@ -13,8 +13,9 @@ LaunchFile* LaunchInterface::retrieveLaunchFile(){
     f->setLaunch(r,rocketCount);
     return f;
 }
-LaunchInterface::LaunchInterface(){
+LaunchInterface::LaunchInterface(Station * s){
     launchCaretaker = new LaunchCaretaker();
+    space_station = s;
 }
 LaunchInterface::~LaunchInterface(){
     delete launchCaretaker;
@@ -48,7 +49,7 @@ void LaunchInterface::TestLaunch(){
     vector<bool> m;//real or test
     for (int i = 0; i < rocketCount; i++){
         if (b[i]){
-            l.push_back(new LaunchReal(rocketships[i]));
+            l.push_back(new LaunchReal(rocketships[i],space_station));
             bool w = true;
             char a;
             do{

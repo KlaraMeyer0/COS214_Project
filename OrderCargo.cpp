@@ -19,9 +19,11 @@ void OrderCargo::execute()
     bool valid;
     bool flag;
     bool done = false;
-    int amount = 0;
+    int amount = 1;
+    string cargo_string;
     while (!done)
     {
+        amount = 1;
         do
         {
             flag = false;
@@ -32,7 +34,6 @@ void OrderCargo::execute()
             cout << "3. Quit" << endl;
             cin >> choice;
 
-            string cargo_string;
             switch (choice)
             {
             case 1:
@@ -52,7 +53,6 @@ void OrderCargo::execute()
                     cout << "Please enter a valid number: ";
                     cin >> amount;
                 }
-                cargo = equipment_factory->startFactory(cargo_string);
                 break;
             case 3:
                 cout << "Exiting..." << endl;
@@ -68,7 +68,10 @@ void OrderCargo::execute()
         if (valid)
         {
             for (int i = 0; i < amount; i++)
-                base_station->receiveCargo(cargo);  //Many instances of cargo must be created. How?
+            {
+                cargo = equipment_factory->startFactory(cargo_string);
+                base_station->receiveCargo(cargo);
+            }
         }
     }
 }
