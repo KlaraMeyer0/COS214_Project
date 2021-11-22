@@ -103,7 +103,7 @@ void CrewDragonRocketship::startLanding(Station *base)
     do
     {
         loopBack = false;
-        cout << "Do you want to load " << addOn << "equipment from the space station? (Y/N):";
+        cout << "Do you want to load " << addOn << "equipment from the space station? (Y/N): ";
         cin >> response;
         if (response == "Y")
         {
@@ -111,10 +111,10 @@ void CrewDragonRocketship::startLanding(Station *base)
             {
                 int index;
                 int amount;
-                cout << "Choose an index from the list:" << endl;
+                cout << "Choose an index from the list: " << endl;
                 s->printEquipment();
                 cin >> index;
-                cout << "How many " << s->equipment.at(index - 1).first->getName() << " do you want to load";
+                cout << "How many " << s->equipment.at(index - 1).first->getName() << "s do you want to load";
                 cin >> amount;
                 pair<Cargo *, int> p = s->loadEquipment(index - 1, amount);
                 //CHECK MISSING FOR INDEX OUT OF BOUNDS
@@ -142,7 +142,7 @@ void CrewDragonRocketship::startLanding(Station *base)
     addOn = "";
     do
     {
-        cout << "Do you want to board " << addOn << "humans from the space station? (Y/N):";
+        cout << "Do you want to board " << addOn << "humans from the space station? (Y/N): ";
         cin >> response;
         if (response == "Y")
         {
@@ -150,7 +150,7 @@ void CrewDragonRocketship::startLanding(Station *base)
             {
                 int index;
                 int amount;
-                cout << "Choose an index from the list:" << endl;
+                cout << "Choose an index from the list: " << endl;
                 s->printHumans();
                 cin >> index;
                 Cargo *c = s->loadHumans(index-1);
@@ -167,7 +167,7 @@ void CrewDragonRocketship::startLanding(Station *base)
         }
         else if (response != "N")
         {
-            cout << "Please input only Y or N." << endl;
+            cout << "Please input only Y or N. " << endl;
             loopBack = true;
         }
     } while (loopBack);
