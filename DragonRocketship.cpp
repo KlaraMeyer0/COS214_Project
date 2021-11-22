@@ -31,7 +31,6 @@ Rocketship *DragonRocketship::clone()
 {
     DragonRocketship *temp = new DragonRocketship(this->getName());
     temp->spacecraft = (this->spacecraft)->clone();//broken, use setter
-    cout<<"Help"<<endl;
     temp->rocket = (this->rocket)->clone();
     if (this->cargo != NULL)
     {
@@ -169,4 +168,22 @@ void DragonRocketship::startLanding(Station *base)
     this->attachCargo(temp);
     cout << this->getName() << " begins its journey back to earth" << endl;
     this->attachToStation(base);
+}
+Spacecraft* DragonRocketship::getSpacecraft(){
+    return spacecraft;
+}
+FalconRocket* DragonRocketship::getRocket(){
+    return rocket;
+}
+Cargo** DragonRocketship::getCargo(){
+    return cargo;
+}
+void DragonRocketship::setSpacecraft(Spacecraft* s){
+    spacecraft = s;
+}
+void DragonRocketship::setRocket(FalconRocket* r){
+    rocket = r;
+}
+void DragonRocketship::setCargo(Cargo** c){
+    cargo = c;
 }

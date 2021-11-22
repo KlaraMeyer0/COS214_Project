@@ -219,3 +219,21 @@ void CrewDragonRocketship::startLanding(Station *base)
     cout << this->getName() << " begins its journey back to earth" << endl;
     this->attachToStation(base);
 }
+Spacecraft* CrewDragonRocketship::getSpacecraft(){
+    return spacecraft;
+}
+FalconRocket* CrewDragonRocketship::getRocket(){
+    return rocket;
+}
+Cargo** CrewDragonRocketship::getCargo(){
+    return cargo;
+}
+void CrewDragonRocketship::setSpacecraft(Spacecraft* s){
+    spacecraft = s;
+}
+void CrewDragonRocketship::setRocket(FalconRocket* r){
+    rocket = r;
+}
+void CrewDragonRocketship::setCargo(Cargo** c){
+    cargo = c;
+}

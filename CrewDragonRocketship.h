@@ -91,6 +91,42 @@ public:
      * 
      */
     void startLanding(Station* base);
+    /**
+     * @brief Get the Spacecraft object
+     * 
+     * @return Spacecraft* 
+     */
+    Spacecraft* getSpacecraft();
+    /**
+     * @brief Get the Rocket object
+     * 
+     * @return FalconRocket* 
+     */
+    FalconRocket* getRocket();
+    /**
+     * @brief Get the Cargo object
+     * 
+     * @return Cargo** 
+     */
+    Cargo** getCargo();
+    /**
+     * @brief Set the Spacecraft object
+     * 
+     * @param s The spacecraft to attach
+     */
+    void setSpacecraft(Spacecraft* s);
+    /**
+     * @brief Set the Rocket object
+     * 
+     * @param r The rocket to attach
+     */
+    void setRocket(FalconRocket* r);
+    /**
+     * @brief Set the Cargo object
+     * 
+     * @param c The cargo array to attach
+     */
+    void setCargo(Cargo** c);
 private:
     /**
      * @brief An array of Cargo* that holds all the loaded cargo
