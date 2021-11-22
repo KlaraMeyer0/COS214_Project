@@ -27,6 +27,12 @@ public:
 	 * @return Rocketship* 
 	 */
 	virtual Rocketship* getShip() = 0; 
+	
+	/**
+	 * @brief Cancels the launch
+	 * 
+	 */
+	virtual void Cancel() = 0;
 };
 
 #endif

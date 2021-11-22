@@ -38,6 +38,7 @@ void EnginePresentTest::output(){
         ss<<i;
         ss>>aaa;
         s = "There are "+aaa+" attached. "+aa+" are required.";//get real and expected number as strings
+        Cancel();
     }
     cout<<"Result: Test "<<res<<endl<<s<<endl;
 }

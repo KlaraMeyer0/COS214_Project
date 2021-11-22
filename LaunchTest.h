@@ -55,6 +55,14 @@ public:
 	virtual Rocketship* getShip(){
 		return l->getShip();
 	};
+
+	/**
+	 * @brief Cancels the launch
+	 * 
+	 */
+	virtual void Cancel(){
+		l->Cancel();
+	};
 protected:
 	/**
 	 * @brief The decorated component

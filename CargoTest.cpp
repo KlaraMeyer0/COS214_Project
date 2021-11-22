@@ -14,6 +14,7 @@ void CargoTest::output(){
     } else {
         res = "Failed";
         s = "There is no cargo attached.";
+        Cancel();
     }
     cout<<"Result: Test "<<res<<endl<<s<<endl;
 }
