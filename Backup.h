@@ -39,12 +39,6 @@ public:
      * 
      */
     void undo();
-private:
-    /**
-     * @brief Stores a pointer to the launch interface used
-     * 
-     */
-    LaunchInterface* interface;
 };
 
 #endif
