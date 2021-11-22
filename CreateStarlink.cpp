@@ -1,9 +1,8 @@
 #include "CreateStarlink.h"
 
-CreateStarlink::CreateStarlink(RocketshipEngineer *e, LaunchInterface *l, StarlinkBay *s, BaseStation *b, SpaceStation* ss)
+CreateStarlink::CreateStarlink(RocketshipEngineer *e, LaunchInterface *l, StarlinkBay *s, BaseStation *b, SpaceStation* ss): Work(l)
 {
     engineer = e;
-    launch_interface = l;
     starlink_bay = s;
     base_station = b;
     space_station = ss;

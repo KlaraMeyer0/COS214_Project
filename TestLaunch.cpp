@@ -1,8 +1,6 @@
 #include "TestLaunch.h"
 
-TestLaunch::TestLaunch(LaunchInterface* l) {
-    launch_interface = l;
-}
+TestLaunch::TestLaunch(LaunchInterface* l) : Work(l) {}
 TestLaunch::~TestLaunch() {}
 
 void TestLaunch::execute() {

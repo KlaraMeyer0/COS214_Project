@@ -1,8 +1,6 @@
 #include "Backup.h"
 
-Backup::Backup(LaunchInterface* i){
-    launch_interface = i;
-}
+Backup::Backup(LaunchInterface* i) : Work(i){}
 
 Backup::~Backup(){}
 
