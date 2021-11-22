@@ -15,6 +15,8 @@ using namespace std;
 #include <unistd.h>
 #include "Station.h"
 #include "FalconRocket.h"
+#include "Falcon9.h"
+#include "Spacecraft.h"
 
 class Rocketship
 {
@@ -108,7 +110,42 @@ public:
 	 * 
 	 */
 	virtual void startLanding(Station* base) = 0;
-
+	    /**
+     * @brief Get the Spacecraft object
+     * 
+     * @return Spacecraft* 
+     */
+    virtual Spacecraft* getSpacecraft() = 0;
+    /**
+     * @brief Get the Rocket object
+     * 
+     * @return FalconRocket* 
+     */
+    virtual FalconRocket* getRocket() = 0;
+    /**
+     * @brief Get the Cargo object
+     * 
+     * @return Cargo** 
+     */
+    virtual Cargo** getCargo() = 0;
+    /**
+     * @brief Set the Spacecraft object
+     * 
+     * @param s The spacecraft to attach
+     */
+    virtual void setSpacecraft(Spacecraft* s) = 0;
+    /**
+     * @brief Set the Rocket object
+     * 
+     * @param r The rocket to attach
+     */
+    virtual void setRocket(FalconRocket* r) = 0;
+    /**
+     * @brief Set the Cargo object
+     * 
+     * @param c The cargo array to attach
+     */
+    virtual void setCargo(Cargo** c) = 0;
 private:
 	/**
 	 * @brief The name of the rocketship
