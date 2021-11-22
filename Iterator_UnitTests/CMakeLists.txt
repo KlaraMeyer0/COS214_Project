@@ -7,30 +7,44 @@ include_directories(${GTEST_INCLUDE_DIRS})
  
 # Link runTests with what we want to test and the GTest and pthread library
 add_executable(runTests main.cpp
-        ../Cargo.h
-        ../Cargo.cpp
-        ../Equipment.h
-        ../Equipment.cpp
-        ../Human.h
-        ../Human.cpp
-        ../Station.cpp
-        ../Station.h
-        ../BaseStation.cpp
-        ../BaseStation.h
-        ../SpaceStation.cpp
-        ../SpaceStation.cpp
-        ../CargoHandler.cpp
-        ../CargoHandler.h
-        ../EquipmentHandler.cpp
-        ../EquipmentHandler.h
-        ../HumanHandler.cpp
-        ../HumanHandler.h
+        ../StarlinkCollection.cpp
+        ../StarlinkCollection.h
         ../PointOfCommunication.cpp
         ../PointOfCommunication.h
         ../StarlinkSatellite.cpp
         ../StarlinkSatellite.h
         ../CommunicationRelay.cpp
         ../CommunicationRelay.h
-        chainOfResponsibility_UnitTests.cpp)
+        ../Station.h
+        ../Station.cpp
+        ../SpaceStation.h
+        ../SpaceStation.cpp
+        ../BaseStation.h
+        ../BaseStation.cpp
+        ../PointOfCommunication.cpp
+        ../PointOfCommunication.h
+        ../Rocketship.cpp
+        ../Rocketship.h
+        ../SatelliteManager.h
+        ../SatelliteManager.cpp
+        ../SatelliteIterator.cpp
+        ../SatelliteIterator.h
+        ../Cargo.cpp
+        ../Cargo.h
+        ../Human.cpp
+        ../Human.h
+        ../Equipment.cpp
+        ../Equipment.h
+        ../CargoHandler.cpp
+        ../CargoHandler.h
+        ../HumanHandler.cpp
+        ../HumanHandler.h
+        ../EquipmentHandler.h
+        ../EquipmentHandler.cpp
+        ../FalconRocket.h
+        ../FalconRocket.cpp
+        ../StageEngine.h
+        ../StageEngine.cpp
+        iterator_unitTests.cpp)
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 

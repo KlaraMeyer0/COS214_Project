@@ -9,7 +9,7 @@ CommunicationRelay::CommunicationRelay(Station* obj){
 }
 
 CommunicationRelay::~CommunicationRelay(){
-    cout<<"CommunicationRelay destoryed"<<endl;
+    cout<<"CommunicationRelay destroyed"<<endl;
     while(satellites.size())
         satellites.pop_back();
     
