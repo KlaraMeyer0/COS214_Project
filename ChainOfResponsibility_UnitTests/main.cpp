@@ -1,4 +1,4 @@
-#include "ChainOfResponsibility_UnitTests.cpp"
+#include "chainOfResponsibility_UnitTests.cpp"
 #include <gtest/gtest.h>
 
 int main(int argc, char **argv)
