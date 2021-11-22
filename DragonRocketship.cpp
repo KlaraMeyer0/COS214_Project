@@ -30,7 +30,8 @@ void DragonRocketship::Launch(Station *ss)
 Rocketship *DragonRocketship::clone()
 {
     DragonRocketship *temp = new DragonRocketship(this->getName());
-    temp->spacecraft = (this->spacecraft)->clone();
+    temp->spacecraft = (this->spacecraft)->clone();//broken, use setter
+    cout<<"Help"<<endl;
     temp->rocket = (this->rocket)->clone();
     if (this->cargo != NULL)
     {
