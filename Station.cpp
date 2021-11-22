@@ -7,7 +7,7 @@ using namespace std;
 Station::Station(){}
 
 Station::~Station(){
-    relayTo = nullptr;
+    relayTo = NULL;
 }
 
 void Station:: updateStatus(StarlinkSatellite* obj){
@@ -33,4 +33,17 @@ map<int ,bool> Station:: getSatStatus(){
 void Station::setName(string n)
 {
     name = n;
+}
+
+void Station::setSatStatus(map<int ,bool> stat){
+    SatStatus=stat;
+}
+
+void Station::setRelay(CommunicationRelay* obj){
+    relayTo = obj;
+}
+
+
+CommunicationRelay* Station:: getRelay(){
+    return relayTo;
 }

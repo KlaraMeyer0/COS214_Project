@@ -3,6 +3,9 @@
 
 #include "SatelliteManager.h"
 
+SatelliteManager:: SatelliteManager(){
+}
+
 SatelliteManager::SatelliteManager(BaseStation* BS ,SpaceStation* SS, StarlinkCollection* SC){
 
     this->BS =BS;
@@ -21,7 +24,7 @@ SatelliteManager::SatelliteManager(BaseStation* BS ,SpaceStation* SS, StarlinkCo
 
     this->SC =SC;
     this->SC->setCommunicationRelayBS(relayBS);
-    this->SC->setCommunicationRelayBS(relaySS);
+    this->SC->setCommunicationRelaySS(relaySS);
 
     head =NULL;
 } 
@@ -41,28 +44,50 @@ SatelliteManager::~SatelliteManager(){
 //Luca->Xander&James
 SatelliteManager* SatelliteManager::clone(StarlinkCollection* objcopy,BaseStation* BScopy ,SpaceStation* SScopy)
 {
-    SatelliteManager* temp = new SatelliteManager(BScopy ,SScopy ,objcopy);
-    delete temp->relayBS;
-    delete temp->relaySS;
+    SatelliteManager* temp = new SatelliteManager();
+    temp->BS=BScopy;
+    temp->SS=SScopy;
 
-    temp->relayBS = relayBS->clone(BScopy);
-    temp->relaySS = relaySS->clone(SScopy);
-    
-    StarlinkSatellite* ptr =head;
+    //relays already cloned in StarlinkCollection must be set
+    temp->relayBS = BScopy->getRelay();
+    temp->relaySS = SScopy->getRelay();
+
+    //setting prototypical instances of temp
+    temp->protoBSSatellite= this->protoBSSatellite->cloneExact("BaseStation",temp->relayBS);
+    temp->protoSTSatellite= this->protoSTSatellite->cloneExact("SpaceStation",temp->relaySS);
+
+    temp->SC = objcopy;
+
     StarlinkSatellite* tempSat =NULL;
-    while(ptr != NULL){
-        if(ptr->getCommunicatesWith() == "BaseStation"){
-            tempSat=ptr->cloneExact("BaseStation",temp->relayBS);
+    StarlinkSatellite* thistempSat =NULL;
+
+    SatelliteIterator* it =NULL;
+    for(it= this->SC->begin();!it->equals(this->SC->end()) ;it->next()){
+        thistempSat =it->currentSatellite();
+        if(thistempSat->getCommunicatesWith() == "BaseStation"){
+            tempSat=thistempSat->cloneExact("BaseStation",temp->relayBS);
             objcopy->insert(tempSat);
-            relayBS->addSatellite(tempSat);
+            temp->relayBS->addSatellite(tempSat);
         }
         else{
-            tempSat=ptr->cloneExact("SpaceStation",temp->relaySS);
-            objcopy->insert(ptr->cloneExact("SpaceStation",temp->relaySS));
-            relaySS->addSatellite(tempSat);
+            tempSat=thistempSat->cloneExact("SpaceStation",temp->relaySS);
+            objcopy->insert(tempSat);
+            temp->relaySS->addSatellite(tempSat);
         }
-        ptr =ptr->next;
     }
+    //below part is nesscesary due to way iterator onstructed
+    thistempSat =it->currentSatellite();
+    if(thistempSat->getCommunicatesWith() == "BaseStation"){
+        tempSat=thistempSat->cloneExact("BaseStation",temp->relayBS);
+        objcopy->insert(tempSat);
+        temp->relayBS->addSatellite(tempSat);
+    }
+    else{
+        tempSat=thistempSat->cloneExact("SpaceStation",temp->relaySS);
+        objcopy->insert(tempSat);
+        temp->relaySS->addSatellite(tempSat);
+    }
+
 
     temp->head =objcopy->getFirstSat();
 

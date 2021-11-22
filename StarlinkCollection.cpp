@@ -13,6 +13,11 @@ StarlinkCollection:: StarlinkCollection(string name,BaseStation* BS ,SpaceStatio
     satelliteManager = new SatelliteManager(BS,SS,this);
 }
 
+StarlinkCollection:: StarlinkCollection(int, string name,BaseStation* BS ,SpaceStation* SS): Rocketship(name, 's'){
+    head = 0;
+    this->BS = BS;
+    this->SS = SS;
+}
 
 StarlinkCollection::~StarlinkCollection(){
     
@@ -89,11 +94,21 @@ StarlinkSatellite *StarlinkCollection::getFirstSat()
 StarlinkCollection* StarlinkCollection:: clone(){
     
     BaseStation* BScopy =BS->clone();
+    CommunicationRelay* relayBSclone = new CommunicationRelay(BScopy);
+    BScopy->setRelay(relayBSclone);
+
     SpaceStation* SScopy =SS->clone();
+    CommunicationRelay* relaySSclone = new CommunicationRelay(SScopy);
+    SScopy->setRelay(relaySSclone);
     
-    StarlinkCollection* temp = new StarlinkCollection(this->getName(),BScopy ,SScopy);
+    StarlinkCollection* temp = new StarlinkCollection(10,this->getName(),BScopy ,SScopy);
     
-    delete temp->satelliteManager;
+    temp->BS = BScopy;
+    temp->SS = SScopy;
+
+    temp->relaySS = relaySSclone;
+    temp->relayBS = relayBSclone;
+
     temp->satelliteManager = this->satelliteManager->clone(temp,BScopy ,SScopy);
 
     temp->rocket =rocket->clone();

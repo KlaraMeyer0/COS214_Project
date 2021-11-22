@@ -37,6 +37,8 @@ public:
      */
     StarlinkCollection(string name,BaseStation* BS ,SpaceStation* SS); 
 	
+    
+
     /**
      * @brief Deallocates all members associated with the StarlinkCollection ,bar
      *        the FalconRocket instance 
@@ -155,6 +157,13 @@ public:
     SatelliteManager* getSatelliteManager();
 
 private:
+    
+    /** @brief exact same functionality as the StarlinkCollection bud does not 
+    *         set the satelliteManager member ,used exclusively in cloning the StarlinkCollection
+    *         the first int parameter is redundant and allosw the overload of the constructor
+    */
+    StarlinkCollection(int, string name,BaseStation* BS ,SpaceStation* SS);
+
 
     ///@brief Set in the StarlinkBay
     ///@brief num_B is the number of StarlinkSatellites that communicate with a BaseStation
@@ -179,6 +188,7 @@ private:
      * used for communication between StarlinkSatellites and the BaseStation
      */
     CommunicationRelay* relayBS;
+    
     /**
      * @brief CommunicationRelay the StarlinkCollection is associated with 
      * used for communication between StarlinkSatellites and the BaseStation

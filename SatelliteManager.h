@@ -37,6 +37,9 @@ public:
     */
 	SatelliteManager(BaseStation* BS ,SpaceStation* ST, StarlinkCollection* SC);
 	
+    ///@brief used on the clone method
+    SatelliteManager();
+
     /**
      * @brief Destructor that deallocates the prototypical instances used in this class
      *        and removes associations with the communicationRelays ,StarlinkCollection 
@@ -107,25 +110,25 @@ private:
      * @brief set in creation of this class ,StarlinkSatellite used to create all        
      * StarlinkSatellites that communicate with a BaseStation
     */
-    StarlinkSatellite* protoBSSatellite;
+    StarlinkSatellite* protoBSSatellite; //YES
     
     /**
      * @brief set in creation of this class ,StarlinkSatellite used to create all        
      * StarlinkSatellites that communicate with a SpaceStation
     */
-    StarlinkSatellite* protoSTSatellite;
+    StarlinkSatellite* protoSTSatellite;  //YES
     
     ///@brief set in creation of this class ,used by StarlinkSatellites to communicate with a BaseStation
-    CommunicationRelay* relayBS;
+    CommunicationRelay* relayBS;        //YES
 
     ///@brief set in creation of this class ,used by StarlinkSatellites to communicate with a SpaceStation
-    CommunicationRelay* relaySS;
+    CommunicationRelay* relaySS;        //YES
 
     /**
      * @brief set in the cosntructor of this class ,this is the StarlinkCollection that
      *        uses this SatelliteManager to Create StarlinkSatellites
     */
-    StarlinkCollection* SC;
+    StarlinkCollection* SC;     //YES
     
     /**
      * @brief set in the cosntructor of this class ,this is the BaseStation that some 
@@ -138,6 +141,7 @@ private:
      *        StarlinkSatellites created in this class communicates with
     */
     SpaceStation* SS;
+ 
 };
 
 #endif

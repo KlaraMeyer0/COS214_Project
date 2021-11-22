@@ -35,6 +35,9 @@ public:
      */
 	StarlinkSatellite(string communicatesWith, CommunicationRelay* obj);
 	
+    ///@brief defualt constructor used in the cloneExact method
+    StarlinkSatellite();
+
     /**
      * @brief Destructor for the StarlinkSatellite instance that removes all
      *        associations to other StarlinkSatellite instance and the
