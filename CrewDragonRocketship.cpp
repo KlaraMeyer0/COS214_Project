@@ -22,7 +22,16 @@ void CrewDragonRocketship::Launch(Station *ss)
 {
     this->countdown();
     rocket->turnOn();
-    cout << "Attaching to space station " << ss->getName() << endl;
+    this->attachToStation(ss);
+    Station *station = ss;
+    for (int i = 0; i < spacecraft->getCapacity(); i++)
+    {
+        if (cargo[i] != null)
+        {
+            station->receiveCargo(cargo[i]);
+            cargo[i] = null;
+        }
+    }
 }
 
 Rocketship *CrewDragonRocketship::clone()
