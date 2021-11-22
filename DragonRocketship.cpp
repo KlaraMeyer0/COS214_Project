@@ -30,15 +30,16 @@ void DragonRocketship::Launch(Station *ss)
 Rocketship *DragonRocketship::clone()
 {
     DragonRocketship *temp = new DragonRocketship(this->getName());
-    temp->spacecraft = (this->spacecraft)->clone();//broken, use setter
-    temp->rocket = (this->rocket)->clone();
-    if (this->cargo != NULL)
+    temp->setSpacecraft((this->spacecraft)->clone());
+    temp->setRocket((this->rocket)->clone());
+    if (this->getCargo() != nullptr)
     {
-        temp->cargo = new Cargo*[temp->spacecraft->getCapacity()];
-        for (int i=0; i<this->spacecraft->getCapacity(); i++)
+        Cargo** c = new Cargo*[temp->spacecraft->getCapacity()];
+        for (int i=0; i<this->getSpacecraft()->getCapacity(); i++)
         {
-            temp->cargo[i] = this->cargo[i]->clone();
+            c[i] = this->getCargo()[i]->clone();
         }
+        temp->setCargo(c);
     }
     return temp;
 }
