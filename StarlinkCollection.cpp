@@ -150,8 +150,17 @@ void StarlinkCollection::Launch(Station* ss)
     this->countdown();
     rocket->turnOn();
 
-    //stops with turning off vacume engin
-    //add pattern functionality here
+    cout<<"BaseStation: StarlinkSatellite deployed, report: \n";
+    map<int ,bool> tempBSReport = BS->getSatStatus();
+    for(map<int,bool>::iterator it = tempBSReport.begin();it!=tempBSReport.end();++it){
+        cout<<"Name: "<<it->first<<" ,Status: "<<it->second<<endl;
+    }
+    
+    cout<<"\nSpaceStation: StarlinkSatellite deployed, report: \n";
+    map<int ,bool> tempSSReport = SS->getSatStatus();
+    for(map<int,bool>::iterator it = tempSSReport.begin();it!=tempSSReport.end();++it){
+        cout<<"Name: "<<it->first<<" ,Status: "<<it->second<<endl;
+    }
 }
 
 bool StarlinkCollection:: isViableClone(StarlinkCollection* obj){
