@@ -1,3 +1,7 @@
+#include <iostream>
+
+using namespace std;
+
 #include "CargoHandler.h"
 
 CargoHandler::CargoHandler(): next(0) {}
