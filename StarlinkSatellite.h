@@ -28,7 +28,7 @@ public:
      *        constructor to set the name of the StarlinkSatellite instance
      *        sets relay ,next and previous to NULL
      * @param communicatesWith string that serves to indicate the Station 
-     *        instanse the StarlinkSatellite communicates with through the  
+     *        instance the StarlinkSatellite communicates with through the
      *        CommunicationRelay
      * @param obj CommunicationRelay instance that the StarlinkSatellite
      *            instance communicates with
