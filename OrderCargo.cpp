@@ -1,6 +1,6 @@
 #include "OrderCargo.h"
 
-OrderCargo::OrderCargo(BaseStation *b)
+OrderCargo::OrderCargo(BaseStation *b,LaunchInterface *l):Work(l)
 {
     equipment_factory = new EquipmentFactory();
     human_factory = new HumanFactory();
