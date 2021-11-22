@@ -112,8 +112,26 @@ void DragonRocketship::startLanding(Station *base)
                 cout << "Choose an index from the list:" << endl;
                 s->printEquipment();
                 cin >> index;
+
+                while (!cin.good() || index <= 0)
+                {
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid index: ";
+                    cin >> index;
+                }
+
                 cout << "How many " << s->equipment.at(index-1).first->getName() << " do you want to load";
                 cin >> amount;
+
+                while (!cin.good() || amount <= 0)
+                {
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid amount: ";
+                    cin >> amount;
+                }
+
                 pair<Cargo *, int> p = s->loadEquipment(index-1, amount);
                 //CHECK MISSING FOR INDEX OUT OF BOUNDS
                 for (int i=0; i<p.second-1; i++)
