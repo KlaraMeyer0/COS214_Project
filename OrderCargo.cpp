@@ -40,6 +40,7 @@ void OrderCargo::execute()
                 cout << "Enter the name of the human you want to recruit: ";
                 cin >> cargo_string;
                 cargo = human_factory->startFactory(cargo_string);
+
                 break;
             case 2:
                 cout << "What equipment do you want to order: ";
