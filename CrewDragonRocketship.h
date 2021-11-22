@@ -11,6 +11,7 @@
 
 using namespace std;
 
+#include <iostream>
 #include "Rocketship.h"
 #include "Cargo.h"
 #include "Spacecraft.h"
@@ -89,7 +90,7 @@ public:
      * @brief Prompts the loading of Cargo* and sends the rocket back to BaseStation
      * 
      */
-    void startLanding();
+    void startLanding(Station* base);
 private:
     /**
      * @brief An array of Cargo* that holds all the loaded cargo

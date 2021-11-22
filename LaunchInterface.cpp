@@ -13,9 +13,10 @@ LaunchFile* LaunchInterface::retrieveLaunchFile(){
     f->setLaunch(r,rocketCount);
     return f;
 }
-LaunchInterface::LaunchInterface(Station * s){
+LaunchInterface::LaunchInterface(Station * s, Station* b){
     launchCaretaker = new LaunchCaretaker();
     space_station = s;
+    base_station = b;
 }
 LaunchInterface::~LaunchInterface(){
     delete launchCaretaker;
@@ -238,4 +239,9 @@ int LaunchInterface::getRocketCount()
 Rocketship** LaunchInterface::getAllRockets()
 {
     return rocketships;
+}
+
+Station* LaunchInterface::getBaseStation()
+{
+    return base_station;
 }

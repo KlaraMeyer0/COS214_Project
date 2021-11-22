@@ -217,7 +217,7 @@ SatelliteManager* StarlinkCollection:: getSatelliteManager(){
     return satelliteManager;
 }
 
-void StarlinkCollection::startLanding()
+void StarlinkCollection::startLanding(Station* base)
 {
 
 }

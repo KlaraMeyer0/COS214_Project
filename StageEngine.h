@@ -1,9 +1,8 @@
 /**
  * @file StageEngine.h
  * @author Rina Rene du Toit
- *
+ * @class StageEngine
  * @brief
- *
  * Design Pattern: State
  * Participant: State
  */

@@ -107,7 +107,7 @@ public:
 	 * @brief Prompts the loading of Cargo* and sends the rocket back to BaseStation
 	 * 
 	 */
-	virtual void startLanding() = 0;
+	virtual void startLanding(Station* base) = 0;
 
 private:
 	/**
