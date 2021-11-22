@@ -17,6 +17,7 @@ using namespace std;
 #include "PointOfCommunication.h"
 #include "CommunicationRelay.h"
 #include <string>
+#include <iostream>
 
 class CommunicationRelay;
 
