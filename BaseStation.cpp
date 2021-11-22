@@ -73,7 +73,6 @@ pair<Cargo *, int> BaseStation::loadEquipment(int idx, int num)
 
     return p;
 }
-}
 
 Cargo *BaseStation::loadHumans(int idx)
 {
