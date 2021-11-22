@@ -40,11 +40,19 @@ void DragonBay::addCargo()
     bool stop = false;
     int c, idx, num;
     vector<Cargo *> tempCargo;
-    while (!stop)
+    while (!stop && !dragon->getStation()->equipment.empty())
     {
         cout << "1: Choose equipment to load" << endl;
         cout << "2: Skip" << endl;
         cin >> c;
+
+        while (!cin.good())
+        {
+            cin.clear();
+            cin.ignore(15, '\n');
+            cout << "Please enter a valid index: ";
+            cin >> idx;
+        }
 
         if (c == 0)
         {
