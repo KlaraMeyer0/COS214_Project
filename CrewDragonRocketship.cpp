@@ -114,15 +114,39 @@ void CrewDragonRocketship::startLanding(Station *base)
                 cout << "Choose an index from the list: " << endl;
                 s->printEquipment();
                 cin >> index;
+
+                while (!cin.good() || index <= 0)
+                {
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid index: ";
+                    cin >> index;
+                }
+
                 cout << "How many " << s->equipment.at(index - 1).first->getName() << "s do you want to load";
                 cin >> amount;
-                pair<Cargo *, int> p = s->loadEquipment(index - 1, amount);
-                //CHECK MISSING FOR INDEX OUT OF BOUNDS
-                for (int i = 0; i < p.second - 1; i++)
+
+                while (!cin.good() || amount <= 0)
                 {
-                    temp.push_back(p.first->clone());
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid amount: ";
+                    cin >> amount;
                 }
-                temp.push_back(p.first);
+
+                pair<Cargo *, int> p = s->loadEquipment(index - 1, amount);
+
+                if (p.second < 0)
+                    cout << "Please enter a valid index." << endl;
+                else
+                {
+                    for (int i = 0; i < p.second - 1; i++)
+                    {
+                        temp.push_back(p.first->clone());
+                    }
+                    temp.push_back(p.first);
+                }
+
                 loopBack = true;
                 addOn = "more ";
             }
@@ -153,9 +177,22 @@ void CrewDragonRocketship::startLanding(Station *base)
                 cout << "Choose an index from the list: " << endl;
                 s->printHumans();
                 cin >> index;
-                Cargo *c = s->loadHumans(index-1);
-                //CHECK MISSING FOR INDEX OUT OF BOUNDS
-                temp.push_back(c);
+
+                while (!cin.good() || index <= 0)
+                {
+                    cin.clear();
+                    cin.ignore(15, '\n');
+                    cout << "Please enter a valid index: ";
+                    cin >> index;
+                }
+
+                Cargo *c = s->loadHumans(index - 1);
+
+                if (c == nullptr)
+                    cout << "Please enter a valid index." << endl;
+                else
+                    temp.push_back(c);
+
                 loopBack = true;
                 addOn = "more ";
             }

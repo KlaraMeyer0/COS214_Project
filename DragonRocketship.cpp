@@ -132,13 +132,17 @@ void DragonRocketship::startLanding(Station *base)
                     cin >> amount;
                 }
 
-                pair<Cargo *, int> p = s->loadEquipment(index-1, amount);
-                //CHECK MISSING FOR INDEX OUT OF BOUNDS
-                for (int i=0; i<p.second-1; i++)
+                pair<Cargo *, int> p = s->loadEquipment(index - 1, amount);
+                if (p.second < 0)
+                    cout << "Please enter a valid index." << endl;
+                else
                 {
-                    temp.push_back(p.first->clone());
+                    for (int i = 0; i < p.second - 1; i++)
+                    {
+                        temp.push_back(p.first->clone());
+                    }
+                    temp.push_back(p.first);
                 }
-                temp.push_back(p.first);
                 loopBack = true;
                 addOn = "more ";
             }
