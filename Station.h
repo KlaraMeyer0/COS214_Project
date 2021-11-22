@@ -31,7 +31,7 @@ class Station{
         virtual ~Station();
 
         //void add(Station* stat);
-        //virtual void receiveCargo(Cargo* c);
+        virtual void receiveCargo(Cargo* c) = 0;
         virtual void receiveCommunication(string com) = 0;
         virtual void printEquipment() = 0;
         virtual void printHumans() = 0;
