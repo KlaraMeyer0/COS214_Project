@@ -22,7 +22,7 @@ void FalconCore::TurnOn() {
 		cout << "Merlin engine " << i+1 << ": ";
 		merlins[i]->TurnOn();
 	}
-	cout << "All merlin engines are firing" <<endl;
+	cout << "All merlin engines are firing" << endl;
 };
 
 void FalconCore::TurnOff() {
@@ -32,7 +32,7 @@ void FalconCore::TurnOff() {
 		cout << "Merlin engine " << i+1 << ": ";
 		merlins[i]->TurnOff();
 	}
-	cout << "All merlin engines are off";
+	cout << "All merlin engines are off" << endl;
 };
 
 int FalconCore::getCount(){
