@@ -81,10 +81,7 @@ int DragonRocketship::getRockets()
 
 bool DragonRocketship::testFire()
 {
-    rocket->turnOn();
-    bool b = rocket->getState();
-    rocket->turnOff();
-    return b;
+    return rocket->getEngine()->testFire();
 }
 
 bool DragonRocketship::testLoading()
