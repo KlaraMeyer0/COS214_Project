@@ -31,7 +31,7 @@ void OrderCargo::execute()
             cout << "What do you want to do? Choose the corresponding number: " << endl;
             cout << "1. Recruit humans" << endl;
             cout << "2. Order equipment" << endl;
-            cout << "3. Quit" << endl;
+            cout << "3. Continue" << endl;
             cin >> choice;
 
             switch (choice)

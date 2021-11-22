@@ -3,16 +3,13 @@
 
 using namespace std;
 
-#include "ConcreteCargoHandler.h"
+#include "EquipmentHandler.h"
 
-ConcreteCargoHandler::ConcreteCargoHandler(bool h) : human(h) {}
+EquipmentHandler::EquipmentHandler(bool h) : human(h) {}
 
-void ConcreteCargoHandler::handleCargo(Cargo* c, Station* s)
+void EquipmentHandler::handleCargo(Cargo* c, Station* s)
 {
-    if (c->isHuman() && human)
-        s->humans.push_back(c);
-
-    if (!c->isHuman() && !human)
+    if (c->isHuman() == human)
     {
         bool found = false;
 
