@@ -28,10 +28,10 @@ void CargoHandler::handleCargo(Cargo* c, Station* s)
         }
         else
         {
-            cout << c->getName() << " cannot be delivered." << endl;
+            cout << c->getName() << " has arrived at " << s->getName() << endl;
         }
     }
-        cout << c->getName() << " has been delivered." << endl;
+        cout << c->getName() << " has arrived at " << s->getName() << endl;
 }
 
 CargoHandler::~CargoHandler()

@@ -23,6 +23,16 @@ void DragonRocketship::Launch(Station* ss)
 {
     this->countdown();
     rocket->turnOn();
+    this->attachToStation(ss);
+    Station *station = ss;
+    for (int i = 0; i < spacecraft->getCapacity(); i++)
+    {
+        if (cargo[i] != NULL)
+        {
+            station->receiveCargo(cargo[i]);
+            cargo[i] = NULL;
+        }
+    }
 }
 
 Rocketship *DragonRocketship::clone()

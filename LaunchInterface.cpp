@@ -199,11 +199,14 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
         stringstream ss;
         ss<<n;
         ss>>t;
+        ss >> ws;
         ss.clear();
-        if (t == NULL){
+        //if (t == NULL)
+        if (ss.fail() || !ss.eof())
+        {
             cout<<"Please input a number!"<<endl;
             flag = true;
-            }
+        }
         else if (t >= launchCaretaker->getSize() || t < 0){
             cout<<"The number is out of the range!"<<endl;
             flag = true;
