@@ -15,6 +15,22 @@ using namespace std;
 class Work {
 public:
 	/**
+	 * @brief Construct a new Work object
+	 * 
+	 * @param launch_interface The launch interface to affect with commands
+	 */
+	Work(LaunchInterface* launch_interface){
+		this->launch_interface = launch_interface;
+	}
+
+	/**
+	 * @brief Destroy the Work object
+	 * 
+	 */
+	virtual ~Work(){
+		launch_interface = nullptr;
+	}
+	/**
 	 * @brief Executes the concrete command
 	 * 
 	 */

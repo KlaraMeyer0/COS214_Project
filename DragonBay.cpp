@@ -70,7 +70,7 @@ void DragonBay::addCargo()
                 cin >> num;
             }
 
-            pair<Cargo *, int> *p = dragon->getStation()->loadEquipment(idx, num);
+            pair<Cargo *, int> *p = dragon->getStation()->loadEquipment(idx - 1, num);
 
             if (p == nullptr)
                 cout << "Please enter a valid index." << endl;
