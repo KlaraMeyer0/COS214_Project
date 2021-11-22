@@ -11,12 +11,16 @@ LaunchCaretaker::~LaunchCaretaker(){
     delete file;
 }
 LaunchFile* LaunchCaretaker::getFile(int i){
+    if (i >= FileSize || i < 0) throw "Argument outside of range.\n";
     return file[i];
 }
 void LaunchCaretaker::setFile(LaunchFile* newfile){
+    if (newfile == nullptr) throw "Argument is null.\n";
     string s;
     cout<<"Please input a description:"<<endl;//add description? would help with organising and selecting a new launch setup, replace with automatic?
     cin>>s;
+    cin.clear();
+    cin.ignore(15, '\n');
     FileSize++;
     LaunchFile** f = new LaunchFile*[FileSize];
     string* ss = new string[FileSize];
@@ -30,9 +34,11 @@ void LaunchCaretaker::setFile(LaunchFile* newfile){
     desc = ss;
 }
 string LaunchCaretaker::getDesc(int i){
+    if (i >= FileSize || i < 0) throw "Argument outside of range.\n";
     return desc[i];
 }
 void LaunchCaretaker::removeFile(int i){
+    if (i >= FileSize || i < 0) throw "Argument outside of range.\n";
     FileSize--;
     string* ss = new string[FileSize];
     LaunchFile** f = new LaunchFile*[FileSize];

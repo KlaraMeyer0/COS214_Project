@@ -35,16 +35,59 @@ namespace
     }
 
     //LaunchCaretaker tests:
-    // Checks if the launchfile was stored correctly, Valid argument
-    TEST(CaretakerTest, getFileTest)
+    // Checks if the launchfile is set correctly, Valid argument
+    TEST(CaretakerTest, setTest)
     {
         LaunchFile* f = new LaunchFile();
         LaunchCaretaker* c = new LaunchCaretaker();
         c->setFile(f);
         EXPECT_EQ(c->contains(f),true);
     }
-    // Checks if the launchfile was stored correctly, Invalid argument
-    TEST(CaretakerTest, getFileTest1)
+    // Checks if the launchfile is set correctly, Invalid argument
+    TEST(CaretakerTest, setTest1)
+    {
+        LaunchCaretaker* c = new LaunchCaretaker();
+        try {
+            c->setFile(nullptr);
+            FAIL();
+        } catch(string ExceptionString) {
+            EXPECT_EQ(ExceptionString,"Argument is null.\n");
+        } catch(...) {
+            FAIL();
+        }
+    }
+    // Checks if the description is outputted, Valid argument
+    TEST(CaretakerTest, descTest)
+    {
+        LaunchFile* f = new LaunchFile();
+        LaunchCaretaker* c = new LaunchCaretaker();
+        c->setFile(f);
+        EXPECT_EQ(c->contains(f),true);
+    }
+    // Checks if the description is outputted, Invalid argument
+    TEST(CaretakerTest, descTest1)
+    {
+        LaunchCaretaker* c = new LaunchCaretaker();
+        c->setFile(new LaunchFile());
+        try {
+            c->getDesc(2);
+            FAIL();
+        } catch(string ExceptionString) {
+            EXPECT_EQ(ExceptionString,"Argument outside of range.\n");
+        } catch(...) {
+            FAIL();
+        }
+    }
+    // Checks if the launchfile is contained, Valid argument
+    TEST(CaretakerTest, containsTest)
+    {
+        LaunchFile* f = new LaunchFile();
+        LaunchCaretaker* c = new LaunchCaretaker();
+        c->setFile(f);
+        EXPECT_EQ(c->contains(f),true);
+    }
+    // Checks if the launchfile is contained, Invalid argument
+    TEST(CaretakerTest, containsTest1)
     {
         LaunchFile* f = new LaunchFile();
         LaunchFile* l = new LaunchFile();
@@ -52,21 +95,59 @@ namespace
         c->setFile(f);
         EXPECT_EQ(c->contains(l),false);
     }
-
-    // Checks if the file gets removed correctly
+    // Checks if the file gets returned correctly, Valid argument
+    TEST(CaretakerTest, getTest)
+    {
+        LaunchCaretaker* c = new LaunchCaretaker();
+        LaunchFile* f = new LaunchFile();
+        c->setFile(f);
+        EXPECT_EQ(c->getFile(0),f);
+    }
+    // Checks if the file gets returned correctly, Invalid argument
+    TEST(CaretakerTest, getTest)
+    {
+        LaunchCaretaker* c = new LaunchCaretaker();
+        LaunchFile* f = new LaunchFile();
+        c->setFile(f);
+        try {
+            c->getFile(2);
+            FAIL();
+        } catch(string ExceptionString) {
+            EXPECT_EQ(ExceptionString,"Argument outside of range.\n");
+        } catch(...) {
+            FAIL();
+        }
+    }
+    // Checks if the file gets removed correctly, Valid argument
     TEST(CaretakerTest, removeTest)
     {
         LaunchCaretaker* c = new LaunchCaretaker();
-        LaunchFile* f1 = new LaunchFile();
-        EXPECT_EQ(output, "Successfully created Falcon9 rocket\n");
+        LaunchFile* f = new LaunchFile();
+        c->setFile(f);
+        c->removeFile(0);
+        EXPECT_EQ(c->contains(f),false);
     }
-    // Checks if new falconheavy is created
-    TEST(FalconHeavyFactoryTests, createdTest)
+    // Checks if the file gets removed correctly, Invalid argument
+    TEST(CaretakerTest, removeTest1)
     {
-        RocketFactory *factory = new FalconHeavyFactory();
-        testing::internal::CaptureStdout();
-        factory->startFactory();
-        std::string output = testing::internal::GetCapturedStdout();
-        EXPECT_EQ(output, "Successfully created FalconHeavy rocket\n");
+        LaunchCaretaker* c = new LaunchCaretaker();
+        LaunchFile* f = new LaunchFile();
+        c->setFile(f);
+        try {
+            c->removeFile(1);
+            FAIL();
+        } catch(string ExceptionString) {
+            EXPECT_EQ(ExceptionString,"Argument outside of range.\n");
+        } catch(...) {
+            FAIL();
+        }
+    }
+    // Checks if the correct file size is returned
+    TEST(CaretakerTest, getSizeTest)
+    {
+        LaunchCaretaker* c = new LaunchCaretaker();
+        LaunchFile* f = new LaunchFile();
+        c->setFile(f);
+        EXPECT_EQ(c->getSize(),1);
     }
 }
