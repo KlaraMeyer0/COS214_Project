@@ -1,6 +1,6 @@
 #include "Director.h"
 
-Director::Director(LaunchInterface *i, BaseStation *b, SpaceStation* s)
+Director::Director(LaunchInterface *i, BaseStation *b, SpaceStation* s) 
 {
     interface = i;
     base_station = b;
