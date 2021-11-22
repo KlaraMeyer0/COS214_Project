@@ -19,7 +19,7 @@ DragonRocketship::~DragonRocketship()
     }
 }
 
-void DragonRocketship::Launch(Station* ss)
+void DragonRocketship::Launch(Station *ss)
 {
     this->countdown();
     rocket->turnOn();
@@ -89,7 +89,52 @@ bool DragonRocketship::testLoading()
     return cargo == NULL ? false : true;
 }
 
-void DragonRocketship::startLanding()
+void DragonRocketship::startLanding(Station *base)
 {
-    
+    Station *s = this->getStation();
+    cout << "Landing for " << this->getName() << " initialised" << endl;
+    bool loopBack;
+    loopBack = false;
+    string response;
+    string addOn;
+    vector<Cargo*> temp;
+    do
+    {
+        cout << "Do you want to load " << addOn << "equipment from the space station? (Y/N):";
+        cin >> response;
+        if (response == "Y")
+        {
+            if (!s->equipment.empty())
+            {
+                int index;
+                int amount;
+                cout << "Choose an index from the list:" << endl;
+                s->printEquipment();
+                cin >> index;
+                cout << "How many " << s->equipment.at(index).first->getName() << " do you want to load";
+                cin >> amount;
+                pair<Cargo *, int> p = s->loadEquipment(index, amount);
+                for (int i=0; i<p.second-1; i++)
+                {
+                    temp.push_back(p.first->clone());
+                }
+                temp.push_back(p.first);
+                loopBack = true;
+                addOn = "more ";
+            }
+            else
+            {
+                cout << "No equipment to load" << endl;
+                loopBack = false;
+            }
+        }
+        else if (response != "N")
+        {
+            cout << "Please input only Y or N." << endl;
+            loopBack = true;
+        }
+    } while (loopBack);
+    this->attachCargo(temp);
+    cout << this->getName() << " begins its journey back to earth" << endl;
+    this->attachToStation(base);
 }
