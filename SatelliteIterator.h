@@ -1,5 +1,6 @@
 /**
  * @file SatelliteIterator.h
+ * @class SatelliteIterator
  * @author Klara Meyer
  *
  * @brief

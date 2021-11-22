@@ -1,7 +1,7 @@
 /**
  * @file StarlinkCollection.h
  * @class StarlinkCollection
- * @author Luca Loubser ,Klara Meyer 
+ * @author {Luca Loubser ,Klara Meyer}
  * 
  * @brief
  * StarlinkCollection inherits from Rocketship

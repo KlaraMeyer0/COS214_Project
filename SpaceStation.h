@@ -1,5 +1,6 @@
 /**
  * @file SpaceStation.h
+ * @class SpaceStation
  * @author Klara Meyer
  */
 
