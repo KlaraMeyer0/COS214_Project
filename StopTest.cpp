@@ -14,6 +14,7 @@ void StopTest::output(){
         } if (c == 'a')
             b = false;
         else cout<<"Please input only c or a!"<<endl;
+        cin.ignore(15, '\n');
     } while (b);
 }
 void StopTest::startLaunch(){
