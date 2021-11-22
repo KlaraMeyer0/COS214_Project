@@ -29,7 +29,7 @@ class StarlinkCollection : public Rocketship {
 public:
 
     /**
-     * @brief Creates a new instanse of a StarlinkCollection 
+     * @brief Creates a new instance of a StarlinkCollection
      *        creates a satelliteManager and sets satelliteManager.
      * @param name string name of the StarlinkCollection
      * @param SS BaseStation some StarlinkSatellite communicate with
@@ -50,7 +50,7 @@ public:
     virtual bool testLoading();
 
     /**
-     * @brief Used to insert a new StarlinkSatellite instanse into the List of 
+     * @brief Used to insert a new StarlinkSatellite instance into the List of
      *        StarlinkSatellite this class has a pointer to 
      * @param StarlinkSatellite to add to the List of StarlinkSatellite
     */
@@ -87,7 +87,7 @@ public:
     
     /**
      * @brief Creates a clone of the StarlinkCollection ,creating deep
-     *        coppies of all its members
+     *        copies of all its members
      * @return StarlinkCollection
     */
     StarlinkCollection* clone();
@@ -107,14 +107,14 @@ public:
 
     /**
      * @brief Sets the CommunicationRelay the StarlinkSatellite that communicate with
-     *        the SpaseStation communicates through
+     *        the SpaceStation communicates through
      * @param CommunicationRelay
     */
     void setCommunicationRelaySS(CommunicationRelay*);
 
     /**
      * @brief Sets the number of StarlinkSatellite that communicate with a BaseStation
-     *        and the SpaceStation respctively 
+     *        and the SpaceStation respectively
      * @param num_B
      * @param num_S
     */
@@ -144,9 +144,9 @@ public:
 private:
 
     ///@brief Set in the StarlinkBay
-    ///@brief num_B is the number of StarlinkSattelites that communicate with a BaseStation 
+    ///@brief num_B is the number of StarlinkSatellites that communicate with a BaseStation
     int num_B;
-    ///@brief num_S is the number of StarlinkSattelites that communicate with a SpaceStation
+    ///@brief num_S is the number of StarlinkSatellites that communicate with a SpaceStation
     int num_S;
     ///@brief Is the rocket this StarlinkCollection is associated with
     FalconRocket* rocket;
@@ -163,15 +163,15 @@ private:
     ///@brief Created and assigned in the SatelliteManager
     /**
      * @brief CommunicationRelay the StarlinkCollection is associated with 
-     * used for commuincation between StarlinkSatellites and the BaseStation
+     * used for communication between StarlinkSatellites and the BaseStation
      */
     CommunicationRelay* relayBS;
     /**
      * @brief CommunicationRelay the StarlinkCollection is associated with 
-     * used for commuincation between StarlinkSatellites and the BaseStation
+     * used for communication between StarlinkSatellites and the BaseStation
      */
     CommunicationRelay* relaySS;
-    ///@brief pointer to StarlinkSatellites linked list created uisng the SatelliteManager  
+    ///@brief pointer to StarlinkSatellites linked list created using the SatelliteManager
     StarlinkSatellite* head;
 
 };
