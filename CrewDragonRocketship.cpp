@@ -77,13 +77,12 @@ int CrewDragonRocketship::getRockets()
 {
     return rocket->getEngine()->EngineCount();
 }
+
 bool CrewDragonRocketship::testFire()
 {
-    rocket->turnOn();
-    bool b = rocket->getState();
-    rocket->turnOff();
-    return b;
+    return rocket->getEngine()->testFire();
 }
+
 bool CrewDragonRocketship::testLoading()
 {
     return cargo == NULL ? false : true;

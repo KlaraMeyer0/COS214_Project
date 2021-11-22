@@ -14,6 +14,7 @@
 using namespace std;
 
 #include "FalconRocket.h"
+#include <iostream>
 
 class FalconRocket;
 
@@ -37,7 +38,7 @@ public:
 	virtual void TurnOff(FalconRocket*) = 0;
 	/**
 	 * Pure virtaul function - Returns the number of engines
-	 * @return Current StageEngine storing the stage of the rocket
+	 * @return The number of engines in the rocket
 	 */
 	virtual int EngineCount() = 0;
 	/**
@@ -45,6 +46,13 @@ public:
 	 * @return The state of the engines
 	 */
 	virtual bool getState() = 0;
+	/**
+	 * @brief Does a static fire test
+	 * 
+	 * @return true 
+	 * @return false 
+	 */
+	bool testFire();
 };
 
 #endif
