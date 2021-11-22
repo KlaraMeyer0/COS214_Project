@@ -42,7 +42,7 @@ public:
      */
     Rocketship *clone();
     /**
-     * @brief Creates a deep copy of the Dragon rocketship and returns it
+     * @brief Attaches a spacecraft to the Dragon rocketship
      * 
      * @param s 
      */
@@ -108,24 +108,6 @@ public:
      * @return Cargo** 
      */
     Cargo** getCargo();
-    /**
-     * @brief Set the Spacecraft object
-     * 
-     * @param s The spacecraft to attach
-     */
-    void setSpacecraft(Spacecraft* s);
-    /**
-     * @brief Set the Rocket object
-     * 
-     * @param r The rocket to attach
-     */
-    void setRocket(FalconRocket* r);
-    /**
-     * @brief Set the Cargo object
-     * 
-     * @param c The cargo array to attach
-     */
-    void setCargo(Cargo** c);
 private:
     /**
      * @brief An array of Cargo* that holds all the loaded cargo

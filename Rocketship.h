@@ -110,7 +110,7 @@ public:
 	 * 
 	 */
 	virtual void startLanding(Station* base) = 0;
-	    /**
+	/**
      * @brief Get the Spacecraft object
      * 
      * @return Spacecraft* 
@@ -128,24 +128,24 @@ public:
      * @return Cargo** 
      */
     virtual Cargo** getCargo() = 0;
-    /**
-     * @brief Set the Spacecraft object
+	/**
+     * @brief Attaches a spacecraft to the rocketship
      * 
-     * @param s The spacecraft to attach
+     * @param s 
      */
-    virtual void setSpacecraft(Spacecraft* s) = 0;
+	virtual void attachSpacecraft(Spacecraft *s) = 0;
     /**
-     * @brief Set the Rocket object
+     * @brief Attaches a rocket to the Dragon rocketship
      * 
-     * @param r The rocket to attach
+     * @param r 
      */
-    virtual void setRocket(FalconRocket* r) = 0;
+    virtual void attachRocket(FalconRocket *r) = 0;
     /**
-     * @brief Set the Cargo object
+     * @brief Attaches cargo to the Dragon rocketship
      * 
-     * @param c The cargo array to attach
+     * @param cvect A vector with all the cargo to be attached to the Dragon rocketship
      */
-    virtual void setCargo(Cargo** c) = 0;
+    virtual void attachCargo(vector<Cargo*> cvect) = 0;
 private:
 	/**
 	 * @brief The name of the rocketship
