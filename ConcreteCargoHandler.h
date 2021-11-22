@@ -1,3 +1,13 @@
+/**
+ * @file ConcreteCargoHandler.h
+ * @author Klara Meyer
+ *
+ * @brief
+ *
+ * Design Pattern: Chain of Responsibility
+ * Participant: Iterator
+ */
+
 #ifndef CONCRETECARGOHANDLER_H
 #define CONCRETECARGOHANDLER_H
 
