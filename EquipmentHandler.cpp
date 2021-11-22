@@ -9,10 +9,7 @@ EquipmentHandler::EquipmentHandler(bool h) : human(h) {}
 
 void EquipmentHandler::handleCargo(Cargo* c, Station* s)
 {
-    if (c->isHuman() && human)
-        s->humans.push_back(c);
-
-    if (!c->isHuman() && !human)
+    if (c->isHuman() == human)
     {
         bool found = false;
 
