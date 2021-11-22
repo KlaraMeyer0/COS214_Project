@@ -42,6 +42,12 @@ public:
      * @return Rocketship* 
      */
     virtual Rocketship* getShip();
+
+    /**
+     * @brief Cancels the launch
+     * 
+     */
+    virtual void Cancel();
 private:
     /**
      * @brief The rocketship to launch
@@ -53,6 +59,11 @@ private:
      * 
      */
     Station* space_station;
+    /**
+     * @brief Whether the launch can go ahead or not
+     * 
+     */
+    bool goAhead;
 };
 
 #endif

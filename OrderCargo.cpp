@@ -1,6 +1,6 @@
 #include "OrderCargo.h"
 
-OrderCargo::OrderCargo(BaseStation *b)
+OrderCargo::OrderCargo(BaseStation *b,LaunchInterface *l):Work(l)//Launch interface not used in this class
 {
     equipment_factory = new EquipmentFactory();
     human_factory = new HumanFactory();
@@ -16,7 +16,6 @@ void OrderCargo::execute()
 {
     Cargo *cargo;
     int choice;
-    bool valid;
     bool flag;
     bool done = false;
     int amount = 1;
@@ -27,7 +26,6 @@ void OrderCargo::execute()
         do
         {
             flag = false;
-            valid = true;
             cout << "What do you want to do? Choose the corresponding number: " << endl;
             cout << "1. Recruit humans" << endl;
             cout << "2. Order equipment" << endl;
@@ -40,6 +38,11 @@ void OrderCargo::execute()
                 cout << "Enter the name of the human you want to recruit: ";
                 cin >> cargo_string;
                 cargo = human_factory->startFactory(cargo_string);
+
+                if (!cargo->isHuman())
+                    cout << "THE HUMANS CREATED ARE NOT HUMAN" << endl;
+                base_station->receiveCargo(cargo);
+
                 break;
             case 2:
                 cout << "What equipment do you want to order: ";
@@ -53,10 +56,14 @@ void OrderCargo::execute()
                     cout << "Please enter a valid number: ";
                     cin >> amount;
                 }
+                for (int i = 0; i < amount; i++)
+                {
+                    cargo = equipment_factory->startFactory(cargo_string);
+                    base_station->receiveCargo(cargo);
+                }
                 break;
             case 3:
                 cout << "Exiting..." << endl;
-                valid = false;
                 done = true;
                 break;
             default:
@@ -65,14 +72,6 @@ void OrderCargo::execute()
                 break;
             }
         } while (flag);
-        if (valid)
-        {
-            for (int i = 0; i < amount; i++)
-            {
-                cargo = equipment_factory->startFactory(cargo_string);
-                base_station->receiveCargo(cargo);
-            }
-        }
     }
 }
 

@@ -19,8 +19,8 @@ namespace
         Cargo* testCargo4 = new Cargo("Hammer", false);
         Cargo* testCargo5 = new Cargo("Rope", false);
 
-        CargoHandler* testCargoHandler = new ConcreteCargoHandler(true);
-        testCargoHandler->add(new ConcreteCargoHandler(false));
+        CargoHandler* testCargoHandler = new HumanHandler(true);
+        testCargoHandler->add(new EquipmentHandler(false));
 
         testCargoHandler->handleCargo(testCargo1);
         testCargoHandler->handleCargo(testCargo2);

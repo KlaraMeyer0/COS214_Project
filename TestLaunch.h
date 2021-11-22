@@ -4,8 +4,8 @@
  * 
  * @brief
  * 
- * Design Pattern: Memento, Command
- * Participant: Client, Concrete Command
+ * Design Pattern: Command
+ * Participant: Concrete Command
  */
 #ifndef TESTLAUNCH_H
 #define TESTLAUNCH_H
@@ -40,12 +40,6 @@ public:
      * 
      */
     void undo();
-private:
-    /**
-     * @brief Stores a pointer to the launch interface used
-     * 
-     */
-    LaunchInterface* l;
 };
 
 #endif

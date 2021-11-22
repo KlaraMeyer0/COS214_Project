@@ -16,7 +16,6 @@
 #include "EngineFireTest.h"
 #include "StopTest.h"
 #include "CargoTest.h"
-#include "LaunchFile.h"
 #include <sstream>
 
 using namespace std;

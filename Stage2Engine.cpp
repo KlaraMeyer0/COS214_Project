@@ -16,7 +16,7 @@ void Stage2Engine::TurnOn(FalconRocket* r) {
 };
 
 void Stage2Engine::TurnOff(FalconRocket* r) {
-    cout << "Payload is in desired ordit" << endl;
+    cout << "Payload is in desired orbit" << endl;
     engine->TurnOff();
 };
 

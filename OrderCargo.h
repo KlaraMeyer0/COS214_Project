@@ -6,10 +6,9 @@
 #include "HumanFactory.h"
 #include "BaseStation.h"
 
-class OrderCargo : public Work
-{
+class OrderCargo : public Work{
 public:
-    OrderCargo(BaseStation* b);
+    OrderCargo(BaseStation* b,LaunchInterface* l);
     virtual ~OrderCargo();
     void execute();
     void undo();

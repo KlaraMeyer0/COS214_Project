@@ -7,9 +7,10 @@ using namespace std;
 BaseStation::BaseStation() : Station()
 {
     setName("Base-KJLXR-28564");
-    handler = new CargoHandler();
-    handler->add(new EquipmentHandler(true));
-    handler->add(new EquipmentHandler(false));
+    //handler = new CargoHandler();
+    //handler->add(new EquipmentHandler(true));
+    handler = new HumanHandler();
+    handler->add(new EquipmentHandler());
 }
 
 BaseStation::~BaseStation()
@@ -32,24 +33,32 @@ void BaseStation::receiveCommunication(string s)
 // call receiveCargo from another function that calls the factory for human or equipment respectively
 void BaseStation::printEquipment()
 {
-    for (int i = 0; i < equipment.size(); i++)
-        cout << "Index: " << i << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
+    if (equipment.empty())
+        cout << "There is no at the station." << endl;
+    else
+        for (int i = 0; i < equipment.size(); i++)
+            cout << "Index: " << (i+1) << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
 }
 
 void BaseStation::printHumans()
 {
-    for (int i = 0; i < humans.size(); i++)
-        cout << "index: " << i << " Name: " << humans.at(i) << endl;
+    if (humans.empty())
+        cout << "There are no humans at the station." << endl;
+    else
+        for (int i = 0; i < humans.size(); i++)
+            cout << "index: " << (i+1) << " Name: " << humans.at(i)->getName() << endl;
 }
 
-pair<Cargo *, int> *BaseStation::loadEquipment(int idx, int num)
+pair<Cargo *, int> BaseStation::loadEquipment(int idx, int num)
 {
-    if (idx > equipment.size() - 1)
-        return nullptr;
+    pair<Cargo *, int> p;
+    p = make_pair(equipment.at(idx).first,p.second = num);
 
-    pair<Cargo *, int> *p;
-    p->first = equipment.at(idx).first;
-    p->second = num;
+    if (idx > equipment.size() - 1)
+    {
+        p.second = -1;
+        return p;
+    }
 
     if (equipment.at(idx).second > num)
     {
@@ -57,7 +66,7 @@ pair<Cargo *, int> *BaseStation::loadEquipment(int idx, int num)
     }
     else if (equipment.at(idx).second <= num)
     {
-        p->second = equipment.at(idx).second;
+        p.second = equipment.at(idx).second;
         equipment.erase(equipment.begin() + idx);
     }
 

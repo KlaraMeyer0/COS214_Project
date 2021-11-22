@@ -32,7 +32,7 @@ char Rocketship::getType()
 void Rocketship::attachToStation(Station *s)
 {
     current_Station = s;
-    cout << this->getName() << " has attached to station "<< s->getName();
+    cout << this->getName() << " has attached to station "<< s->getName() << endl;
 }
 
 Station* Rocketship::getStation()

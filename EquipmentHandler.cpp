@@ -5,7 +5,7 @@ using namespace std;
 
 #include "EquipmentHandler.h"
 
-EquipmentHandler::EquipmentHandler(bool h) : human(h) {}
+EquipmentHandler::EquipmentHandler() : CargoHandler(), human(false) {}
 
 void EquipmentHandler::handleCargo(Cargo* c, Station* s)
 {
@@ -22,6 +22,7 @@ void EquipmentHandler::handleCargo(Cargo* c, Station* s)
             {
                 found = true;
                 p.second = p.second + 1;
+                s->equipment.at(i) = p;
             }
             i++;
         }
@@ -29,8 +30,11 @@ void EquipmentHandler::handleCargo(Cargo* c, Station* s)
         if (!found)
         {
             p.first = c;
-            p.second = 0;
+            p.second = 1;
             s->equipment.push_back(p);
         }
+
+
     }
+    CargoHandler::handleCargo(c,s);
 }
