@@ -12,7 +12,7 @@
 using namespace std;
 #include <iostream>
 #include <string>
-#include <unistd.h>
+//#include <unistd.h>
 #include "Station.h"
 #include "FalconRocket.h"
 
@@ -34,13 +34,14 @@ public:
 	virtual ~Rocketship();
 
 	/**
-	 * @brief launches the rocket into space and attaches it to the space station
+	 * @brief Launches the rocket into space and attaches it to the space station
 	 * 
+	 * @param ss The space station that the rocket is being launched to
 	 */
-	virtual void Launch() = 0;
+	virtual void Launch(Station* ss) = 0;
 
 	/**
-	 * @brief Creates a deepcopy of the rocketship and returns it
+	 * @brief Creates a deep copy of the rocketship and returns it
 	 * 
 	 * @return Rocketship* 
 	 */
@@ -81,7 +82,7 @@ public:
 	Station *getStation();
 
 	/**
-	 * @brief Gives a count of the engines on this spaceship setup
+	 * @brief Gives a count of the engines on this rocketship setup
 	 * 
 	 * @return int 
 	 */

@@ -19,7 +19,7 @@ DragonRocketship::~DragonRocketship()
     }
 }
 
-void DragonRocketship::Launch()
+void DragonRocketship::Launch(Station* ss)
 {
     this->countdown();
     rocket->turnOn();
