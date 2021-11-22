@@ -87,3 +87,8 @@ bool CrewDragonRocketship::testLoading()
 {
     return cargo == NULL ? false : true;
 }
+
+void CrewDragonRocketship::startLanding()
+{
+    
+}

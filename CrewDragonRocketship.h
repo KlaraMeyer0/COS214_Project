@@ -85,6 +85,11 @@ public:
      * @return false 
      */
     virtual bool testLoading();
+    /**
+     * @brief Prompts the loading of Cargo* and sends the rocket back to BaseStation
+     * 
+     */
+    void startLanding();
 private:
     /**
      * @brief An array of Cargo* that holds all the loaded cargo

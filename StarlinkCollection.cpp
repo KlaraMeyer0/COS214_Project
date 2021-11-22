@@ -216,3 +216,8 @@ CommunicationRelay* StarlinkCollection::  getCommunicationRelayBS(){
 SatelliteManager* StarlinkCollection:: getSatelliteManager(){
     return satelliteManager;
 }
+
+void StarlinkCollection::startLanding()
+{
+
+}

@@ -88,3 +88,8 @@ bool DragonRocketship::testLoading()
 {
     return cargo == NULL ? false : true;
 }
+
+void DragonRocketship::startLanding()
+{
+    
+}
