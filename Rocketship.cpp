@@ -1,4 +1,4 @@
-#include <unistd.h>
+
 #include "Rocketship.h"
 
 Rocketship::Rocketship(string n, char t)
