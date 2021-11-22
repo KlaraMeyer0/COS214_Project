@@ -1,12 +1,13 @@
 #include <limits.h>
 #include <stdexcept>
-#include <iostream>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-//#include "gtest/gtest.h"
-#include "Cargo.h"
-#include "ConcreteCargohandler.h"
+#include "../Cargo.h"
+#include "../EquipmentHandler.h"
+#include "../HumanHandler.h"
+
 
 namespace
 {
