@@ -32,7 +32,7 @@ class Station{
 
         //void add(Station* stat);
         //virtual void receiveCargo(Cargo* c);
-        virtual void receiveCommunication(string com);
+        virtual void receiveCommunication(string com) = 0;
         virtual void printEquipment() = 0;
         virtual void printHumans() = 0;
         virtual pair<Cargo*, int>* loadEquipment(int idx, int num) = 0;
