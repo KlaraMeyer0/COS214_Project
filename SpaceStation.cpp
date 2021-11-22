@@ -11,6 +11,8 @@ SpaceStation::SpaceStation() : Station()
     //handler->add(new HumanHandler(true));
     handler = new HumanHandler();
     handler->add(new EquipmentHandler());
+
+    cout << "Space station " << getName() << " has been created." << endl;
 }
 
 SpaceStation::~SpaceStation()
