@@ -22,6 +22,13 @@ class EquipmentHandler : public CargoHandler
          * @param h
          */
         EquipmentHandler(bool h);
+
+        /**
+         * Adds equipment to the specified station
+         *
+         * @param c
+         * @param s
+         */
         void handleCargo(Cargo* c, Station* s);
     public:
         bool human;
