@@ -8,8 +8,8 @@ SpaceStation::SpaceStation() : Station()
 {
     setName("Space Station");
     handler = new CargoHandler();
-    handler->add(new ConcreteCargoHandler(true));
-    handler->add(new ConcreteCargoHandler(false));
+    handler->add(new EquipmentHandler(true));
+    handler->add(new EquipmentHandler(false));
 }
 
 SpaceStation::~SpaceStation()

@@ -3,11 +3,11 @@
 
 using namespace std;
 
-#include "ConcreteCargoHandler.h"
+#include "HumanHandler.h"
 
-ConcreteCargoHandler::ConcreteCargoHandler(bool h) : human(h) {}
+HumanHandler::HumanHandler(bool h) : human(h) {}
 
-void ConcreteCargoHandler::handleCargo(Cargo* c, Station* s)
+void HumanHandler::handleCargo(Cargo* c, Station* s)
 {
     if (c->isHuman() && human)
         s->humans.push_back(c);

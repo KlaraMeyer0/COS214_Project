@@ -6,7 +6,7 @@
 using namespace std;
 
 #include "Station.h"
-#include "ConcreteCargoHandler.h"
+#include "EquipmentHandler.h"
 
 class SpaceStation : public Station
 {
