@@ -5,10 +5,11 @@ using namespace std;
 
 #include "EquipmentHandler.h"
 
-EquipmentHandler::EquipmentHandler(bool h) : human(h) {}
+EquipmentHandler::EquipmentHandler() : CargoHandler(), human(false) {}
 
 void EquipmentHandler::handleCargo(Cargo* c, Station* s)
 {
+    cout << "CURRENTLY IN EquipmentHandler's handleCargo" << endl;
     if (c->isHuman() == human)
     {
         bool found = false;
@@ -33,6 +34,7 @@ void EquipmentHandler::handleCargo(Cargo* c, Station* s)
             s->equipment.push_back(p);
         }
 
-        CargoHandler::handleCargo(c,s);
+
     }
+    CargoHandler::handleCargo(c,s);
 }

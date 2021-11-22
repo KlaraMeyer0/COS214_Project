@@ -18,10 +18,10 @@ class EquipmentHandler : public CargoHandler
     public:
         /**
          * Constructor that sets the human attribute to true if it handles humans and false if it doesn't handle humans.
-         *
+         *#################################################################
          * @param h
          */
-        EquipmentHandler(bool h);
+        EquipmentHandler();
 
         /**
          * Adds equipment to the specified station
