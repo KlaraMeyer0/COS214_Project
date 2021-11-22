@@ -53,6 +53,11 @@ void OrderCargo::execute()
                     cout << "Please enter a valid number: ";
                     cin >> amount;
                 }
+                for (int i = 0; i < amount; i++)
+                {
+                    cargo = equipment_factory->startFactory(cargo_string);
+                    base_station->receiveCargo(cargo);
+                }
                 break;
             case 3:
                 cout << "Exiting..." << endl;
@@ -65,14 +70,6 @@ void OrderCargo::execute()
                 break;
             }
         } while (flag);
-        if (valid)
-        {
-            for (int i = 0; i < amount; i++)
-            {
-                cargo = equipment_factory->startFactory(cargo_string);
-                base_station->receiveCargo(cargo);
-            }
-        }
     }
 }
 
