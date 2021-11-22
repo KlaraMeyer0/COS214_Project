@@ -1,9 +1,8 @@
 #include "CreateCrewDragon.h"
 
-CreateCrewDragon::CreateCrewDragon(RocketshipEngineer *e, LaunchInterface *l, CrewDragonBay *cd, BaseStation* s)
+CreateCrewDragon::CreateCrewDragon(RocketshipEngineer *e, LaunchInterface *l, CrewDragonBay *cd, BaseStation* s) : Work(l)
 {
     engineer = e;
-    launch_interface = l;
     crewdragon_bay = cd;
     base_station = s;
 }

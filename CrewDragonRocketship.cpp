@@ -23,6 +23,7 @@ void CrewDragonRocketship::Launch(Station *ss)
     this->countdown();
     rocket->turnOn();
     this->attachToStation(ss);
+    this->dropCargo();
 }
 
 Rocketship *CrewDragonRocketship::clone()

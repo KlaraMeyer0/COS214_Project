@@ -40,7 +40,7 @@ void BaseStation::printEquipment()
 void BaseStation::printHumans()
 {
     for (int i = 0; i < humans.size(); i++)
-        cout << "index: " << i << " Name: " << humans.at(i) << endl;
+        cout << "index: " << i << " Name: " << humans.at(i)->getName() << endl;
 }
 
 pair<Cargo *, int> *BaseStation::loadEquipment(int idx, int num)

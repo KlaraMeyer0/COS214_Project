@@ -3,8 +3,8 @@
  * @author James Butler
  * @brief 
  * 
- * Design Pattern: Command
- * Participant: Concrete Command
+ * Design Pattern: Memento, Command
+ * Participant: Client, Concrete Command
  */
 #ifndef BACKUP_H
 #define BACKUP_H
@@ -39,12 +39,6 @@ public:
      * 
      */
     void undo();
-private:
-    /**
-     * @brief Stores a pointer to the launch interface used
-     * 
-     */
-    LaunchInterface* interface;
 };
 
 #endif

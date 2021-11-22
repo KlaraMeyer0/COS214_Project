@@ -9,10 +9,8 @@ EquipmentHandler::EquipmentHandler() : CargoHandler(), human(false) {}
 
 void EquipmentHandler::handleCargo(Cargo* c, Station* s)
 {
-    cout << "CURRENTLY IN EquipmentHandler's handleCargo" << endl;
     if (c->isHuman() == human)
     {
-        cout << "EQUIPMENT IN EQUIPMENTHANDLER" << endl;
         bool found = false;
 
         pair<Cargo *, int> p;
@@ -22,6 +20,7 @@ void EquipmentHandler::handleCargo(Cargo* c, Station* s)
             p = s->equipment.at(i);
             if (p.first->getName() == c->getName())
             {
+                cout << "NAME MATCH" << endl;
                 found = true;
                 p.second = p.second + 1;
             }
@@ -31,7 +30,7 @@ void EquipmentHandler::handleCargo(Cargo* c, Station* s)
         if (!found)
         {
             p.first = c;
-            p.second = 0;
+            p.second = 1;
             s->equipment.push_back(p);
         }
 

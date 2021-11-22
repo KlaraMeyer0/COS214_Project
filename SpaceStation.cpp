@@ -31,13 +31,13 @@ void SpaceStation::receiveCommunication(string s)
 void SpaceStation::printEquipment()
 {
     for (int i = 0; i < equipment.size(); i++)
-        cout << "Index: " << i << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
+        cout << "Index: " << (i+1) << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
 }
 
 void SpaceStation::printHumans()
 {
     for (int i = 0; i < humans.size(); i++)
-        cout << "index: " << i << " Name: " << humans.at(i) << endl;
+        cout << "index: " << (i+1) << " Name: " << humans.at(i)->getName() << endl;
 }
 
 pair<Cargo *, int> *SpaceStation::loadEquipment(int idx, int num)
