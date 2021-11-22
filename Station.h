@@ -66,6 +66,10 @@ class Station{
          */ 
         string getName();
 
+        /**
+         * @brief sets the name of the Station
+         * @param string
+        */ 
         void setName(string n);
 
         /**
