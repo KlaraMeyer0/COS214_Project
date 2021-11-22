@@ -39,6 +39,10 @@ void OrderCargo::execute()
                 cin >> cargo_string;
                 cargo = human_factory->startFactory(cargo_string);
 
+                if (!cargo->isHuman())
+                    cout << "THE HUMANS CREATED ARE NOT HUMAN" << endl;
+                base_station->receiveCargo(cargo);
+
                 break;
             case 2:
                 cout << "What equipment do you want to order: ";
