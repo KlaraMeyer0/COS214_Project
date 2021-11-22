@@ -12,5 +12,6 @@ int main()
     Bob->receiveCargo();
     Bob->makeCrewDragon();
     Bob->startTestLaunch();
+    Bob->returnRocketship();
     return 0;
 }

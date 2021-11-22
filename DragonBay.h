@@ -1,5 +1,6 @@
 /**
- * @file CreateDragon.h
+ * @file DragonBay.h
+ * @class DragonBay
  * @author Xander Coetzer
  * @brief 
  * Design Pattern: Builder

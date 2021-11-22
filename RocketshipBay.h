@@ -1,5 +1,6 @@
 /**
- * @file CreateDragon.h
+ * @file RocketshipBay.h
+ * @class Rocketship
  * @author Xander Coetzer
  * @brief
  * Design Pattern: Builder

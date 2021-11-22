@@ -90,18 +90,19 @@ bool CrewDragonRocketship::testLoading()
     return cargo == NULL ? false : true;
 }
 
-void CrewDragonRocketship::startLanding(Station* base)
+void CrewDragonRocketship::startLanding(Station *base)
 {
     Station *s = this->getStation();
     bool loopBack;
     loopBack = false;
     string response;
     string addOn;
-    vector<Cargo*> temp;
+    vector<Cargo *> temp;
     cout << "Landing for " << this->getName() << " initialised" << endl;
-    //cargo loop
+    // cargo loop
     do
     {
+        loopBack = false;
         cout << "Do you want to load " << addOn << "equipment from the space station? (Y/N):";
         cin >> response;
         if (response == "Y")
@@ -113,10 +114,11 @@ void CrewDragonRocketship::startLanding(Station* base)
                 cout << "Choose an index from the list:" << endl;
                 s->printEquipment();
                 cin >> index;
-                cout << "How many " << s->equipment.at(index).first->getName() << " do you want to load";
+                cout << "How many " << s->equipment.at(index - 1).first->getName() << " do you want to load";
                 cin >> amount;
-                pair<Cargo*,int> p = s->loadEquipment(index, amount);
-                for (int i=0; i<p.second-1; i++)
+                pair<Cargo *, int> p = s->loadEquipment(index - 1, amount);
+                //CHECK MISSING FOR INDEX OUT OF BOUNDS
+                for (int i = 0; i < p.second - 1; i++)
                 {
                     temp.push_back(p.first->clone());
                 }
@@ -136,7 +138,7 @@ void CrewDragonRocketship::startLanding(Station* base)
             loopBack = true;
         }
     } while (loopBack);
-    //human loop
+    // human loop
     addOn = "";
     do
     {
@@ -151,7 +153,8 @@ void CrewDragonRocketship::startLanding(Station* base)
                 cout << "Choose an index from the list:" << endl;
                 s->printHumans();
                 cin >> index;
-                Cargo * c = s->loadHumans(index);
+                Cargo *c = s->loadHumans(index-1);
+                //CHECK MISSING FOR INDEX OUT OF BOUNDS
                 temp.push_back(c);
                 loopBack = true;
                 addOn = "more ";

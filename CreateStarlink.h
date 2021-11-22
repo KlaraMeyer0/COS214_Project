@@ -1,5 +1,6 @@
 /**
- * @file CreateDragon.h
+ * @file CreateStarlink.h
+ * @class CreateStarlink
  * @author Xander Coetzer
  * @brief 
  * Design Pattern: Command
