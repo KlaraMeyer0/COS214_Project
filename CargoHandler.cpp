@@ -22,7 +22,6 @@ void CargoHandler::handleCargo(Cargo* c, Station* s)
 {
     if (c != nullptr)
     {
-        cout << "THE CARGO RECEIVED IS NOT NULL: YAY" << endl;
         if (next)
         {
             next->handleCargo(c, s);
