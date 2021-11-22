@@ -27,10 +27,10 @@ void DragonRocketship::Launch(Station* ss)
     Station *station = ss;
     for (int i = 0; i < spacecraft->getCapacity(); i++)
     {
-        if (cargo[i] != null)
+        if (cargo[i] != NULL)
         {
             station->receiveCargo(cargo[i]);
-            cargo[i] = null;
+            cargo[i] = NULL;
         }
     }
 }
