@@ -1,11 +1,11 @@
 /**
- * @file ConcreteCargoHandler.h
+ * @file HumanHandler.h
  * @author Klara Meyer
  *
  * @brief
  *
  * Design Pattern: Chain of Responsibility
- * Participant: Iterator
+ * Participant: Concrete Handler
  */
 
 #ifndef HUMANHANDLER_H
@@ -22,6 +22,13 @@ class HumanHandler : public CargoHandler
          * @param h
          */
         HumanHandler(bool h);
+
+        /**
+         * Adds humans to the specified station
+         *
+         * @param c
+         * @param s
+         */
         void handleCargo(Cargo* c, Station* s);
     public:
         bool human;
