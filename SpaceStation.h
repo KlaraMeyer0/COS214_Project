@@ -2,6 +2,8 @@
  * @file SpaceStation.h
  * @class SpaceStation
  * @author Klara Meyer
+ *
+ * @brief Not part of a specific pattern
  */
 
 #ifndef SPACESTATION_H
