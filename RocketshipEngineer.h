@@ -1,3 +1,11 @@
+/**
+ * @file RocketshipEngineer.h
+ * @author your name (you@domain.com)
+ * @brief 
+ * Design Pattern:
+ * Participant:
+ * 
+ */
 #ifndef ROCKETSHIPENGINEER_H
 #define ROCKETSHIPENGINEER_H
 

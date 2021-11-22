@@ -1,9 +1,9 @@
 /**
- * @file CreateDragon.h
- * @author Xander Coetzer
+ * @file DragonRocketship.h
+ * @author your name (you@domain.com)
  * @brief 
- * Design Pattern:
- * Participant
+ * Design Pattern: 
+ * Participant:
  * 
  */
 #ifndef DRAGONROCKETSHIP_H

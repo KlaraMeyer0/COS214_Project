@@ -1,9 +1,9 @@
 /**
- * @file CreateDragon.h
+ * @file CrewDragonFactory.h
  * @author Xander Coetzer
  * @brief 
  * Design Pattern: Factory Method
- * Participant: Abstract Factory
+ * Participant: Factory
  * 
  */
 #ifndef CREWDRAGONFACTORY_H
@@ -15,9 +15,22 @@ using namespace std;
 
 class CrewDragonFactory : public SpacecraftFactory {
 public:
+	/**
+	 * @brief Construct a new Crew Dragon Factory object
+	 * 
+	 */
 	CrewDragonFactory();
+	/**
+	 * @brief Destroy the Crew Dragon Factory object
+	 * 
+	 */
 	virtual ~CrewDragonFactory();
 protected:
+	/**
+	 * @brief Creates a crewDragon spacecraft and returns a pointer to it
+	 * 
+	 * @return Spacecraft* 
+	 */
     Spacecraft* createRocket();
 };
 
