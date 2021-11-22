@@ -25,15 +25,14 @@ void CargoHandler::handleCargo(Cargo* c, Station* s)
         if (next)
         {
             next->handleCargo(c, s);
-            if (next->next)
-                next->next->handleCargo(c,s);
         }
         else
         {
             cout << c->getName() << " has arrived at " << s->getName() << endl;
         }
-        cout << c->getName() << " has arrived at " << s->getName() << endl;
     }
+    else
+        cout << c->getName() << " has arrived at " << s->getName() << endl;
 }
 
 CargoHandler::~CargoHandler()

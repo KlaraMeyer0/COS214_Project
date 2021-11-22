@@ -32,5 +32,7 @@ void EquipmentHandler::handleCargo(Cargo* c, Station* s)
             p.second = 0;
             s->equipment.push_back(p);
         }
+
+        CargoHandler::handleCargo(c,s);
     }
 }
