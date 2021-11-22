@@ -23,15 +23,6 @@ void CrewDragonRocketship::Launch(Station *ss)
     this->countdown();
     rocket->turnOn();
     this->attachToStation(ss);
-    Station *station = ss;
-    for (int i = 0; i < spacecraft->getCapacity(); i++)
-    {
-        if (cargo[i] != NULL)
-        {
-            station->receiveCargo(cargo[i]);
-            cargo[i] = NULL;
-        }
-    }
 }
 
 Rocketship *CrewDragonRocketship::clone()
@@ -66,9 +57,19 @@ void CrewDragonRocketship::attachCargo(vector<Cargo *> cvect)
         cargo[i] = cvect[i];
 }
 
-Cargo *CrewDragonRocketship::dropCargo()
+void CrewDragonRocketship::dropCargo()
 {
-    cout << "Implement dropCargo" << endl;
+    Station *station = this->getStation();
+    if (cargo[0] == NULL)
+        cout << "There is no Cargo to unlaod" << endl;
+    for (int i = 0; i < spacecraft->getCapacity(); i++)
+    {
+        if (cargo[i] != NULL)
+        {
+            station->receiveCargo(cargo[i]);
+            cargo[i] = NULL;
+        }
+    }
 }
 
 int CrewDragonRocketship::getRockets()

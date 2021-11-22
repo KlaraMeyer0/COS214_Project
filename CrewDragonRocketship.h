@@ -64,7 +64,7 @@ public:
      * 
      * @return Cargo* 
      */
-    Cargo *dropCargo();
+    void dropCargo();
     /**
      * @brief Gives a count of the engines on the CrewDragon rocketship
      * 
