@@ -113,14 +113,6 @@ public:
     void setCommunicationRelaySS(CommunicationRelay*);
 
     /**
-     * @brief Sets the number of StarlinkSatellite that communicate with a BaseStation
-     *        and the SpaceStation respectively
-     * @param num_B
-     * @param num_S
-    */
-    void setNums(int num_B ,int num_S);
-
-    /**
      * @brief Sets the head attribute
      * @param StarlinkSatellite
     */
@@ -128,7 +120,7 @@ public:
 
     /**
      * @brief Calls the setSatellites(int, int) method on the satelliteManager
-     *        to create the StarlinkSatellites
+     *        to create the StarlinkSatellites and sets num_B and num_S
      * @param num_B int
      * @param num_S int
      */
@@ -140,6 +132,27 @@ public:
      * @param StarlinkCollection
      */
     bool isViableClone(StarlinkCollection*);
+
+    ///@return int ,returns the num_B member
+    int getB();
+
+    ///@return int ,returns the num_S member
+    int getS();
+
+    ///@return BaseStation ,returns the BS member
+    BaseStation* getBS();
+
+    ///@return SpaceStation ,returns the SS member
+    SpaceStation* getSS();
+
+    ///@return CommunicationRelay ,returns the relaySS member
+    CommunicationRelay* getCommunicationRelaySS();
+
+    ///@return CommunicationRelay ,returns the relayBS member
+    CommunicationRelay* getCommunicationRelayBS();
+
+    ///@return SatelliteManager ,returns the satelliteManager member
+    SatelliteManager* getSatelliteManager();
 
 private:
 

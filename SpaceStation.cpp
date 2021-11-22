@@ -30,33 +30,40 @@ void SpaceStation::receiveCommunication(string s)
 
 void SpaceStation::printEquipment()
 {
-    for (int i = 0; i < equipment.size(); i++)
-        cout << "Index: " << (i+1) << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
+    if (equipment.empty())
+        cout << "There is no equipment at the station." << endl;
+    else
+        for (int i = 0; i < equipment.size(); i++)
+            cout << "Index: " << (i+1) << " Type: " << equipment.at(i).first->getName() << " Number: " << equipment.at(i).second << endl;
 }
 
 void SpaceStation::printHumans()
 {
-    for (int i = 0; i < humans.size(); i++)
-        cout << "index: " << (i+1) << " Name: " << humans.at(i)->getName() << endl;
+    if (humans.empty())
+        cout << "There are no humans at the station." << endl;
+    else
+        for (int i = 0; i < humans.size(); i++)
+            cout << "index: " << (i+1) << " Name: " << humans.at(i)->getName() << endl;
 }
 
-pair<Cargo *, int> *SpaceStation::loadEquipment(int idx, int num)
+pair<Cargo *, int> SpaceStation::loadEquipment(int idx, int num)
 {
-    if (idx > equipment.size() - 1)
-        return nullptr;
+    pair<Cargo *, int> p;
+    p = make_pair(equipment.at(idx).first,p.second = num);
 
-    pair<Cargo*, int> * p;
-    p->first = equipment.at(idx).first;
-    p->second = num;
+    if (idx > equipment.size() - 1)
+    {
+        p.second = -1;
+        return p;
+    }
 
     if (equipment.at(idx).second > num)
     {
         equipment.at(idx).second -= num;
     }
-    else
-    if (equipment.at(idx).second <= num)
+    else if (equipment.at(idx).second <= num)
     {
-        p->second = equipment.at(idx).second;
+        p.second = equipment.at(idx).second;
         equipment.erase(equipment.begin() + idx);
     }
 

@@ -1,6 +1,6 @@
 #include "OrderCargo.h"
 
-OrderCargo::OrderCargo(BaseStation *b,LaunchInterface *l):Work(l)
+OrderCargo::OrderCargo(BaseStation *b,LaunchInterface *l):Work(l)//Launch interface not used in this class
 {
     equipment_factory = new EquipmentFactory();
     human_factory = new HumanFactory();

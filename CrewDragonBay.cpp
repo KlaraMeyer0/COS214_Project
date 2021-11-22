@@ -40,7 +40,7 @@ void CrewDragonBay::addCargo()
     bool stop = false;
     int c, idx;
     vector<Cargo*> tempCargo;
-    while (!stop)
+    while (!stop  && !crew_dragon->getStation()->humans.empty())
     {
         cout << "1: Choose humans to board the rocket" << endl;
         cout << "2: Skip" << endl;
@@ -88,11 +88,19 @@ void CrewDragonBay::addCargo()
 
     stop = false;
     int num;
-    while (!stop)
+    while (!stop && !crew_dragon->getStation()->equipment.empty())
     {
         cout << "1: Choose equipment to load" << endl;
         cout << "2: Skip" << endl;
         cin >> c;
+
+        while (!cin.good())
+        {
+            cin.clear();
+            cin.ignore(15, '\n');
+            cout << "Please enter a valid index: ";
+            cin >> idx;
+        }
 
         if (c == 1)
         {
@@ -118,15 +126,15 @@ void CrewDragonBay::addCargo()
                 cin >> num;
             }
 
-            pair<Cargo *, int> *p = crew_dragon->getStation()->loadEquipment(idx-1, num);
-            if (p == nullptr)
+            pair<Cargo *, int> p = crew_dragon->getStation()->loadEquipment(idx-1, num);
+            if (p.second < 0)
                 cout << "Please enter a valid index." << endl;
             else
             {
-                for (int i = 0; i < p->second; i++)
-                    tempCargo.push_back(p->first);
+                for (int i = 0; i < p.second; i++)
+                    tempCargo.push_back(p.first);
 
-                cout << "Loaded " << p->second << " " << p->first->getName() << "s." << endl;
+                cout << "Loaded " << p.second << " " << p.first->getName() << "s." << endl;
             }
         }
         else

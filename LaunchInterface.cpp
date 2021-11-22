@@ -41,6 +41,8 @@ void LaunchInterface::TestLaunch(){
                 b[i] = false;
             } else {
                 cout<<"Please input either n or y."<<endl;
+                cin.clear();
+                cin.ignore(15, '\n');
             }
         } while (w);
     }
@@ -75,6 +77,8 @@ void LaunchInterface::TestLaunch(){
                         } else {
                             cout<<"Please input either n or y."<<endl;
                         }
+                        cin.clear();
+                        cin.ignore(15, '\n');
                     } while (d);
                     d = true;
                     do{
@@ -88,6 +92,8 @@ void LaunchInterface::TestLaunch(){
                         } else {
                             cout<<"Please input either n or y."<<endl;
                         }
+                        cin.clear();
+                        cin.ignore(15, '\n');
                     } while (d);
                     d = true;
                     do{
@@ -101,11 +107,15 @@ void LaunchInterface::TestLaunch(){
                         } else {
                             cout<<"Please input either n or y."<<endl;
                         }
+                        cin.clear();
+                        cin.ignore(15, '\n');
                     } while (d);
                     cout<<"Setup complete"<<endl;
                 } else {
                     cout<<"Please input either r or t."<<endl;
                 }
+                cin.clear();
+                cin.ignore(15, '\n');
             } while (w);  
         }
     }
@@ -177,6 +187,8 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
                 cout<<"Please input y or n only."<<endl;
                 flag = true;
             }
+            cin.clear();
+            cin.ignore(15, '\n');
         } while (flag);
     }
     outputDesc();
@@ -200,7 +212,7 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
         ss<<n;
         ss>>t;
         ss >> ws;
-        ss.clear();
+        ss.ignore();
         //if (t == NULL)
         if (ss.fail() || !ss.eof())
         {
@@ -211,6 +223,8 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
             cout<<"The number is out of the range!"<<endl;
             flag = true;
         } else flag = false;
+        cin.clear();
+        cin.ignore(15, '\n');
     } while (flag);
     //load file
     setLaunchFile(launchCaretaker->getFile(t));

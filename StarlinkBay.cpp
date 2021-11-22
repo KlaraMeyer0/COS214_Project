@@ -37,6 +37,5 @@ void StarlinkBay::addCargo()
     cout<<"Number of StarlinkSattelites that communicates with the SpaceStation: \n";
     cin>>num_S;
 
-    starlink_collection->setNums(num_B,num_S);
     starlink_collection->setSatellites(num_B, num_S);
 }

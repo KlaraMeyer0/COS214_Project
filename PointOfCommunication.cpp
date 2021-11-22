@@ -6,7 +6,11 @@
 using namespace std;
 
 PointOfCommunication::PointOfCommunication(){
-    srand(time(0));
+    static int i =0;
+    if(i==0){
+        srand(time(0));
+        ++i;
+    }
     //random number between 1-1000 serves as identifier of PointOfCommunication 
     name = rand() % (1000) +1;
     status =true;
