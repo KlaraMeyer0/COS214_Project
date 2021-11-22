@@ -103,6 +103,11 @@ public:
 	 * @return false
 	 */
 	virtual bool testLoading() = 0;
+	/**
+	 * @brief Prompts the loading of Cargo* and sends the rocket back to BaseStation
+	 * 
+	 */
+	virtual void startLanding() = 0;
 
 private:
 	/**

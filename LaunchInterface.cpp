@@ -235,7 +235,7 @@ int LaunchInterface::getRocketCount()
     return rocketCount;
 }
 
-Rocketship** getAllRockets()
+Rocketship** LaunchInterface::getAllRockets()
 {
     return rocketships;
 }

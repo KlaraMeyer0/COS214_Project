@@ -13,8 +13,7 @@ void TestLaunch::undo() {
     {
         if (rockets[i]->getStation()->getName() != "Base-KJLXR-28564")
         {
-            rockets[i]->;
-            rockets[i]->;
+            rockets[i]->startLanding();
         }
     }
 }
