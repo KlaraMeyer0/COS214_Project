@@ -120,10 +120,22 @@ class Station{
          */
         vector<Cargo *> humans;
 
+        /**
+         * @brief sets the SatStatus member to the passed in parameter used for cloning the Station
+         * @param map<int ,bool> 
+        */ 
         void setSatStatus(map<int, bool> stat);
 
+        /**
+         * @brief sets the relayTo member ,used in cloning the Station
+         * @param CommunicationRelay
+        */ 
         void setRelay(CommunicationRelay *obj);
 
+        /**
+         * @brief returns the relayTo member
+         * @return CommunicationRelay
+        */ 
         CommunicationRelay *getRelay();
 
     private:
