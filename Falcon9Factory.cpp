@@ -6,5 +6,6 @@ Falcon9Factory::~Falcon9Factory() {}
 
 FalconRocket *Falcon9Factory::createRocket()
 {
+    cout << "Successfully created FalconHeavy rocket" << endl;
     return new Falcon9();
 }
