@@ -118,7 +118,7 @@ void LaunchInterface::TestLaunch(){
                     cout<<"Please input either r or t."<<endl;
                 }
                 cin.clear();
-                cin.ignore(15, '\n');
+                //cin.ignore(15, '\n');
             } while (w);  
         }
     }
