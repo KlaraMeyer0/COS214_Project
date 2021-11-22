@@ -1,5 +1,6 @@
 /**
  * @file BaseStation.h
+ * @class BaseStation
  * @author Klara Meyer
  */
 
