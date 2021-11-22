@@ -16,7 +16,6 @@ void OrderCargo::execute()
 {
     Cargo *cargo;
     int choice;
-    bool valid;
     bool flag;
     bool done = false;
     int amount = 1;
@@ -27,7 +26,6 @@ void OrderCargo::execute()
         do
         {
             flag = false;
-            valid = true;
             cout << "What do you want to do? Choose the corresponding number: " << endl;
             cout << "1. Recruit humans" << endl;
             cout << "2. Order equipment" << endl;
@@ -62,7 +60,6 @@ void OrderCargo::execute()
                 break;
             case 3:
                 cout << "Exiting..." << endl;
-                valid = false;
                 done = true;
                 break;
             default:
