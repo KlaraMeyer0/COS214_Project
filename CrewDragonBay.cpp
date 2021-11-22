@@ -53,7 +53,7 @@ void CrewDragonBay::addCargo()
             cout << "Please enter a valid index: ";
             cin >> idx;
         }
-
+cout << "INDEX CHOSEN IS: " << c << endl;
         if (c == 0)
         {
             crew_dragon->getStation()->printEquipment();
