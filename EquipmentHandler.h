@@ -1,5 +1,5 @@
 /**
- * @file ConcreteCargoHandler.h
+ * @file EquipmentHandler.h
  * @author Klara Meyer
  *
  * @brief
@@ -8,12 +8,12 @@
  * Participant: Iterator
  */
 
-#ifndef CONCRETECARGOHANDLER_H
-#define CONCRETECARGOHANDLER_H
+#ifndef EQUIPMENTHANDLER_H
+#define EQUIPMENTHANDLER_H
 
 #include "CargoHandler.h"
 
-class ConcreteCargoHandler : public CargoHandler
+class EquipmentHandler : public CargoHandler
 {
     public:
         /**
@@ -21,7 +21,7 @@ class ConcreteCargoHandler : public CargoHandler
          *
          * @param h
          */
-        ConcreteCargoHandler(bool h);
+        EquipmentHandler(bool h);
         void handleCargo(Cargo* c, Station* s);
     public:
         bool human;

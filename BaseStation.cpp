@@ -8,8 +8,8 @@ BaseStation::BaseStation() : Station()
 {
     setName("KJLXR-28564");
     handler = new CargoHandler();
-    handler->add(new ConcreteCargoHandler(true));
-    handler->add(new ConcreteCargoHandler(false));
+    handler->add(new EquipmentHandler(true));
+    handler->add(new EquipmentHandler(false));
 }
 
 BaseStation::~BaseStation()

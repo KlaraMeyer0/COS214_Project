@@ -46,7 +46,7 @@ void CrewDragonBay::addCargo()
         cout << "2: Skip" << endl;
         cin >> c;
 
-        while (!cin.good() || idx <= 0)
+        while (!cin.good())
         {
             cin.clear();
             cin.ignore(15, '\n');
@@ -54,13 +54,11 @@ void CrewDragonBay::addCargo()
             cin >> idx;
         }
 cout << "INDEX CHOSEN IS: " << c << endl;
-        if (c == 0)
+        if (c == 1)
         {
             crew_dragon->getStation()->printEquipment();
             cout << "Enter the index of the human to board the rocket: " << endl;
             cin >> idx;
-
-
 
             Cargo* h = crew_dragon->getStation()->loadHumans(idx);
 
@@ -74,7 +72,7 @@ cout << "INDEX CHOSEN IS: " << c << endl;
             }
         }
         else
-            if (c == 1)
+            if (c == 2)
                 stop = true;
             else
                 cout << "Please choose a valid option." << endl;
@@ -88,7 +86,7 @@ cout << "INDEX CHOSEN IS: " << c << endl;
         cout << "2: Skip" << endl;
         cin >> c;
 
-        if (c == 0)
+        if (c == 1)
         {
             crew_dragon->getStation()->printEquipment();
             cout << "Enter the index of the type of equipment you want to load: " << endl;
@@ -124,7 +122,7 @@ cout << "INDEX CHOSEN IS: " << c << endl;
             }
         }
         else
-            if (c == 1)
+            if (c == 2)
                 stop = true;
             else
                 cout << "Please choose a valid option." << endl;
