@@ -12,7 +12,10 @@ void HumanHandler::handleCargo(Cargo* c, Station* s)
   cout << "CURRENTLY IN HumanHandler's handleCargo" << endl;
 
     if (c->isHuman() == human)
+    {
+        cout << "HUMAN IN HUMANHANDLER" << endl;
         s->humans.push_back(c);
+    }
 
     CargoHandler::handleCargo(c,s);
 }

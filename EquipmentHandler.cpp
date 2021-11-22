@@ -12,6 +12,7 @@ void EquipmentHandler::handleCargo(Cargo* c, Station* s)
     cout << "CURRENTLY IN EquipmentHandler's handleCargo" << endl;
     if (c->isHuman() == human)
     {
+        cout << "EQUIPMENT IN EQUIPMENTHANDLER" << endl;
         bool found = false;
 
         pair<Cargo *, int> p;

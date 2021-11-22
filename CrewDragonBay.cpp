@@ -53,10 +53,10 @@ void CrewDragonBay::addCargo()
             cout << "Please enter a valid index: ";
             cin >> idx;
         }
-cout << "INDEX CHOSEN IS: " << c << endl;
+//cout << "INDEX CHOSEN IS: " << c << endl;
         if (c == 1)
         {
-            crew_dragon->getStation()->printEquipment();
+            crew_dragon->getStation()->printHumans();
             cout << "Enter the index of the human to board the rocket: " << endl;
             cin >> idx;
 

@@ -22,13 +22,14 @@ void CargoHandler::handleCargo(Cargo* c, Station* s)
 {
     if (c != nullptr)
     {
+        cout << "THE CARGO RECEIVED IS NOT NULL: YAY" << endl;
         if (next)
         {
             next->handleCargo(c, s);
         }
         else
         {
-            cout << c->getName() << " has arrived at " << s->getName() << endl;
+            cout << c->getName() << " cannot arrive at " << s->getName() << endl;
         }
     }
     else
