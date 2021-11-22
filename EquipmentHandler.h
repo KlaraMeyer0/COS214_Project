@@ -5,7 +5,7 @@
  * @brief
  *
  * Design Pattern: Chain of Responsibility
- * Participant: Iterator
+ * Participant: Concrete Handler
  */
 
 #ifndef EQUIPMENTHANDLER_H

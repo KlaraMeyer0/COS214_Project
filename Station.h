@@ -20,9 +20,17 @@ class CommunicationRelay;
 
 class Station{
     public:
+        /**
+         * @brief Creates a new station
+         */
         Station();
+
+        /**
+         * @brief Destructor of the Station
+         */
         virtual ~Station();
-        void add(Station* stat);
+
+        //void add(Station* stat);
         //virtual void receiveCargo(Cargo* c);
         virtual void receiveCommunication(string com);
         virtual void printEquipment() = 0;
@@ -56,6 +64,7 @@ class Station{
          * @return string
          */ 
         string getName();
+
         void setName(string n);
 
         /**
@@ -69,7 +78,7 @@ class Station{
 
         
     private:
-        Station* next;
+        //Station* next;
 
         ///@brief name of the station
         string name;

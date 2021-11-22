@@ -149,6 +149,9 @@ void StarlinkCollection::Launch(Station* ss)
 {
     this->countdown();
     rocket->turnOn();
+
+    //stops with turning off vacume engin
+    //add pattern functionality here
 }
 
 bool StarlinkCollection:: isViableClone(StarlinkCollection* obj){

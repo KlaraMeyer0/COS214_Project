@@ -18,10 +18,11 @@ CrewDragonRocketship::~CrewDragonRocketship()
     }
 }
 
-void CrewDragonRocketship::Launch(Station* ss)
+void CrewDragonRocketship::Launch(Station *ss)
 {
     this->countdown();
     rocket->turnOn();
+    cout << "Attaching to space station " << ss->getName() << endl;
 }
 
 Rocketship *CrewDragonRocketship::clone()

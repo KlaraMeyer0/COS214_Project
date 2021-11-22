@@ -1,7 +1,7 @@
 /**
  * @file StarlinkCollection.h
  * @class StarlinkCollection
- * @author Luca Loubser
+ * @author Luca Loubser ,Klara Meyer 
  * 
  * @brief
  * StarlinkCollection inherits from Rocketship
@@ -43,16 +43,46 @@ public:
      */
     virtual ~StarlinkCollection();
 
+    //Talk To Xander
     void Launch(Station* ss);
     virtual int getRockets();
     virtual bool testFire();
     virtual bool testLoading();
 
-    //Used by the Iterator Design Pattern
+    /**
+     * @brief Used to insert a new StarlinkSatellite instanse into the List of 
+     *        StarlinkSatellite this class has a pointer to 
+     * @param StarlinkSatellite to add to the List of StarlinkSatellite
+    */
     void insert(StarlinkSatellite*);
+
+    /**
+     * @brief Used to remove a StarlinkSatellite from the List of StarlinkSatellite
+     *        this class has a pointer to ,removes the first StarlinkSatellite
+     *        in the List
+     * @param StarlinkSatellite pointer to the StarlinkSatellite that has been removed
+    */
     StarlinkSatellite* remove();
+
+    /**
+     * @brief returns a SatelliteIterator that has a pointer to the first 
+     *        element in the List of StarlinkSatellites 
+     * @return SatelliteIterator pointer
+     */
     SatelliteIterator* begin();
+
+    /**
+     * @brief returns a SatelliteIterator that has a pointer to the last 
+     *        element in the List of StarlinkSatellites 
+     * @return SatelliteIterator pointer
+     */
     SatelliteIterator* end();
+
+    /**
+     * @brief returns a StarlinkSatellite pointing to the first 
+     *        element in the List of StarlinkSatellites 
+     * @return SatelliteIterator pointer
+    */
     StarlinkSatellite* getFirstSat();
     
     /**

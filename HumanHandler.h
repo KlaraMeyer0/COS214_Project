@@ -5,7 +5,7 @@
  * @brief
  *
  * Design Pattern: Chain of Responsibility
- * Participant: Iterator
+ * Participant: Concrete Handler
  */
 
 #ifndef HUMANHANDLER_H
@@ -13,7 +13,7 @@
 
 #include "CargoHandler.h"
 
-class ConcreteCargoHandler : public CargoHandler
+class HumanHandler : public CargoHandler
 {
     public:
         /**
@@ -21,7 +21,7 @@ class ConcreteCargoHandler : public CargoHandler
          *
          * @param h
          */
-        ConcreteCargoHandler(bool h);
+        HumanHandler(bool h);
         void handleCargo(Cargo* c, Station* s);
     public:
         bool human;
