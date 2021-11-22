@@ -1,17 +1,19 @@
 #include <limits.h>
 #include <stdexcept>
-#include <iostream>
+#include <gtest/gtest.h>
+#include <string>
 
 using namespace std;
 
-//#include "gtest/gtest.h"
-#include "Cargo.h"
-#include "ConcreteCargohandler.h"
+#include "../Cargo.h"
+#include "../EquipmentHandler.h"
+#include "../HumanHandler.h"
+
 
 namespace
 {
     // Tests chain of responsibility
-    void runChainOfResponsibilityTests()
+    TEST(ChainOfResponsibilityTests)
     {
         Cargo* testCargo1 = new Cargo("Pete", true);
         Cargo* testCargo2 = new Cargo("Rope", false);
@@ -22,10 +24,18 @@ namespace
         CargoHandler* testCargoHandler = new HumanHandler(true);
         testCargoHandler->add(new EquipmentHandler(false));
 
-        testCargoHandler->handleCargo(testCargo1);
+        SpaceStation* testSpaceStation = new SpaceStation();
+        BaseStation* testBaseStation = new BaseStation();
+
+        testing::internal::CaptureStdout();
+
+        testCargoHandler->handleCargo(testCargo1, );
         testCargoHandler->handleCargo(testCargo2);
         testCargoHandler->handleCargo(testCargo3);
         testCargoHandler->handleCargo(testCargo4);
         testCargoHandler->handleCargo(testCargo5);
+
+        std::string output = testing::internal::GetCapturedStdout();
+        EXPECT_EQ(output, "Pete has arrived at\n");
     }
 }

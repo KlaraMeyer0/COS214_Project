@@ -11,6 +11,8 @@ BaseStation::BaseStation() : Station()
     //handler->add(new EquipmentHandler(true));
     handler = new HumanHandler();
     handler->add(new EquipmentHandler());
+
+    cout << "Base station " << getName() << " has been created." << endl;
 }
 
 BaseStation::~BaseStation()
