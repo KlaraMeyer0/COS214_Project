@@ -54,7 +54,7 @@ void DragonBay::addCargo()
             cin >> idx;
         }
 
-        if (c == 0)
+        if (c == 1)
         {
             dragon->getStation()->printEquipment();
             cout << "Enter the index of the type of equipment you want to load: " << endl;
@@ -90,11 +90,10 @@ void DragonBay::addCargo()
                 cout << "Loaded " << p.second << " " << p.first->getName() << "s." << endl;
             }
         }
+        else if (c == 2)
+            stop = true;
         else
-            if (c == 1)
-                stop = true;
-            else
-                cout << "Please choose a valid option." << endl;
+            cout << "Please choose a valid option." << endl;
     }
     dragon->attachCargo(tempCargo);
 }
