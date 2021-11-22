@@ -5,7 +5,8 @@
 
 using namespace std;
 
-#include "../Cargo.h"
+#include "../Human.h"
+#include "../Equipment.h"
 #include "../EquipmentHandler.h"
 #include "../HumanHandler.h"
 #include "../BaseStation.h"
@@ -21,7 +22,7 @@ namespace
         BaseStation* testBaseStation = new BaseStation();
 
         std::string output = testing::internal::GetCapturedStdout();
-        EXPECT_EQ(output, "Space station Space-RXKJL-68348 has been created.\nBase station Base-KJLXR-28564 has been created.");
+        EXPECT_EQ(output, "Space station Space-RXKJL-68348 has been created.\nBase station Base-KJLXR-28564 has been created.\n");
     }
 
     // Tests chain of responsibility
