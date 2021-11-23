@@ -8,8 +8,8 @@ LaunchFile::LaunchFile(){
 }
 
 void LaunchFile::setLaunch(Rocketship** rocketships,int c){
-    if (c < 0) throw "Argument outside of range.\n";
-    if (rocketships == nullptr) throw "Argument is null.\n";
+    if (c < 0) throw std::invalid_argument("Argument outside of range");
+    if (rocketships == nullptr) throw std::invalid_argument("Argument is null");
     this->rocketships = rocketships;
     count = c;
 }
