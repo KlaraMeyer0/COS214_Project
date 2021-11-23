@@ -68,16 +68,16 @@ void DragonRocketship::attachCargo(vector<Cargo *> cvect)
 }
 
 void DragonRocketship::dropCargo()
-{
+{   
     Station *station = this->getStation();
-    if (cargo[0] == NULL)
+    if (cargo[0] == nullptr)
         cout << "There is no Cargo to unlaod" << endl;
     for (int i = 0; i < spacecraft->getCapacity(); i++)
     {
-        if (cargo[i] != NULL)
+        if (cargo[i] != nullptr)
         {
             station->receiveCargo(cargo[i]);
-            cargo[i] = NULL;
+            cargo[i] = nullptr;
         }
     }
 }
