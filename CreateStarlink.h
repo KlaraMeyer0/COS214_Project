@@ -2,10 +2,7 @@
  * @file CreateStarlink.h
  * @class CreateStarlink
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Command
- * Participant: Concrete Command
- * 
+ * @brief Inherits from Work, Design Pattern: Command, Participant: Concrete Command
  */
 #ifndef CREATESTARLINK_H
 #define CREATESTARLINK_H

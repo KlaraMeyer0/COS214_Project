@@ -1,11 +1,8 @@
 /**
  * @file StarlinkSatellite.h
  * @class StarlinkSatellite
- * @author Luca Loubser 
- * 
- * @brief
- * Design Pattern: Mediator
- * Participant: ConcreteMediator
+ * @author Luca Loubser
+ * @brief Design Pattern: Mediator, Participant: ConcreteMediator
  */
 
 #ifndef COMMUNICATIONRELAY_H

@@ -2,10 +2,7 @@
  * @file PointOfCommunication.h
  * @class PointOfCommunication
  * @author Klara Meyer ,Luca Loubser
- * 
- * @brief
- * Design Pattern: Mediator, Prototype
- * Participant: Colleague, Prototype
+ * @brief Design Pattern: Mediator, Prototype, Participant: Colleague, Prototype
  */
 
 

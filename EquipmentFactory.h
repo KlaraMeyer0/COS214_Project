@@ -2,10 +2,7 @@
  * @file EquipmentFactory.h
  * @class EquipmentFactory
  * @author Xander Coetzer
- * @brief 
- * 
- * Design Pattern: Factory
- * Participant: Concrete Factory
+ * @brief Inherits from CargoFactory, Design Pattern: Factory, Participant: Concrete Factory
  */
 #ifndef EQUIPMENTFACTORY_H
 #define EQUIPMENTFACTORY_H

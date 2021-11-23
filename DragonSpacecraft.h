@@ -2,9 +2,7 @@
  * @file DragonSpacecraft.h
  * @class DragonSpacecraft
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Factory Method
- * Participant: Concrete Product
+ * @brief Inherits from Spacecraft, Design Pattern: Factory Method, Participant: Concrete Product
  * 
  */
 #ifndef DRAGONSPACECRAFT_H

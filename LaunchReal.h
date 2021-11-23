@@ -2,10 +2,7 @@
  * @file LaunchReal.h
  * @author James Butler
  * @class LaunchReal
- * @brief 
- * 
- * Design Pattern: Decorator
- * Participant: Concrete Component
+ * @brief Inherits from Launch, Design Pattern: Decorator, Participant: Concrete Component
  */
 #ifndef LAUNCHREAL_H
 #define LAUNCHREAL_H

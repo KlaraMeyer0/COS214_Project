@@ -2,10 +2,7 @@
  * @file Cargo.h
  * @class Cargo
  * @author Xander Coetzer
- * @brief 
- * 
- * Design Pattern: Factory
- * Participant: Product
+ * @brief Design Pattern: Factory, Participant: Product
  */
 #ifndef CARGO_H
 #define CARGO_H

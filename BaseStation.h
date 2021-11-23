@@ -2,8 +2,7 @@
  * @file BaseStation.h
  * @class BaseStation
  * @author Klara Meyer
- *
- * @brief Not part of a specific pattern
+ * @brief Inherits from Station, Not part of a specific pattern
  */
 
 #ifndef BASESTATION_H

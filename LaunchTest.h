@@ -2,11 +2,7 @@
  * @file LaunchTest.h
  * @author James Butler
  * @class LaunchTest
- * 
- * @brief 
- * 
- * Design Pattern: Decorator
- * Participant: Decorator
+ * @brief Inherits from Launch, Design Pattern: Decorator, Participant: Decorator
  */
 #ifndef LAUNCHTEST_H
 #define LAUNCHTEST_H

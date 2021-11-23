@@ -2,11 +2,7 @@
  * @file HumanHandler.h
  * @class HumanHandler
  * @author Klara Meyer
- *
- * @brief
- *
- * Design Pattern: Chain of Responsibility
- * Participant: Concrete Handler
+ * @brief Inherits from CargoHandler, Design Pattern: Chain of Responsibility, Participant: Concrete Handler
  */
 
 #ifndef HUMANHANDLER_H
