@@ -27,7 +27,7 @@ void LaunchCaretaker::setFile(LaunchFile* newfile){
         f[i] = file[i];
         ss[i] = desc[i];
     }
-    f[FileSize] = newfile;
+    f[FileSize-1] = newfile;
     ss[FileSize-1] = s;
     file = f;
     desc = ss;
@@ -55,7 +55,7 @@ void LaunchCaretaker::removeFile(int i){
 }
 bool LaunchCaretaker::contains(LaunchFile* f){
     for (int i = 0; i < FileSize; i++){
-        for (int j = 0; j < file[i]->getCount(); j++){//broken file[i]
+        for (int j = 0; j < file[i]->getCount(); j++){
             if (f->getLaunch()[i]->getName() == file[i]->getLaunch()[i]->getName()) return true;
         }
     }
