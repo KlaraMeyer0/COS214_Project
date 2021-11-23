@@ -3,10 +3,7 @@
  * @class CargoHandler
  * @author Klara Meyer
  *
- * @brief
- *
- * Design Pattern: Chain of Responsibility
- * Participant: Handler
+ * @brief Design Pattern: Chain of Responsibility, Participant: Handler
  */
 
 #ifndef CARGOHANDLER_H

@@ -2,10 +2,7 @@
  * @file StopTest.h
  * @class StopTest
  * @author James Butler
- * @brief 
- * 
- * Design Pattern: Decorator
- * Participant: Concrete Decorator
+ * @brief Inherits from LaunchTest, Design Pattern: Decorator, Participant: Concrete Decorator
  */
 #ifndef STOPTEST_H
 #define STOPTEST_H

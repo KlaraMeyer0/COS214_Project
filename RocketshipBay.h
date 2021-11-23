@@ -2,9 +2,7 @@
  * @file RocketshipBay.h
  * @class RocketshipBay
  * @author Xander Coetzer
- * @brief
- * Design Pattern: Builder
- * Participant: Builder
+ * @brief Design Pattern: Builder, Participant: Builder
  *
  */
 #ifndef ROCKETSHIPBAY_H

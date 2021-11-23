@@ -2,10 +2,7 @@
  * @file CargoFactory.h
  * @class CargoFactory
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Factory Method
- * Participant: Abstract Factory 
- * 
+ * @brief Design Pattern: Factory Method, Participant: Abstract Factory
  */
 #ifndef CARGOFACTORY_H
 #define CARGOFACTORY_H

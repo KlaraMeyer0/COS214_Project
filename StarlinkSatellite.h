@@ -2,11 +2,7 @@
  * @file CommunicationRelay.h
  * @class CommunicationRelay
  * @author {Luca Loubser ,Klara Meyer}
- * 
- * @brief
- * Design Pattern: Mediator, Prototype
- * Participant: ConcreteColleague, ConcretePrototype
- * CommunicationRelay inherits from PointOfCommunication
+ * @brief Inherits from PointOfCommunication, Design Pattern: Mediator, Prototype, Participant: ConcreteColleague, ConcretePrototype
  */
 
 #ifndef STARLINKSATELLITE_H

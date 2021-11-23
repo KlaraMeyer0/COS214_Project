@@ -2,10 +2,7 @@
  * @file LaunchInterface.h
  * @author James Butler
  * @class LaunchInterface
- * @brief 
- * 
- * Design Pattern: Memento
- * Participant: Originator
+ * @brief Design Pattern: Memento, Participant: Originator
  */
 #ifndef LAUNCHINTERFACE_H
 #define LAUNCHINTERFACE_H

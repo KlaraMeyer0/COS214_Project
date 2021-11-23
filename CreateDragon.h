@@ -2,10 +2,7 @@
  * @file CreateDragon.h
  * @class CreateDragon
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Command
- * Participant: Concrete Command
- * 
+ * @brief Inherits from Work, Design Pattern: Command, Participant: Concrete Command
  */
 
 #ifndef CREATEDRAGON_H

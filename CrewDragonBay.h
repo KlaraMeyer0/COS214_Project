@@ -2,10 +2,7 @@
  * @file CrewDragonBay.h
  * @class CrewDragonBay
  * @author Xander Coetzer
- * @brief
- * Design Pattern: Builder
- * Participant: Concrete Builder
- *
+ * @brief Inherits from RocketshipBay, Design Pattern: Builder, Participant: Concrete Builder
  */
 #ifndef CREWDRAGONBAY_H
 #define CREWDRAGONBAY_H

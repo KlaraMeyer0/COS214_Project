@@ -2,10 +2,7 @@
  * @file CreateCrewDragon.h
  * @class CreateCrewDragon
  * @author Xander Coetzer
- * @brief
- * 
- * Design Pattern: Command
- * Participant: Concrete Command
+ * @brief Inherits from Work, Design Pattern: Command, Participant: Concrete Command
  */
 #ifndef CREATECREWDRAGON_H
 #define CREATECREWDRAGON_H

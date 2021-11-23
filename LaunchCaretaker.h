@@ -2,10 +2,7 @@
  * @file LaunchCaretaker.h
  * @author James Butler
  * @class LaunchCaretaker
- * @brief 
- * 
- * Design Pattern: Memento
- * Participant: Caretaker
+ * @brief Design Pattern: Memento, Participant: Caretaker
  */
 #ifndef LAUNCHCARETAKER_H
 #define LAUNCHCARETAKER_H

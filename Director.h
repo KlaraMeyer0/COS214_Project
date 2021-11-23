@@ -2,10 +2,7 @@
  * @file Director.h
  * @class Director
  * @author {James Butler,Xander Coetzer}
- * @brief 
- * 
- * Design Pattern: Command
- * Participant: Invoker
+ * @brief Design Pattern: Command, Participant: Invoker
  */
 #ifndef DIRECTOR_H
 #define DIRECTOR_H

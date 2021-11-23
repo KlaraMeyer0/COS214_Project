@@ -2,10 +2,7 @@
  * @file Station.h
  * @class Station
  * @author {Klara Meyer, Luca Loubser}
- * 
- * @brief
- * Design Pattern: Mediator
- * Participant: ConcreteColleage
+ * @brief Design Pattern: Mediator, Participant: ConcreteColleage
  */
 
 #ifndef STATION_H
