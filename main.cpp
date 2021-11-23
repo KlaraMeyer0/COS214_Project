@@ -22,6 +22,7 @@ int main()
     Bob->startTestLaunch();
     Bob->returnRocketship();
     Bob->retrieveBackup();
+    Bob->receiveCargo();
     Bob->startTestLaunch();
     Bob->returnRocketship();
     return 0;
