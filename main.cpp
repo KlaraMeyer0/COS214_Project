@@ -13,7 +13,7 @@ int main()
     Bob->receiveCargo();
     Bob->makeCrewDragon();
     Bob->makeDragon();
-    Bob->makeStarlink();
+    // Bob->makeStarlink();
     Bob->startTestLaunch();
     Bob->returnRocketship();
     cout<<"Phase 2"<<endl;
