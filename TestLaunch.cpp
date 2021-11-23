@@ -9,7 +9,7 @@ void TestLaunch::execute() {
 
 void TestLaunch::undo() {
     Rocketship** rockets = launch_interface->getAllRockets();
-    for (int i=0; i<launch_interface->getRocketCount(); i++)
+    for (int i = 0; i < launch_interface->getRocketCount() - 1; i++)
     {
         if (rockets[i]->getStation()->getName() != "Base-KJLXR-28564")
         {
