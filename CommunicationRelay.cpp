@@ -35,7 +35,7 @@ void CommunicationRelay:: notify(StarlinkSatellite* obj){
 }
 
 void CommunicationRelay:: resolve(StarlinkSatellite* obj){
-    cout<<"Station with name: "<< RelayTo->getName() <<"resolved the error of "<<
+    cout<<"Station with name: "<< RelayTo->getName() <<" resolved the error of "<<
     "StarlinkSatellite with name: "<<obj->getName()<<endl;
     for(int i=0; i < satellites.size(); ++i)
         if(obj->getName() == satellites[i]->getName()){

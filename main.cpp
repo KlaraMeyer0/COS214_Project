@@ -15,9 +15,10 @@ int main()
     Bob->receiveCargo();
     Bob->makeCrewDragon();
     Bob->makeDragon();
-    // Bob->makeStarlink();
+    Bob->makeStarlink();
     Bob->startTestLaunch();
     Bob->returnRocketship();
+    Bob->runMediator();
     cout<<"Phase 2"<<endl;
     Bob->createBackup();
     Bob->makeStarlink();

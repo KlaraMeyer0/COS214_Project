@@ -71,6 +71,25 @@ void Director::receiveCargo()
 
 void Director::runMediator()
 {
+    cout<<"\nDemonstrating StarlinkSatellites communication with Stations\n";
     StarlinkCollection* SC = starlink_Bay->getRocketship();
-    //
+    
+    StarlinkSatellite* ss =SC->getFirstSat();
+    ss->setStatus(false);
+    cout<<"StarlinkSatellite: "<<ss->getName()<<" was incorrectly configured ,notifying BaseStation of this error\n";
+    ss->NotifyStation();
+    cout<<"Status of the StarlinkSatellites ,the BaseStation is in communication with: \n";
+    map<int,bool> TempMap =SC->getCommunicationRelayBS()->getStatStatus();
+    for(map<int,bool>::iterator it =TempMap.begin();it!=TempMap.end();++it)
+        cout<<"name: "<<it->first<<" ,status: "<<it->second<<endl;
+
+    cout<<"BaseStation responds by fixing configuration on StarlinkSatellite "<<ss->getName()<<endl;
+    base_station->resolve(ss);
+    cout<<"New status of the StarlinkSatellites ,the BaseStation is in communication with: \n";
+    TempMap =SC->getCommunicationRelayBS()->getStatStatus();
+    for(map<int,bool>::iterator it =TempMap.begin();it!=TempMap.end();++it)
+        cout<<"name: "<<it->first<<" ,status: "<<it->second<<endl;
+
+    cout<<"End communication demonstration\n\n";
+    
 }
