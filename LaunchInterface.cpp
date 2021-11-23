@@ -179,7 +179,7 @@ void LaunchInterface::storeFile(){//store current file into Caretaker
 }
 void LaunchInterface::outputDesc(){
     //output all descriptions
-    for (int i = 0; i < rocketCount; i++)
+    for (int i = 0; i < launchCaretaker->getSize(); i++)
         cout<<i<<endl<<launchCaretaker->getDesc(i)<<endl;
 }
 void LaunchInterface::restoreFile(){
