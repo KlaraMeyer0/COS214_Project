@@ -2,6 +2,8 @@
 #include "SpaceStation.h"
 #include "LaunchInterface.h"
 #include "Director.h"
+#include <map>
+using namespace std;
 
 int main()
 {
@@ -24,5 +26,6 @@ int main()
     Bob->retrieveBackup();
     Bob->startTestLaunch();
     Bob->returnRocketship();
+    
     return 0;
 }
