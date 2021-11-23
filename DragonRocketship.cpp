@@ -32,7 +32,7 @@ Rocketship *DragonRocketship::clone()
     DragonRocketship *temp = new DragonRocketship(this->getName());
     temp->attachSpacecraft((this->getSpacecraft())->clone());
     temp->attachRocket((this->getRocket())->clone());
-    if (this->getCargo() == nullptr)
+    if (this->getCargo() != nullptr)
     {
         vector<Cargo*> c;
         for (int i=0; i<this->getSpacecraft()->getCapacity(); i++)
@@ -71,7 +71,7 @@ void DragonRocketship::dropCargo()
 {   
     Station *station = this->getStation();
     if (cargo[0] == nullptr)
-        cout << "There is no Cargo to unlaod" << endl;
+        cout << "There is no Cargo to unload" << endl;
     for (int i = 0; i < spacecraft->getCapacity(); i++)
     {
         if (cargo[i] != nullptr)
