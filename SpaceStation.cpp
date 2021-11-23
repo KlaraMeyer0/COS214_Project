@@ -50,14 +50,16 @@ void SpaceStation::printHumans()
 
 pair<Cargo *, int> SpaceStation::loadEquipment(int idx, int num)
 {
-    pair<Cargo *, int> p;
-    p = make_pair(equipment.at(idx).first, p.second = num);
+     pair<Cargo *, int> p;
+    p = make_pair(equipment.at(0).first, p.second = num);
 
     if (idx > equipment.size() - 1)
     {
         p.second = -1;
         return p;
     }
+
+    p.first = equipment.at(idx).first;
 
     if (equipment.at(idx).second > num)
     {
