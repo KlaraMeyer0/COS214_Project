@@ -24,6 +24,7 @@ int main()
     Bob->makeStarlink();
     Bob->startTestLaunch();
     Bob->returnRocketship();
+    Bob->runMediator();
     Bob->retrieveBackup();
     Bob->startTestLaunch();
     Bob->returnRocketship();

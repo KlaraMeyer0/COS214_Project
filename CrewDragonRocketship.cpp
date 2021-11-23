@@ -162,7 +162,7 @@ void CrewDragonRocketship::startLanding(Station *base)
             else
             {
                 cout << "No equipment to load" << endl;
-                loopBack = true;
+                loopBack = false;
             }
         }
         else if (response != "N")
