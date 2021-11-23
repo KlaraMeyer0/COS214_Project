@@ -68,7 +68,6 @@ void OrderCargo::execute()
                 break;
             default:
                 cout << "Input was not a number or out of range" << endl;
-                flag = true;
                 break;
             }
         } while (flag);
