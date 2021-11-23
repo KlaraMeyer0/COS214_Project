@@ -89,7 +89,8 @@ namespace
         r[0] = new DragonRocketship("test");
         f->setLaunch(r,1);
         LaunchCaretaker* c = new LaunchCaretaker();
-        c->setFile(f);//broken
+        c->setFile(f);
+        cout<<(c->getFile(0) == nullptr)<<endl;
         EXPECT_EQ(c->contains(f),true);
     }
     // Checks if the launchfile is set correctly, Invalid argument
