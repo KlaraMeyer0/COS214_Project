@@ -6,6 +6,10 @@ using namespace std;
     StarlinkSatellite::StarlinkSatellite(){
     }
 
+    void StarlinkSatellite:: NotifyStation(){
+        relay->notify(this);
+    }
+
     StarlinkSatellite:: StarlinkSatellite(string communicatesWith, CommunicationRelay* obj):
         PointOfCommunication(){
         this->communicatesWith = communicatesWith;

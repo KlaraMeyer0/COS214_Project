@@ -74,10 +74,11 @@ class Station{
         /**
          * @brief used to update a Station of any changes to a StarlinkSatellites ,
          *        through the CommunicationRelay
-         * @param StarlinkSatellite that updates the Station
+         * @param int is the name of the StarlinkSatellite that's staus must be updated in the Station
+         * @param bool to set the status to 
         */
         //used to update Space station of any changes to the StarlinkSatellites
-        void updateStatus(StarlinkSatellite *);
+        void updateStatus(int,bool);
 
         /**
          * @brief resolve an error on one of the StarlinkSatellite, by setting its status to true

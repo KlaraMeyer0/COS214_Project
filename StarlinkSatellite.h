@@ -66,6 +66,9 @@ public:
     ///@brief Used in the Iterator Pattern ,points to StarlinkSatellite instance ,set in creation process
     StarlinkSatellite* previous;
 
+    ///@brief notifes the Station it is associated with 
+    void NotifyStation();
+
 private:
 
     ///@brief CommunicationRelay instance

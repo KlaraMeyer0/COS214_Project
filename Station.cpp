@@ -10,8 +10,8 @@ Station::~Station(){
     relayTo = NULL;
 }
 
-void Station:: updateStatus(StarlinkSatellite* obj){
-    SatStatus[obj->getName()]=obj->getStatus();
+void Station:: updateStatus(int name,bool status){
+    SatStatus[name]=status;
 }
 
 void Station:: resolve(StarlinkSatellite* obj){

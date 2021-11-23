@@ -20,7 +20,7 @@ void CommunicationRelay:: addSatellite(StarlinkSatellite* obj){
     cout<<"StarlinkSatellite with name: "<<obj->getName()<<" attached to CommunicationRelay."<<endl;
     SatStatus[obj->getName()]=obj->getStatus();
     satellites.push_back(obj);
-    RelayTo->updateStatus(obj);
+    RelayTo->updateStatus(obj->getName(),obj->getStatus());
 }
 
 Station* CommunicationRelay:: getRelayTo(){
@@ -31,7 +31,7 @@ void CommunicationRelay:: notify(StarlinkSatellite* obj){
     cout<<"StarlinkSatellite with name: "<<obj->getName()<<" notified Station with name: "
     << RelayTo->getName()<< endl;
     SatStatus[obj->getName()]=obj->getStatus();
-    RelayTo->updateStatus(obj);
+    RelayTo->updateStatus(obj->getName(),obj->getStatus());
 }
 
 void CommunicationRelay:: resolve(StarlinkSatellite* obj){
