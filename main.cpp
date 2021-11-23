@@ -15,5 +15,10 @@ int main()
     Bob->makeStarlink();
     Bob->startTestLaunch();
     Bob->returnRocketship();
+    Bob->createBackup();
+    Bob->makeStarlink();
+    Bob->startTestLaunch();
+    Bob->retrieveBackup();
+    Bob->startTestLaunch();
     return 0;
 }
