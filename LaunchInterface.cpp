@@ -167,8 +167,11 @@ void LaunchInterface::addRocketship(Rocketship* r){//add rocket to current array
 }
 void LaunchInterface::storeFile(){//store current file into Caretaker
     LaunchFile* f = retrieveLaunchFile();
-    if (!launchCaretaker->contains(f))
+    if (!launchCaretaker->contains(f)){
         launchCaretaker->setFile(f);
+        rocketships = new Rocketship*[0];
+        rocketCount = 0;
+    }
 }
 void LaunchInterface::outputDesc(){
     //output all descriptions

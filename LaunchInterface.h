@@ -46,8 +46,9 @@ public:
 	/**
 	 * @brief Sets the given Launchfile as the current rocket setup
 	 * 
+	 * @param file The file to set as the current setup
 	 */
-	void setLaunchFile(LaunchFile*);
+	void setLaunchFile(LaunchFile* file);
 
 	/**
 	 * @brief Starts a launch by prompting the user about which rockets to launch,
@@ -59,8 +60,9 @@ public:
 	/**
 	 * @brief Adds a rocket to the current setup
 	 * 
+	 * @param r The rocketship to add to the current setup
 	 */
-	void addRocketship(Rocketship*);
+	void addRocketship(Rocketship* r);
 
 	/**
 	 * @brief Store the current file into Caretaker

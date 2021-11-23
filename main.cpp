@@ -9,6 +9,7 @@ int main()
     SpaceStation *space_station = new SpaceStation();
     LaunchInterface *launch_interface = new LaunchInterface(space_station, base_station);
     Director *Bob = new Director(launch_interface, base_station, space_station);
+    cout<<"Phase 1"<<endl;
     Bob->receiveCargo();
     Bob->makeCrewDragon();
     Bob->makeDragon();
