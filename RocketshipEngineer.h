@@ -1,6 +1,6 @@
 /**
  * @file RocketshipEngineer.h
- * @class RocketEngineer
+ * @class RocketshipEngineer
  * @author Xander Coetzer
  * @brief Design Pattern: Builder, Participant: Director
  * 
