@@ -4,7 +4,7 @@
 #include "../CrewDragonFactory.h"
 #include "../DragonFactory.h"
 #include "../DragonSpacecraft.h"
-#include "../CrewDragonSpacecraft.h" 
+#include "../CrewDragonSpacecraft.h"
 #include "../HumanFactory.h"
 #include "../EquipmentFactory.h"
 #include "../Human.h"
@@ -77,7 +77,7 @@ namespace
         testing::internal::CaptureStdout();
         factory->startFactory();
         std::string output = testing::internal::GetCapturedStdout();
-        EXPECT_EQ(output, "Dragon spacecraft successfully create\n");
+        EXPECT_EQ(output, "Dragon spacecraft successfully created\n");
     }
     TEST(DragonFactoryTest, CapacityTest)
     {
@@ -92,7 +92,7 @@ namespace
         testing::internal::CaptureStdout();
         factory->startFactory();
         std::string output = testing::internal::GetCapturedStdout();
-        EXPECT_EQ(output, "CrewDragon spacecraft successfully create\n");
+        EXPECT_EQ(output, "CrewDragon spacecraft successfully created\n");
     }
     // Test if the spacecraft has been created with the correct capacity
     TEST(CrewDragonFactoryTest, CapacityTest)
