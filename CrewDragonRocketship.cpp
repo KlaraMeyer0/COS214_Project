@@ -213,7 +213,7 @@ void CrewDragonRocketship::startLanding(Station *base)
         else if (response != "N")
         {
             cout << "Please input only Y or N. " << endl;
-            loopBack = true;
+            loopBack = false;
         }
     } while (loopBack);
     this->attachCargo(temp);
