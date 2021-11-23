@@ -6,8 +6,8 @@ void StopTest::output(){
     bool b = true;
     char c;
     do{
-        cin.clear();
-        cin.ignore(15,'\n');
+        //cin.clear();
+        //cin.ignore(15,'\n');
         cout<<"The launch is suspended. Input c to continue or a to abort."<<endl;
         cin>>c;
         if (c == 'c'){
