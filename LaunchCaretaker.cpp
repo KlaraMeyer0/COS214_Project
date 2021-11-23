@@ -18,7 +18,7 @@ void LaunchCaretaker::setFile(LaunchFile* newfile){
     if (newfile == nullptr) throw std::invalid_argument("Argument is null");
     string s = "";
     for (int i = 0; i < newfile->getCount(); i++){
-        s = s + newfile->getLaunch()[i]->getName() + newfile->getLaunch()[i]->getType() +"\n";
+        s = s + newfile->getLaunch()[i]->getName() +" "+newfile->getLaunch()[i]->getType() +"\n";
     }
     FileSize++;
     LaunchFile** f = new LaunchFile*[FileSize];
@@ -61,9 +61,9 @@ bool LaunchCaretaker::contains(LaunchFile* f){
     }
     return false;
 }
-bool LaunchCaretaker::contains(Rocketship** r){
+bool LaunchCaretaker::contains(Rocketship** r,int k){
     for (int i = 0; i < FileSize; i++){
-        for (int j = 0; j < file[i]->getCount(); j++){
+        for (int j = 0; j < k; j++){
             if (r[j]->getName() == file[i]->getLaunch()[j]->getName()) return true;
         } 
     }

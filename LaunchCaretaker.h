@@ -70,9 +70,10 @@ public:
 	 * @brief Returns true if the Rocketship array passed in is stored
 	 * 
 	 * @param r The Rocketship array to check
+	 * @param k The size of the array
 	 * @return bool
 	 */
-	bool contains(Rocketship** r);
+	bool contains(Rocketship** r,int k);
 
 	/**
 	 * @brief Get the number of stored files

@@ -28,6 +28,10 @@ LaunchInterface::~LaunchInterface(){
 }
 void LaunchInterface::TestLaunch(){
     //prompt about which rockets to launch
+    if (rocketships == nullptr){
+        cout<<"There are no rockets loaded in the current setup"<<endl;
+        return;
+    }
     getDesc();
     bool* b = new bool[rocketCount];
     for (int i = 0; i < rocketCount; i++){
@@ -178,8 +182,8 @@ void LaunchInterface::outputDesc(){
     for (int i = 0; i < rocketCount; i++)
         cout<<i<<endl<<launchCaretaker->getDesc(i)<<endl;
 }
-void LaunchInterface::restoreFile(){//needs to be tested!!!
-    if (!launchCaretaker->contains(rocketships)) {
+void LaunchInterface::restoreFile(){
+    if (!launchCaretaker->contains(rocketships,rocketCount)) {
         bool flag = false;
         do{
             cout<<"Do you want to make a backup of the current launch arrangement before overwriting? (input y/n)"<<endl;
@@ -188,8 +192,7 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
             if (s == "y") {
                 storeFile();
                 flag = false;
-                }
-            if (s == "n") flag = false;
+                } else if (s == "n") flag = false;
             else {
                 cout<<"Please input y or n only."<<endl;
                 flag = true;
@@ -219,7 +222,6 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
         ss<<n;
         ss>>t;
         ss >> ws;
-        ss.ignore();
         //if (t == NULL)
         if (ss.fail() || !ss.eof())
         {
@@ -230,6 +232,7 @@ void LaunchInterface::restoreFile(){//needs to be tested!!!
             cout<<"The number is out of the range!"<<endl;
             flag = true;
         } else flag = false;
+        ss.ignore();
         cin.clear();
         cin.ignore(15, '\n');
     } while (flag);
