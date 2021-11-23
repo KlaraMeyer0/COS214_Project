@@ -7,6 +7,6 @@ DragonFactory::~DragonFactory() {}
 
 Spacecraft *DragonFactory::createRocket()
 {
-    cout << "Dragon spacecraft successfully create" << endl;
+    cout << "Dragon spacecraft successfully created" << endl;
     return new DragonSpacecraft(50);
 }
