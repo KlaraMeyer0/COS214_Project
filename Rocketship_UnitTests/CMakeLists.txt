@@ -5,7 +5,7 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
  
 # Link runTests with what we want to test and the GTest and pthread library
-add_executable(runTests main.cpp factorymethod_unitTests.cpp)
+add_executable(runTests main.cpp ../StarlinkCollection.h ../SatelliteManager.h ../SatelliteManager.cpp ../SatelliteIterator.h ../SatelliteIterator.cpp ../StarlinkSatellite.h ../DragonSpacecraft.h ../Falcon9.h ../Falcon9.cpp ../FalconHeavy.h ../_9Engine.h ../_9Engine.cpp ../HeavyEngine.h ../HeavyEngine.cpp ../FalconCore.h ../FalconCore.cpp ../FalconHeavy.cpp ../DragonSpacecraft.cpp ../CrewDragonSpacecraft.h ../CrewDragonSpacecraft.cpp ../StarlinkSatellite.cpp ../Equipment.h ../Equipment.cpp ../StarlinkCollection.cpp ../Rocketship.h ../Rocketship.cpp ../CrewDragonRocketship.h ../CrewDragonRocketship.cpp ../DragonRocketship.h ../DragonRocketship.cpp ../Station.h ../Station.cpp ../SpaceStation.h ../SpaceStation.cpp ../Spacecraft.h ../Spacecraft.cpp ../HumanHandler.h ../HumanHandler.cpp ../EquipmentHandler.h ../EquipmentHandler.cpp ../CargoHandler.h ../CargoHandler.cpp ../FalconRocket.h ../FalconRocket.cpp ../StageEngine.h ../StageEngine.cpp ../Stage1Engine.h ../Stage1Engine.cpp ../Stage2Engine.h ../Stage2Engine.cpp ../VacuumEngine.h ../VacuumEngine.cpp ../MerlinEngine.h ../MerlinEngine.cpp ../Engine.h ../Engine.cpp ../CommunicationRelay.h ../CommunicationRelay.cpp ../PointOfCommunication.h ../PointOfCommunication.cpp ../Cargo.h ../Cargo.cpp ../BaseStation.h ../BaseStation.cpp rocketship_unitTests.cpp)
 target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 
 
