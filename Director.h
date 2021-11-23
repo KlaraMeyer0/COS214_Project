@@ -73,6 +73,11 @@ public:
      * 
      */
     void receiveCargo();
+    /**
+     * @brief Runs a demonstration of the mediator pattern
+     * 
+     */
+    void runMediator();
 
 private:
     /**

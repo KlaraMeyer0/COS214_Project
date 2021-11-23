@@ -32,12 +32,13 @@ Rocketship *DragonRocketship::clone()
     DragonRocketship *temp = new DragonRocketship(this->getName());
     temp->attachSpacecraft((this->getSpacecraft())->clone());
     temp->attachRocket((this->getRocket())->clone());
-    if (this->getCargo() == nullptr)
+    if (this->getCargo() != nullptr)
     {
-        vector<Cargo*> c;
-        for (int i=0; i<this->getSpacecraft()->getCapacity(); i++)
+        vector<Cargo *> c;
+        for (int i = 0; i < spacecraft->getCapacity() - 1; i++)
         {
-            c.push_back(this->getCargo()[i]->clone());
+            if (cargo[i] != nullptr)
+                c.push_back(this->getCargo()[i]->clone());
         }
         temp->attachCargo(c);
     }
@@ -68,10 +69,10 @@ void DragonRocketship::attachCargo(vector<Cargo *> cvect)
 }
 
 void DragonRocketship::dropCargo()
-{   
+{
     Station *station = this->getStation();
     if (cargo[0] == nullptr)
-        cout << "There is no Cargo to unlaod" << endl;
+        cout << "There is no Cargo to unload" << endl;
     for (int i = 0; i < spacecraft->getCapacity(); i++)
     {
         if (cargo[i] != nullptr)
@@ -105,7 +106,7 @@ void DragonRocketship::startLanding(Station *base)
     loopBack = false;
     string response;
     string addOn;
-    vector<Cargo*> temp;
+    vector<Cargo *> temp;
     do
     {
         loopBack = false;
@@ -129,7 +130,7 @@ void DragonRocketship::startLanding(Station *base)
                     cin >> index;
                 }
 
-                cout << "How many " << s->equipment.at(index-1).first->getName() << " do you want to load";
+                cout << "How many " << s->equipment.at(index - 1).first->getName() << " do you want to load";
                 cin >> amount;
 
                 while (!cin.good() || amount <= 0)
@@ -164,19 +165,23 @@ void DragonRocketship::startLanding(Station *base)
         {
             cout << "Please input only Y or N." << endl;
             loopBack = true;
-        } else
+        }
+        else
             loopBack = false;
     } while (loopBack);
     this->attachCargo(temp);
     cout << this->getName() << " begins its journey back to earth" << endl;
     this->attachToStation(base);
 }
-Spacecraft* DragonRocketship::getSpacecraft(){
+Spacecraft *DragonRocketship::getSpacecraft()
+{
     return spacecraft;
 }
-FalconRocket* DragonRocketship::getRocket(){
+FalconRocket *DragonRocketship::getRocket()
+{
     return rocket;
 }
-Cargo** DragonRocketship::getCargo(){
+Cargo **DragonRocketship::getCargo()
+{
     return cargo;
 }

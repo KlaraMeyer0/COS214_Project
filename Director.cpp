@@ -68,3 +68,9 @@ void Director::receiveCargo()
 {
     command[5]->execute();
 }
+
+void Director::runMediator()
+{
+    StarlinkCollection* SC = starlink_Bay->getRocketship();
+    //
+}

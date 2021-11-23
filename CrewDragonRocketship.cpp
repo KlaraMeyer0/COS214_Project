@@ -33,12 +33,13 @@ Rocketship *CrewDragonRocketship::clone()
     CrewDragonRocketship *temp = new CrewDragonRocketship(this->getName());
     temp->attachSpacecraft((this->getSpacecraft())->clone());
     temp->attachRocket((this->getRocket())->clone());
-    if (this->getCargo() == nullptr)
+    if (cargo != nullptr)
     {
-        vector<Cargo*> c;
-        for (int i=0; i<this->getSpacecraft()->getCapacity(); i++)
+        vector<Cargo *> c;
+        for (int i = 0; i < spacecraft->getCapacity() - 1; i++)
         {
-            c.push_back(this->getCargo()[i]->clone());
+            if (cargo[i] != nullptr)
+                c.push_back(cargo[i]->clone());
         }
         temp->attachCargo(c);
     }
@@ -72,7 +73,7 @@ void CrewDragonRocketship::dropCargo()
 {
     Station *station = this->getStation();
     if (cargo[0] == nullptr)
-        cout << "There is no Cargo to unlaod" << endl;
+        cout << "There is no Cargo to unload" << endl;
     for (int i = 0; i < spacecraft->getCapacity(); i++)
     {
         if (cargo[i] != nullptr)
@@ -168,7 +169,8 @@ void CrewDragonRocketship::startLanding(Station *base)
         {
             cout << "Please input only Y or N." << endl;
             loopBack = true;
-        } else
+        }
+        else
             loopBack = false;
     } while (loopBack);
     // human loop
@@ -215,19 +217,23 @@ void CrewDragonRocketship::startLanding(Station *base)
         {
             cout << "Please input only Y or N. " << endl;
             loopBack = true;
-        } else
+        }
+        else
             loopBack = false;
     } while (loopBack);
     this->attachCargo(temp);
     cout << this->getName() << " begins its journey back to earth" << endl;
     this->attachToStation(base);
 }
-Spacecraft* CrewDragonRocketship::getSpacecraft(){
+Spacecraft *CrewDragonRocketship::getSpacecraft()
+{
     return spacecraft;
 }
-FalconRocket* CrewDragonRocketship::getRocket(){
+FalconRocket *CrewDragonRocketship::getRocket()
+{
     return rocket;
 }
-Cargo** CrewDragonRocketship::getCargo(){
+Cargo **CrewDragonRocketship::getCargo()
+{
     return cargo;
 }
