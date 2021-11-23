@@ -1,6 +1,7 @@
 /**
  * @file LaunchInterface.h
  * @author James Butler
+ * @class LaunchInterface
  * @brief 
  * 
  * Design Pattern: Memento

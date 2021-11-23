@@ -1,7 +1,7 @@
 /**
  * @file Station.h
  * @class Station
- * @author {Klara Meyer ,Luca Loubser}
+ * @author {Klara Meyer, Luca Loubser}
  * 
  * @brief
  * Design Pattern: Mediator

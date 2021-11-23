@@ -247,7 +247,10 @@ private:
      * used for communication between StarlinkSatellites and the BaseStation
      */
     CommunicationRelay* relaySS;
-    ///@brief pointer to StarlinkSatellites linked list created using the SatelliteManager
+    /**
+     * @brief pointer to StarlinkSatellites linked list created using the SatelliteManager
+     * 
+     */
     StarlinkSatellite* head;
 
 };

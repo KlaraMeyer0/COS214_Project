@@ -1,6 +1,7 @@
 /**
  * @file Rocketship.h
  * @author {Xander Coetzer, James Butler}
+ * @class Rocketship
  * @brief
  *
  * Design Patterns: Builder

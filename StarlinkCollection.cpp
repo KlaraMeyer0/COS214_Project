@@ -246,4 +246,6 @@ Cargo** StarlinkCollection::getCargo(){
     return nullptr;
 }
 void StarlinkCollection::attachSpacecraft(Spacecraft* s){}
-void StarlinkCollection::attachCargo(vector<Cargo*> cvect){}
+void StarlinkCollection::attachCargo(vector<Cargo*> cvect){
+    cout << "Cannot attach cargo to StarlinkCollection" <<endl;
+}

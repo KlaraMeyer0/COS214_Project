@@ -1,5 +1,6 @@
 /**
  * @file EngineFireTest.h
+ * @class EngineFireTest
  * @author James Butler
  * @brief 
  * 

@@ -43,7 +43,6 @@ void Station::setRelay(CommunicationRelay* obj){
     relayTo = obj;
 }
 
-
 CommunicationRelay* Station:: getRelay(){
     return relayTo;
 }

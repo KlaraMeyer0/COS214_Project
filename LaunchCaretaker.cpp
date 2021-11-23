@@ -11,11 +11,11 @@ LaunchCaretaker::~LaunchCaretaker(){
     delete file;
 }
 LaunchFile* LaunchCaretaker::getFile(int i){
-    if (i >= FileSize || i < 0) throw "Argument outside of range.\n";
+    if (i >= FileSize || i < 0) throw std::invalid_argument("Argument outside of range");
     return file[i];
 }
 void LaunchCaretaker::setFile(LaunchFile* newfile){
-    if (newfile == nullptr) throw "Argument is null.\n";
+    if (newfile == nullptr) throw std::invalid_argument("Argument is null");
     string s = "";
     for (int i = 0; i < newfile->getCount(); i++){
         s = s + newfile->getLaunch()[i]->getName() + newfile->getLaunch()[i]->getType() +"\n";
@@ -27,41 +27,45 @@ void LaunchCaretaker::setFile(LaunchFile* newfile){
         f[i] = file[i];
         ss[i] = desc[i];
     }
-    f[FileSize] = newfile;
-    ss[FileSize] = s;
+    f[FileSize-1] = newfile;
+    ss[FileSize-1] = s;
     file = f;
     desc = ss;
 }
 string LaunchCaretaker::getDesc(int i){
-    if (i >= FileSize || i < 0) throw "Argument outside of range.\n";
+    if (i >= FileSize || i < 0) throw std::invalid_argument("Argument outside of range");
     return desc[i];
 }
 void LaunchCaretaker::removeFile(int i){
-    if (i >= FileSize || i < 0) throw "Argument outside of range.\n";
-    FileSize--;
-    string* ss = new string[FileSize];
-    LaunchFile** f = new LaunchFile*[FileSize];
+    if (i >= FileSize || i < 0) throw std::invalid_argument("Argument outside of range");
+    string* ss = new string[FileSize-1];
+    LaunchFile** f = new LaunchFile*[FileSize-1];
     for (int j = 0; j < i; j++){
         f[j] = file[j];
         ss[j] = desc[j];
     }
-    for (int j = i; j < FileSize+1; j++){
+    for (int j = i; j < FileSize-1; j++){
         f[j] = file[j+1];
-        ss[j] = desc[j];
+        ss[j] = desc[j+1];
     }
     delete file[i];
+    FileSize--;
     file = f;
     desc = ss;
 }
 bool LaunchCaretaker::contains(LaunchFile* f){
     for (int i = 0; i < FileSize; i++){
-        if (f == file[i]) return true;
+        for (int j = 0; j < file[i]->getCount(); j++){
+            if (f->getLaunch()[i]->getName() == file[i]->getLaunch()[i]->getName()) return true;
+        }
     }
     return false;
 }
 bool LaunchCaretaker::contains(Rocketship** r){
     for (int i = 0; i < FileSize; i++){
-        if (r == file[i]->getLaunch()) return true;
+        for (int j = 0; j < file[i]->getCount(); j++){
+            if (r[j]->getName() == file[i]->getLaunch()[j]->getName()) return true;
+        } 
     }
     return false;
 }

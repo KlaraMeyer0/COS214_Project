@@ -1,6 +1,6 @@
 /**
  * @file RocketshipBay.h
- * @class Rocketship
+ * @class RocketshipBay
  * @author Xander Coetzer
  * @brief
  * Design Pattern: Builder

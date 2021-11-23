@@ -11,11 +11,6 @@
 using namespace std;
 
 class Engine {
-protected:
-	/**
-	 * Variable storing weither the engine is on or not
-	 */
-	bool On;
 public:
 	/**
 	 * Constructor that initailises the On attribute to true
@@ -38,6 +33,11 @@ public:
 	 * @return The On attribute, saves weither the engine is on or not
      */
 	virtual bool getState();
+protected:
+	/**
+	 * Variable storing weither the engine is on or not
+	 */
+	bool On;
 };
 
 #endif

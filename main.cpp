@@ -15,5 +15,11 @@ int main()
     Bob->makeStarlink();
     Bob->startTestLaunch();
     Bob->returnRocketship();
+    cout<<"Phase 2"<<endl;
+    Bob->createBackup();
+    Bob->makeStarlink();
+    Bob->startTestLaunch();
+    Bob->retrieveBackup();
+    Bob->startTestLaunch();
     return 0;
 }

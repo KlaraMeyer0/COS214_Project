@@ -1,5 +1,6 @@
 /**
  * @file StarlinkBay.h
+ * @class StarlinkBay
  * @author Xander Coetzer
  * @brief 
  * Design Pattern: Builder

@@ -61,8 +61,8 @@ namespace
         try {
             f->setLaunch(r,-1);
             FAIL();
-        } catch(string ExceptionString) {
-            EXPECT_EQ(ExceptionString,"Argument outside of range.\n");
+        } catch(std::invalid_argument & err) {
+            EXPECT_EQ(err.what(),std::string("Argument outside of range"));
         } catch(...) {
             FAIL();
         } 
@@ -74,8 +74,8 @@ namespace
         try {
             f->setLaunch(nullptr,1);
             FAIL();
-        } catch(string ExceptionString) {
-            EXPECT_EQ(ExceptionString,"Argument is null.\n");
+        } catch(std::invalid_argument & err) {
+            EXPECT_EQ(err.what(),std::string("Argument is null"));
         } catch(...) {
             FAIL();
         }
@@ -83,8 +83,11 @@ namespace
     //LaunchCaretaker tests:
     // Checks if the launchfile is set correctly, Valid argument
     TEST(CaretakerTest, setTest)
-    {
+    {   
         LaunchFile* f = new LaunchFile();
+        Rocketship** r = new Rocketship*[1];
+        r[0] = new DragonRocketship("test");
+        f->setLaunch(r,1);
         LaunchCaretaker* c = new LaunchCaretaker();
         c->setFile(f);
         EXPECT_EQ(c->contains(f),true);
@@ -96,32 +99,8 @@ namespace
         try {
             c->setFile(nullptr);
             FAIL();
-        } catch(string ExceptionString) {
-            EXPECT_EQ(ExceptionString,"Argument is null.\n");
-        } catch(...) {
-            FAIL();
-        }
-    }
-    // Checks if the description is outputted, Valid argument
-    TEST(CaretakerTest, descTest)
-    {
-        LaunchFile* f = new LaunchFile();
-        LaunchCaretaker* c = new LaunchCaretaker();
-        c->setFile(f);
-        c->getDesc(0);
-        std::string output = testing::internal::GetCapturedStdout();
-        EXPECT_EQ(output, "test2\n");
-    }
-    // Checks if the description is outputted, Invalid argument
-    TEST(CaretakerTest, descTest1)
-    {
-        LaunchCaretaker* c = new LaunchCaretaker();
-        c->setFile(new LaunchFile());
-        try {
-            c->getDesc(2);
-            FAIL();
-        } catch(string ExceptionString) {
-            EXPECT_EQ(ExceptionString,"Argument outside of range.\n");
+        } catch(std::invalid_argument & err) {
+            EXPECT_EQ(err.what(),std::string("Argument is null"));
         } catch(...) {
             FAIL();
         }
@@ -130,6 +109,9 @@ namespace
     TEST(CaretakerTest, containsTest)
     {
         LaunchFile* f = new LaunchFile();
+        Rocketship** r = new Rocketship*[1];
+        r[0] = new DragonRocketship("test");
+        f->setLaunch(r,1);
         LaunchCaretaker* c = new LaunchCaretaker();
         c->setFile(f);
         EXPECT_EQ(c->contains(f),true);
@@ -160,8 +142,8 @@ namespace
         try {
             c->getFile(2);
             FAIL();
-        } catch(string ExceptionString) {
-            EXPECT_EQ(ExceptionString,"Argument outside of range.\n");
+        } catch(std::invalid_argument & err) {
+            EXPECT_EQ(err.what(),std::string("Argument outside of range"));
         } catch(...) {
             FAIL();
         }
@@ -171,6 +153,9 @@ namespace
     {
         LaunchCaretaker* c = new LaunchCaretaker();
         LaunchFile* f = new LaunchFile();
+        Rocketship** r = new Rocketship*[1];
+        r[0] = new DragonRocketship("test");
+        f->setLaunch(r,1);
         c->setFile(f);
         c->removeFile(0);
         EXPECT_EQ(c->contains(f),false);
@@ -184,8 +169,8 @@ namespace
         try {
             c->removeFile(1);
             FAIL();
-        } catch(string ExceptionString) {
-            EXPECT_EQ(ExceptionString,"Argument outside of range.\n");
+        } catch(std::invalid_argument & err) {
+            EXPECT_EQ(err.what(),std::string("Argument outside of range"));
         } catch(...) {
             FAIL();
         }

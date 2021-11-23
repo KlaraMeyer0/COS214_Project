@@ -1,5 +1,6 @@
 /**
  * @file TestLaunch.h
+ * @class TestLaunch
  * @author James Butler
  * 
  * @brief

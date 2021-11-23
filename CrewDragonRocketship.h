@@ -1,5 +1,6 @@
 /**
  * @file CrewDragonRocketship.h
+ * @class CrewDragonRocketship
  * @author {Xander Coetzer, James Butler}
  * @brief 
  * Design Pattern: Builder

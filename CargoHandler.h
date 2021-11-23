@@ -1,5 +1,6 @@
 /**
  * @file CargoHandler.h
+ * @class CargoHandler
  * @author Klara Meyer
  *
  * @brief

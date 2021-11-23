@@ -1,5 +1,6 @@
 /**
  * @file CargoFactory.h
+ * @class CargoFactory
  * @author Xander Coetzer
  * @brief 
  * Design Pattern: Factory Method

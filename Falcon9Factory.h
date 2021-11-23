@@ -1,6 +1,7 @@
 /**
  * @file Falcon9Factory.h
- * @author your name (you@domain.com)
+ * @class Falcon9Factory
+ * @author Xander Coetzer
  * @brief 
  * Design Pattern: Factory Method
  * Participant: Factory

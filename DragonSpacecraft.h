@@ -1,6 +1,7 @@
 /**
  * @file DragonSpacecraft.h
- * @author your name (you@domain.com)
+ * @class DragonSpacecraft
+ * @author Xander Coetzer
  * @brief 
  * Design Pattern: Factory Method
  * Participant: Concrete Product
