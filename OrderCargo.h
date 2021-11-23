@@ -2,10 +2,7 @@
  * @file OrderCargo.h
  * @class OrderCargo
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Command
- * Participant: Concrete Command
- * 
+ * @brief Inherits from Work, Design Pattern: Command, Participant: Concrete Command
  */
 #ifndef ORDERCARGO_H
 #define ORDERCARGO_H

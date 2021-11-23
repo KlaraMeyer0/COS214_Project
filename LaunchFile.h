@@ -2,10 +2,7 @@
  * @file LaunchFile.h
  * @author James Butler
  * @class LaunchFile
- * @brief 
- * 
- * Design Pattern: Memento
- * Participant: Memento
+ * @brief Design Pattern: Memento, Participant: Memento
  */
 #ifndef LAUNCHFILE_H
 #define LAUNCHFILE_H

@@ -2,11 +2,7 @@
  * @file TestLaunch.h
  * @class TestLaunch
  * @author James Butler
- * 
- * @brief
- * 
- * Design Pattern: Command
- * Participant: Concrete Command
+ * @brief Inherits from Work, Design Pattern: Command, Participant: Concrete Command
  */
 #ifndef TESTLAUNCH_H
 #define TESTLAUNCH_H

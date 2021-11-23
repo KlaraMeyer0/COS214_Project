@@ -2,7 +2,7 @@
  * @file HeavyEngine.h
  * @author Rina Rene du Toit
  * @class HeavyEngine
- * @brief Design Pattern: State Participant: Concrete State
+ * @brief Inherts from Engine Stage1Engine, Design Pattern: State, Participant: Concrete State
  */
 
 #ifndef HeavyENGINE_H

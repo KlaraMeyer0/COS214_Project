@@ -2,10 +2,7 @@
  * @file Work.h
  * @class Work
  * @author {James Butler, Xander Coetzer}
- * @brief 
- * 
- * Design Pattern: Command
- * Participant: Command
+ * @brief Design Pattern: Command, Participant: Command
  */
 #ifndef WORK_H
 #define WORK_H

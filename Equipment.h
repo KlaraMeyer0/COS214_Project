@@ -2,9 +2,7 @@
  * @file Equipment.h
  * @class Equipment
  * @author Xander Coetzer
- * @brief
- * Design Pattern: Factory Method
- * Participant: Concrete Product
+ * @brief Inherits from Cargo, Design Pattern: Factory Method, Participant: Concrete Product
  *
  */
 #ifndef EQUIPMENT_H

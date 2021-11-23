@@ -2,7 +2,7 @@
  * @file VacuumEngine.h
  * @author Rina Rene du Toit
  * @class VacuumEngine
- * @brief Design Pattern: Template in State Participant: Concrete class
+ * @brief Inherts from Engine, Design Pattern: Template in State, Participant: Concrete class
  */
 
 #ifndef VACUUMENGINE_H

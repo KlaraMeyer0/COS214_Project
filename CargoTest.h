@@ -2,10 +2,7 @@
  * @file CargoTest.h
  * @class CargoTest
  * @author James Butler
- * @brief 
- * 
- * Design pattern: Decorator
- * Participant: Concrete Decorator
+ * @brief Inherits from LaunchTest, Design pattern: Decorator, Participant: Concrete Decorator
  */
 #ifndef CARGOTEST_H
 #define CARGOTEST_H

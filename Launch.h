@@ -2,10 +2,7 @@
  * @file Launch.h
  * @author James Butler
  * @class Launch
- * @brief 
- * 
- * Design Pattern: Decorator
- * Participant: Component
+ * @brief Design Pattern: Decorator, Participant: Component
  */
 #ifndef LAUNCH_H
 #define LAUNCH_H

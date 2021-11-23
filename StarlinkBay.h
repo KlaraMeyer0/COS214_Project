@@ -2,10 +2,7 @@
  * @file StarlinkBay.h
  * @class StarlinkBay
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Builder
- * Participant: Concrete Builder
- * 
+ * @brief Inherits from RocketshipBay, Design Pattern: Builder, Participant: Concrete Builder
  */
 #ifndef STARLINKBAY_H
 #define STARLINKBAY_H

@@ -2,11 +2,7 @@
  * @file SatelliteIterator.h
  * @class SatelliteIterator
  * @author Klara Meyer
- *
- * @brief
- *
- * Design Pattern: Iterator
- * Participant: Iterator
+ * @brief Design Pattern: Iterator, Participant: Iterator
  */
 
 #ifndef SATELLITEITERATOR_H

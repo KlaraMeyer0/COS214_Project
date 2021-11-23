@@ -2,11 +2,7 @@
  * @file StarlinkCollection.h
  * @class StarlinkCollection
  * @author {Luca Loubser ,Klara Meyer}
- * 
- * @brief
- * StarlinkCollection inherits from Rocketship
- * Design Pattern: Prototype
- * Participant: Client
+ * @brief StarlinkCollection inherits from Rocketship, Design Pattern: Prototype, Participant: Client
  */
 
 #ifndef STARLINKCOLLECTION_H

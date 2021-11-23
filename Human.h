@@ -2,10 +2,7 @@
  * @file Human.h
  * @author Xander Coetzer
  * @class Human
- * @brief 
- * 
- * Design Pattern: Factory
- * Participant: Concrete Product
+ * @brief Inherits from Cargo, Design Pattern: Factory, Participant: Concrete Product
  */
 #ifndef HUMAN_H
 #define HUMAN_H

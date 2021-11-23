@@ -1,10 +1,8 @@
 /**
  * @file CrewDragonSpacecraft.h
+ * @class CrewDragonSpacecraft
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Factory Method
- * Participant: Concrete Product
- * 
+ * @brief Inherits from Spacecraft, Design Pattern: Factory Method, Participant: Concrete Product
  */
 #ifndef CREWDRAGONSPACECRAFT_H
 #define CREWDRAGONSPACECRAFT_H

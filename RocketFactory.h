@@ -1,10 +1,8 @@
 /**
  * @file RocketFactory.h
+ * @class RocketFactory
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Factory Method
- * Participant: Abstract Factory
- * 
+ * @brief Design Pattern: Factory, Method Participant: Abstract Factory
  */
 #ifndef ROCKETFACTORY_H
 #define ROCKETFACTORY_H

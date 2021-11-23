@@ -2,10 +2,7 @@
  * @file EnginePresentTest.h
  * @class EnginePresentTest
  * @author James Butler
- * @brief 
- * 
- * Design Pattern: Decorator
- * Participant: Concrete Decorator
+ * @brief Inherits from LaunchTest, Design Pattern: Decorator, Participant: Concrete Decorator
  */
 #ifndef ENGINEPRESENTTEST_H
 #define ENGINEPRESENTTEST_H

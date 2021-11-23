@@ -1,11 +1,8 @@
 /**
  * @file SatelliteManager.h
  * @class SatelliteManager
- * @author Luca Loubser 
- * 
- * @brief
- * Design Pattern: Prototype
- * Participant: PrototypeManager
+ * @author Luca Loubser
+ * @brief Design Pattern: Prototype, Participant: PrototypeManager
  */
 
 #ifndef SATELLITEMANAGER_H

@@ -2,10 +2,7 @@
  * @file Rocketship.h
  * @author {Xander Coetzer, James Butler}
  * @class Rocketship
- * @brief
- *
- * Design Patterns: Builder
- * Participant: Product
+ * @brief Design Patterns: Builder, Participant: Product
  */
 #ifndef ROCKETSHIP_H
 #define ROCKETSHIP_H

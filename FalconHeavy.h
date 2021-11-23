@@ -2,7 +2,7 @@
  * @file FalconHeavy.h
  * @author Rina Rene du Toit
  * @class FalconHeavy
- * @brief Design Pattern: State Participant: Context
+ * @brief Inherts from FalconRocket, Design Pattern: State, Participant: Context
  */
 
 #ifndef FALCONHEAVY_H

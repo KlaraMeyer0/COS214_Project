@@ -2,10 +2,7 @@
  * @file Backup.h
  * @class Backup
  * @author James Butler
- * @brief 
- * 
- * Design Pattern: Memento, Command
- * Participant: Client, Concrete Command
+ * @brief Inherits from Work, Design Pattern: Memento, Command, Participant: Client, Concrete Command
  */
 #ifndef BACKUP_H
 #define BACKUP_H

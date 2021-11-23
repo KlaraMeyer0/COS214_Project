@@ -2,10 +2,7 @@
  * @file HumanFactory.h
  * @author Xander Coetzer
  * @class HumanFactory
- * @brief 
- * 
- * Design Pattern: Factory
- * Participant: Concrete Factory
+ * @brief Inherits from CargoFactory, Design Pattern: Factory, Participant: Concrete Factory
  */
 #ifndef HUMANFACTORY_H
 #define HUMANFACTORY_H

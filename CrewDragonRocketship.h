@@ -2,10 +2,7 @@
  * @file CrewDragonRocketship.h
  * @class CrewDragonRocketship
  * @author {Xander Coetzer, James Butler}
- * @brief 
- * Design Pattern: Builder
- * Participant: Product
- * 
+ * @brief INherits from Rocketship, Design Pattern: Builder, Participant: Product
  */
 #ifndef CREWDRAGONROCKETSHIP_H
 #define CREWDRAGONROCKETSHIP_H

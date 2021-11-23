@@ -2,10 +2,7 @@
  * @file Spacecraft.h
  * @class Spacecraft
  * @author Xander Coetzer
- * @brief
- * Design Pattern: Factory Method
- * Participant: Product
- *
+ * @brief Design Pattern: Factory Method, Participant: Product
  */
 #ifndef SPACECRAFT_H
 #define SPACECRAFT_H

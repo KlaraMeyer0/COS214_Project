@@ -2,10 +2,7 @@
  * @file Falcon9Factory.h
  * @class Falcon9Factory
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Factory Method
- * Participant: Factory
- * 
+ * @brief Inherits from RocketFactory, Design Pattern: Factory Method, Participant: Factory
  */
 #ifndef FALCON9FACTORY_H
 #define FALCON9FACTORY_H

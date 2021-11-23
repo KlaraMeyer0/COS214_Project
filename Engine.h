@@ -2,7 +2,7 @@
  * @file Engine.h
  * @author Rina Rene du Toit
  * @class Engine
- * @brief Design Pattern: Template in State Participant: Abstract class
+ * @brief Design Pattern: Template in State, Participant: Abstract class
  */
 
 #ifndef ENGINE_H

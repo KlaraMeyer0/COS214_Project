@@ -2,10 +2,7 @@
  * @file CrewDragonFactory.h
  * @class CrewDragonFactory
  * @author Xander Coetzer
- * @brief 
- * Design Pattern: Factory Method
- * Participant: Factory
- * 
+ * @brief INherits from SpacecraftFactory, Design Pattern: Factory Method, Participant: Factory
  */
 #ifndef CREWDRAGONFACTORY_H
 #define CREWDRAGONFACTORY_H

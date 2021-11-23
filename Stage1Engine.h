@@ -2,7 +2,7 @@
  * @file Stage1Engine.h
  * @author Rina Rene du Toit
  * @class Stage1Engine
- * @brief Design Pattern: State Participant: State
+ * @brief Inherts from Engine, StageEngine Pattern: State, Participant: State
  */
 
 #ifndef STAGE1ENGINE_H
