@@ -1,5 +1,6 @@
 /**
  * @file Spacecraft.h
+ * @class Spacecraft
  * @author Xander Coetzer
  * @brief
  * Design Pattern: Factory Method

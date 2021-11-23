@@ -1,6 +1,7 @@
 /**
  * @file LaunchCaretaker.h
  * @author James Butler
+ * @class LaunchCaretaker
  * @brief 
  * 
  * Design Pattern: Memento

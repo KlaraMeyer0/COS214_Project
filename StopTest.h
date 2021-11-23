@@ -1,5 +1,6 @@
 /**
  * @file StopTest.h
+ * @class StopTest
  * @author James Butler
  * @brief 
  * 

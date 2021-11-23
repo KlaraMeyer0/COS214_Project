@@ -1,6 +1,6 @@
 /**
  * @file RocketFactory.h
- * @author your name (you@domain.com)
+ * @author Xander Coetzer
  * @brief 
  * Design Pattern: Factory Method
  * Participant: Abstract Factory

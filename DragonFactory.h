@@ -1,5 +1,6 @@
 /**
  * @file DragonFactory.h
+ * @class DragonFactory
  * @author Xander Coetzer
  * @brief 
  * Design Pattern: Factory Method

@@ -1,5 +1,6 @@
 /**
  * @file EquipmentFactory.h
+ * @class EquipmentFactory
  * @author Xander Coetzer
  * @brief 
  * 

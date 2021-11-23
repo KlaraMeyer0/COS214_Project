@@ -1,5 +1,6 @@
 /**
  * @file CrewDragonFactory.h
+ * @class CrewDragonFactory
  * @author Xander Coetzer
  * @brief 
  * Design Pattern: Factory Method

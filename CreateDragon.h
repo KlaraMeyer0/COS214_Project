@@ -1,5 +1,6 @@
 /**
  * @file CreateDragon.h
+ * @class CreateDragon
  * @author Xander Coetzer
  * @brief 
  * Design Pattern: Command

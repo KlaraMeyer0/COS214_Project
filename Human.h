@@ -1,6 +1,7 @@
 /**
  * @file Human.h
  * @author Xander Coetzer
+ * @class Human
  * @brief 
  * 
  * Design Pattern: Factory

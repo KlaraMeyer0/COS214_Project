@@ -1,5 +1,6 @@
 /**
  * @file Cargo.h
+ * @class Cargo
  * @author Xander Coetzer
  * @brief 
  * 

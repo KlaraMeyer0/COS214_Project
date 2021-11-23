@@ -1,5 +1,6 @@
 /**
  * @file Backup.h
+ * @class Backup
  * @author James Butler
  * @brief 
  * 

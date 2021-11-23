@@ -1,5 +1,6 @@
 /**
  * @file CargoTest.h
+ * @class CargoTest
  * @author James Butler
  * @brief 
  * 

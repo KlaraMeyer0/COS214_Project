@@ -1,6 +1,7 @@
 /**
  * @file LaunchReal.h
  * @author James Butler
+ * @class LaunchReal
  * @brief 
  * 
  * Design Pattern: Decorator

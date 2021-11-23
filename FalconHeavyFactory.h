@@ -1,6 +1,7 @@
 /**
  * @file FalconHeavyFactory.h
- * @author your name (you@domain.com)
+ * @author Xander Coetzer
+ * @class FalconHeavyFactory
  * @brief 
  * Design Pattern: Factory Method
  * Participant: Factory
