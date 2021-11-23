@@ -161,14 +161,15 @@ void CrewDragonRocketship::startLanding(Station *base)
             else
             {
                 cout << "No equipment to load" << endl;
-                loopBack = false;
+                loopBack = true;
             }
         }
         else if (response != "N")
         {
             cout << "Please input only Y or N." << endl;
             loopBack = true;
-        }
+        } else
+            loopBack = false;
     } while (loopBack);
     // human loop
     addOn = "";
@@ -213,8 +214,9 @@ void CrewDragonRocketship::startLanding(Station *base)
         else if (response != "N")
         {
             cout << "Please input only Y or N. " << endl;
+            loopBack = true;
+        } else
             loopBack = false;
-        }
     } while (loopBack);
     this->attachCargo(temp);
     cout << this->getName() << " begins its journey back to earth" << endl;

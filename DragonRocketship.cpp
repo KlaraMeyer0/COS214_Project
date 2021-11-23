@@ -163,8 +163,9 @@ void DragonRocketship::startLanding(Station *base)
         else if (response != "N")
         {
             cout << "Please input only Y or N." << endl;
+            loopBack = true;
+        } else
             loopBack = false;
-        }
     } while (loopBack);
     this->attachCargo(temp);
     cout << this->getName() << " begins its journey back to earth" << endl;
